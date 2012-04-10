@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A491534491B0092DC4A /* UIKit.framework */; };
+		49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
+		49A04A4E1534491B0092DC4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4D1534491B0092DC4A /* CoreGraphics.framework */; };
+		49A04A541534491B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04A521534491B0092DC4A /* InfoPlist.strings */; };
+		49A04A561534491B0092DC4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A551534491B0092DC4A /* main.m */; };
+		49A04A5A1534491B0092DC4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A591534491B0092DC4A /* AppDelegate.m */; };
+		49A04A5D1534491B0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04A5B1534491B0092DC4A /* MainStoryboard_iPhone.storyboard */; };
+		49A04A601534491B0092DC4A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04A5E1534491B0092DC4A /* MainStoryboard_iPad.storyboard */; };
+		49A04A631534491B0092DC4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A621534491B0092DC4A /* ViewController.m */; };
+		49A04A6B1534491B0092DC4A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A6A1534491B0092DC4A /* SenTestingKit.framework */; };
+		49A04A6C1534491B0092DC4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A491534491B0092DC4A /* UIKit.framework */; };
+		49A04A6D1534491B0092DC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
+		49A04A751534491B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04A731534491B0092DC4A /* InfoPlist.strings */; };
+		49A04A781534491B0092DC4A /* MeritDemeritCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A771534491B0092DC4A /* MeritDemeritCellTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49A04A6E1534491B0092DC4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A04A3C1534491B0092DC4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49A04A441534491B0092DC4A;
+			remoteInfo = MeritDemeritCell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49A04A451534491B0092DC4A /* MeritDemeritCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeritDemeritCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A04A491534491B0092DC4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		49A04A4B1534491B0092DC4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49A04A4D1534491B0092DC4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		49A04A511534491B0092DC4A /* MeritDemeritCell-Info.plist */ = {isa = PBXFileReference; path = "MeritDemeritCell-Info.plist"; sourceTree = "<group>"; };
+		49A04A531534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49A04A551534491B0092DC4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49A04A571534491B0092DC4A /* MeritDemeritCell-Prefix.pch */ = {isa = PBXFileReference; path = "MeritDemeritCell-Prefix.pch"; sourceTree = "<group>"; };
+		49A04A581534491B0092DC4A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		49A04A591534491B0092DC4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		49A04A5C1534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		49A04A5F1534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		49A04A611534491B0092DC4A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		49A04A621534491B0092DC4A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		49A04A691534491B0092DC4A /* MeritDemeritCellTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeritDemeritCellTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A04A6A1534491B0092DC4A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		49A04A721534491B0092DC4A /* MeritDemeritCellTests-Info.plist */ = {isa = PBXFileReference; path = "MeritDemeritCellTests-Info.plist"; sourceTree = "<group>"; };
+		49A04A741534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49A04A761534491B0092DC4A /* MeritDemeritCellTests.h */ = {isa = PBXFileReference; path = MeritDemeritCellTests.h; sourceTree = "<group>"; };
+		49A04A771534491B0092DC4A /* MeritDemeritCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeritDemeritCellTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49A04A421534491B0092DC4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */,
+				49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */,
+				49A04A4E1534491B0092DC4A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A04A651534491B0092DC4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A04A6B1534491B0092DC4A /* SenTestingKit.framework in Frameworks */,
+				49A04A6C1534491B0092DC4A /* UIKit.framework in Frameworks */,
+				49A04A6D1534491B0092DC4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49A04A3A1534491B0092DC4A = {
+			isa = PBXGroup;
+			children = (
+				49A04A4F1534491B0092DC4A /* MeritDemeritCell */,
+				49A04A701534491B0092DC4A /* MeritDemeritCellTests */,
+				49A04A481534491B0092DC4A /* Frameworks */,
+				49A04A461534491B0092DC4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49A04A461534491B0092DC4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49A04A451534491B0092DC4A /* MeritDemeritCell.app */,
+				49A04A691534491B0092DC4A /* MeritDemeritCellTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49A04A481534491B0092DC4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49A04A491534491B0092DC4A /* UIKit.framework */,
+				49A04A4B1534491B0092DC4A /* Foundation.framework */,
+				49A04A4D1534491B0092DC4A /* CoreGraphics.framework */,
+				49A04A6A1534491B0092DC4A /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49A04A4F1534491B0092DC4A /* MeritDemeritCell */ = {
+			isa = PBXGroup;
+			children = (
+				49A04A581534491B0092DC4A /* AppDelegate.h */,
+				49A04A591534491B0092DC4A /* AppDelegate.m */,
+				49A04A5B1534491B0092DC4A /* MainStoryboard_iPhone.storyboard */,
+				49A04A5E1534491B0092DC4A /* MainStoryboard_iPad.storyboard */,
+				49A04A611534491B0092DC4A /* ViewController.h */,
+				49A04A621534491B0092DC4A /* ViewController.m */,
+				49A04A501534491B0092DC4A /* Supporting Files */,
+			);
+			path = MeritDemeritCell;
+			sourceTree = "<group>";
+		};
+		49A04A501534491B0092DC4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49A04A511534491B0092DC4A /* MeritDemeritCell-Info.plist */,
+				49A04A521534491B0092DC4A /* InfoPlist.strings */,
+				49A04A551534491B0092DC4A /* main.m */,
+				49A04A571534491B0092DC4A /* MeritDemeritCell-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49A04A701534491B0092DC4A /* MeritDemeritCellTests */ = {
+			isa = PBXGroup;
+			children = (
+				49A04A761534491B0092DC4A /* MeritDemeritCellTests.h */,
+				49A04A771534491B0092DC4A /* MeritDemeritCellTests.m */,
+				49A04A711534491B0092DC4A /* Supporting Files */,
+			);
+			path = MeritDemeritCellTests;
+			sourceTree = "<group>";
+		};
+		49A04A711534491B0092DC4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49A04A721534491B0092DC4A /* MeritDemeritCellTests-Info.plist */,
+				49A04A731534491B0092DC4A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49A04A441534491B0092DC4A /* MeritDemeritCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A04A7B1534491B0092DC4A /* Build configuration list for PBXNativeTarget "MeritDemeritCell" */;
+			buildPhases = (
+				49A04A411534491B0092DC4A /* Sources */,
+				49A04A421534491B0092DC4A /* Frameworks */,
+				49A04A431534491B0092DC4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeritDemeritCell;
+			productName = MeritDemeritCell;
+			productReference = 49A04A451534491B0092DC4A /* MeritDemeritCell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49A04A681534491B0092DC4A /* MeritDemeritCellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A04A7E1534491B0092DC4A /* Build configuration list for PBXNativeTarget "MeritDemeritCellTests" */;
+			buildPhases = (
+				49A04A641534491B0092DC4A /* Sources */,
+				49A04A651534491B0092DC4A /* Frameworks */,
+				49A04A661534491B0092DC4A /* Resources */,
+				49A04A671534491B0092DC4A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49A04A6F1534491B0092DC4A /* PBXTargetDependency */,
+			);
+			name = MeritDemeritCellTests;
+			productName = MeritDemeritCellTests;
+			productReference = 49A04A691534491B0092DC4A /* MeritDemeritCellTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49A04A3C1534491B0092DC4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = ThoughtWorks;
+			};
+			buildConfigurationList = 49A04A3F1534491B0092DC4A /* Build configuration list for PBXProject "MeritDemeritCell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49A04A3A1534491B0092DC4A;
+			productRefGroup = 49A04A461534491B0092DC4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49A04A441534491B0092DC4A /* MeritDemeritCell */,
+				49A04A681534491B0092DC4A /* MeritDemeritCellTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49A04A431534491B0092DC4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A04A541534491B0092DC4A /* InfoPlist.strings in Resources */,
+				49A04A5D1534491B0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */,
+				49A04A601534491B0092DC4A /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A04A661534491B0092DC4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A04A751534491B0092DC4A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49A04A671534491B0092DC4A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49A04A411534491B0092DC4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A04A561534491B0092DC4A /* main.m in Sources */,
+				49A04A5A1534491B0092DC4A /* AppDelegate.m in Sources */,
+				49A04A631534491B0092DC4A /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A04A641534491B0092DC4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A04A781534491B0092DC4A /* MeritDemeritCellTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49A04A6F1534491B0092DC4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49A04A441534491B0092DC4A /* MeritDemeritCell */;
+			targetProxy = 49A04A6E1534491B0092DC4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49A04A521534491B0092DC4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A04A531534491B0092DC4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		49A04A5B1534491B0092DC4A /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A04A5C1534491B0092DC4A /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		49A04A5E1534491B0092DC4A /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A04A5F1534491B0092DC4A /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		49A04A731534491B0092DC4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A04A741534491B0092DC4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49A04A791534491B0092DC4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49A04A7A1534491B0092DC4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49A04A7C1534491B0092DC4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MeritDemeritCell/MeritDemeritCell-Prefix.pch";
+				INFOPLIST_FILE = "MeritDemeritCell/MeritDemeritCell-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		49A04A7D1534491B0092DC4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MeritDemeritCell/MeritDemeritCell-Prefix.pch";
+				INFOPLIST_FILE = "MeritDemeritCell/MeritDemeritCell-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		49A04A7F1534491B0092DC4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MeritDemeritCell.app/MeritDemeritCell";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MeritDemeritCell/MeritDemeritCell-Prefix.pch";
+				INFOPLIST_FILE = "MeritDemeritCellTests/MeritDemeritCellTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		49A04A801534491B0092DC4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MeritDemeritCell.app/MeritDemeritCell";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MeritDemeritCell/MeritDemeritCell-Prefix.pch";
+				INFOPLIST_FILE = "MeritDemeritCellTests/MeritDemeritCellTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49A04A3F1534491B0092DC4A /* Build configuration list for PBXProject "MeritDemeritCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A04A791534491B0092DC4A /* Debug */,
+				49A04A7A1534491B0092DC4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A04A7B1534491B0092DC4A /* Build configuration list for PBXNativeTarget "MeritDemeritCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A04A7C1534491B0092DC4A /* Debug */,
+				49A04A7D1534491B0092DC4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		49A04A7E1534491B0092DC4A /* Build configuration list for PBXNativeTarget "MeritDemeritCellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A04A7F1534491B0092DC4A /* Debug */,
+				49A04A801534491B0092DC4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49A04A3C1534491B0092DC4A /* Project object */;
+}
