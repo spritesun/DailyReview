@@ -1,13 +1,15 @@
 //
-//  ViewController.h
+//  BehaviorFactory.h
 //  MeritDemeritCell
 //
 //  Created by Long Sun on 10/04/12.
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UIViewController
+@interface BehaviorFactory : NSObject
+
++ (NSArray *)sharedMerits;
 
 @end
