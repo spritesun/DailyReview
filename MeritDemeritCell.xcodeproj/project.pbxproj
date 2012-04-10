@@ -38,21 +38,21 @@
 		49A04A491534491B0092DC4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49A04A4B1534491B0092DC4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49A04A4D1534491B0092DC4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		49A04A511534491B0092DC4A /* MeritDemeritCell-Info.plist */ = {isa = PBXFileReference; path = "MeritDemeritCell-Info.plist"; sourceTree = "<group>"; };
+		49A04A511534491B0092DC4A /* MeritDemeritCell-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MeritDemeritCell-Info.plist"; sourceTree = "<group>"; };
 		49A04A531534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49A04A551534491B0092DC4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49A04A571534491B0092DC4A /* MeritDemeritCell-Prefix.pch */ = {isa = PBXFileReference; path = "MeritDemeritCell-Prefix.pch"; sourceTree = "<group>"; };
-		49A04A581534491B0092DC4A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		49A04A571534491B0092DC4A /* MeritDemeritCell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MeritDemeritCell-Prefix.pch"; sourceTree = "<group>"; };
+		49A04A581534491B0092DC4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49A04A591534491B0092DC4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		49A04A5C1534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		49A04A5F1534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		49A04A611534491B0092DC4A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		49A04A611534491B0092DC4A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		49A04A621534491B0092DC4A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49A04A691534491B0092DC4A /* MeritDemeritCellTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeritDemeritCellTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A04A6A1534491B0092DC4A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		49A04A721534491B0092DC4A /* MeritDemeritCellTests-Info.plist */ = {isa = PBXFileReference; path = "MeritDemeritCellTests-Info.plist"; sourceTree = "<group>"; };
+		49A04A721534491B0092DC4A /* MeritDemeritCellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MeritDemeritCellTests-Info.plist"; sourceTree = "<group>"; };
 		49A04A741534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		49A04A761534491B0092DC4A /* MeritDemeritCellTests.h */ = {isa = PBXFileReference; path = MeritDemeritCellTests.h; sourceTree = "<group>"; };
+		49A04A761534491B0092DC4A /* MeritDemeritCellTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeritDemeritCellTests.h; sourceTree = "<group>"; };
 		49A04A771534491B0092DC4A /* MeritDemeritCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeritDemeritCellTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
