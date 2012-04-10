@@ -10,17 +10,17 @@
 		49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A491534491B0092DC4A /* UIKit.framework */; };
 		49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
 		49A04A4E1534491B0092DC4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4D1534491B0092DC4A /* CoreGraphics.framework */; };
-		49A04A541534491B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04A521534491B0092DC4A /* InfoPlist.strings */; };
-		49A04A561534491B0092DC4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A551534491B0092DC4A /* main.m */; };
-		49A04A5A1534491B0092DC4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A591534491B0092DC4A /* AppDelegate.m */; };
-		49A04A5D1534491B0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04A5B1534491B0092DC4A /* MainStoryboard_iPhone.storyboard */; };
-		49A04A601534491B0092DC4A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04A5E1534491B0092DC4A /* MainStoryboard_iPad.storyboard */; };
-		49A04A631534491B0092DC4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A621534491B0092DC4A /* ViewController.m */; };
 		49A04A6B1534491B0092DC4A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A6A1534491B0092DC4A /* SenTestingKit.framework */; };
 		49A04A6C1534491B0092DC4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A491534491B0092DC4A /* UIKit.framework */; };
 		49A04A6D1534491B0092DC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
-		49A04A751534491B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04A731534491B0092DC4A /* InfoPlist.strings */; };
-		49A04A781534491B0092DC4A /* MeritDemeritCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A771534491B0092DC4A /* MeritDemeritCellTests.m */; };
+		49A04AA415344CD90092DC4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A9815344CD90092DC4A /* AppDelegate.m */; };
+		49A04AA815344CD90092DC4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AA015344CD90092DC4A /* main.m */; };
+		49A04AA915344CD90092DC4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AA315344CD90092DC4A /* ViewController.m */; };
+		49A04AAD15344D420092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AAB15344D420092DC4A /* InfoPlist.strings */; };
+		49A04AB215344D4E0092DC4A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AAE15344D4E0092DC4A /* MainStoryboard_iPad.storyboard */; };
+		49A04AB315344D4E0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */; };
+		49A04AB615344D900092DC4A /* MeritDemeritCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AB515344D900092DC4A /* MeritDemeritCellTests.m */; };
+		49A04AB915344D9B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB715344D9B0092DC4A /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +38,22 @@
 		49A04A491534491B0092DC4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49A04A4B1534491B0092DC4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49A04A4D1534491B0092DC4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		49A04A511534491B0092DC4A /* MeritDemeritCell-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MeritDemeritCell-Info.plist"; sourceTree = "<group>"; };
-		49A04A531534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		49A04A551534491B0092DC4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49A04A571534491B0092DC4A /* MeritDemeritCell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MeritDemeritCell-Prefix.pch"; sourceTree = "<group>"; };
-		49A04A581534491B0092DC4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		49A04A591534491B0092DC4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		49A04A5C1534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		49A04A5F1534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		49A04A611534491B0092DC4A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		49A04A621534491B0092DC4A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49A04A691534491B0092DC4A /* MeritDemeritCellTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeritDemeritCellTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A04A6A1534491B0092DC4A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		49A04A721534491B0092DC4A /* MeritDemeritCellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MeritDemeritCellTests-Info.plist"; sourceTree = "<group>"; };
-		49A04A741534491B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		49A04A761534491B0092DC4A /* MeritDemeritCellTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeritDemeritCellTests.h; sourceTree = "<group>"; };
-		49A04A771534491B0092DC4A /* MeritDemeritCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeritDemeritCellTests.m; sourceTree = "<group>"; };
+		49A04A9715344CD90092DC4A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/AppDelegate.h; sourceTree = "<group>"; };
+		49A04A9815344CD90092DC4A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/AppDelegate.m; sourceTree = "<group>"; };
+		49A04AA015344CD90092DC4A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
+		49A04AA115344CD90092DC4A /* MeritDemeritCell-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MeritDemeritCell-Prefix.pch"; path = "src/MeritDemeritCell-Prefix.pch"; sourceTree = "<group>"; };
+		49A04AA215344CD90092DC4A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = src/ViewController.h; sourceTree = "<group>"; };
+		49A04AA315344CD90092DC4A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = src/ViewController.m; sourceTree = "<group>"; };
+		49A04AAC15344D420092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = src/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49A04AAF15344D4E0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = src/en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		49A04AB115344D4E0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = src/en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		49A04AB415344D900092DC4A /* MeritDemeritCellTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeritDemeritCellTests.h; path = test/MeritDemeritCellTests.h; sourceTree = "<group>"; };
+		49A04AB515344D900092DC4A /* MeritDemeritCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeritDemeritCellTests.m; path = test/MeritDemeritCellTests.m; sourceTree = "<group>"; };
+		49A04AB815344D9B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49A04ABA15344DB50092DC4A /* MeritDemeritCell-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MeritDemeritCell-Info.plist"; path = "resources/MeritDemeritCell-Info.plist"; sourceTree = "<group>"; };
+		49A04ABB15344DB50092DC4A /* MeritDemeritCellTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MeritDemeritCellTests-Info.plist"; path = "resources/MeritDemeritCellTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,23 +83,24 @@
 		49A04A3A1534491B0092DC4A = {
 			isa = PBXGroup;
 			children = (
-				49A04A4F1534491B0092DC4A /* MeritDemeritCell */,
-				49A04A701534491B0092DC4A /* MeritDemeritCellTests */,
-				49A04A481534491B0092DC4A /* Frameworks */,
-				49A04A461534491B0092DC4A /* Products */,
+				49A04A8F15344BB00092DC4A /* src */,
+				49A04A9215344BF30092DC4A /* test */,
+				49A04A9315344C0E0092DC4A /* resources */,
+				49A04A481534491B0092DC4A /* frameworks */,
+				49A04A461534491B0092DC4A /* products */,
 			);
 			sourceTree = "<group>";
 		};
-		49A04A461534491B0092DC4A /* Products */ = {
+		49A04A461534491B0092DC4A /* products */ = {
 			isa = PBXGroup;
 			children = (
 				49A04A451534491B0092DC4A /* MeritDemeritCell.app */,
 				49A04A691534491B0092DC4A /* MeritDemeritCellTests.octest */,
 			);
-			name = Products;
+			name = products;
 			sourceTree = "<group>";
 		};
-		49A04A481534491B0092DC4A /* Frameworks */ = {
+		49A04A481534491B0092DC4A /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				49A04A491534491B0092DC4A /* UIKit.framework */,
@@ -107,51 +108,50 @@
 				49A04A4D1534491B0092DC4A /* CoreGraphics.framework */,
 				49A04A6A1534491B0092DC4A /* SenTestingKit.framework */,
 			);
-			name = Frameworks;
+			name = frameworks;
 			sourceTree = "<group>";
 		};
-		49A04A4F1534491B0092DC4A /* MeritDemeritCell */ = {
+		49A04A8F15344BB00092DC4A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				49A04A581534491B0092DC4A /* AppDelegate.h */,
-				49A04A591534491B0092DC4A /* AppDelegate.m */,
-				49A04A5B1534491B0092DC4A /* MainStoryboard_iPhone.storyboard */,
-				49A04A5E1534491B0092DC4A /* MainStoryboard_iPad.storyboard */,
-				49A04A611534491B0092DC4A /* ViewController.h */,
-				49A04A621534491B0092DC4A /* ViewController.m */,
-				49A04A501534491B0092DC4A /* Supporting Files */,
+				49A04A9715344CD90092DC4A /* AppDelegate.h */,
+				49A04A9815344CD90092DC4A /* AppDelegate.m */,
+				49A04AA215344CD90092DC4A /* ViewController.h */,
+				49A04AA315344CD90092DC4A /* ViewController.m */,
+				49A04AAE15344D4E0092DC4A /* MainStoryboard_iPad.storyboard */,
+				49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */,
+				49A04AAB15344D420092DC4A /* InfoPlist.strings */,
+				49A04AAA15344D200092DC4A /* others */,
 			);
-			path = MeritDemeritCell;
+			name = src;
 			sourceTree = "<group>";
 		};
-		49A04A501534491B0092DC4A /* Supporting Files */ = {
+		49A04A9215344BF30092DC4A /* test */ = {
 			isa = PBXGroup;
 			children = (
-				49A04A511534491B0092DC4A /* MeritDemeritCell-Info.plist */,
-				49A04A521534491B0092DC4A /* InfoPlist.strings */,
-				49A04A551534491B0092DC4A /* main.m */,
-				49A04A571534491B0092DC4A /* MeritDemeritCell-Prefix.pch */,
+				49A04AB415344D900092DC4A /* MeritDemeritCellTests.h */,
+				49A04AB515344D900092DC4A /* MeritDemeritCellTests.m */,
+				49A04AB715344D9B0092DC4A /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
+			name = test;
 			sourceTree = "<group>";
 		};
-		49A04A701534491B0092DC4A /* MeritDemeritCellTests */ = {
+		49A04A9315344C0E0092DC4A /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				49A04A761534491B0092DC4A /* MeritDemeritCellTests.h */,
-				49A04A771534491B0092DC4A /* MeritDemeritCellTests.m */,
-				49A04A711534491B0092DC4A /* Supporting Files */,
+				49A04ABA15344DB50092DC4A /* MeritDemeritCell-Info.plist */,
+				49A04ABB15344DB50092DC4A /* MeritDemeritCellTests-Info.plist */,
 			);
-			path = MeritDemeritCellTests;
+			name = resources;
 			sourceTree = "<group>";
 		};
-		49A04A711534491B0092DC4A /* Supporting Files */ = {
+		49A04AAA15344D200092DC4A /* others */ = {
 			isa = PBXGroup;
 			children = (
-				49A04A721534491B0092DC4A /* MeritDemeritCellTests-Info.plist */,
-				49A04A731534491B0092DC4A /* InfoPlist.strings */,
+				49A04AA015344CD90092DC4A /* main.m */,
+				49A04AA115344CD90092DC4A /* MeritDemeritCell-Prefix.pch */,
 			);
-			name = "Supporting Files";
+			name = others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +210,7 @@
 				en,
 			);
 			mainGroup = 49A04A3A1534491B0092DC4A;
-			productRefGroup = 49A04A461534491B0092DC4A /* Products */;
+			productRefGroup = 49A04A461534491B0092DC4A /* products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -225,9 +225,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A04A541534491B0092DC4A /* InfoPlist.strings in Resources */,
-				49A04A5D1534491B0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */,
-				49A04A601534491B0092DC4A /* MainStoryboard_iPad.storyboard in Resources */,
+				49A04AAD15344D420092DC4A /* InfoPlist.strings in Resources */,
+				49A04AB215344D4E0092DC4A /* MainStoryboard_iPad.storyboard in Resources */,
+				49A04AB315344D4E0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A04A751534491B0092DC4A /* InfoPlist.strings in Resources */,
+				49A04AB915344D9B0092DC4A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A04A561534491B0092DC4A /* main.m in Sources */,
-				49A04A5A1534491B0092DC4A /* AppDelegate.m in Sources */,
-				49A04A631534491B0092DC4A /* ViewController.m in Sources */,
+				49A04AA415344CD90092DC4A /* AppDelegate.m in Sources */,
+				49A04AA815344CD90092DC4A /* main.m in Sources */,
+				49A04AA915344CD90092DC4A /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A04A781534491B0092DC4A /* MeritDemeritCellTests.m in Sources */,
+				49A04AB615344D900092DC4A /* MeritDemeritCellTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,34 +287,34 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		49A04A521534491B0092DC4A /* InfoPlist.strings */ = {
+		49A04AAB15344D420092DC4A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				49A04A531534491B0092DC4A /* en */,
+				49A04AAC15344D420092DC4A /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		49A04A5B1534491B0092DC4A /* MainStoryboard_iPhone.storyboard */ = {
+		49A04AAE15344D4E0092DC4A /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				49A04A5C1534491B0092DC4A /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		49A04A5E1534491B0092DC4A /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49A04A5F1534491B0092DC4A /* en */,
+				49A04AAF15344D4E0092DC4A /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		49A04A731534491B0092DC4A /* InfoPlist.strings */ = {
+		49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				49A04A741534491B0092DC4A /* en */,
+				49A04AB115344D4E0092DC4A /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		49A04AB715344D9B0092DC4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A04AB815344D9B0092DC4A /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -373,8 +373,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MeritDemeritCell/MeritDemeritCell-Prefix.pch";
-				INFOPLIST_FILE = "MeritDemeritCell/MeritDemeritCell-Info.plist";
+				GCC_PREFIX_HEADER = "src/MeritDemeritCell-Prefix.pch";
+				INFOPLIST_FILE = "resources/MeritDemeritCell-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -384,8 +384,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MeritDemeritCell/MeritDemeritCell-Prefix.pch";
-				INFOPLIST_FILE = "MeritDemeritCell/MeritDemeritCell-Info.plist";
+				GCC_PREFIX_HEADER = "src/MeritDemeritCell-Prefix.pch";
+				INFOPLIST_FILE = "resources/MeritDemeritCell-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -400,8 +400,8 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MeritDemeritCell/MeritDemeritCell-Prefix.pch";
-				INFOPLIST_FILE = "MeritDemeritCellTests/MeritDemeritCellTests-Info.plist";
+				GCC_PREFIX_HEADER = "src/MeritDemeritCell-Prefix.pch";
+				INFOPLIST_FILE = "resources/MeritDemeritCellTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -417,8 +417,8 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MeritDemeritCell/MeritDemeritCell-Prefix.pch";
-				INFOPLIST_FILE = "MeritDemeritCellTests/MeritDemeritCellTests-Info.plist";
+				GCC_PREFIX_HEADER = "src/MeritDemeritCell-Prefix.pch";
+				INFOPLIST_FILE = "resources/MeritDemeritCellTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -444,6 +444,7 @@
 				49A04A7D1534491B0092DC4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49A04A7E1534491B0092DC4A /* Build configuration list for PBXNativeTarget "MeritDemeritCellTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +453,7 @@
 				49A04A801534491B0092DC4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
