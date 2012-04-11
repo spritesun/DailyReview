@@ -12,5 +12,4 @@
 
 @synthesize window = _window;
 
-
 @end

@@ -6,17 +6,34 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 
 #import "BehaviorTableViewController.h"
 #import "Behavior.h"
 #import "BehaviorFactory.h"
+#import "UIGestureRecognizer+Blocks.h"
 
-@interface BehaviorTableViewController ()
+NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
+
+@interface BehaviorTableViewController () {
+  NSMutableArray *sectionsExpandStatus_;
+}
 
 @end
 
 @implementation BehaviorTableViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  self = [super initWithCoder:aDecoder];
+  if (self) {
+    sectionsExpandStatus_ = [NSMutableArray array];
+    for (int i = 0; i < [[BehaviorFactory sharedMerits] count]; i++) {
+      [sectionsExpandStatus_ addObject:[NSNumber numberWithBool:YES]];
+    }
+  }
+  return self;
+
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -36,7 +53,36 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return [[[BehaviorFactory sharedMerits] objectAtIndex:section] count];
+  if ([[sectionsExpandStatus_ objectAtIndex:section] isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+    return [[[BehaviorFactory sharedMerits] objectAtIndex:section] count];
+  }
+  else {
+    return 0;
+  }
+  
 }
+
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//  return [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];
+//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+  UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+  header.text = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];
+  header.backgroundColor = [UIColor lightGrayColor];
+  header.userInteractionEnabled = YES;
+  
+  UIGestureRecognizer *recognizer = [UITapGestureRecognizer instanceWithActionBlock:^(id gesture) {
+    [sectionsExpandStatus_ replaceObjectAtIndex:section withObject:[NSNumber numberWithBool:NO]];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section]  withRowAnimation:UITableViewRowAnimationTop];
+  }];
+  [header addGestureRecognizer:recognizer];
+  
+  return header;
+}
+
+
 
 @end

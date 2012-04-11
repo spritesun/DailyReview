@@ -12,4 +12,6 @@
 
 + (NSArray *)sharedMerits;
 
++ (NSArray *)sharedMeritCategories;
+
 @end

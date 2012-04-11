@@ -8,12 +8,6 @@
 
 #import "Behavior.h"
 
-@interface Behavior ()
-
-- (id)initWithName:(NSString *)name rank:(NSInteger)rank;
-
-@end
-
 @implementation Behavior
 
 @synthesize name = name_, rank = rank_;

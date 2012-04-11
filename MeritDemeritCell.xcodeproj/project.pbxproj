@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
 		497316241534590400E3E5DC /* BehaviorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorTableViewController.m */; };
 		4973162915345CCB00E3E5DC /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973162815345CCB00E3E5DC /* Behavior.m */; };
 		4973162F15345D9500E3E5DC /* BehaviorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973162E15345D9500E3E5DC /* BehaviorFactory.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+Blocks.h"; path = "src/UIGestureRecognizer+Blocks.h"; sourceTree = "<group>"; };
+		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
 		497316221534590400E3E5DC /* BehaviorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewController.h; path = src/BehaviorTableViewController.h; sourceTree = "<group>"; };
 		497316231534590400E3E5DC /* BehaviorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewController.m; path = src/BehaviorTableViewController.m; sourceTree = "<group>"; };
 		4973162715345CCB00E3E5DC /* Behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Behavior.h; path = src/Behavior.h; sourceTree = "<group>"; };
@@ -86,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		495C97FA1535ABC500EEDAFB /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */,
+				495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
 		4973162515345C8F00E3E5DC /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,7 @@
 			children = (
 				4973162615345CA000E3E5DC /* domains */,
 				4973162515345C8F00E3E5DC /* controllers */,
+				495C97FA1535ABC500EEDAFB /* utils */,
 				49A04AAE15344D4E0092DC4A /* MainStoryboard_iPad.storyboard */,
 				49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */,
 				49A04AAB15344D420092DC4A /* InfoPlist.strings */,
@@ -293,6 +306,7 @@
 				497316241534590400E3E5DC /* BehaviorTableViewController.m in Sources */,
 				4973162915345CCB00E3E5DC /* Behavior.m in Sources */,
 				4973162F15345D9500E3E5DC /* BehaviorFactory.m in Sources */,
+				495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

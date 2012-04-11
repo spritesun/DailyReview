@@ -31,4 +31,18 @@
   return merits;
 }
 
++ (NSArray *)sharedMeritCategories
+{
+  static dispatch_once_t shared_initialized;
+  static NSMutableArray *meritCategories = nil;
+  
+  dispatch_once(&shared_initialized, ^ {
+    meritCategories = [NSMutableArray array];
+    [meritCategories addObject:@"准一功"];
+    [meritCategories addObject:@"准三功"];
+  });
+  
+  return meritCategories;
+}
+
 @end
