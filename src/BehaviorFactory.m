@@ -14,12 +14,18 @@
 + (NSArray *)sharedMerits
 {
   static dispatch_once_t shared_initialized;
-  static NSMutableArray *merits = nil;
+  static NSArray *merits = nil;
   
   dispatch_once(&shared_initialized, ^ {
-    merits = [NSMutableArray array];
-    [merits addObject:[Behavior behaviorWithName:@"赞一人善" rank:1]]; 
-    [merits addObject:[Behavior behaviorWithName:@"掩一人恶" rank:1]]; 
+    NSMutableArray *merits_1 = [NSMutableArray array];
+    [merits_1 addObject:[Behavior behaviorWithName:@"赞一人善" rank:1]]; 
+    [merits_1 addObject:[Behavior behaviorWithName:@"掩一人恶" rank:1]]; 
+    
+    NSMutableArray *merits_3 = [NSMutableArray array];
+    [merits_3 addObject:[Behavior behaviorWithName:@"受一横不嗔" rank:3]]; 
+    [merits_3 addObject:[Behavior behaviorWithName:@"任一谤不辩" rank:3]]; 
+    
+    merits = [NSArray arrayWithObjects:merits_1, merits_3, nil];    
   });
   
   return merits;

@@ -23,19 +23,20 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kBehaviorTableViewCell];
   
   cell = cell ? cell : [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kBehaviorTableViewCell];
-  cell.textLabel.text = ((Behavior *)[[BehaviorFactory sharedMerits] objectAtIndex:indexPath.row]).name;
+  Behavior *behavior = [[[BehaviorFactory sharedMerits] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+  cell.textLabel.text = behavior.name;
   
   return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 1;
+  return [[BehaviorFactory sharedMerits] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return [[BehaviorFactory sharedMerits] count];
+  return [[[BehaviorFactory sharedMerits] objectAtIndex:section] count];
 }
 
 @end
