@@ -13,9 +13,9 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 
 @implementation BehaviorTableViewController
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (id)init
 {
-  self = [super initWithCoder:aDecoder];
+  self = [super init];
   if (self) {
     sectionsExpandStatus_ = [NSMutableArray array];
     for (int i = 0; i < [[BehaviorFactory sharedMerits] count]; i++) {
@@ -23,14 +23,19 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
     }
   }
   return self;
+}
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  return [self init];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kBehaviorTableViewCell];
-  
-  cell = cell ? cell : [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kBehaviorTableViewCell];
+  if (nil == cell) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kBehaviorTableViewCell];
+  }
   Behavior *behavior = [[[BehaviorFactory sharedMerits] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
   cell.textLabel.text = behavior.name;
   
@@ -44,36 +49,30 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  if ([[sectionsExpandStatus_ objectAtIndex:section] isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+  if ([[sectionsExpandStatus_ objectAtIndex:section] boolValue]) {
     return [[[BehaviorFactory sharedMerits] objectAtIndex:section] count];
   }
   else {
     return 0;
-  }
-  
+  }  
 }
-
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//  return [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];
-//}
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
   UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
   header.text = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];
+  header.textColor = [UIColor whiteColor];
   header.backgroundColor = [UIColor lightGrayColor];
   header.userInteractionEnabled = YES;
   
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer instanceWithActionBlock:^(id gesture) {
-    [sectionsExpandStatus_ replaceObjectAtIndex:section withObject:[NSNumber numberWithBool:NO]];
+    BOOL expanded = [[sectionsExpandStatus_ objectAtIndex:section] boolValue];
+    [sectionsExpandStatus_ replaceObjectAtIndex:section withObject:[NSNumber numberWithBool:!expanded]];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section]  withRowAnimation:UITableViewRowAnimationTop];
   }];
   [header addGestureRecognizer:recognizer];
   
   return header;
 }
-
-
 
 @end
