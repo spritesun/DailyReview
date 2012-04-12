@@ -1,6 +1,6 @@
 * group into section by rank value
 
-
+* add introspect
 * introduce config file
 * bundle zh name 
 * split into two view by rank +/-

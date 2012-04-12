@@ -24,6 +24,7 @@
 		49A04AB315344D4E0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */; };
 		49A04AB615344D900092DC4A /* MeritDemeritCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AB515344D900092DC4A /* MeritDemeritCellTests.m */; };
 		49A04AB915344D9B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB715344D9B0092DC4A /* InfoPlist.strings */; };
+		49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		49A04AB815344D9B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49A04ABA15344DB50092DC4A /* MeritDemeritCell-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MeritDemeritCell-Info.plist"; path = "resources/MeritDemeritCell-Info.plist"; sourceTree = "<group>"; };
 		49A04ABB15344DB50092DC4A /* MeritDemeritCellTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MeritDemeritCellTests-Info.plist"; path = "resources/MeritDemeritCellTests-Info.plist"; sourceTree = "<group>"; };
+		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
+		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				49A04A9815344CD90092DC4A /* AppDelegate.m */,
 				497316221534590400E3E5DC /* BehaviorTableViewController.h */,
 				497316231534590400E3E5DC /* BehaviorTableViewController.m */,
+				49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */,
+				49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				4973162915345CCB00E3E5DC /* Behavior.m in Sources */,
 				4973162F15345D9500E3E5DC /* BehaviorFactory.m in Sources */,
 				495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */,
+				49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

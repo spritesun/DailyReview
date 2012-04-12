@@ -1,25 +1,28 @@
 #import "BehaviorTableViewController.h"
 #import "Behavior.h"
 #import "BehaviorFactory.h"
+#import "BehaviorSectionHeaderView.h"
 #import "UIGestureRecognizer+Blocks.h"
 
 NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 
-@interface BehaviorTableViewController () {
-  NSMutableArray *sectionsExpandStatus_;
-}
+@interface BehaviorTableViewController ()
+
+@property (nonatomic, retain) NSMutableArray *sectionHeaderViews;
 
 @end
 
 @implementation BehaviorTableViewController
 
+@synthesize sectionHeaderViews = sectionHeaderViews_;
+
 - (id)init
 {
   self = [super init];
   if (self) {
-    sectionsExpandStatus_ = [NSMutableArray array];
-    for (int i = 0; i < [[BehaviorFactory sharedMerits] count]; i++) {
-      [sectionsExpandStatus_ addObject:[NSNumber numberWithBool:YES]];
+    sectionHeaderViews_ = [NSMutableArray array];
+    for (NSInteger section = 0; section < [[BehaviorFactory sharedMerits] count]; section ++) {
+      [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
     }
   }
   return self;
@@ -49,26 +52,26 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  if ([[sectionsExpandStatus_ objectAtIndex:section] boolValue]) {
+  if ([[sectionHeaderViews_ objectAtIndex:section] expanded]) {
     return [[[BehaviorFactory sharedMerits] objectAtIndex:section] count];
-  }
-  else {
+  } else {
     return 0;
   }  
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-  UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-  header.text = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];
-  header.textColor = [UIColor whiteColor];
-  header.backgroundColor = [UIColor lightGrayColor];
-  header.userInteractionEnabled = YES;
+  return [sectionHeaderViews_ objectAtIndex:section];
+}
+
+- (BehaviorSectionHeaderView *)buildHeaderForSection:(NSInteger)section
+{
+  NSString *title = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];  
+  BehaviorSectionHeaderView *header = [BehaviorSectionHeaderView viewWithTitle:title section:section];  
   
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer instanceWithActionBlock:^(id gesture) {
-    BOOL expanded = [[sectionsExpandStatus_ objectAtIndex:section] boolValue];
-    [sectionsExpandStatus_ replaceObjectAtIndex:section withObject:[NSNumber numberWithBool:!expanded]];
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section]  withRowAnimation:UITableViewRowAnimationTop];
+    header.expanded ^= YES;
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section]  withRowAnimation:UITableViewRowAnimationAutomatic];
   }];
   [header addGestureRecognizer:recognizer];
   
