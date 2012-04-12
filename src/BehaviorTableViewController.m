@@ -3,6 +3,7 @@
 #import "BehaviorFactory.h"
 #import "BehaviorSectionHeaderView.h"
 #import "UIGestureRecognizer+Blocks.h"
+#import "UIView+Utils.h"
 
 NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 
@@ -31,6 +32,20 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
   return [self init];
+}
+
+- (BehaviorSectionHeaderView *)buildHeaderForSection:(NSInteger)section
+{
+  NSString *title = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];  
+  BehaviorSectionHeaderView *header = [BehaviorSectionHeaderView viewWithTitle:title section:section];  
+  
+  UIGestureRecognizer *recognizer = [UITapGestureRecognizer instanceWithActionBlock:^(id gesture) {
+    header.expanded ^= YES;
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section]  withRowAnimation:UITableViewRowAnimationAutomatic];
+  }];
+  [header addGestureRecognizer:recognizer];
+  
+  return header;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,18 +79,8 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
   return [sectionHeaderViews_ objectAtIndex:section];
 }
 
-- (BehaviorSectionHeaderView *)buildHeaderForSection:(NSInteger)section
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-  NSString *title = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];  
-  BehaviorSectionHeaderView *header = [BehaviorSectionHeaderView viewWithTitle:title section:section];  
-  
-  UIGestureRecognizer *recognizer = [UITapGestureRecognizer instanceWithActionBlock:^(id gesture) {
-    header.expanded ^= YES;
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section]  withRowAnimation:UITableViewRowAnimationAutomatic];
-  }];
-  [header addGestureRecognizer:recognizer];
-  
-  return header;
+  return [[sectionHeaderViews_ objectAtIndex:section] height];
 }
-
 @end

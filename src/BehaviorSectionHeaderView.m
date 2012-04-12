@@ -1,4 +1,5 @@
 #import "BehaviorSectionHeaderView.h"
+#import "UIView+Utils.h"
 
 @implementation BehaviorSectionHeaderView
 
@@ -11,18 +12,26 @@
 
 - (id)initWithTitle:(NSString *)title section:(NSInteger)section;
 {
-  self = [self initWithFrame:CGRectMake(0, 0, 320, 20)];
+  self = [self initWithFrame:CGRectMake(0, 0, 320, 30)];
   if (self) {
     expanded_ = YES;
+    self.backgroundColor = [UIColor lightGrayColor];
+    self.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
     UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
+    label.left = 10;
     label.text = title;
     label.textColor = [UIColor whiteColor];
-    label.backgroundColor = [UIColor lightGrayColor];
+    label.backgroundColor = [UIColor clearColor];
     label.userInteractionEnabled = YES;        
     [self addSubview:label];
   }
   return self;          
+}
+
+- (void)layoutSubviews
+{
+  
 }
 
 @end

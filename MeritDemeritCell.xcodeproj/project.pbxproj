@@ -25,6 +25,7 @@
 		49A04AB615344D900092DC4A /* MeritDemeritCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AB515344D900092DC4A /* MeritDemeritCellTests.m */; };
 		49A04AB915344D9B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB715344D9B0092DC4A /* InfoPlist.strings */; };
 		49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
+		49EBB4161536C8B4002BBF3C /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4151536C8B4002BBF3C /* UIView+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		49A04ABB15344DB50092DC4A /* MeritDemeritCellTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MeritDemeritCellTests-Info.plist"; path = "resources/MeritDemeritCellTests-Info.plist"; sourceTree = "<group>"; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
+		49EBB4141536C8B4002BBF3C /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "src/UIView+Utils.h"; sourceTree = "<group>"; };
+		49EBB4151536C8B4002BBF3C /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Utils.m"; path = "src/UIView+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 			children = (
 				495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */,
 				495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */,
+				49EBB4141536C8B4002BBF3C /* UIView+Utils.h */,
+				49EBB4151536C8B4002BBF3C /* UIView+Utils.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				4973162F15345D9500E3E5DC /* BehaviorFactory.m in Sources */,
 				495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */,
 				49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */,
+				49EBB4161536C8B4002BBF3C /* UIView+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
