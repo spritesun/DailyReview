@@ -8,7 +8,7 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 
 @interface BehaviorTableViewController ()
 
-@property (nonatomic, retain) NSMutableArray *sectionHeaderViews;
+@property (nonatomic, strong) NSMutableArray *sectionHeaderViews;
 
 @end
 
