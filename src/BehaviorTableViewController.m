@@ -1,12 +1,3 @@
-//
-//  BehaviorTableViewController.m
-//  MeritDemeritCell
-//
-//  Created by Long Sun on 10/04/12.
-//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
-//
-
-
 #import "BehaviorTableViewController.h"
 #import "Behavior.h"
 #import "BehaviorFactory.h"

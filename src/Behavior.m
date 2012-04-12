@@ -1,11 +1,3 @@
-//
-//  Behavior.m
-//  MeritDemeritCell
-//
-//  Created by Long Sun on 10/04/12.
-//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
-//
-
 #import "Behavior.h"
 
 @implementation Behavior
