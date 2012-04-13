@@ -6,8 +6,8 @@
 #import "UIGestureRecognizer+Blocks.h"
 #import "UIView+Additions.h"
 
-NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
-NSString * const kBehaviorCountKeyPath = @"count";
+static NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
+static NSString * const kBehaviorCountKeyPath = @"count";
 
 @interface BehaviorTableViewController ()
 
@@ -103,7 +103,7 @@ NSString * const kBehaviorCountKeyPath = @"count";
 
 // TODO: will refactor to Binding & BindingManager
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-  if ([keyPath isEqualToString:kBehaviorCountKeyPath]) {
+  if (keyPath == kBehaviorCountKeyPath) {
     NSNumber *old = [change objectForKey:NSKeyValueChangeOldKey];
     NSNumber *new = [change objectForKey:NSKeyValueChangeNewKey];
     
