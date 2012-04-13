@@ -3,7 +3,7 @@
 #import "BehaviorFactory.h"
 #import "BehaviorSectionHeaderView.h"
 #import "UIGestureRecognizer+Blocks.h"
-#import "UIView+Utils.h"
+#import "UIView+Additions.h"
 
 NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 

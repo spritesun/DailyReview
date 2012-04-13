@@ -1,4 +1,4 @@
-@interface UIView (Utils)
+@interface UIView (Additions)
 
 /**
  * Shortcut for frame.origin.x.

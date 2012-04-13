@@ -1,5 +1,5 @@
 #import "BehaviorSectionHeaderView.h"
-#import "UIView+Utils.h"
+#import "UIView+Additions.h"
 
 @implementation BehaviorSectionHeaderView
 

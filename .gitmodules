@@ -1,0 +1,3 @@
+[submodule "lib/DCIntrospect"]
+	path = lib/DCIntrospect
+	url = git://github.com/domesticcatsoftware/DCIntrospect.git

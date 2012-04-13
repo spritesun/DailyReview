@@ -25,7 +25,13 @@
 		49A04AB615344D900092DC4A /* MeritDemeritCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AB515344D900092DC4A /* MeritDemeritCellTests.m */; };
 		49A04AB915344D9B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB715344D9B0092DC4A /* InfoPlist.strings */; };
 		49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
-		49EBB4161536C8B4002BBF3C /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4151536C8B4002BBF3C /* UIView+Utils.m */; };
+		49EBB4321537D1E9002BBF3C /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB42A1537D1E9002BBF3C /* DCCrossHairView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49EBB4331537D1E9002BBF3C /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB42C1537D1E9002BBF3C /* DCFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49EBB4341537D1E9002BBF3C /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB42E1537D1E9002BBF3C /* DCIntrospect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49EBB4351537D1E9002BBF3C /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4311537D1E9002BBF3C /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EBB4361537D360002BBF3C /* QuartzCore.framework */; };
+		49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
+		49EBB43D1537D4BE002BBF3C /* Introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* Introspect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +73,20 @@
 		49A04ABB15344DB50092DC4A /* MeritDemeritCellTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MeritDemeritCellTests-Info.plist"; path = "resources/MeritDemeritCellTests-Info.plist"; sourceTree = "<group>"; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
-		49EBB4141536C8B4002BBF3C /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "src/UIView+Utils.h"; sourceTree = "<group>"; };
-		49EBB4151536C8B4002BBF3C /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Utils.m"; path = "src/UIView+Utils.m"; sourceTree = "<group>"; };
+		49EBB4141536C8B4002BBF3C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "src/UIView+Additions.h"; sourceTree = "<group>"; };
+		49EBB4291537D1E9002BBF3C /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
+		49EBB42A1537D1E9002BBF3C /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
+		49EBB42B1537D1E9002BBF3C /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
+		49EBB42C1537D1E9002BBF3C /* DCFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFrameView.m; sourceTree = "<group>"; };
+		49EBB42D1537D1E9002BBF3C /* DCIntrospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospect.h; sourceTree = "<group>"; };
+		49EBB42E1537D1E9002BBF3C /* DCIntrospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCIntrospect.m; sourceTree = "<group>"; };
+		49EBB42F1537D1E9002BBF3C /* DCIntrospectSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospectSettings.h; sourceTree = "<group>"; };
+		49EBB4301537D1E9002BBF3C /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
+		49EBB4311537D1E9002BBF3C /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
+		49EBB4361537D360002BBF3C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		49EBB4391537D4A5002BBF3C /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "src/UIView+Additions.m"; sourceTree = "<group>"; };
+		49EBB43B1537D4BE002BBF3C /* Introspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Introspect.h; path = src/Introspect.h; sourceTree = "<group>"; };
+		49EBB43C1537D4BE002BBF3C /* Introspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Introspect.m; path = src/Introspect.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */,
 				49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */,
 				49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */,
 				49A04A4E1534491B0092DC4A /* CoreGraphics.framework in Frameworks */,
@@ -98,10 +117,8 @@
 		495C97FA1535ABC500EEDAFB /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */,
-				495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */,
-				49EBB4141536C8B4002BBF3C /* UIView+Utils.h */,
-				49EBB4151536C8B4002BBF3C /* UIView+Utils.m */,
+				49EBB43B1537D4BE002BBF3C /* Introspect.h */,
+				49EBB43C1537D4BE002BBF3C /* Introspect.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -135,6 +152,7 @@
 			children = (
 				49A04A8F15344BB00092DC4A /* src */,
 				49A04A9215344BF30092DC4A /* test */,
+				49EBB4261537D1D3002BBF3C /* lib */,
 				49A04A9315344C0E0092DC4A /* resources */,
 				49A04A481534491B0092DC4A /* frameworks */,
 				49A04A461534491B0092DC4A /* products */,
@@ -153,6 +171,7 @@
 		49A04A481534491B0092DC4A /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49EBB4361537D360002BBF3C /* QuartzCore.framework */,
 				49A04A491534491B0092DC4A /* UIKit.framework */,
 				49A04A4B1534491B0092DC4A /* Foundation.framework */,
 				49A04A4D1534491B0092DC4A /* CoreGraphics.framework */,
@@ -166,6 +185,7 @@
 			children = (
 				4973162615345CA000E3E5DC /* domains */,
 				4973162515345C8F00E3E5DC /* controllers */,
+				49EBB4381537D452002BBF3C /* additions */,
 				495C97FA1535ABC500EEDAFB /* utils */,
 				49A04AAE15344D4E0092DC4A /* MainStoryboard_iPad.storyboard */,
 				49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */,
@@ -201,6 +221,42 @@
 				49A04AA115344CD90092DC4A /* MeritDemeritCell-Prefix.pch */,
 			);
 			name = others;
+			sourceTree = "<group>";
+		};
+		49EBB4261537D1D3002BBF3C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				49EBB4281537D1E9002BBF3C /* DCIntrospect */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		49EBB4281537D1E9002BBF3C /* DCIntrospect */ = {
+			isa = PBXGroup;
+			children = (
+				49EBB4291537D1E9002BBF3C /* DCCrossHairView.h */,
+				49EBB42A1537D1E9002BBF3C /* DCCrossHairView.m */,
+				49EBB42B1537D1E9002BBF3C /* DCFrameView.h */,
+				49EBB42C1537D1E9002BBF3C /* DCFrameView.m */,
+				49EBB42D1537D1E9002BBF3C /* DCIntrospect.h */,
+				49EBB42E1537D1E9002BBF3C /* DCIntrospect.m */,
+				49EBB42F1537D1E9002BBF3C /* DCIntrospectSettings.h */,
+				49EBB4301537D1E9002BBF3C /* DCStatusBarOverlay.h */,
+				49EBB4311537D1E9002BBF3C /* DCStatusBarOverlay.m */,
+			);
+			name = DCIntrospect;
+			path = lib/DCIntrospect/DCIntrospect;
+			sourceTree = "<group>";
+		};
+		49EBB4381537D452002BBF3C /* additions */ = {
+			isa = PBXGroup;
+			children = (
+				495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */,
+				495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */,
+				49EBB4141536C8B4002BBF3C /* UIView+Additions.h */,
+				49EBB4391537D4A5002BBF3C /* UIView+Additions.m */,
+			);
+			name = additions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +374,12 @@
 				4973162F15345D9500E3E5DC /* BehaviorFactory.m in Sources */,
 				495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */,
 				49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */,
-				49EBB4161536C8B4002BBF3C /* UIView+Utils.m in Sources */,
+				49EBB4321537D1E9002BBF3C /* DCCrossHairView.m in Sources */,
+				49EBB4331537D1E9002BBF3C /* DCFrameView.m in Sources */,
+				49EBB4341537D1E9002BBF3C /* DCIntrospect.m in Sources */,
+				49EBB4351537D1E9002BBF3C /* DCStatusBarOverlay.m in Sources */,
+				49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */,
+				49EBB43D1537D4BE002BBF3C /* Introspect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

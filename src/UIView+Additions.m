@@ -1,6 +1,6 @@
-#import "UIView+Utils.h"
+#import "UIView+Additions.h"
 
-@implementation UIView (Utils)
+@implementation UIView (Additions)
 
 - (CGFloat)left {
   return self.frame.origin.x;
