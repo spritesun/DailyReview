@@ -25,7 +25,6 @@
 {
   behavior_ = behavior;
   self.textLabel.text = behavior_.name;
-  // TODO:need refactor to KVO
   self.detailTextLabel.text = [NSString stringWithFormat:@"%d", behavior_.count];
 }
 
