@@ -5,12 +5,12 @@
 
 @synthesize expanded = expanded_;
 
-+ (BehaviorSectionHeaderView *)viewWithTitle:(NSString *)title section:(NSInteger)section
++ (BehaviorSectionHeaderView *)viewWithTitle:(NSString *)title
 {
-  return [[self alloc] initWithTitle:title section:section];
+  return [[self alloc] initWithTitle:title];
 }
 
-- (id)initWithTitle:(NSString *)title section:(NSInteger)section;
+- (id)initWithTitle:(NSString *)title;
 {
   self = [self initWithFrame:CGRectMake(0, 0, 320, 30)];
   if (self) {

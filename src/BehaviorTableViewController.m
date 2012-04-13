@@ -45,7 +45,7 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(NSInteger)section
 {
   NSString *title = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];  
-  BehaviorSectionHeaderView *header = [BehaviorSectionHeaderView viewWithTitle:title section:section];  
+  BehaviorSectionHeaderView *header = [BehaviorSectionHeaderView viewWithTitle:title];  
   
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
     NSMutableArray *indexPaths = [NSMutableArray array];

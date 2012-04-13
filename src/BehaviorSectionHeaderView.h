@@ -2,6 +2,6 @@
 
 @property (nonatomic, assign) BOOL expanded;
 
-+ (BehaviorSectionHeaderView *)viewWithTitle:(NSString *)title section:(NSInteger)section;
++ (BehaviorSectionHeaderView *)viewWithTitle:(NSString *)title;
 
 @end
