@@ -29,9 +29,4 @@
   return self;          
 }
 
-- (void)layoutSubviews
-{
-  
-}
-
 @end

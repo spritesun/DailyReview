@@ -71,11 +71,48 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
   BehaviorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BehaviorTableViewCell class])];
   if (nil == cell) {    
     cell = [BehaviorTableViewCell cell];
+
+    UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+      Behavior *behavior = cell.behavior;
+      behavior.count ++;
+      // TODO:need refactor to KVO
+      cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", behavior.count];
+      UIColor *originalColor = cell.contentView.backgroundColor;
+      [UIView animateWithDuration:0.2 animations:^{
+        cell.contentView.backgroundColor = [UIColor yellowColor];
+      } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.2 animations:^{
+          cell.contentView.backgroundColor = originalColor;
+        }];
+      }];
+    }];
+    [cell addGestureRecognizer:increaseRecognizer];    
+    
+    UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+      Behavior *behavior = cell.behavior;
+      if (0 != behavior.count) {
+        behavior.count --;
+        // TODO:need refactor to KVO
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", behavior.count];
+        UIColor *originalColor = cell.contentView.backgroundColor;
+        [UIView animateWithDuration:0.2 animations:^{
+          cell.contentView.backgroundColor = [UIColor orangeColor];
+        } completion:^(BOOL finished) {
+          [UIView animateWithDuration:0.2 animations:^{
+            cell.contentView.backgroundColor = originalColor;
+          }];
+        }];
+      }
+    }];
+    decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    [cell addGestureRecognizer:decreaseRecognizer];    
+
   }
   
   Behavior *behavior = [[[BehaviorFactory sharedMerits] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
   cell.behavior = behavior;  
   
+//  [cell.detailTextLable addObserver:self forKeyPath:@"count" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
   return cell;
 }
 
