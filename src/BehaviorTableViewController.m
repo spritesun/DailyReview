@@ -21,10 +21,7 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 {
   self = [super init];
   if (self) {
-    sectionHeaderViews_ = [NSMutableArray array];
-    for (NSInteger section = 0; section < [[BehaviorFactory sharedMerits] count]; section ++) {
-      [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
-    }
+    // placeholder
   }
   return self;
 }
@@ -34,14 +31,34 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
   return [self init];
 }
 
+- (void)viewDidLoad
+{
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+  
+  sectionHeaderViews_ = [NSMutableArray array];
+  for (NSInteger section = 0; section < [[BehaviorFactory sharedMerits] count]; section ++) {
+    [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
+  }
+}
+
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(NSInteger)section
 {
   NSString *title = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];  
   BehaviorSectionHeaderView *header = [BehaviorSectionHeaderView viewWithTitle:title section:section];  
   
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer instanceWithActionBlock:^(id gesture) {
+    NSMutableArray *indexPaths = [NSMutableArray array];
+    for (NSInteger i = 0; i < [[[BehaviorFactory sharedMerits] objectAtIndex:section] count]; i++) {
+      [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
+    }
     header.expanded ^= YES;
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section]  withRowAnimation:UITableViewRowAnimationAutomatic];
+    UITableViewRowAnimation animation = UITableViewRowAnimationTop;
+    
+    if (header.expanded) {
+      [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+    } else {
+      [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
+    }
   }];
   [header addGestureRecognizer:recognizer];
   
@@ -53,6 +70,7 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kBehaviorTableViewCell];
   if (nil == cell) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kBehaviorTableViewCell];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
   }
   Behavior *behavior = [[[BehaviorFactory sharedMerits] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
   cell.textLabel.text = behavior.name;
