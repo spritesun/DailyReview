@@ -36,11 +36,6 @@
             <point key="canvasLocation" x="294" y="241"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BehaviorTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BehaviorTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

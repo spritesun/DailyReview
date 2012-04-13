@@ -2,6 +2,7 @@
 #import "Behavior.h"
 #import "BehaviorFactory.h"
 #import "BehaviorSectionHeaderView.h"
+#import "BehaviorTableViewCell.h"
 #import "UIGestureRecognizer+Blocks.h"
 #import "UIView+Additions.h"
 
@@ -46,7 +47,7 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
   NSString *title = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];  
   BehaviorSectionHeaderView *header = [BehaviorSectionHeaderView viewWithTitle:title section:section];  
   
-  UIGestureRecognizer *recognizer = [UITapGestureRecognizer instanceWithActionBlock:^(id gesture) {
+  UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
     NSMutableArray *indexPaths = [NSMutableArray array];
     for (NSInteger i = 0; i < [[[BehaviorFactory sharedMerits] objectAtIndex:section] count]; i++) {
       [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
@@ -67,13 +68,13 @@ NSString * const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kBehaviorTableViewCell];
-  if (nil == cell) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kBehaviorTableViewCell];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+  BehaviorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BehaviorTableViewCell class])];
+  if (nil == cell) {    
+    cell = [BehaviorTableViewCell cell];
   }
+  
   Behavior *behavior = [[[BehaviorFactory sharedMerits] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-  cell.textLabel.text = behavior.name;
+  cell.behavior = behavior;  
   
   return cell;
 }

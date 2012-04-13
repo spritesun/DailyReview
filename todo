@@ -1,5 +1,8 @@
 # * group into section by rank value
 # * add introspect
+# * swipe to record/clear
+
+* try to use IB to connect table and cell
 
 * introduce config file
 * bundle zh name 

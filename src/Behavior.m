@@ -2,7 +2,7 @@
 
 @implementation Behavior
 
-@synthesize name = name_, rank = rank_;
+@synthesize name = name_, rank = rank_, count = count_;
 
 + (Behavior *)behaviorWithName:(NSString *)name rank:(NSInteger)rank
 {
@@ -15,6 +15,7 @@
   if (self) {
     name_ = [name copy];
     rank_ = rank;    
+    count_ = 0;
   }
   return self;
 }

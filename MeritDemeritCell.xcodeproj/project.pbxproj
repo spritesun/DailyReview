@@ -11,6 +11,7 @@
 		497316241534590400E3E5DC /* BehaviorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorTableViewController.m */; };
 		4973162915345CCB00E3E5DC /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973162815345CCB00E3E5DC /* Behavior.m */; };
 		4973162F15345D9500E3E5DC /* BehaviorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973162E15345D9500E3E5DC /* BehaviorFactory.m */; };
+		499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
 		49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A491534491B0092DC4A /* UIKit.framework */; };
 		49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
 		49A04A4E1534491B0092DC4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4D1534491B0092DC4A /* CoreGraphics.framework */; };
@@ -53,6 +54,8 @@
 		4973162815345CCB00E3E5DC /* Behavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Behavior.m; path = src/Behavior.m; sourceTree = "<group>"; };
 		4973162D15345D9500E3E5DC /* BehaviorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorFactory.h; path = src/BehaviorFactory.h; sourceTree = "<group>"; };
 		4973162E15345D9500E3E5DC /* BehaviorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorFactory.m; path = src/BehaviorFactory.m; sourceTree = "<group>"; };
+		499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewCell.h; path = src/BehaviorTableViewCell.h; sourceTree = "<group>"; };
+		499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewCell.m; path = src/BehaviorTableViewCell.m; sourceTree = "<group>"; };
 		49A04A451534491B0092DC4A /* MeritDemeritCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeritDemeritCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A04A491534491B0092DC4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49A04A4B1534491B0092DC4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +133,8 @@
 				49A04A9815344CD90092DC4A /* AppDelegate.m */,
 				497316221534590400E3E5DC /* BehaviorTableViewController.h */,
 				497316231534590400E3E5DC /* BehaviorTableViewController.m */,
+				499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */,
+				499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */,
 				49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */,
 				49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */,
 			);
@@ -380,6 +385,7 @@
 				49EBB4351537D1E9002BBF3C /* DCStatusBarOverlay.m in Sources */,
 				49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */,
 				49EBB43D1537D4BE002BBF3C /* Introspect.m in Sources */,
+				499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@ static char block_key;
 
 @implementation UIGestureRecognizer (Blocks)
 
-+ (id)instanceWithActionBlock:(GestureActionBlock)action;
++ (id)recognizerWithActionBlock:(GestureActionBlock)action;
 {
   return [[[self class] alloc] initWithActionBlock:action];
 }
