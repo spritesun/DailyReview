@@ -1,6 +1,6 @@
 #import "BehaviorTableViewController.h"
 #import "Behavior.h"
-#import "BehaviorFactory.h"
+#import "BehaviorDataSource.h"
 #import "BehaviorSectionHeaderView.h"
 #import "BehaviorTableViewCell.h"
 #import "UIGestureRecognizer+Blocks.h"
@@ -13,6 +13,8 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 @implementation BehaviorTableViewController {
   NSMutableArray *sectionHeaderViews_;
   BindingManager *bindingManager_;
+  BehaviorDataSource *dataSource_;
+
 }
 
 #pragma mark - Initialization
@@ -20,7 +22,8 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 - (id)init {
   self = [super init];
   if (self) {
-    // placeholder
+    bindingManager_ = [BindingManager new];
+    dataSource_ = [BehaviorDataSource merits];
   }
   return self;
 }
@@ -36,15 +39,13 @@ static NSString *const kBehaviorCountKeyPath = @"count";
   
   //TODO: should we put this in viewDidLoad or init?
   sectionHeaderViews_ = [NSMutableArray array];
-  for (NSUInteger section = 0; section < [[BehaviorFactory sharedMerits] count]; section++) {
+  for (NSUInteger section = 0; section < [dataSource_ categoryCount]; section++) {
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
   }
-  
-  bindingManager_ = [BindingManager new];
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(NSUInteger)section {
-  NSString *title = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];
+  NSString *title = [dataSource_ categoryForSection:section];
   BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:title];
   
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
@@ -57,7 +58,7 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 
 - (void)toggleSection:(NSUInteger)section headerView:(BehaviorSectionHeaderView *)headerView {
   NSMutableArray *indexPaths = [NSMutableArray array];
-  for (NSInteger i = 0; i < [[[BehaviorFactory sharedMerits] objectAtIndex:section] count]; i++) {
+  for (NSInteger i = 0; i < [dataSource_ behaviorCountForSection:section]; i++) {
     [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
   }
   headerView.expanded ^= YES;
@@ -76,32 +77,32 @@ static NSString *const kBehaviorCountKeyPath = @"count";
     cell = [BehaviorTableViewCell cell];    
   }
   
-  Behavior *behavior = [[[BehaviorFactory sharedMerits] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+  Behavior *behavior = [dataSource_ behaviorForIndexPath:indexPath];
   
   cell.textLabel.text = behavior.name;
   
   //add gestures
   [cell removeAllGestureRecognizers];
   UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-    behavior.count++;
+//    behavior.count++;
   }];
   [cell addGestureRecognizer:increaseRecognizer];
   
   UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-    if (0 != behavior.count) {
-      behavior.count--;
-    }
+//    if (0 != behavior.count) {
+//      behavior.count--;
+//    }
   }];
   decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
   [cell addGestureRecognizer:decreaseRecognizer];
 
   //add binding
-  [bindingManager_ unbindSource:behavior];
-  [bindingManager_ bindSource:behavior
-                  withKeyPath:@"count"
-                       action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
-                         [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
-                       }];
+//  [bindingManager_ unbindSource:behavior];
+//  [bindingManager_ bindSource:behavior
+//                  withKeyPath:@"count"
+//                       action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
+//                         [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
+//                       }];
   
   return cell;
 }
@@ -121,12 +122,12 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [[BehaviorFactory sharedMerits] count];
+  return [dataSource_ categoryCount];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   if ([[sectionHeaderViews_ objectAtIndex:section] expanded]) {
-    return [[[BehaviorFactory sharedMerits] objectAtIndex:section] count];
+    return [dataSource_ behaviorCountForSection:section];
   } else {
     return 0;
   }

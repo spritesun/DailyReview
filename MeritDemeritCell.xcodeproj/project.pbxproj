@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4943CECB153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */; };
+		4943CECF153AA48700B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
+		4943CED5153AA60500B823E7 /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CED4153AA60500B823E7 /* Behavior.m */; };
+		4943CED8153AA6BF00B823E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
+		4943CEE1153AAE1E00B823E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CEE0153AAE1E00B823E7 /* CoreData.framework */; };
+		4943CEE3153AAE1E00B823E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CEE2153AAE1E00B823E7 /* Foundation.framework */; };
+		4943CEE6153AAE1E00B823E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEE5153AAE1E00B823E7 /* main.m */; };
+		4943CEED153AAE1E00B823E7 /* populate_database.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEEC153AAE1E00B823E7 /* populate_database.1 */; };
+		4943CEF1153AB13600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */; };
+		4943CEF2153AB14000B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
+		4943CEF3153AB14700B823E7 /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CED4153AA60500B823E7 /* Behavior.m */; };
+		4943CEF9153AB9A200B823E7 /* initial_data.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEF4153AB93600B823E7 /* initial_data.json */; };
 		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
 		497316241534590400E3E5DC /* BehaviorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorTableViewController.m */; };
-		4973162915345CCB00E3E5DC /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973162815345CCB00E3E5DC /* Behavior.m */; };
-		4973162F15345D9500E3E5DC /* BehaviorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973162E15345D9500E3E5DC /* BehaviorFactory.m */; };
 		499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
 		49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A491534491B0092DC4A /* UIKit.framework */; };
 		49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
@@ -35,6 +45,8 @@
 		49EBB43D1537D4BE002BBF3C /* Introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* Introspect.m */; };
 		49EBB43D1537D4BE002BBF3E /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF3D /* Binding.m */; };
 		49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF43 /* BindingManager.m */; };
+		49EBB43D1537D4BE002BBF4A /* BehaviorDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF49 /* BehaviorDataSource.m */; };
+		49EBB43D1537D4BE002BBF4D /* ContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF4C /* ContextProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,15 +59,47 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4943CEDB153AAE1D00B823E7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				4943CEED153AAE1E00B823E7 /* populate_database.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4943CEF8153AB98D00B823E7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				4943CEF9153AB9A200B823E7 /* initial_data.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4943CECA153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeritDemeritCellDataModel.xcdatamodel; sourceTree = "<group>"; };
+		4943CECD153AA48700B823E7 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = src/Event.h; sourceTree = "<group>"; };
+		4943CECE153AA48700B823E7 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = src/Event.m; sourceTree = "<group>"; };
+		4943CED3153AA60500B823E7 /* Behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Behavior.h; path = src/Behavior.h; sourceTree = "<group>"; };
+		4943CED4153AA60500B823E7 /* Behavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Behavior.m; path = src/Behavior.m; sourceTree = "<group>"; };
+		4943CED6153AA68000B823E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4943CEDD153AAE1D00B823E7 /* populate-database */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "populate-database"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4943CEE0153AAE1E00B823E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4943CEE2153AAE1E00B823E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4943CEE5153AAE1E00B823E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4943CEE8153AAE1E00B823E7 /* populate-database-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "populate-database-Prefix.pch"; sourceTree = "<group>"; };
+		4943CEEC153AAE1E00B823E7 /* populate_database.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = populate_database.1; sourceTree = "<group>"; };
+		4943CEF4153AB93600B823E7 /* initial_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = initial_data.json; sourceTree = "<group>"; };
 		495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+Blocks.h"; path = "src/UIGestureRecognizer+Blocks.h"; sourceTree = "<group>"; };
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
 		497316221534590400E3E5DC /* BehaviorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewController.h; path = src/BehaviorTableViewController.h; sourceTree = "<group>"; };
 		497316231534590400E3E5DC /* BehaviorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewController.m; path = src/BehaviorTableViewController.m; sourceTree = "<group>"; };
-		4973162715345CCB00E3E5DC /* Behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Behavior.h; path = src/Behavior.h; sourceTree = "<group>"; };
-		4973162815345CCB00E3E5DC /* Behavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Behavior.m; path = src/Behavior.m; sourceTree = "<group>"; };
-		4973162D15345D9500E3E5DC /* BehaviorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorFactory.h; path = src/BehaviorFactory.h; sourceTree = "<group>"; };
-		4973162E15345D9500E3E5DC /* BehaviorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorFactory.m; path = src/BehaviorFactory.m; sourceTree = "<group>"; };
 		499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewCell.h; path = src/BehaviorTableViewCell.h; sourceTree = "<group>"; };
 		499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewCell.m; path = src/BehaviorTableViewCell.m; sourceTree = "<group>"; };
 		49A04A451534491B0092DC4A /* MeritDemeritCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeritDemeritCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,9 +142,22 @@
 		49EBB43D1537D4BE002BBF43 /* BindingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BindingManager.m; path = src/BindingManager.m; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF45 /* BindingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BindingManager.h; path = src/BindingManager.h; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF48 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = src/Macros.h; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF49 /* BehaviorDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorDataSource.m; path = src/BehaviorDataSource.m; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF4B /* BehaviorDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorDataSource.h; path = src/BehaviorDataSource.h; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF4C /* ContextProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextProvider.m; path = src/ContextProvider.m; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF4E /* ContextProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextProvider.h; path = src/ContextProvider.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4943CEDA153AAE1D00B823E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4943CEE1153AAE1E00B823E7 /* CoreData.framework in Frameworks */,
+				4943CEE3153AAE1E00B823E7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49A04A421534491B0092DC4A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -109,6 +166,7 @@
 				49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */,
 				49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */,
 				49A04A4E1534491B0092DC4A /* CoreGraphics.framework in Frameworks */,
+				4943CED8153AA6BF00B823E7 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +183,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4943CEDF153AAE1D00B823E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4943CEE0153AAE1E00B823E7 /* CoreData.framework */,
+				4943CEE2153AAE1E00B823E7 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4943CEE4153AAE1E00B823E7 /* populate-database */ = {
+			isa = PBXGroup;
+			children = (
+				4943CEF4153AB93600B823E7 /* initial_data.json */,
+				4943CEE5153AAE1E00B823E7 /* main.m */,
+				4943CEEC153AAE1E00B823E7 /* populate_database.1 */,
+				4943CEE7153AAE1E00B823E7 /* Supporting Files */,
+			);
+			path = "populate-database";
+			sourceTree = "<group>";
+		};
+		4943CEE7153AAE1E00B823E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4943CEE8153AAE1E00B823E7 /* populate-database-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		495C97FA1535ABC500EEDAFB /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,10 +244,13 @@
 		4973162615345CA000E3E5DC /* domains */ = {
 			isa = PBXGroup;
 			children = (
-				4973162715345CCB00E3E5DC /* Behavior.h */,
-				4973162815345CCB00E3E5DC /* Behavior.m */,
-				4973162D15345D9500E3E5DC /* BehaviorFactory.h */,
-				4973162E15345D9500E3E5DC /* BehaviorFactory.m */,
+				49EBB43D1537D4BE002BBF4B /* BehaviorDataSource.h */,
+				49EBB43D1537D4BE002BBF49 /* BehaviorDataSource.m */,
+				4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */,
+				4943CECD153AA48700B823E7 /* Event.h */,
+				4943CECE153AA48700B823E7 /* Event.m */,
+				4943CED3153AA60500B823E7 /* Behavior.h */,
+				4943CED4153AA60500B823E7 /* Behavior.m */,
 			);
 			name = domains;
 			sourceTree = "<group>";
@@ -175,6 +264,8 @@
 				49A04A9315344C0E0092DC4A /* resources */,
 				49A04A481534491B0092DC4A /* frameworks */,
 				49A04A461534491B0092DC4A /* products */,
+				4943CEE4153AAE1E00B823E7 /* populate-database */,
+				4943CEDF153AAE1D00B823E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +274,7 @@
 			children = (
 				49A04A451534491B0092DC4A /* MeritDemeritCell.app */,
 				49A04A691534491B0092DC4A /* MeritDemeritCellTests.octest */,
+				4943CEDD153AAE1D00B823E7 /* populate-database */,
 			);
 			name = products;
 			sourceTree = "<group>";
@@ -190,6 +282,7 @@
 		49A04A481534491B0092DC4A /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4943CED6153AA68000B823E7 /* CoreData.framework */,
 				49EBB4361537D360002BBF3C /* QuartzCore.framework */,
 				49A04A491534491B0092DC4A /* UIKit.framework */,
 				49A04A4B1534491B0092DC4A /* Foundation.framework */,
@@ -202,6 +295,8 @@
 		49A04A8F15344BB00092DC4A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				49EBB43D1537D4BE002BBF4E /* ContextProvider.h */,
+				49EBB43D1537D4BE002BBF4C /* ContextProvider.m */,
 				4973162615345CA000E3E5DC /* domains */,
 				4973162515345C8F00E3E5DC /* controllers */,
 				49EBB4381537D452002BBF3C /* additions */,
@@ -281,6 +376,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4943CEDC153AAE1D00B823E7 /* populate-database */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4943CEEE153AAE1E00B823E7 /* Build configuration list for PBXNativeTarget "populate-database" */;
+			buildPhases = (
+				4943CED9153AAE1D00B823E7 /* Sources */,
+				4943CEDA153AAE1D00B823E7 /* Frameworks */,
+				4943CEDB153AAE1D00B823E7 /* CopyFiles */,
+				4943CEF8153AB98D00B823E7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "populate-database";
+			productName = "populate-database";
+			productReference = 4943CEDD153AAE1D00B823E7 /* populate-database */;
+			productType = "com.apple.product-type.tool";
+		};
 		49A04A441534491B0092DC4A /* MeritDemeritCell */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49A04A7B1534491B0092DC4A /* Build configuration list for PBXNativeTarget "MeritDemeritCell" */;
@@ -340,6 +453,7 @@
 			targets = (
 				49A04A441534491B0092DC4A /* MeritDemeritCell */,
 				49A04A681534491B0092DC4A /* MeritDemeritCellTests */,
+				4943CEDC153AAE1D00B823E7 /* populate-database */,
 			);
 		};
 /* End PBXProject section */
@@ -382,6 +496,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4943CED9153AAE1D00B823E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4943CEE6153AAE1E00B823E7 /* main.m in Sources */,
+				4943CEF1153AB13600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */,
+				4943CEF2153AB14000B823E7 /* Event.m in Sources */,
+				4943CEF3153AB14700B823E7 /* Behavior.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49A04A411534491B0092DC4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,8 +514,6 @@
 				49A04AA415344CD90092DC4A /* AppDelegate.m in Sources */,
 				49A04AA815344CD90092DC4A /* main.m in Sources */,
 				497316241534590400E3E5DC /* BehaviorTableViewController.m in Sources */,
-				4973162915345CCB00E3E5DC /* Behavior.m in Sources */,
-				4973162F15345D9500E3E5DC /* BehaviorFactory.m in Sources */,
 				495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */,
 				49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */,
 				49EBB4321537D1E9002BBF3C /* DCCrossHairView.m in Sources */,
@@ -402,6 +525,11 @@
 				499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */,
 				49EBB43D1537D4BE002BBF3E /* Binding.m in Sources */,
 				49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */,
+				4943CECB153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */,
+				4943CECF153AA48700B823E7 /* Event.m in Sources */,
+				4943CED5153AA60500B823E7 /* Behavior.m in Sources */,
+				49EBB43D1537D4BE002BBF4A /* BehaviorDataSource.m in Sources */,
+				49EBB43D1537D4BE002BBF4D /* ContextProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +587,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4943CEEF153AAE1E00B823E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "populate-database/populate-database-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4943CEF0153AAE1E00B823E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "populate-database/populate-database-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		49A04A791534491B0092DC4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -565,6 +723,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4943CEEE153AAE1E00B823E7 /* Build configuration list for PBXNativeTarget "populate-database" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4943CEEF153AAE1E00B823E7 /* Debug */,
+				4943CEF0153AAE1E00B823E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		49A04A3F1534491B0092DC4A /* Build configuration list for PBXProject "MeritDemeritCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -593,6 +759,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4943CECA153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodel */,
+			);
+			currentVersion = 4943CECA153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodel */;
+			name = MeritDemeritCellDataModel.xcdatamodeld;
+			path = src/MeritDemeritCellDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 49A04A3C1534491B0092DC4A /* Project object */;
 }
