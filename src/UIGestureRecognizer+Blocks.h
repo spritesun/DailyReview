@@ -1,4 +1,4 @@
-typedef void (^GestureActionBlock) (id theRecognizer);
+typedef void (^GestureActionBlock)(id theRecognizer);
 
 @interface UIGestureRecognizer (Blocks)
 

@@ -2,7 +2,7 @@
 
 @interface BehaviorTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) Behavior *behavior;
+@property(nonatomic, strong) Behavior *behavior;
 
 + (BehaviorTableViewCell *)cell;
 
