@@ -1,0 +1,1 @@
+#define HAS_FLAG(flags, flag) (((flags) & (flag)) != 0)

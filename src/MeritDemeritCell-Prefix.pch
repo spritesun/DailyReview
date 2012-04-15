@@ -1,7 +1,3 @@
-//
-// Prefix header for all source files of the 'MeritDemeritCell' target in the 'MeritDemeritCell' project
-//
-
 #import <Availability.h>
 
 #ifndef __IPHONE_5_0
@@ -12,5 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "Assert.h"
+#import "Macros.h"
 
 #endif

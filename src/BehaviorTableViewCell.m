@@ -2,8 +2,6 @@
 
 @implementation BehaviorTableViewCell
 
-@synthesize behavior = behavior_;
-
 + (BehaviorTableViewCell *)cell; {
   return [[self alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass([self class])];
 }
@@ -16,12 +14,6 @@
     self.detailTextLabel.backgroundColor = [UIColor clearColor];
   }
   return self;
-}
-
-- (void)setBehavior:(Behavior *)behavior {
-  behavior_ = behavior;
-  self.textLabel.text = behavior_.name;
-  self.detailTextLabel.text = [NSString stringWithFormat:@"%d", behavior_.count];
 }
 
 @end

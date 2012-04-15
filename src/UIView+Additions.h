@@ -66,9 +66,10 @@
  */
 @property(nonatomic) CGSize size;
 
-/**
- * Removes all subviews.
- */
 - (void)removeAllSubviews;
+
+- (void)removeAllGestureRecognizers;
+
+- (void)flashWithDuration:(float)duration color:(UIColor *)color;
 
 @end

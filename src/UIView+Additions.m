@@ -105,4 +105,21 @@
   }
 }
 
+- (void)removeAllGestureRecognizers {
+  for (id recognizer in self.gestureRecognizers) {
+    [self removeGestureRecognizer:recognizer];
+  }
+}
+
+- (void)flashWithDuration:(float)duration color:(UIColor *)color {
+  UIColor *originalColor = self.backgroundColor;
+  [UIView animateWithDuration:duration / 2 animations:^{
+    self.backgroundColor = color;
+  }                completion:^(BOOL finished) {
+    [UIView animateWithDuration:duration / 2 animations:^{
+      self.backgroundColor = originalColor;
+    }];
+  }];
+}
+
 @end

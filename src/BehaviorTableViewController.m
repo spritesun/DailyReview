@@ -5,19 +5,17 @@
 #import "BehaviorTableViewCell.h"
 #import "UIGestureRecognizer+Blocks.h"
 #import "UIView+Additions.h"
+#import "BindingManager.h"
 
 static NSString *const kBehaviorTableViewCell = @"BehaviorTableViewCell";
 static NSString *const kBehaviorCountKeyPath = @"count";
 
-@interface BehaviorTableViewController ()
+@implementation BehaviorTableViewController {
+  NSMutableArray *sectionHeaderViews_;
+  BindingManager *bindingManager_;
+}
 
-@property(nonatomic, strong) NSMutableArray *sectionHeaderViews;
-
-@end
-
-@implementation BehaviorTableViewController
-
-@synthesize sectionHeaderViews = sectionHeaderViews_;
+#pragma mark - Initialization
 
 - (id)init {
   self = [super init];
@@ -31,35 +29,40 @@ static NSString *const kBehaviorCountKeyPath = @"count";
   return [self init];
 }
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad {
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
+  
+  //TODO: should we put this in viewDidLoad or init?
   sectionHeaderViews_ = [NSMutableArray array];
-  for (NSInteger section = 0; section < [[BehaviorFactory sharedMerits] count]; section++) {
+  for (NSUInteger section = 0; section < [[BehaviorFactory sharedMerits] count]; section++) {
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
   }
+  
+  bindingManager_ = [BindingManager new];
 }
 
-- (BehaviorSectionHeaderView *)buildHeaderForSection:(NSInteger)section {
+- (BehaviorSectionHeaderView *)buildHeaderForSection:(NSUInteger)section {
   NSString *title = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];
   BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:title];
-
+  
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
     [self toggleSection:section headerView:headerView];
   }];
   [headerView addGestureRecognizer:recognizer];
-
+  
   return headerView;
 }
 
-- (void)toggleSection:(NSInteger)section headerView:(BehaviorSectionHeaderView *)headerView {
+- (void)toggleSection:(NSUInteger)section headerView:(BehaviorSectionHeaderView *)headerView {
   NSMutableArray *indexPaths = [NSMutableArray array];
   for (NSInteger i = 0; i < [[[BehaviorFactory sharedMerits] objectAtIndex:section] count]; i++) {
     [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
   }
   headerView.expanded ^= YES;
   UITableViewRowAnimation animation = UITableViewRowAnimationTop;
-
+  
   if (headerView.expanded) {
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
   } else {
@@ -70,49 +73,51 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   BehaviorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BehaviorTableViewCell class])];
   if (nil == cell) {
-    cell = [BehaviorTableViewCell cell];
-
-    UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-      Behavior *behavior = cell.behavior;
-      behavior.count++;
-    }];
-    [cell addGestureRecognizer:increaseRecognizer];
-
-    UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-      Behavior *behavior = cell.behavior;
-      if (0 != behavior.count) {
-        behavior.count--;
-      }
-    }];
-    decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-    [cell addGestureRecognizer:decreaseRecognizer];
+    cell = [BehaviorTableViewCell cell];    
   }
-
+  
   Behavior *behavior = [[[BehaviorFactory sharedMerits] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-  cell.behavior = behavior;
-  [behavior addObserver:self forKeyPath:kBehaviorCountKeyPath options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(void *) cell];
+  
+  cell.textLabel.text = behavior.name;
+  
+  //add gestures
+  [cell removeAllGestureRecognizers];
+  UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+    behavior.count++;
+  }];
+  [cell addGestureRecognizer:increaseRecognizer];
+  
+  UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+    if (0 != behavior.count) {
+      behavior.count--;
+    }
+  }];
+  decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+  [cell addGestureRecognizer:decreaseRecognizer];
 
+  //add binding
+  [bindingManager_ unbindSource:behavior];
+  [bindingManager_ bindSource:behavior
+                  withKeyPath:@"count"
+                       action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
+                         [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
+                       }];
+  
   return cell;
 }
 
-// TODO: will refactor to Binding & BindingManager
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-  if (keyPath == kBehaviorCountKeyPath) {
-    NSNumber *old = [change objectForKey:NSKeyValueChangeOldKey];
-    NSNumber *new = [change objectForKey:NSKeyValueChangeNewKey];
-
-    BehaviorTableViewCell *cell = (__bridge BehaviorTableViewCell *) context;
-    cell.detailTextLabel.text = [new stringValue];
-
-    UIColor *originalColor = cell.contentView.backgroundColor;
-    [UIView animateWithDuration:0.2 animations:^{
-      cell.contentView.backgroundColor = ([new intValue] > [old intValue]) ? [UIColor yellowColor] : [UIColor orangeColor];
-    }                completion:^(BOOL finished) {
-      [UIView animateWithDuration:0.2 animations:^{
-        cell.contentView.backgroundColor = originalColor;
-      }];
-    }];
+- (void)changeBehaviorCountFrom:(NSNumber *)oldValue to:(NSNumber *)newValue inCell:(UITableViewCell *)cell {
+  if ([newValue intValue] == 0) {
+    cell.detailTextLabel.text = @" ";
+  } else {
+    cell.detailTextLabel.text = [newValue stringValue];
   }
+  
+  if (oldValue == nil) {
+    return;
+  }
+  
+  [cell.contentView flashWithDuration:0.4 color:([newValue intValue] > [oldValue intValue]) ? [UIColor yellowColor] : [UIColor orangeColor]];  
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -127,6 +132,8 @@ static NSString *const kBehaviorCountKeyPath = @"count";
   }
 }
 
+#pragma mark - UITableViewDelegate
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
   return [sectionHeaderViews_ objectAtIndex:section];
 }
@@ -134,4 +141,5 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
   return [[sectionHeaderViews_ objectAtIndex:section] height];
 }
+
 @end

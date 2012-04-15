@@ -33,6 +33,8 @@
 		49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EBB4361537D360002BBF3C /* QuartzCore.framework */; };
 		49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
 		49EBB43D1537D4BE002BBF3C /* Introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* Introspect.m */; };
+		49EBB43D1537D4BE002BBF3E /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF3D /* Binding.m */; };
+		49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF43 /* BindingManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,12 @@
 		49EBB4391537D4A5002BBF3C /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "src/UIView+Additions.m"; sourceTree = "<group>"; };
 		49EBB43B1537D4BE002BBF3C /* Introspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Introspect.h; path = src/Introspect.h; sourceTree = "<group>"; };
 		49EBB43C1537D4BE002BBF3C /* Introspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Introspect.m; path = src/Introspect.m; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF3D /* Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Binding.m; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF3F /* Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Binding.h; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF42 /* Assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assert.h; path = src/Assert.h; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF43 /* BindingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BindingManager.m; path = src/BindingManager.m; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF45 /* BindingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BindingManager.h; path = src/BindingManager.h; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF48 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = src/Macros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,12 @@
 		495C97FA1535ABC500EEDAFB /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				49EBB43D1537D4BE002BBF48 /* Macros.h */,
+				49EBB43D1537D4BE002BBF45 /* BindingManager.h */,
+				49EBB43D1537D4BE002BBF43 /* BindingManager.m */,
+				49EBB43D1537D4BE002BBF42 /* Assert.h */,
+				49EBB43D1537D4BE002BBF3F /* Binding.h */,
+				49EBB43D1537D4BE002BBF3D /* Binding.m */,
 				49EBB43B1537D4BE002BBF3C /* Introspect.h */,
 				49EBB43C1537D4BE002BBF3C /* Introspect.m */,
 			);
@@ -386,6 +400,8 @@
 				49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */,
 				49EBB43D1537D4BE002BBF3C /* Introspect.m in Sources */,
 				499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */,
+				49EBB43D1537D4BE002BBF3E /* Binding.m in Sources */,
+				49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
