@@ -294,13 +294,13 @@
 			children = (
 				4973162615345CA000E3E5DC /* domains */,
 				4973162515345C8F00E3E5DC /* controllers */,
+				49EBB43D1537D4BE002BBF5D /* views */,
+				49EBB43D1537D4BE002BBF56 /* managers */,
 				495C97FA1535ABC500EEDAFB /* supports */,
 				49A04AAA15344D200092DC4A /* others */,
 				49A04AAE15344D4E0092DC4A /* MainStoryboard_iPad.storyboard */,
 				49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */,
 				49A04AAB15344D420092DC4A /* InfoPlist.strings */,
-				49EBB43D1537D4BE002BBF56 /* managers */,
-				49EBB43D1537D4BE002BBF5D /* views */,
 			);
 			name = src;
 			sourceTree = "<group>";

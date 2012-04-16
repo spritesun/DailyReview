@@ -12,6 +12,11 @@ static NSMutableDictionary *categoryNamesDict = nil;
   if (!categoryNamesDict) {
     categoryNamesDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
         @"准一功", [NSNumber numberWithInt:1],
+        @"准三功", [NSNumber numberWithInt:3],
+        @"准五功", [NSNumber numberWithInt:5],
+        @"准十功", [NSNumber numberWithInt:10],
+        @"准三十功", [NSNumber numberWithInt:30],
+        @"准五十功", [NSNumber numberWithInt:50],
         @"准百功", [NSNumber numberWithInt:100],
         nil];
   }
