@@ -1,6 +1,13 @@
-# * group into section by rank value
-# * add introspect
-# * swipe to record/clear
+# Release 1 must have:
+
+* could navigate between merit/demerit/summary
+* Plain UI with logo, splash screen
+
+# TODO List:
+
+// * group into section by rank value
+// * add introspect
+// * swipe to record/clear
 
 * try to use IB to connect table and cell
 * weibo
@@ -18,3 +25,4 @@
 * paper folding animation
 * pinch to close section
 * when one section longer than page, close animation not so smooth
+
