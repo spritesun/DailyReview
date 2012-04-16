@@ -6,6 +6,10 @@
 #import "UIGestureRecognizer+Blocks.h"
 #import "UIView+Additions.h"
 #import "BindingManager.h"
+#import "Event.h"
+#import "NSManagedObjectContext+Additions.h"
+#import "NSDate+Additions.h"
+#import "NSArray+Additions.h"
 
 @implementation BehaviorTableViewController {
   NSMutableArray *sectionHeaderViews_;
@@ -72,40 +76,71 @@
   }
 }
 
+#pragma mark - UITableViewDataSource
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  //TODO: avoid create empty event for every behavior everyday.
   BehaviorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BehaviorTableViewCell class])];
   if (nil == cell) {
     cell = [BehaviorTableViewCell cell];    
   }
   
   Behavior *behavior = [dataSource_ behaviorForIndexPath:indexPath];
-  
   cell.textLabel.text = behavior.name;
+
+  //TODO: move to domain?
+  Event *event = [self buildEventForBehavior:behavior];
+
+  [self addGesturesForCell:cell event:event];
+
+  //add binding
+  [bindingManager_ unbindSource:event];
+  [bindingManager_ bindSource:event
+                  withKeyPath:@"count"
+                       action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
+                         [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
+                       }];
   
-  //add gestures
+  return cell;
+}
+
+- (Event *)buildEventForBehavior:(Behavior *)behavior {
+  if (nil == behavior.currentEvent) {
+    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"behavior = %@ AND date = %@", behavior, [[NSDate date] dateWithoutTime]]];
+    __block NSArray *results;
+    [context performBlockAndWait:^{
+      results = [context executeFetchRequest:request error:nil];
+    }];
+    if ([results isEmpty]) {
+      behavior.currentEvent = [Event eventForBehavior:behavior];
+    } else {
+      behavior.currentEvent = [results first];
+    }
+  }
+
+  Event *event = behavior.currentEvent;
+  return event;
+}
+
+- (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
+  NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
   [cell removeAllGestureRecognizers];
   UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-//    behavior.count++;
+    event.countValue ++;
+    [context save];
   }];
   [cell addGestureRecognizer:increaseRecognizer];
-  
+
   UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-//    if (0 != behavior.count) {
-//      behavior.count--;
-//    }
+    if (0 != event.countValue) {
+      event.countValue --;
+      [context save];
+    }
   }];
   decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
   [cell addGestureRecognizer:decreaseRecognizer];
-
-  //add binding
-//  [bindingManager_ unbindSource:behavior];
-//  [bindingManager_ bindSource:behavior
-//                  withKeyPath:@"count"
-//                       action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
-//                         [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
-//                       }];
-  
-  return cell;
 }
 
 - (void)changeBehaviorCountFrom:(NSNumber *)oldValue to:(NSNumber *)newValue inCell:(UITableViewCell *)cell {

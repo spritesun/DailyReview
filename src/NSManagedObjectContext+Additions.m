@@ -29,4 +29,12 @@ static NSManagedObjectContext *defaultContext_ = nil;
   return defaultContext_;
 }
 
+- (void)save {
+  NSError *error = nil;
+  [self save:&error];
+  if (error) {
+    [error handleWithDescription:@"NSManagedObjectContext failed to save object."];
+  }
+}
+
 @end

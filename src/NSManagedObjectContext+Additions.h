@@ -6,4 +6,6 @@
 
 + (NSManagedObjectContext *)defaultContext;
 
+- (void)save;
+
 @end

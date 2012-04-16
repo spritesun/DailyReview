@@ -17,26 +17,6 @@ static NSMutableDictionary *categoryNamesDict = nil;
   }
 }
 
-- (BehaviorDataSource *)initWithBehaviors:(NSArray *)behaviors {
-  self = [super init];
-  if (self) {
-    NSArray *ranks = [behaviors valueForKeyPath:@"@distinctUnionOfObjects.rank"];
-    ranks = [ranks sortedArrayUsingDescriptors:[NSArray arrayWithObject:
-                                                [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]]];
-
-    categories_ = [categoryNamesDict objectsForKeys:ranks notFoundMarker:@"未知"];
-
-    arrayOfBehaviors_ = [NSMutableArray new];
-    for (NSNumber *rank in ranks) {
-      NSArray *behaviorsInSameRank = [behaviors filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"rank = %@", rank]];
-      [arrayOfBehaviors_ addObject:behaviorsInSameRank];
-    }
-
-  }
-
-  return self;
-}
-
 + (BehaviorDataSource *)merits {
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
 
@@ -55,6 +35,26 @@ static NSMutableDictionary *categoryNamesDict = nil;
 
 + (BehaviorDataSource *)demerits {
   return nil;
+}
+
+- (BehaviorDataSource *)initWithBehaviors:(NSArray *)behaviors {
+  self = [super init];
+  if (self) {
+    NSArray *ranks = [behaviors valueForKeyPath:@"@distinctUnionOfObjects.rank"];
+    ranks = [ranks sortedArrayUsingDescriptors:[NSArray arrayWithObject:
+                                                [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]]];
+    //TODO: I need NSArray#sortAscending NSArray#reverse
+
+    categories_ = [categoryNamesDict objectsForKeys:ranks notFoundMarker:@"未知"];
+
+    arrayOfBehaviors_ = [NSMutableArray new];
+    for (NSNumber *rank in ranks) {
+      NSArray *behaviorsInSameRank = [behaviors filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"rank = %@", rank]];
+      [arrayOfBehaviors_ addObject:behaviorsInSameRank];
+    }
+  }
+
+  return self;
 }
 
 - (NSUInteger)categoryCount {

@@ -15,5 +15,6 @@
 @dynamic name;
 @dynamic rank;
 @dynamic events;
+@synthesize currentEvent = currentEvent_;
 
 @end

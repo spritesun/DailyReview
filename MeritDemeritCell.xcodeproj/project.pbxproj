@@ -50,6 +50,8 @@
 		49EBB43D1537D4BE002BBF51 /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF50 /* NSError+Additions.m */; };
 		49EBB43D1537D4BE002BBF54 /* NSManagedObjectContext+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF53 /* NSManagedObjectContext+Additions.m */; };
 		49EBB43D1537D4BE002BBF5C /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5B /* DatabaseManager.m */; };
+		49EBB43D1537D4BE002BBF5F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */; };
+		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +154,10 @@
 		49EBB43D1537D4BE002BBF55 /* NSManagedObjectContext+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+Additions.h"; path = "src/NSManagedObjectContext+Additions.h"; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF5A /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseManager.h; path = src/DatabaseManager.h; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF5B /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseManager.m; path = src/DatabaseManager.m; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additions.m"; path = "src/NSDate+Additions.m"; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF60 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "src/NSDate+Additions.h"; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Additions.m"; path = "src/NSArray+Additions.m"; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF63 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Additions.h"; path = "src/NSArray+Additions.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +362,10 @@
 		49EBB4381537D452002BBF3C /* additions */ = {
 			isa = PBXGroup;
 			children = (
+				49EBB43D1537D4BE002BBF63 /* NSArray+Additions.h */,
+				49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */,
+				49EBB43D1537D4BE002BBF60 /* NSDate+Additions.h */,
+				49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */,
 				49EBB43D1537D4BE002BBF55 /* NSManagedObjectContext+Additions.h */,
 				49EBB43D1537D4BE002BBF53 /* NSManagedObjectContext+Additions.m */,
 				49EBB43D1537D4BE002BBF52 /* NSError+Additions.h */,
@@ -550,6 +560,8 @@
 				49EBB43D1537D4BE002BBF51 /* NSError+Additions.m in Sources */,
 				49EBB43D1537D4BE002BBF54 /* NSManagedObjectContext+Additions.m in Sources */,
 				49EBB43D1537D4BE002BBF5C /* DatabaseManager.m in Sources */,
+				49EBB43D1537D4BE002BBF5F /* NSDate+Additions.m in Sources */,
+				49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * rank;
 @property (nonatomic, retain) NSSet *events;
+@property (nonatomic, retain) Event *currentEvent;
 @end
 
 @interface Behavior (CoreDataGeneratedAccessors)
