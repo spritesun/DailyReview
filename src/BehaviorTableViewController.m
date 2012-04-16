@@ -7,14 +7,10 @@
 #import "UIView+Additions.h"
 #import "BindingManager.h"
 
-static NSString *const kBehaviorTableViewCell = @"BehaviorTableViewCell";
-static NSString *const kBehaviorCountKeyPath = @"count";
-
 @implementation BehaviorTableViewController {
   NSMutableArray *sectionHeaderViews_;
   BindingManager *bindingManager_;
   BehaviorDataSource *dataSource_;
-
 }
 
 #pragma mark - Initialization
@@ -22,8 +18,7 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 - (id)init {
   self = [super init];
   if (self) {
-    bindingManager_ = [BindingManager new];
-    dataSource_ = [BehaviorDataSource merits];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   }
   return self;
 }
@@ -35,13 +30,19 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 #pragma mark - LifeCycle
 
 - (void)viewDidLoad {
-  self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-  
   //TODO: should we put this in viewDidLoad or init?
-  sectionHeaderViews_ = [NSMutableArray array];
+  bindingManager_ = [BindingManager new];
+  dataSource_ = [BehaviorDataSource merits];  
+  sectionHeaderViews_ = [NSMutableArray new];
   for (NSUInteger section = 0; section < [dataSource_ categoryCount]; section++) {
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
   }
+}
+
+- (void)viewDidUnLoad {
+  bindingManager_ = nil;
+  dataSource_ = nil;
+  sectionHeaderViews_ = nil;
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(NSUInteger)section {

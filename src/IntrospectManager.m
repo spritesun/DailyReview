@@ -1,4 +1,4 @@
-#import "Introspect.h"
+#import "IntrospectManager.h"
 
 // comment/uncoment this line for DCIntrospect disable/enable
 #define WANT_DCINTROSPECT
@@ -12,7 +12,7 @@
   #define IS_DCINTROSPECT_ENABLED 0
 #endif
 
-@implementation Introspect
+@implementation IntrospectManager
 
 + (void)loadIntrospect; {
 #if IS_DCINTROSPECT_ENABLED

@@ -1,61 +1,48 @@
 #import "BehaviorDataSource.h"
-#import "ContextProvider.h"
+#import "NSManagedObjectContext+Additions.m"
 
-static NSMutableDictionary *categoriesDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"准一功", [NSNumber numberWithInt:1], nil];
+static NSMutableDictionary *categoryNamesDict = nil;
 
 @implementation BehaviorDataSource {
-  NSMutableArray *behaviorsGroups_;
-  NSMutableArray *categories_;
+  NSMutableArray *arrayOfBehaviors_;
+  NSArray *categories_;
+}
+
++ (void)initialize {
+  if (!categoryNamesDict) {
+    categoryNamesDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        @"准一功", [NSNumber numberWithInt:1],
+        @"准百功", [NSNumber numberWithInt:100],
+        nil];
+  }
 }
 
 - (BehaviorDataSource *)initWithBehaviors:(NSArray *)behaviors {
   self = [super init];
+  if (self) {
+    NSArray *ranks = [behaviors valueForKeyPath:@"@distinctUnionOfObjects.rank"];
+    ranks = [ranks sortedArrayUsingDescriptors:[NSArray arrayWithObject:
+                                                [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]]];
 
-  categories_ = [NSMutableArray new];
-  behaviorsGroups_ = [NSMutableArray new];
+    categories_ = [categoryNamesDict objectsForKeys:ranks notFoundMarker:@"未知"];
 
-  NSMutableDictionary *dictionary = [NSMutableDictionary new];
-
-  for (Behavior *behavior in behaviors) {
-    NSString *category = [categoriesDict objectForKey:[behavior rank]];
-    if (![categories_ containsObject:category]) {
-      [categories_ addObject:category];
+    arrayOfBehaviors_ = [NSMutableArray new];
+    for (NSNumber *rank in ranks) {
+      NSArray *behaviorsInSameRank = [behaviors filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"rank = %@", rank]];
+      [arrayOfBehaviors_ addObject:behaviorsInSameRank];
     }
-    if (![[dictionary allKeys] containsObject:[behavior rank]]) {
-      NSMutableArray *behaviorGroup = [NSMutableArray new];
-      [behaviorGroup addObject:behavior];
-      [dictionary setObject:behaviorGroup forKey:[behavior rank]];
-    } else {
-      [[dictionary objectForKey:[behavior rank]] addObject:behavior];
-    }
+
   }
 
-  NSArray *const sortedKeys = [[dictionary allKeys] sortedArrayUsingComparator:^(id obj1, id obj2) {
-
-    if ([obj1 integerValue] > [obj2 integerValue]) {
-      return (NSComparisonResult) NSOrderedDescending;
-    }
-
-    if ([obj1 integerValue] < [obj2 integerValue]) {
-      return (NSComparisonResult) NSOrderedAscending;
-    }
-    return (NSComparisonResult) NSOrderedSame;
-  }];
-
-  for (NSNumber *rank in sortedKeys) {
-    [behaviorsGroups_ addObject:[dictionary objectForKey:rank]];
-  }
   return self;
 }
 
 + (BehaviorDataSource *)merits {
-  NSManagedObjectContext *context = [ContextProvider context];
+  NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
 
   NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
   [request setPredicate:[NSPredicate predicateWithFormat:@"rank > 0"]];
-  [request setSortDescriptors:[NSArray arrayWithObjects:
-      [[NSSortDescriptor alloc] initWithKey:@"rank" ascending:YES],
-      [[NSSortDescriptor alloc] initWithKey:@"id" ascending:YES], nil]];
+  //TODO: read this for more ordering, http://stackoverflow.com/questions/2707905/retrieve-core-data-entities-in-order-of-insertion
 
   __block NSArray *results;
 
@@ -71,19 +58,19 @@ static NSMutableDictionary *categoriesDict = [NSMutableDictionary dictionaryWith
 }
 
 - (NSUInteger)categoryCount {
-  return [categories count];
+  return [categories_ count];
 }
 
 - (NSString *)categoryForSection:(NSUInteger)section {
-  return [categories objectAtIndex:section];
+  return [categories_ objectAtIndex:section];
 }
 
 - (NSUInteger)behaviorCountForSection:(NSUInteger)section {
-  return [[behaviorsGroups objectAtIndex:section] count];
+  return [[arrayOfBehaviors_ objectAtIndex:section] count];
 }
 
 - (Behavior *)behaviorForIndexPath:(NSIndexPath *)indexPath {
-  return [[behaviorsGroups objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+  return [[arrayOfBehaviors_ objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
 }
 
 

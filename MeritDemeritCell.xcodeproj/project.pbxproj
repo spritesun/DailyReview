@@ -11,8 +11,6 @@
 		4943CECF153AA48700B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CED5153AA60500B823E7 /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CED4153AA60500B823E7 /* Behavior.m */; };
 		4943CED8153AA6BF00B823E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
-		4943CEE1153AAE1E00B823E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CEE0153AAE1E00B823E7 /* CoreData.framework */; };
-		4943CEE3153AAE1E00B823E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CEE2153AAE1E00B823E7 /* Foundation.framework */; };
 		4943CEE6153AAE1E00B823E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEE5153AAE1E00B823E7 /* main.m */; };
 		4943CEED153AAE1E00B823E7 /* populate_database.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEEC153AAE1E00B823E7 /* populate_database.1 */; };
 		4943CEF1153AB13600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */; };
@@ -21,6 +19,10 @@
 		4943CEF9153AB9A200B823E7 /* initial_data.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEF4153AB93600B823E7 /* initial_data.json */; };
 		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
 		497316241534590400E3E5DC /* BehaviorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorTableViewController.m */; };
+		497659CD153BB8DB00E0D533 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
+		497659FD153BCC5900E0D533 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
+		497659FE153BCC5E00E0D533 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
+		49765A77153C05A200E0D533 /* mdc.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49765A76153C05A200E0D533 /* mdc.sqlite */; };
 		499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
 		49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A491534491B0092DC4A /* UIKit.framework */; };
 		49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
@@ -42,11 +44,12 @@
 		49EBB4351537D1E9002BBF3C /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4311537D1E9002BBF3C /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EBB4361537D360002BBF3C /* QuartzCore.framework */; };
 		49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
-		49EBB43D1537D4BE002BBF3C /* Introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* Introspect.m */; };
-		49EBB43D1537D4BE002BBF3E /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF3D /* Binding.m */; };
+		49EBB43D1537D4BE002BBF3C /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */; };
 		49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF43 /* BindingManager.m */; };
 		49EBB43D1537D4BE002BBF4A /* BehaviorDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF49 /* BehaviorDataSource.m */; };
-		49EBB43D1537D4BE002BBF4D /* ContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF4C /* ContextProvider.m */; };
+		49EBB43D1537D4BE002BBF51 /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF50 /* NSError+Additions.m */; };
+		49EBB43D1537D4BE002BBF54 /* NSManagedObjectContext+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF53 /* NSManagedObjectContext+Additions.m */; };
+		49EBB43D1537D4BE002BBF5C /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5B /* DatabaseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +93,6 @@
 		4943CED4153AA60500B823E7 /* Behavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Behavior.m; path = src/Behavior.m; sourceTree = "<group>"; };
 		4943CED6153AA68000B823E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4943CEDD153AAE1D00B823E7 /* populate-database */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "populate-database"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4943CEE0153AAE1E00B823E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		4943CEE2153AAE1E00B823E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4943CEE5153AAE1E00B823E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4943CEE8153AAE1E00B823E7 /* populate-database-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "populate-database-Prefix.pch"; sourceTree = "<group>"; };
 		4943CEEC153AAE1E00B823E7 /* populate_database.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = populate_database.1; sourceTree = "<group>"; };
@@ -100,6 +101,9 @@
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
 		497316221534590400E3E5DC /* BehaviorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewController.h; path = src/BehaviorTableViewController.h; sourceTree = "<group>"; };
 		497316231534590400E3E5DC /* BehaviorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewController.m; path = src/BehaviorTableViewController.m; sourceTree = "<group>"; };
+		497659CB153BB8DB00E0D533 /* Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Binding.h; path = src/Binding.h; sourceTree = "<group>"; };
+		497659CC153BB8DB00E0D533 /* Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Binding.m; path = src/Binding.m; sourceTree = "<group>"; };
+		49765A76153C05A200E0D533 /* mdc.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = mdc.sqlite; path = resources/mdc.sqlite; sourceTree = "<group>"; };
 		499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewCell.h; path = src/BehaviorTableViewCell.h; sourceTree = "<group>"; };
 		499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewCell.m; path = src/BehaviorTableViewCell.m; sourceTree = "<group>"; };
 		49A04A451534491B0092DC4A /* MeritDemeritCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeritDemeritCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,18 +138,20 @@
 		49EBB4311537D1E9002BBF3C /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		49EBB4361537D360002BBF3C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49EBB4391537D4A5002BBF3C /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "src/UIView+Additions.m"; sourceTree = "<group>"; };
-		49EBB43B1537D4BE002BBF3C /* Introspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Introspect.h; path = src/Introspect.h; sourceTree = "<group>"; };
-		49EBB43C1537D4BE002BBF3C /* Introspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Introspect.m; path = src/Introspect.m; sourceTree = "<group>"; };
-		49EBB43D1537D4BE002BBF3D /* Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Binding.m; sourceTree = "<group>"; };
-		49EBB43D1537D4BE002BBF3F /* Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Binding.h; sourceTree = "<group>"; };
+		49EBB43B1537D4BE002BBF3C /* IntrospectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntrospectManager.h; path = src/IntrospectManager.h; sourceTree = "<group>"; };
+		49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntrospectManager.m; path = src/IntrospectManager.m; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF42 /* Assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assert.h; path = src/Assert.h; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF43 /* BindingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BindingManager.m; path = src/BindingManager.m; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF45 /* BindingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BindingManager.h; path = src/BindingManager.h; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF48 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = src/Macros.h; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF49 /* BehaviorDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorDataSource.m; path = src/BehaviorDataSource.m; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF4B /* BehaviorDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorDataSource.h; path = src/BehaviorDataSource.h; sourceTree = "<group>"; };
-		49EBB43D1537D4BE002BBF4C /* ContextProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextProvider.m; path = src/ContextProvider.m; sourceTree = "<group>"; };
-		49EBB43D1537D4BE002BBF4E /* ContextProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextProvider.h; path = src/ContextProvider.h; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF50 /* NSError+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+Additions.m"; path = "src/NSError+Additions.m"; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF52 /* NSError+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+Additions.h"; path = "src/NSError+Additions.h"; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF53 /* NSManagedObjectContext+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+Additions.m"; path = "src/NSManagedObjectContext+Additions.m"; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF55 /* NSManagedObjectContext+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+Additions.h"; path = "src/NSManagedObjectContext+Additions.h"; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF5A /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseManager.h; path = src/DatabaseManager.h; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF5B /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseManager.m; path = src/DatabaseManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +159,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4943CEE1153AAE1E00B823E7 /* CoreData.framework in Frameworks */,
-				4943CEE3153AAE1E00B823E7 /* Foundation.framework in Frameworks */,
+				497659FD153BCC5900E0D533 /* CoreData.framework in Frameworks */,
+				497659FE153BCC5E00E0D533 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,15 +189,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4943CEDF153AAE1D00B823E7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4943CEE0153AAE1E00B823E7 /* CoreData.framework */,
-				4943CEE2153AAE1E00B823E7 /* Foundation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4943CEE4153AAE1E00B823E7 /* populate-database */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,19 +208,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		495C97FA1535ABC500EEDAFB /* utils */ = {
+		495C97FA1535ABC500EEDAFB /* supports */ = {
 			isa = PBXGroup;
 			children = (
+				49EBB4381537D452002BBF3C /* additions */,
 				49EBB43D1537D4BE002BBF48 /* Macros.h */,
+				497659CB153BB8DB00E0D533 /* Binding.h */,
+				497659CC153BB8DB00E0D533 /* Binding.m */,
 				49EBB43D1537D4BE002BBF45 /* BindingManager.h */,
 				49EBB43D1537D4BE002BBF43 /* BindingManager.m */,
 				49EBB43D1537D4BE002BBF42 /* Assert.h */,
-				49EBB43D1537D4BE002BBF3F /* Binding.h */,
-				49EBB43D1537D4BE002BBF3D /* Binding.m */,
-				49EBB43B1537D4BE002BBF3C /* Introspect.h */,
-				49EBB43C1537D4BE002BBF3C /* Introspect.m */,
 			);
-			name = utils;
+			name = supports;
 			sourceTree = "<group>";
 		};
 		4973162515345C8F00E3E5DC /* controllers */ = {
@@ -233,10 +229,6 @@
 				49A04A9815344CD90092DC4A /* AppDelegate.m */,
 				497316221534590400E3E5DC /* BehaviorTableViewController.h */,
 				497316231534590400E3E5DC /* BehaviorTableViewController.m */,
-				499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */,
-				499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */,
-				49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */,
-				49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -246,11 +238,11 @@
 			children = (
 				49EBB43D1537D4BE002BBF4B /* BehaviorDataSource.h */,
 				49EBB43D1537D4BE002BBF49 /* BehaviorDataSource.m */,
-				4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */,
 				4943CECD153AA48700B823E7 /* Event.h */,
 				4943CECE153AA48700B823E7 /* Event.m */,
 				4943CED3153AA60500B823E7 /* Behavior.h */,
 				4943CED4153AA60500B823E7 /* Behavior.m */,
+				4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */,
 			);
 			name = domains;
 			sourceTree = "<group>";
@@ -265,7 +257,6 @@
 				49A04A481534491B0092DC4A /* frameworks */,
 				49A04A461534491B0092DC4A /* products */,
 				4943CEE4153AAE1E00B823E7 /* populate-database */,
-				4943CEDF153AAE1D00B823E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,16 +286,15 @@
 		49A04A8F15344BB00092DC4A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				49EBB43D1537D4BE002BBF4E /* ContextProvider.h */,
-				49EBB43D1537D4BE002BBF4C /* ContextProvider.m */,
 				4973162615345CA000E3E5DC /* domains */,
 				4973162515345C8F00E3E5DC /* controllers */,
-				49EBB4381537D452002BBF3C /* additions */,
-				495C97FA1535ABC500EEDAFB /* utils */,
+				495C97FA1535ABC500EEDAFB /* supports */,
+				49A04AAA15344D200092DC4A /* others */,
 				49A04AAE15344D4E0092DC4A /* MainStoryboard_iPad.storyboard */,
 				49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */,
 				49A04AAB15344D420092DC4A /* InfoPlist.strings */,
-				49A04AAA15344D200092DC4A /* others */,
+				49EBB43D1537D4BE002BBF56 /* managers */,
+				49EBB43D1537D4BE002BBF5D /* views */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -322,6 +312,7 @@
 		49A04A9315344C0E0092DC4A /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				49765A76153C05A200E0D533 /* mdc.sqlite */,
 				49A04ABA15344DB50092DC4A /* MeritDemeritCell-Info.plist */,
 				49A04ABB15344DB50092DC4A /* MeritDemeritCellTests-Info.plist */,
 			);
@@ -365,12 +356,38 @@
 		49EBB4381537D452002BBF3C /* additions */ = {
 			isa = PBXGroup;
 			children = (
+				49EBB43D1537D4BE002BBF55 /* NSManagedObjectContext+Additions.h */,
+				49EBB43D1537D4BE002BBF53 /* NSManagedObjectContext+Additions.m */,
+				49EBB43D1537D4BE002BBF52 /* NSError+Additions.h */,
+				49EBB43D1537D4BE002BBF50 /* NSError+Additions.m */,
 				495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */,
 				495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */,
 				49EBB4141536C8B4002BBF3C /* UIView+Additions.h */,
 				49EBB4391537D4A5002BBF3C /* UIView+Additions.m */,
 			);
 			name = additions;
+			sourceTree = "<group>";
+		};
+		49EBB43D1537D4BE002BBF56 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				49EBB43D1537D4BE002BBF5B /* DatabaseManager.m */,
+				49EBB43D1537D4BE002BBF5A /* DatabaseManager.h */,
+				49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */,
+				49EBB43B1537D4BE002BBF3C /* IntrospectManager.h */,
+			);
+			name = managers;
+			sourceTree = "<group>";
+		};
+		49EBB43D1537D4BE002BBF5D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */,
+				499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */,
+				49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */,
+				49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +483,7 @@
 				49A04AAD15344D420092DC4A /* InfoPlist.strings in Resources */,
 				49A04AB215344D4E0092DC4A /* MainStoryboard_iPad.storyboard in Resources */,
 				49A04AB315344D4E0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */,
+				49765A77153C05A200E0D533 /* mdc.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,15 +539,17 @@
 				49EBB4341537D1E9002BBF3C /* DCIntrospect.m in Sources */,
 				49EBB4351537D1E9002BBF3C /* DCStatusBarOverlay.m in Sources */,
 				49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */,
-				49EBB43D1537D4BE002BBF3C /* Introspect.m in Sources */,
+				49EBB43D1537D4BE002BBF3C /* IntrospectManager.m in Sources */,
 				499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */,
-				49EBB43D1537D4BE002BBF3E /* Binding.m in Sources */,
 				49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */,
 				4943CECB153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */,
 				4943CECF153AA48700B823E7 /* Event.m in Sources */,
 				4943CED5153AA60500B823E7 /* Behavior.m in Sources */,
 				49EBB43D1537D4BE002BBF4A /* BehaviorDataSource.m in Sources */,
-				49EBB43D1537D4BE002BBF4D /* ContextProvider.m in Sources */,
+				497659CD153BB8DB00E0D533 /* Binding.m in Sources */,
+				49EBB43D1537D4BE002BBF51 /* NSError+Additions.m in Sources */,
+				49EBB43D1537D4BE002BBF54 /* NSManagedObjectContext+Additions.m in Sources */,
+				49EBB43D1537D4BE002BBF5C /* DatabaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +750,7 @@
 				4943CEF0153AAE1E00B823E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49A04A3F1534491B0092DC4A /* Build configuration list for PBXProject "MeritDemeritCell" */ = {
 			isa = XCConfigurationList;

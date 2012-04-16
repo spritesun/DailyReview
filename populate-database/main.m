@@ -7,7 +7,7 @@ void insertData(NSManagedObjectContext *context, NSArray* behaviorJSONArray);
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
-    NSString *databaseFile = @"/tmp/merit-demerit-cell.sqlite";
+    NSString *databaseFile = @"/tmp/mdc.sqlite";
     
     NSManagedObjectContext *context = managedObjectContext(databaseFile);
     insertData(context, jsonObjectsFromSource(@"initial_data.json"));
