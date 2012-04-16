@@ -1,12 +1,13 @@
 #import "AppDelegate.h"
-#import "Introspect.h"
+#import "IntrospectManager.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [Introspect loadIntrospect];
+  [IntrospectManager loadIntrospect];
+
   return YES;
 }
 

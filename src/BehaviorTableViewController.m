@@ -1,18 +1,20 @@
 #import "BehaviorTableViewController.h"
 #import "Behavior.h"
-#import "BehaviorFactory.h"
+#import "BehaviorDataSource.h"
 #import "BehaviorSectionHeaderView.h"
 #import "BehaviorTableViewCell.h"
 #import "UIGestureRecognizer+Blocks.h"
 #import "UIView+Additions.h"
 #import "BindingManager.h"
-
-static NSString *const kBehaviorTableViewCell = @"BehaviorTableViewCell";
-static NSString *const kBehaviorCountKeyPath = @"count";
+#import "Event.h"
+#import "NSManagedObjectContext+Additions.h"
+#import "NSDate+Additions.h"
+#import "NSArray+Additions.h"
 
 @implementation BehaviorTableViewController {
   NSMutableArray *sectionHeaderViews_;
   BindingManager *bindingManager_;
+  BehaviorDataSource *dataSource_;
 }
 
 #pragma mark - Initialization
@@ -20,7 +22,7 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 - (id)init {
   self = [super init];
   if (self) {
-    // placeholder
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   }
   return self;
 }
@@ -32,19 +34,23 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 #pragma mark - LifeCycle
 
 - (void)viewDidLoad {
-  self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-  
   //TODO: should we put this in viewDidLoad or init?
-  sectionHeaderViews_ = [NSMutableArray array];
-  for (NSUInteger section = 0; section < [[BehaviorFactory sharedMerits] count]; section++) {
+  bindingManager_ = [BindingManager new];
+  dataSource_ = [BehaviorDataSource merits];  
+  sectionHeaderViews_ = [NSMutableArray new];
+  for (NSUInteger section = 0; section < [dataSource_ categoryCount]; section++) {
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
   }
-  
-  bindingManager_ = [BindingManager new];
+}
+
+- (void)viewDidUnLoad {
+  bindingManager_ = nil;
+  dataSource_ = nil;
+  sectionHeaderViews_ = nil;
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(NSUInteger)section {
-  NSString *title = [[BehaviorFactory sharedMeritCategories] objectAtIndex:section];
+  NSString *title = [dataSource_ categoryForSection:section];
   BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:title];
   
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
@@ -57,7 +63,7 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 
 - (void)toggleSection:(NSUInteger)section headerView:(BehaviorSectionHeaderView *)headerView {
   NSMutableArray *indexPaths = [NSMutableArray array];
-  for (NSInteger i = 0; i < [[[BehaviorFactory sharedMerits] objectAtIndex:section] count]; i++) {
+  for (NSInteger i = 0; i < [dataSource_ behaviorCountForSection:section]; i++) {
     [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
   }
   headerView.expanded ^= YES;
@@ -70,40 +76,71 @@ static NSString *const kBehaviorCountKeyPath = @"count";
   }
 }
 
+#pragma mark - UITableViewDataSource
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  //TODO: avoid create empty event for every behavior everyday.
   BehaviorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BehaviorTableViewCell class])];
   if (nil == cell) {
     cell = [BehaviorTableViewCell cell];    
   }
   
-  Behavior *behavior = [[[BehaviorFactory sharedMerits] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-  
+  Behavior *behavior = [dataSource_ behaviorForIndexPath:indexPath];
   cell.textLabel.text = behavior.name;
-  
-  //add gestures
-  [cell removeAllGestureRecognizers];
-  UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-    behavior.count++;
-  }];
-  [cell addGestureRecognizer:increaseRecognizer];
-  
-  UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-    if (0 != behavior.count) {
-      behavior.count--;
-    }
-  }];
-  decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-  [cell addGestureRecognizer:decreaseRecognizer];
+
+  //TODO: move to domain?
+  Event *event = [self buildEventForBehavior:behavior];
+
+  [self addGesturesForCell:cell event:event];
 
   //add binding
-  [bindingManager_ unbindSource:behavior];
-  [bindingManager_ bindSource:behavior
+  [bindingManager_ unbindSource:event];
+  [bindingManager_ bindSource:event
                   withKeyPath:@"count"
                        action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
                          [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
                        }];
   
   return cell;
+}
+
+- (Event *)buildEventForBehavior:(Behavior *)behavior {
+  if (nil == behavior.currentEvent) {
+    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"behavior = %@ AND date = %@", behavior, [[NSDate date] dateWithoutTime]]];
+    __block NSArray *results;
+    [context performBlockAndWait:^{
+      results = [context executeFetchRequest:request error:nil];
+    }];
+    if ([results isEmpty]) {
+      behavior.currentEvent = [Event eventForBehavior:behavior];
+    } else {
+      behavior.currentEvent = [results first];
+    }
+  }
+
+  Event *event = behavior.currentEvent;
+  return event;
+}
+
+- (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
+  NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+  [cell removeAllGestureRecognizers];
+  UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+    event.countValue ++;
+    [context save];
+  }];
+  [cell addGestureRecognizer:increaseRecognizer];
+
+  UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+    if (0 != event.countValue) {
+      event.countValue --;
+      [context save];
+    }
+  }];
+  decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+  [cell addGestureRecognizer:decreaseRecognizer];
 }
 
 - (void)changeBehaviorCountFrom:(NSNumber *)oldValue to:(NSNumber *)newValue inCell:(UITableViewCell *)cell {
@@ -121,12 +158,12 @@ static NSString *const kBehaviorCountKeyPath = @"count";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [[BehaviorFactory sharedMerits] count];
+  return [dataSource_ categoryCount];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   if ([[sectionHeaderViews_ objectAtIndex:section] expanded]) {
-    return [[[BehaviorFactory sharedMerits] objectAtIndex:section] count];
+    return [dataSource_ behaviorCountForSection:section];
   } else {
     return 0;
   }

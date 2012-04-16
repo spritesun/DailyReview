@@ -1,9 +1,29 @@
-@interface Behavior : NSObject
+//
+//  Behavior.h
+//  MeritDemeritCell
+//
+//  Created by Long Sun on 15/04/12.
+//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
+//
 
-@property(nonatomic, readonly) NSString *name;
-@property(nonatomic, readonly) NSInteger rank;
-@property(nonatomic, assign) NSUInteger count;
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-+ (Behavior *)behaviorWithName:(NSString *)name rank:(NSInteger)rank;
+@class Event;
+
+@interface Behavior : NSManagedObject
+
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * rank;
+@property (nonatomic, retain) NSSet *events;
+@property (nonatomic, retain) Event *currentEvent;
+@end
+
+@interface Behavior (CoreDataGeneratedAccessors)
+
+- (void)addEventsObject:(Event *)value;
+- (void)removeEventsObject:(Event *)value;
+- (void)addEvents:(NSSet *)values;
+- (void)removeEvents:(NSSet *)values;
 
 @end
