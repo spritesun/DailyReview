@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4943CECB153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */; };
+		4943CECB153AA2A600B823E7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
 		4943CECF153AA48700B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CED5153AA60500B823E7 /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CED4153AA60500B823E7 /* Behavior.m */; };
 		4943CED8153AA6BF00B823E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
 		4943CEE6153AAE1E00B823E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEE5153AAE1E00B823E7 /* main.m */; };
 		4943CEED153AAE1E00B823E7 /* populate_database.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEEC153AAE1E00B823E7 /* populate_database.1 */; };
-		4943CEF1153AB13600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */; };
+		4943CEF1153AB13600B823E7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
 		4943CEF2153AB14000B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CEF3153AB14700B823E7 /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CED4153AA60500B823E7 /* Behavior.m */; };
 		4943CEF9153AB9A200B823E7 /* initial_data.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEF4153AB93600B823E7 /* initial_data.json */; };
@@ -94,7 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4943CECA153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeritDemeritCellDataModel.xcdatamodel; sourceTree = "<group>"; };
+		4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		4943CECD153AA48700B823E7 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = src/Event.h; sourceTree = "<group>"; };
 		4943CECE153AA48700B823E7 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = src/Event.m; sourceTree = "<group>"; };
 		4943CED3153AA60500B823E7 /* Behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Behavior.h; path = src/Behavior.h; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 				4943CECE153AA48700B823E7 /* Event.m */,
 				4943CED3153AA60500B823E7 /* Behavior.h */,
 				4943CED4153AA60500B823E7 /* Behavior.m */,
-				4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */,
+				4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */,
 			);
 			name = domains;
 			sourceTree = "<group>";
@@ -557,7 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4943CEE6153AAE1E00B823E7 /* main.m in Sources */,
-				4943CEF1153AB13600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */,
+				4943CEF1153AB13600B823E7 /* DataModel.xcdatamodeld in Sources */,
 				4943CEF2153AB14000B823E7 /* Event.m in Sources */,
 				4943CEF3153AB14700B823E7 /* Behavior.m in Sources */,
 			);
@@ -580,7 +580,7 @@
 				49EBB43D1537D4BE002BBF3C /* IntrospectManager.m in Sources */,
 				499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */,
 				49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */,
-				4943CECB153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld in Sources */,
+				4943CECB153AA2A600B823E7 /* DataModel.xcdatamodeld in Sources */,
 				4943CECF153AA48700B823E7 /* Event.m in Sources */,
 				4943CED5153AA60500B823E7 /* Behavior.m in Sources */,
 				49EBB43D1537D4BE002BBF4A /* BehaviorDataSource.m in Sources */,
@@ -826,14 +826,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4943CEC9153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodeld */ = {
+		4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4943CECA153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodel */,
+				4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 4943CECA153AA2A600B823E7 /* MeritDemeritCellDataModel.xcdatamodel */;
-			name = MeritDemeritCellDataModel.xcdatamodeld;
-			path = src/MeritDemeritCellDataModel.xcdatamodeld;
+			currentVersion = 4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = src/DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

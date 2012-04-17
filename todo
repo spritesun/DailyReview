@@ -10,9 +10,7 @@
 // * swipe to record/clear
 // * duplicate entry take a look why
 
-
 * try to avoid insert empty event, remove zero count event
-
 
 * try to use IB to connect table and cell
 * icloud
