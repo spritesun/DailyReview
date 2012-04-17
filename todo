@@ -8,10 +8,17 @@
 // * group into section by rank value
 // * add introspect
 // * swipe to record/clear
+// * duplicate entry take a look why
+
+* swipe animation could be more fancy highlight finger touch path
+* try to avoid insert empty event, remove zero count event
+* manager pattern seem misuse.
+* do we need more order under same section?
+
 
 * try to use IB to connect table and cell
-* weibo
-* detail for behavior
+* weibo?
+* detail for behavior?
 * icloud
 
 * introduce config file
