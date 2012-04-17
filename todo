@@ -10,17 +10,15 @@
 // * swipe to record/clear
 // * duplicate entry take a look why
 
-* swipe animation could be more fancy highlight finger touch path
+
 * try to avoid insert empty event, remove zero count event
-* manager pattern seem misuse.
-* do we need more order under same section?
 
 
 * try to use IB to connect table and cell
-* weibo?
-* detail for behavior?
 * icloud
 
+* manager pattern seem misuse.
+* do we need more order under same section?
 * introduce config file
 * bundle zh name 
 * split into two view by rank +/-
@@ -32,4 +30,6 @@
 * paper folding animation
 * pinch to close section
 * when one section longer than page, close animation not so smooth
-
+* swipe animation could be more fancy highlight finger touch path
+* weibo?
+* detail for behavior?

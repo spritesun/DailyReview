@@ -1,5 +1,6 @@
 #import "BehaviorDataSource.h"
 #import "NSManagedObjectContext+Additions.m"
+#import "NSNumber+Additions.h"
 
 static NSMutableDictionary *categoryNamesDict = nil;
 
@@ -11,14 +12,21 @@ static NSMutableDictionary *categoryNamesDict = nil;
 + (void)initialize {
   if (!categoryNamesDict) {
     categoryNamesDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-        @"准一功", [NSNumber numberWithInt:1],
-        @"准三功", [NSNumber numberWithInt:3],
-        @"准五功", [NSNumber numberWithInt:5],
-        @"准十功", [NSNumber numberWithInt:10],
-        @"准三十功", [NSNumber numberWithInt:30],
-        @"准五十功", [NSNumber numberWithInt:50],
-        @"准百功", [NSNumber numberWithInt:100],
-        nil];
+                         @"准一功", [NSNumber numberWithInt:1],
+                         @"准三功", [NSNumber numberWithInt:3],
+                         @"准五功", [NSNumber numberWithInt:5],
+                         @"准十功", [NSNumber numberWithInt:10],
+                         @"准三十功", [NSNumber numberWithInt:30],
+                         @"准五十功", [NSNumber numberWithInt:50],
+                         @"准百功", [NSNumber numberWithInt:100],
+                         @"准一过", [NSNumber numberWithInt:-1],
+                         @"准三过", [NSNumber numberWithInt:-3],
+                         @"准五过", [NSNumber numberWithInt:-5],
+                         @"准十过", [NSNumber numberWithInt:-10],
+                         @"准三十过", [NSNumber numberWithInt:-30],
+                         @"准五十过", [NSNumber numberWithInt:-50],
+                         @"准百过", [NSNumber numberWithInt:-100],                 
+                         nil];
   }
 }
 
@@ -39,7 +47,20 @@ static NSMutableDictionary *categoryNamesDict = nil;
 }
 
 + (BehaviorDataSource *)demerits {
-  return nil;
+  //TODO: refactor with +merits method
+  NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+  
+  NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
+  [request setPredicate:[NSPredicate predicateWithFormat:@"rank < 0"]];
+  
+  __block NSArray *results;
+  
+  [context performBlockAndWait:^{
+    results = [context executeFetchRequest:request error:nil];
+  }];
+  
+  return [[BehaviorDataSource alloc] initWithBehaviors:results];
+
 }
 
 - (BehaviorDataSource *)initWithBehaviors:(NSArray *)behaviors {
@@ -47,7 +68,7 @@ static NSMutableDictionary *categoryNamesDict = nil;
   if (self) {
     NSArray *ranks = [behaviors valueForKeyPath:@"@distinctUnionOfObjects.rank"];
     ranks = [ranks sortedArrayUsingDescriptors:[NSArray arrayWithObject:
-                                                [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]]];
+                                                [NSSortDescriptor sortDescriptorWithKey:@"absInt" ascending:YES]]];
     //TODO: I need NSArray#sortAscending NSArray#reverse
 
     categories_ = [categoryNamesDict objectsForKeys:ranks notFoundMarker:@"未知"];

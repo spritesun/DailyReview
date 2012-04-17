@@ -1,6 +1,4 @@
 #import "BehaviorTableViewController.h"
-#import "Behavior.h"
-#import "BehaviorDataSource.h"
 #import "BehaviorSectionHeaderView.h"
 #import "BehaviorTableViewCell.h"
 #import "UIGestureRecognizer+Blocks.h"
@@ -14,8 +12,9 @@
 @implementation BehaviorTableViewController {
   NSMutableArray *sectionHeaderViews_;
   BindingManager *bindingManager_;
-  BehaviorDataSource *dataSource_;
 }
+
+@synthesize dataSource = dataSource_;
 
 #pragma mark - Initialization
 
@@ -31,12 +30,11 @@
   return [self init];
 }
 
-#pragma mark - LifeCycle
+#pragma mark - LifeCycles
 
 - (void)viewDidLoad {
   //TODO: should we put this in viewDidLoad or init?
   bindingManager_ = [BindingManager new];
-  dataSource_ = [BehaviorDataSource merits];  
   sectionHeaderViews_ = [NSMutableArray new];
   for (NSUInteger section = 0; section < [dataSource_ categoryCount]; section++) {
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
@@ -45,7 +43,6 @@
 
 - (void)viewDidUnLoad {
   bindingManager_ = nil;
-  dataSource_ = nil;
   sectionHeaderViews_ = nil;
 }
 

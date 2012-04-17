@@ -37,6 +37,12 @@
 		49A04AB315344D4E0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */; };
 		49A04AB615344D900092DC4A /* MeritDemeritCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AB515344D900092DC4A /* MeritDemeritCellTests.m */; };
 		49A04AB915344D9B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB715344D9B0092DC4A /* InfoPlist.strings */; };
+		49CE19C0153D221E00C31041 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19BF153D221E00C31041 /* MainViewController.m */; };
+		49CE19C4153D5C1700C31041 /* MeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C3153D5C1700C31041 /* MeritController.m */; };
+		49CE19C7153D5CE800C31041 /* DemeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C6153D5CE800C31041 /* DemeritController.m */; };
+		49CE19CE153D607E00C31041 /* NSNumber+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19CD153D607E00C31041 /* NSNumber+Additions.m */; };
+		49CE19D6153D6CBF00C31041 /* gong.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CE19D4153D6CBF00C31041 /* gong.png */; };
+		49CE19D7153D6CBF00C31041 /* guo.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CE19D5153D6CBF00C31041 /* guo.png */; };
 		49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
 		49EBB4321537D1E9002BBF3C /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB42A1537D1E9002BBF3C /* DCCrossHairView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49EBB4331537D1E9002BBF3C /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB42C1537D1E9002BBF3C /* DCFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -126,6 +132,16 @@
 		49A04AB815344D9B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49A04ABA15344DB50092DC4A /* MeritDemeritCell-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MeritDemeritCell-Info.plist"; path = "resources/MeritDemeritCell-Info.plist"; sourceTree = "<group>"; };
 		49A04ABB15344DB50092DC4A /* MeritDemeritCellTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MeritDemeritCellTests-Info.plist"; path = "resources/MeritDemeritCellTests-Info.plist"; sourceTree = "<group>"; };
+		49CE19BE153D221E00C31041 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = src/MainViewController.h; sourceTree = "<group>"; };
+		49CE19BF153D221E00C31041 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = src/MainViewController.m; sourceTree = "<group>"; };
+		49CE19C2153D5C1700C31041 /* MeritController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeritController.h; path = src/MeritController.h; sourceTree = "<group>"; };
+		49CE19C3153D5C1700C31041 /* MeritController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeritController.m; path = src/MeritController.m; sourceTree = "<group>"; };
+		49CE19C5153D5CE800C31041 /* DemeritController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemeritController.h; path = src/DemeritController.h; sourceTree = "<group>"; };
+		49CE19C6153D5CE800C31041 /* DemeritController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemeritController.m; path = src/DemeritController.m; sourceTree = "<group>"; };
+		49CE19CC153D607E00C31041 /* NSNumber+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Additions.h"; path = "src/NSNumber+Additions.h"; sourceTree = "<group>"; };
+		49CE19CD153D607E00C31041 /* NSNumber+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Additions.m"; path = "src/NSNumber+Additions.m"; sourceTree = "<group>"; };
+		49CE19D4153D6CBF00C31041 /* gong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gong.png; path = resources/gong.png; sourceTree = SOURCE_ROOT; };
+		49CE19D5153D6CBF00C31041 /* guo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = guo.png; path = resources/guo.png; sourceTree = SOURCE_ROOT; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
 		49EBB4141536C8B4002BBF3C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "src/UIView+Additions.h"; sourceTree = "<group>"; };
@@ -233,8 +249,14 @@
 			children = (
 				49A04A9715344CD90092DC4A /* AppDelegate.h */,
 				49A04A9815344CD90092DC4A /* AppDelegate.m */,
+				49CE19BE153D221E00C31041 /* MainViewController.h */,
+				49CE19BF153D221E00C31041 /* MainViewController.m */,
 				497316221534590400E3E5DC /* BehaviorTableViewController.h */,
 				497316231534590400E3E5DC /* BehaviorTableViewController.m */,
+				49CE19C2153D5C1700C31041 /* MeritController.h */,
+				49CE19C3153D5C1700C31041 /* MeritController.m */,
+				49CE19C5153D5CE800C31041 /* DemeritController.h */,
+				49CE19C6153D5CE800C31041 /* DemeritController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -318,6 +340,8 @@
 		49A04A9315344C0E0092DC4A /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				49CE19D4153D6CBF00C31041 /* gong.png */,
+				49CE19D5153D6CBF00C31041 /* guo.png */,
 				49765A76153C05A200E0D533 /* mdc.sqlite */,
 				49A04ABA15344DB50092DC4A /* MeritDemeritCell-Info.plist */,
 				49A04ABB15344DB50092DC4A /* MeritDemeritCellTests-Info.plist */,
@@ -368,6 +392,8 @@
 				49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */,
 				49EBB43D1537D4BE002BBF55 /* NSManagedObjectContext+Additions.h */,
 				49EBB43D1537D4BE002BBF53 /* NSManagedObjectContext+Additions.m */,
+				49CE19CC153D607E00C31041 /* NSNumber+Additions.h */,
+				49CE19CD153D607E00C31041 /* NSNumber+Additions.m */,
 				49EBB43D1537D4BE002BBF52 /* NSError+Additions.h */,
 				49EBB43D1537D4BE002BBF50 /* NSError+Additions.m */,
 				495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */,
@@ -494,6 +520,8 @@
 				49A04AB215344D4E0092DC4A /* MainStoryboard_iPad.storyboard in Resources */,
 				49A04AB315344D4E0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */,
 				49765A77153C05A200E0D533 /* mdc.sqlite in Resources */,
+				49CE19D6153D6CBF00C31041 /* gong.png in Resources */,
+				49CE19D7153D6CBF00C31041 /* guo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +590,10 @@
 				49EBB43D1537D4BE002BBF5C /* DatabaseManager.m in Sources */,
 				49EBB43D1537D4BE002BBF5F /* NSDate+Additions.m in Sources */,
 				49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */,
+				49CE19C0153D221E00C31041 /* MainViewController.m in Sources */,
+				49CE19C4153D5C1700C31041 /* MeritController.m in Sources */,
+				49CE19C7153D5CE800C31041 /* DemeritController.m in Sources */,
+				49CE19CE153D607E00C31041 /* NSNumber+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
