@@ -1,12 +1,3 @@
-//
-//  Behavior.h
-//  MeritDemeritCell
-//
-//  Created by Long Sun on 15/04/12.
-//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
 @class Event;
