@@ -30,7 +30,7 @@
   [super viewDidLoad];
   bindingManager_ = [BindingManager new];
   sectionHeaderViews_ = [NSMutableArray new];
-  for (NSUInteger section = 0; section < [dataSource_ categoryCount]; section++) {
+  for (NSUInteger section = 0; section < [repository_ categoryCount]; section++) {
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
   }
 }
@@ -52,7 +52,7 @@
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(NSUInteger)section {
-  NSString *title = [dataSource_ categoryForSection:section];
+  NSString *title = [repository_ categoryForSection:section];
   BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:title];
 
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
@@ -65,7 +65,7 @@
 
 - (void)toggleSection:(NSUInteger)section headerView:(BehaviorSectionHeaderView *)headerView {
   NSMutableArray *indexPaths = [NSMutableArray array];
-  for (NSInteger i = 0; i < [dataSource_ behaviorCountForSection:section]; i++) {
+  for (NSInteger i = 0; i < [repository_ behaviorCountForSection:section]; i++) {
     [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
   }
   headerView.expanded ^= YES;
@@ -87,7 +87,7 @@
     cell = [BehaviorTableViewCell cell];
   }
 
-  Behavior *behavior = [dataSource_ behaviorForIndexPath:indexPath];
+  Behavior *behavior = [repository_ behaviorForIndexPath:indexPath];
   cell.textLabel.text = behavior.name;
 
   //TODO: move to domain?
@@ -105,7 +105,7 @@
 
 - (void)tableView:(UITableView *)tableView willRemoveCell:(UITableViewCell *)cell {
   [cell removeAllGestureRecognizers];
-  [bindingManager_ unbindSource:[dataSource_ behaviorForIndexPath:[tableView indexPathForCell:cell]].currentEvent];
+  [bindingManager_ unbindSource:[repository_ behaviorForIndexPath:[tableView indexPathForCell:cell]].currentEvent];
 }
 
 - (Event *)buildEventForBehavior:(Behavior *)behavior {
@@ -160,12 +160,12 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [dataSource_ categoryCount];
+  return [repository_ categoryCount];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   if ([[sectionHeaderViews_ objectAtIndex:section] expanded]) {
-    return [dataSource_ behaviorCountForSection:section];
+    return [repository_ behaviorCountForSection:section];
   } else {
     return 0;
   }

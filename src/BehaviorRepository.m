@@ -1,10 +1,10 @@
-#import "BehaviorDataSource.h"
+#import "BehaviorRepository.h"
 #import "NSManagedObjectContext+Additions.m"
 #import "NSNumber+Additions.h"
 
 static NSMutableDictionary *categoryNamesDict = nil;
 
-@implementation BehaviorDataSource {
+@implementation BehaviorRepository {
   NSMutableArray *arrayOfBehaviors_;
   NSArray *categories_;
 }
@@ -30,7 +30,7 @@ static NSMutableDictionary *categoryNamesDict = nil;
   }
 }
 
-+ (BehaviorDataSource *)merits {
++ (BehaviorRepository *)merits {
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
 
   NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
@@ -43,10 +43,10 @@ static NSMutableDictionary *categoryNamesDict = nil;
     results = [context executeFetchRequest:request error:nil];
   }];
 
-  return [[BehaviorDataSource alloc] initWithBehaviors:results];
+  return [[BehaviorRepository alloc] initWithBehaviors:results];
 }
 
-+ (BehaviorDataSource *)demerits {
++ (BehaviorRepository *)demerits {
   //TODO: refactor with +merits method
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
   
@@ -59,11 +59,11 @@ static NSMutableDictionary *categoryNamesDict = nil;
     results = [context executeFetchRequest:request error:nil];
   }];
   
-  return [[BehaviorDataSource alloc] initWithBehaviors:results];
+  return [[BehaviorRepository alloc] initWithBehaviors:results];
 
 }
 
-- (BehaviorDataSource *)initWithBehaviors:(NSArray *)behaviors {
+- (BehaviorRepository *)initWithBehaviors:(NSArray *)behaviors {
   self = [super init];
   if (self) {
     NSArray *ranks = [behaviors valueForKeyPath:@"@distinctUnionOfObjects.rank"];

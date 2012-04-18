@@ -1,12 +1,12 @@
 #import "Behavior.h"
 
-@interface BehaviorDataSource : NSObject
+@interface BehaviorRepository : NSObject
 
-- (BehaviorDataSource *)initWithBehaviors:(NSArray *)array;
+- (BehaviorRepository *)initWithBehaviors:(NSArray *)array;
 
-+ (BehaviorDataSource *)merits;
++ (BehaviorRepository *)merits;
 
-+ (BehaviorDataSource *)demerits;
++ (BehaviorRepository *)demerits;
 
 - (NSUInteger)categoryCount;
 

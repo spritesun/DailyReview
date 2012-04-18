@@ -5,12 +5,12 @@
 #pragma mark - LifeCycles
 
 - (void)viewDidLoad {
-  dataSource_ = [BehaviorDataSource demerits];
+  repository_ = [BehaviorRepository demerits];
   [super viewDidLoad];
 }
 
 - (void)viewDidUnload {
-  dataSource_ = nil;
+  repository_ = nil;
   [super viewDidUnload];  
 }
 

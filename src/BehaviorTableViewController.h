@@ -1,8 +1,8 @@
-#import "BehaviorDataSource.h"
+#import "BehaviorRepository.h"
 
 @interface BehaviorTableViewController : UITableViewController {
   @protected
-  BehaviorDataSource *dataSource_;
+  BehaviorRepository *repository_;
 }
 
 @end

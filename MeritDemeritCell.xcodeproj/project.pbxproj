@@ -54,7 +54,7 @@
 		49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
 		49EBB43D1537D4BE002BBF3C /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */; };
 		49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF43 /* BindingManager.m */; };
-		49EBB43D1537D4BE002BBF4A /* BehaviorDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF49 /* BehaviorDataSource.m */; };
+		49EBB43D1537D4BE002BBF4A /* BehaviorRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF49 /* BehaviorRepository.m */; };
 		49EBB43D1537D4BE002BBF51 /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF50 /* NSError+Additions.m */; };
 		49EBB43D1537D4BE002BBF54 /* NSManagedObjectContext+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF53 /* NSManagedObjectContext+Additions.m */; };
 		49EBB43D1537D4BE002BBF5C /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5B /* DatabaseManager.m */; };
@@ -168,8 +168,8 @@
 		49EBB43D1537D4BE002BBF43 /* BindingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BindingManager.m; path = src/BindingManager.m; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF45 /* BindingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BindingManager.h; path = src/BindingManager.h; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF48 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = src/Macros.h; sourceTree = "<group>"; };
-		49EBB43D1537D4BE002BBF49 /* BehaviorDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorDataSource.m; path = src/BehaviorDataSource.m; sourceTree = "<group>"; };
-		49EBB43D1537D4BE002BBF4B /* BehaviorDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorDataSource.h; path = src/BehaviorDataSource.h; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF49 /* BehaviorRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorRepository.m; path = src/BehaviorRepository.m; sourceTree = "<group>"; };
+		49EBB43D1537D4BE002BBF4B /* BehaviorRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorRepository.h; path = src/BehaviorRepository.h; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF50 /* NSError+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+Additions.m"; path = "src/NSError+Additions.m"; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF52 /* NSError+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+Additions.h"; path = "src/NSError+Additions.h"; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF53 /* NSManagedObjectContext+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+Additions.m"; path = "src/NSManagedObjectContext+Additions.m"; sourceTree = "<group>"; };
@@ -270,8 +270,6 @@
 		4973162615345CA000E3E5DC /* domains */ = {
 			isa = PBXGroup;
 			children = (
-				49EBB43D1537D4BE002BBF4B /* BehaviorDataSource.h */,
-				49EBB43D1537D4BE002BBF49 /* BehaviorDataSource.m */,
 				4943CECD153AA48700B823E7 /* Event.h */,
 				4943CECE153AA48700B823E7 /* Event.m */,
 				4943CED3153AA60500B823E7 /* Behavior.h */,
@@ -321,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				4973162615345CA000E3E5DC /* domains */,
+				49A64D0A153E8FDB0064CF90 /* repositories */,
 				4973162515345C8F00E3E5DC /* controllers */,
 				49EBB43D1537D4BE002BBF5D /* views */,
 				49EBB43D1537D4BE002BBF56 /* managers */,
@@ -362,6 +361,15 @@
 				49A04AA115344CD90092DC4A /* MeritDemeritCell-Prefix.pch */,
 			);
 			name = others;
+			sourceTree = "<group>";
+		};
+		49A64D0A153E8FDB0064CF90 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				49EBB43D1537D4BE002BBF4B /* BehaviorRepository.h */,
+				49EBB43D1537D4BE002BBF49 /* BehaviorRepository.m */,
+			);
+			name = repositories;
 			sourceTree = "<group>";
 		};
 		49EBB4261537D1D3002BBF3C /* lib */ = {
@@ -593,7 +601,7 @@
 				4943CECB153AA2A600B823E7 /* DataModel.xcdatamodeld in Sources */,
 				4943CECF153AA48700B823E7 /* Event.m in Sources */,
 				4943CED5153AA60500B823E7 /* Behavior.m in Sources */,
-				49EBB43D1537D4BE002BBF4A /* BehaviorDataSource.m in Sources */,
+				49EBB43D1537D4BE002BBF4A /* BehaviorRepository.m in Sources */,
 				497659CD153BB8DB00E0D533 /* Binding.m in Sources */,
 				49EBB43D1537D4BE002BBF51 /* NSError+Additions.m in Sources */,
 				49EBB43D1537D4BE002BBF54 /* NSManagedObjectContext+Additions.m in Sources */,
