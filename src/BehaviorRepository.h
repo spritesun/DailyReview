@@ -14,4 +14,6 @@
 
 - (Behavior *)behaviorForIndexPath:(NSIndexPath *)indexPath;
 
+- (NSNumber *)totalRank;
+
 @end

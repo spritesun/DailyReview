@@ -1,5 +1,7 @@
 #import "BehaviorRepository.h"
 #import "NSManagedObjectContext+Additions.m"
+#import "NSArray+Additions.h"
+#import "Event.h"
 
 static NSDictionary *categoryNamesDict = nil;
 
@@ -47,12 +49,21 @@ static NSDictionary *categoryNamesDict = nil;
 }
 
 + (BehaviorRepository *)merits {
-  return [self repositoryFromPredicate:@"rank > 0"];
-
+  static BehaviorRepository *merits;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    merits = [self repositoryFromPredicate:@"rank > 0"];
+  });
+  return merits;
 }
 
 + (BehaviorRepository *)demerits {
-  return [self repositoryFromPredicate:@"rank < 0"];
+  static BehaviorRepository *demerits;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    demerits = [self repositoryFromPredicate:@"rank < 0"];
+  });
+  return demerits;
 }
 
 - (BehaviorRepository *)initWithBehaviors:(NSArray *)behaviors {
@@ -84,11 +95,43 @@ static NSDictionary *categoryNamesDict = nil;
 }
 
 - (NSUInteger)behaviorCountForSection:(NSUInteger)section {
-  return [[arrayOfBehaviors_ objectAtIndex:section] count];
+  return [(NSArray *)[arrayOfBehaviors_ objectAtIndex:section] count];
 }
 
 - (Behavior *)behaviorForIndexPath:(NSIndexPath *)indexPath {
   return [[arrayOfBehaviors_ objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+}
+
+- (NSNumber *)totalRank {
+    __block NSInteger result = 0;
+    [arrayOfBehaviors_ each:^(NSArray *behaviors) {
+        [behaviors each:^(id item) {
+           result = result + [self totalRankForBehavior:item]; 
+        }];
+    }];
+    return [NSNumber numberWithInt:result];
+}
+
+- (NSInteger)totalRankForBehavior:(Behavior *)behavior {
+    
+    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
+    
+    [request setPredicate:[NSPredicate predicateWithFormat:@"behavior=%@", behavior]];
+    
+    __block NSArray *results = nil;
+    
+    [context performBlockAndWait:^{
+        results = [context executeFetchRequest:request error:nil];
+    }];
+    
+    __block NSInteger totalRank = 0;
+    [results each:^(Event * event) {
+        totalRank = event.countValue * [[behavior rank] intValue];
+    }];
+
+    return totalRank;
 }
 
 
