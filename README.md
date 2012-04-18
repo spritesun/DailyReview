@@ -9,3 +9,6 @@
 
 ## 开发者联系方式
 spritesun at gmail.com
+
+# License
+This Code is released under the MIT License by Long Sun.
