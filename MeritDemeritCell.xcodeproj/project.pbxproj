@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490A2135153E8547006D654D /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
+		49340A8C153E8B1A006C11A1 /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */; };
 		4943CECB153AA2A600B823E7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
 		4943CECF153AA48700B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CED5153AA60500B823E7 /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CED4153AA60500B823E7 /* Behavior.m */; };
@@ -94,6 +96,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		490A2133153E8547006D654D /* BehaviorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableView.h; path = src/BehaviorTableView.h; sourceTree = "<group>"; };
+		490A2134153E8547006D654D /* BehaviorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableView.m; path = src/BehaviorTableView.m; sourceTree = "<group>"; };
+		49340A8A153E8B1A006C11A1 /* UITableView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+Additions.h"; path = "src/UITableView+Additions.h"; sourceTree = "<group>"; };
+		49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Additions.m"; path = "src/UITableView+Additions.m"; sourceTree = "<group>"; };
 		4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		4943CECD153AA48700B823E7 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = src/Event.h; sourceTree = "<group>"; };
 		4943CECE153AA48700B823E7 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = src/Event.m; sourceTree = "<group>"; };
@@ -400,6 +406,8 @@
 				495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */,
 				49EBB4141536C8B4002BBF3C /* UIView+Additions.h */,
 				49EBB4391537D4A5002BBF3C /* UIView+Additions.m */,
+				49340A8A153E8B1A006C11A1 /* UITableView+Additions.h */,
+				49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */,
 			);
 			name = additions;
 			sourceTree = "<group>";
@@ -418,6 +426,8 @@
 		49EBB43D1537D4BE002BBF5D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				490A2133153E8547006D654D /* BehaviorTableView.h */,
+				490A2134153E8547006D654D /* BehaviorTableView.m */,
 				499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */,
 				499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */,
 				49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */,
@@ -594,6 +604,8 @@
 				49CE19C4153D5C1700C31041 /* MeritController.m in Sources */,
 				49CE19C7153D5CE800C31041 /* DemeritController.m in Sources */,
 				49CE19CE153D607E00C31041 /* NSNumber+Additions.m in Sources */,
+				490A2135153E8547006D654D /* BehaviorTableView.m in Sources */,
+				49340A8C153E8B1A006C11A1 /* UITableView+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

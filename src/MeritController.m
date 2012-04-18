@@ -2,25 +2,15 @@
 
 @implementation MeritController
 
-#pragma mark - Initialization
-
-- (id)init {
-  self = [super init];
-  if (self) {
-    self.tabBarItem.image = [UIImage imageNamed:@"gong.png"];
-  }
-  return self;
-}
-
 #pragma mark - LifeCycles
 
 - (void)viewDidLoad {
-  self.dataSource = [BehaviorDataSource merits];
+  dataSource_ = [BehaviorDataSource merits];
   [super viewDidLoad];
 }
 
 - (void)viewDidUnload {
-  self.dataSource = nil;
+  dataSource_ = nil;
   [super viewDidUnload];  
 }
 

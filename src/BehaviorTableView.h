@@ -1,0 +1,2 @@
+@interface BehaviorTableView : UITableView
+@end

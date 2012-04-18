@@ -2,26 +2,15 @@
 
 @implementation DemeritController
 
-#pragma mark - Initialization
-
-- (id)init {
-  self = [super init];
-  if (self) {
-    self.tabBarItem.image = [UIImage imageNamed:@"guo.png"];
-  }
-  return self;
-}
-
 #pragma mark - LifeCycles
 
 - (void)viewDidLoad {
-  self.dataSource = [BehaviorDataSource demerits];
-
+  dataSource_ = [BehaviorDataSource demerits];
   [super viewDidLoad];
 }
 
 - (void)viewDidUnload {
-  self.dataSource = nil;
+  dataSource_ = nil;
   [super viewDidUnload];  
 }
 

@@ -1,7 +1,8 @@
 #import "BehaviorDataSource.h"
 
-@interface BehaviorTableViewController : UITableViewController
-
-@property(nonatomic, strong) BehaviorDataSource *dataSource;
+@interface BehaviorTableViewController : UITableViewController {
+  @protected
+  BehaviorDataSource *dataSource_;
+}
 
 @end

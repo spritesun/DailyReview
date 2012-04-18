@@ -100,6 +100,7 @@
                                        initializeTarget:NO action:blockOrNil];
     [bindings_ addObject:targetBinding];
   }
+//  NSLog(@"DEBUG bindings number:%d", [bindings_ count]); 
 }
 
 - (void)unbindSource:(id)source {

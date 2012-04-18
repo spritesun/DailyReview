@@ -1,7 +1,7 @@
 #import "Event.h"
 #import "Behavior.h"
 #import "NSManagedObjectContext+Additions.h"
-
+#import "NSDate+Additions.h"
 
 @implementation Event
 
@@ -10,10 +10,11 @@
 @dynamic behavior;
 @dynamic countValue;
 
-+ (Event *)eventForBehavior:(Behavior *)behavior {
++ (Event *)eventForBehavior:(Behavior *)behavior onDate:(NSDate *)date {
   Event *event = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
   event.behavior = behavior;
   event.count = [NSNumber numberWithInt:0];
+  event.date = date;
   return event;
 }
 
