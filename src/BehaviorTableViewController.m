@@ -69,6 +69,7 @@
     [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
   }
   headerView.expanded ^= YES;
+  
   UITableViewRowAnimation animation = UITableViewRowAnimationTop;
 
   if (headerView.expanded) {
@@ -90,7 +91,6 @@
   Behavior *behavior = [repository_ behaviorForIndexPath:indexPath];
   cell.textLabel.text = behavior.name;
 
-  //TODO: move to domain?
   Event *event = [self buildEventForBehavior:behavior];
 
   [self addGesturesForCell:cell event:event];
@@ -105,11 +105,13 @@
 
 - (void)tableView:(UITableView *)tableView willRemoveCell:(UITableViewCell *)cell {
   [cell removeAllGestureRecognizers];
-  [bindingManager_ unbindSource:[repository_ behaviorForIndexPath:[tableView indexPathForCell:cell]].currentEvent];
+  Behavior *behavior = [repository_ behaviorForIndexPath:[tableView indexPathForCell:cell]];
+  [bindingManager_ unbindSource:[behavior eventForDate:currentDate_]];
 }
 
+  //TODO: move to domain?
 - (Event *)buildEventForBehavior:(Behavior *)behavior {
-  if (![behavior.currentEvent.date isEqualToDate:currentDate_]) {
+  if (nil == [behavior eventForDate:currentDate_]) {
     NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
     [request setPredicate:[NSPredicate predicateWithFormat:@"behavior = %@ AND date = %@", behavior, currentDate_]];
@@ -118,13 +120,13 @@
       results = [context executeFetchRequest:request error:nil];
     }];
     if ([results isEmpty]) {
-      behavior.currentEvent = [Event eventForBehavior:behavior onDate:currentDate_];
+      [behavior addEventsObject:[Event eventForBehavior:behavior onDate:currentDate_]];
     } else {
-      behavior.currentEvent = [results first];
+      [behavior addEventsObject:[results first]];
     }
   }
 
-  return behavior.currentEvent;
+  return [behavior eventForDate:currentDate_];
 }
 
 - (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {

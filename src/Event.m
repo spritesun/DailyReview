@@ -25,4 +25,5 @@
 - (void)setCountValue:(NSUInteger)aCountValue {
   self.count = [NSNumber numberWithInt:aCountValue];
 }
+
 @end

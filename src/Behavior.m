@@ -8,7 +8,7 @@
 
 #import "Behavior.h"
 #import "Event.h"
-
+#import "NSSet+Additions.h"
 
 @implementation Behavior
 
@@ -16,6 +16,11 @@
 @dynamic rank;
 @dynamic timestamp;
 @dynamic events;
-@synthesize currentEvent = currentEvent_;
+
+- (Event *)eventForDate:(NSDate *)date {
+  return [self.events first:^BOOL(Event *event) {  
+    return [[event date] isEqualToDate:date];
+  }];
+}
 
 @end

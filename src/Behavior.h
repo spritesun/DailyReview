@@ -17,7 +17,9 @@
 @property (nonatomic, retain) NSNumber * rank;
 @property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) NSSet *events;
-@property (nonatomic, retain) Event *currentEvent;
+
+- (Event *)eventForDate:(NSDate *)date;
+
 @end
 
 @interface Behavior (CoreDataGeneratedAccessors)
