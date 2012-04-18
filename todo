@@ -9,6 +9,9 @@
 // * add introspect
 // * swipe to record/clear
 // * duplicate entry take a look why
+// * split into two view by rank +/-
+// * core data persistent
+// * order under same section
 
 * try to avoid insert empty event, remove zero count event
 * add @2x images
@@ -17,13 +20,13 @@
 * icloud
 
 * manager pattern seem misuse.
-* do we need more order under same section?
+
 * introduce config file
 * bundle zh name 
-* split into two view by rank +/-
+
 * history summary
 * history detail
-* core data persistent
+
 * input known behavior rule data
 * different version of behavior rule
 * paper folding animation
