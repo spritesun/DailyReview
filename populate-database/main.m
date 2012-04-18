@@ -7,25 +7,28 @@ void insertData(NSManagedObjectContext *context, NSArray* behaviorJSONArray);
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
-    NSString *databaseFile = @"/tmp/mdc.sqlite";
+    NSString *databaseFile = @"/tmp/db.sqlite";
     [[NSFileManager defaultManager] removeItemAtPath:databaseFile error:nil];
     
     NSManagedObjectContext *context = managedObjectContext(databaseFile);
-    insertData(context, jsonObjectsFromSource(@"initial_data.json"));
-    
-    NSError *error = nil;    
-    if (![context save:&error]) {
-      NSLog(@"Error while saving %@", ([error localizedDescription] != nil) ? [error localizedDescription] : @"Unknown Error");
-    }
+    insertData(context, jsonObjectsFromSource(@"initial_data.json"));    
   }
   return 0;
 }
 
 void insertData(NSManagedObjectContext *context, NSArray *behaviorJSONArray) {
+  NSError *error = nil;    
+  
   for (NSDictionary *object in behaviorJSONArray) {
     Behavior *behavior = [NSEntityDescription insertNewObjectForEntityForName:@"Behavior" inManagedObjectContext:context];
     [behavior setName:[object valueForKey:@"name"]];
     [behavior setRank:[object valueForKey:@"rank"]];
+    [behavior setTimestamp:[NSDate date]];
+    if (![context save:&error]) {
+      NSLog(@"Error: %@", [error localizedDescription]);
+      error = nil;
+    }
+
   }
 }
 

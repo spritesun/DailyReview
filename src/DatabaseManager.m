@@ -1,7 +1,7 @@
 #import "DatabaseManager.h"
 #import "NSError+Additions.h"
 
-static NSString *const kDatabaseFileName = @"mdc.sqlite";
+static NSString *const kDatabaseFileName = @"db.sqlite";
 
 @implementation DatabaseManager
 

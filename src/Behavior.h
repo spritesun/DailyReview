@@ -1,3 +1,12 @@
+//
+//  Behavior.h
+//  DailyReview
+//
+//  Created by Long Sun on 18/04/12.
+//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
 @class Event;
@@ -6,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * rank;
+@property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) NSSet *events;
 @property (nonatomic, retain) Event *currentEvent;
 @end

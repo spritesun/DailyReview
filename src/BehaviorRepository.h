@@ -2,8 +2,6 @@
 
 @interface BehaviorRepository : NSObject
 
-- (BehaviorRepository *)initWithBehaviors:(NSArray *)array;
-
 + (BehaviorRepository *)merits;
 
 + (BehaviorRepository *)demerits;
