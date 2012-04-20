@@ -1,15 +1,20 @@
 #import "BehaviorSectionHeaderView.h"
+#import "BehaviorResultsController.h"
 #import "UIView+Additions.h"
 
-@implementation BehaviorSectionHeaderView
-
-@synthesize expanded = expanded_;
-
-+ (BehaviorSectionHeaderView *)viewWithTitle:(NSString *)title {
-  return [[self alloc] initWithTitle:title];
+@implementation BehaviorSectionHeaderView {
+  UILabel *todaySummary_;
+  NSString *scoreName_;
 }
 
-- (id)initWithTitle:(NSString *)title; {
+@synthesize expanded = expanded_;
+@dynamic todayScore;
+
++ (BehaviorSectionHeaderView *)viewWithTitle:(NSString *)title andScoreName:(NSString *)name {
+  return [[self alloc] initWithTitle:title andScoreName:name];
+}
+
+- (id)initWithTitle:(NSString *)title andScoreName:(NSString *)name {
   self = [self initWithFrame:CGRectMake(0, 0, 320, 30)];
   if (self) {
     expanded_ = YES;
@@ -23,8 +28,24 @@
     label.backgroundColor = [UIColor clearColor];
     label.userInteractionEnabled = YES;
     [self addSubview:label];
+    
+    scoreName_ = name;
+    
+    todaySummary_ = [[UILabel alloc] initWithFrame:CGRectMake(200, 0, 120, 30)];  
+    todaySummary_.backgroundColor = [UIColor clearColor];
+    todaySummary_.textColor = [UIColor whiteColor];
+    todaySummary_.font = [UIFont systemFontOfSize:15];
+    [self addSubview:todaySummary_];
   }
   return self;
+}
+
+- (void)setTodayScore:(NSNumber *)todayScore {
+    todaySummary_.text = [NSString stringWithFormat:@"今日累%@： %@", scoreName_, todayScore];
+}
+
+- (void)clearScore {
+      todaySummary_.text = @"";
 }
 
 @end

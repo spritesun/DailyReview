@@ -10,6 +10,7 @@
 #import "UITableView+Additions.h"
 #import "NSDate+Additions.h"
 #import "NSFetchedResultsController+Additions.h"
+#import "BehaviorResultsController.h"
 
 @interface BehaviorTableViewController () <UITableViewAdditionDelegate>
 
@@ -50,10 +51,28 @@
     [[self tableView] reloadData];
     currentDate_ = [[NSDate date] dateWithoutTime];
   }
+  [self updateScore]; 
+}
+
+- (void)updateScore {
+  //TODO: (Qin) how to find a way to check which section is the first visible one?
+  [sectionHeaderViews_ each:^(BehaviorSectionHeaderView *section){
+//      [section clearScore];
+    [section setTodayScore:[self getScore]];
+  }];
+//  [[sectionHeaderViews_ first:^BOOL(BehaviorSectionHeaderView *section) {
+//    return ![section isHidden];
+//  }] setTodayScore:[self getScore]];
+
+}
+
+- (NSNumber*)getScore {
+  //TODO: (Qin) how to declare a abstract method
+  return [NSNumber numberWithInt:0];
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(id <NSFetchedResultsSectionInfo>)section {
-  BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:[section name]];
+  BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:[section name] andScoreName:scoreName_];
 
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
     [self toggleSection:section headerView:headerView];
@@ -129,6 +148,7 @@
   UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
     event.countValue++;
     [context save];
+    [self updateScore]; 
   }];
   [cell addGestureRecognizer:increaseRecognizer];
 
@@ -136,6 +156,7 @@
     if (0 != event.countValue) {
       event.countValue--;
       [context save];
+      [self updateScore];
     }
   }];
   decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;

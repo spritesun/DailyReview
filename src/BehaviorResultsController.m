@@ -2,8 +2,9 @@
 #import "NSManagedObjectContext+Additions.m"
 #import "NSArray+Additions.h"
 #import "Event.h"
+#import "NSDate+Additions.h"
 
-@implementation BehaviorResultsController
+@implementation BehaviorResultsController 
 
 + (BehaviorResultsController *)sharedMeritResultsController {
   static dispatch_once_t onceToken;
@@ -13,7 +14,6 @@
                                         sorter:[NSSortDescriptor sortDescriptorWithKey:@"rank" ascending:YES]
                                      cacheName:@"meritCache"];
   });
-
   return instance;
 }
 
@@ -25,7 +25,6 @@
                                         sorter:[NSSortDescriptor sortDescriptorWithKey:@"rank" ascending:NO]
                                      cacheName:@"demeritCache"];
   });
-
   return instance;
 }
 
@@ -74,6 +73,38 @@
     totalRank = event.countValue * [[behavior rank] intValue];
   }];
 
+  return totalRank;
+}
+
+- (NSNumber *)todayRank {
+  __block NSInteger result = 0;
+  NSDate *today = [[NSDate date] dateWithoutTime];
+  [[self fetchedObjects] each:^(Behavior *behavior) {
+    result = result + [self totalRankForBehavior:behavior OnDate:today];
+  }];
+  return [NSNumber numberWithInt:result];
+}
+
+//TODO: (Qin) duplicated with totalRankForBehavior, need refactor
+- (NSInteger)totalRankForBehavior:(Behavior *)behavior OnDate:(NSDate *)date {
+  NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+  
+  NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
+  
+  // TODO: (Lei) use behavior in behavior_list, https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pCreating.html
+  [request setPredicate:[NSPredicate predicateWithFormat:@"behavior = %@ AND date = %@", behavior, date]];
+  
+  __block NSArray *results = nil;
+  
+  [context performBlockAndWait:^{
+    results = [context executeFetchRequest:request error:nil];
+  }];
+  
+  __block NSInteger totalRank = 0;
+  [results each:^(Event *event) {
+    totalRank = event.countValue * [[behavior rank] intValue];
+  }];
+  
   return totalRank;
 }
 
