@@ -35,3 +35,10 @@
 * swipe animation could be more fancy highlight finger touch path
 * weibo?
 * detail for behavior?
+
+* do we need save all coredata changes during applicationWillTerminate or applicationDidEnterBackground?
+* use NSFetchedResultsController for cache
+
+* performance testing for performance after use it half year
+
+* refactor to workspace style. extract common

@@ -13,10 +13,12 @@
 
 @interface Behavior : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * rank;
-@property (nonatomic, retain) NSDate * timestamp;
-@property (nonatomic, retain) NSSet *events;
+@property(nonatomic, retain) NSString *name;
+@property(nonatomic, retain) NSNumber *rank;
+@property(nonatomic, retain) NSDate *timestamp;
+@property(nonatomic, retain) NSSet *events;
+
+@property(nonatomic, readonly) NSString *category;
 
 - (Event *)eventForDate:(NSDate *)date;
 
@@ -25,8 +27,11 @@
 @interface Behavior (CoreDataGeneratedAccessors)
 
 - (void)addEventsObject:(Event *)value;
+
 - (void)removeEventsObject:(Event *)value;
+
 - (void)addEvents:(NSSet *)values;
+
 - (void)removeEvents:(NSSet *)values;
 
 @end

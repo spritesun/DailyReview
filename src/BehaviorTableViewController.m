@@ -9,6 +9,7 @@
 #import "NSArray+Additions.h"
 #import "UITableView+Additions.h"
 #import "NSDate+Additions.h"
+#import "NSFetchedResultsController+Additions.h"
 
 @interface BehaviorTableViewController () <UITableViewAdditionDelegate>
 
@@ -30,9 +31,9 @@
   [super viewDidLoad];
   bindingManager_ = [BindingManager new];
   sectionHeaderViews_ = [NSMutableArray new];
-  for (NSUInteger section = 0; section < [repository_ categoryCount]; section++) {
+  [[resultsController_ sections] each:^(id <NSFetchedResultsSectionInfo> section) {
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
-  }
+  }];
 }
 
 - (void)viewDidUnLoad {
@@ -51,9 +52,8 @@
   }
 }
 
-- (BehaviorSectionHeaderView *)buildHeaderForSection:(NSUInteger)section {
-  NSString *title = [repository_ categoryForSection:section];
-  BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:title];
+- (BehaviorSectionHeaderView *)buildHeaderForSection:(id <NSFetchedResultsSectionInfo>)section {
+  BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:[section name]];
 
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
     [self toggleSection:section headerView:headerView];
@@ -63,15 +63,10 @@
   return headerView;
 }
 
-- (void)toggleSection:(NSUInteger)section headerView:(BehaviorSectionHeaderView *)headerView {
-  NSMutableArray *indexPaths = [NSMutableArray array];
-  for (NSInteger i = 0; i < [repository_ behaviorCountForSection:section]; i++) {
-    [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
-  }
+- (void)toggleSection:(id <NSFetchedResultsSectionInfo>)section headerView:(BehaviorSectionHeaderView *)headerView {
   headerView.expanded ^= YES;
-  
   UITableViewRowAnimation animation = UITableViewRowAnimationTop;
-
+  NSArray *indexPaths = [resultsController_ indexPathsForSection:section];
   if (headerView.expanded) {
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
   } else {
@@ -88,7 +83,7 @@
     cell = [BehaviorTableViewCell cell];
   }
 
-  Behavior *behavior = [repository_ behaviorForIndexPath:indexPath];
+  Behavior *behavior = [resultsController_ objectAtIndexPath:indexPath];
   cell.textLabel.text = behavior.name;
 
   Event *event = [self buildEventForBehavior:behavior];
@@ -105,11 +100,11 @@
 
 - (void)tableView:(UITableView *)tableView willRemoveCell:(UITableViewCell *)cell {
   [cell removeAllGestureRecognizers];
-  Behavior *behavior = [repository_ behaviorForIndexPath:[tableView indexPathForCell:cell]];
+  Behavior *behavior = [resultsController_ objectAtIndexPath:[tableView indexPathForCell:cell]];
   [bindingManager_ unbindSource:[behavior eventForDate:currentDate_]];
 }
 
-  //TODO: move to domain?
+//TODO: move to domain?
 - (Event *)buildEventForBehavior:(Behavior *)behavior {
   if (nil == [behavior eventForDate:currentDate_]) {
     NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
@@ -162,12 +157,12 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [repository_ categoryCount];
+  return [[resultsController_ sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   if ([[sectionHeaderViews_ objectAtIndex:section] expanded]) {
-    return [repository_ behaviorCountForSection:section];
+    return [resultsController_ numberOfObjectsInSection:section];
   } else {
     return 0;
   }

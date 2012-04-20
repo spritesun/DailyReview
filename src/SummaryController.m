@@ -1,12 +1,4 @@
-//
-//  SummaryController.m
-//  DailyReview
-//
-//  Created by Shengtao Lei on 4/18/12.
-//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
-//
-
-#import "BehaviorRepository.h"
+#import "BehaviorResultsController.h"
 #import "SummaryController.h"
 
 @interface SummaryController ()
@@ -21,11 +13,11 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  NSNumber *totalMeritRank = [[BehaviorRepository merits] totalRank];
-  NSNumber *totalDemritRank = [[BehaviorRepository demerits] totalRank];
-  
+  NSNumber *totalMeritRank = [[BehaviorResultsController sharedMeritResultsController] totalRank];
+  NSNumber *totalDemeritRank = [[BehaviorResultsController sharedDemeritResultsController] totalRank];
+
   [meritRankView_ setText:[totalMeritRank stringValue]];
-  [demeritRankView_ setText:[totalDemritRank stringValue]];
-  [totalRankView_ setText:[NSString stringWithFormat:@"%d", [totalMeritRank intValue] + [totalDemritRank intValue]]];
+  [demeritRankView_ setText:[totalDemeritRank stringValue]];
+  [totalRankView_ setText:[NSString stringWithFormat:@"%d", [totalMeritRank intValue] + [totalDemeritRank intValue]]];
 }
 @end

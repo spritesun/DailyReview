@@ -5,12 +5,12 @@
 #pragma mark - LifeCycles
 
 - (void)viewDidLoad {
-  repository_ = [BehaviorRepository merits];
+  resultsController_ = [BehaviorResultsController sharedMeritResultsController];
   [super viewDidLoad];
 }
 
 - (void)viewDidUnload {
-  repository_ = nil;
+  resultsController_ = nil;
   [super viewDidUnload];  
 }
 
