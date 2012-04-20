@@ -5,14 +5,6 @@
 
 # TODO List:
 
-// * group into section by rank value
-// * add introspect
-// * swipe to record/clear
-// * duplicate entry take a look why
-// * split into two view by rank +/-
-// * core data persistent
-// * order under same section
-
 * try to avoid insert empty event, remove zero count event
 * add @2x images
 
@@ -37,8 +29,15 @@
 * detail for behavior?
 
 * do we need save all coredata changes during applicationWillTerminate or applicationDidEnterBackground?
-* use NSFetchedResultsController for cache
-
 * performance testing for performance after use it half year
-
 * refactor to workspace style. extract common
+
+# Done
+// * group into section by rank value
+// * add introspect
+// * swipe to record/clear
+// * duplicate entry take a look why
+// * split into two view by rank +/-
+// * core data persistent
+// * order under same section
+//* use NSFetchedResultsController for cache
