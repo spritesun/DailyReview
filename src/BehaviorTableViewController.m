@@ -105,7 +105,7 @@
   Behavior *behavior = [resultsController_ objectAtIndexPath:indexPath];
   cell.textLabel.text = behavior.name;
 
-  Event *event = [self buildEventForBehavior:behavior];
+  Event *event = [behavior createEventForDate:currentDate_];
 
   [self addGesturesForCell:cell event:event];
   [bindingManager_ bindSource:event
@@ -121,26 +121,6 @@
   [cell removeAllGestureRecognizers];
   Behavior *behavior = [resultsController_ objectAtIndexPath:[tableView indexPathForCell:cell]];
   [bindingManager_ unbindSource:[behavior eventForDate:currentDate_]];
-}
-
-//TODO: move to domain?
-- (Event *)buildEventForBehavior:(Behavior *)behavior {
-  if (nil == [behavior eventForDate:currentDate_]) {
-    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"behavior = %@ AND date = %@", behavior, currentDate_]];
-    __block NSArray *results;
-    [context performBlockAndWait:^{
-      results = [context executeFetchRequest:request error:nil];
-    }];
-    if ([results isEmpty]) {
-      [behavior addEventsObject:[Event eventForBehavior:behavior onDate:currentDate_]];
-    } else {
-      [behavior addEventsObject:[results first]];
-    }
-  }
-
-  return [behavior eventForDate:currentDate_];
 }
 
 - (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
