@@ -20,6 +20,7 @@
 		4943CEF2153AB14000B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CEF9153AB9A200B823E7 /* initial_data.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEF4153AB93600B823E7 /* initial_data.json */; };
 		494B97F1153EDCDE002801F7 /* SummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B97F0153EDCDE002801F7 /* SummaryController.m */; };
+		4956E97E1543EC9700C33D89 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
 		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
 		497316241534590400E3E5DC /* BehaviorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorTableViewController.m */; };
 		497659CD153BB8DB00E0D533 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
@@ -115,9 +116,10 @@
 		4943CEF4153AB93600B823E7 /* initial_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = initial_data.json; sourceTree = "<group>"; };
 		494B97EF153EDCDE002801F7 /* SummaryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryController.h; path = src/SummaryController.h; sourceTree = "<group>"; };
 		494B97F0153EDCDE002801F7 /* SummaryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryController.m; path = src/SummaryController.m; sourceTree = "<group>"; };
+		4956E97C1543EC9700C33D89 /* ScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreView.h; path = src/ScoreView.h; sourceTree = "<group>"; };
+		4956E97D1543EC9700C33D89 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreView.m; path = src/ScoreView.m; sourceTree = "<group>"; };
 		495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+Blocks.h"; path = "src/UIGestureRecognizer+Blocks.h"; sourceTree = "<group>"; };
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
-		496363381543B78B00B2FA21 /* DailyScoreFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DailyScoreFetcher.h; path = src/DailyScoreFetcher.h; sourceTree = "<group>"; };
 		497316221534590400E3E5DC /* BehaviorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewController.h; path = src/BehaviorTableViewController.h; sourceTree = "<group>"; };
 		497316231534590400E3E5DC /* BehaviorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewController.m; path = src/BehaviorTableViewController.m; sourceTree = "<group>"; };
 		497659CB153BB8DB00E0D533 /* Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Binding.h; path = src/Binding.h; sourceTree = "<group>"; };
@@ -273,7 +275,6 @@
 				49CE19C6153D5CE800C31041 /* DemeritController.m */,
 				494B97EF153EDCDE002801F7 /* SummaryController.h */,
 				494B97F0153EDCDE002801F7 /* SummaryController.m */,
-				496363381543B78B00B2FA21 /* DailyScoreFetcher.h */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -426,6 +427,8 @@
 				499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */,
 				49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */,
 				49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */,
+				4956E97C1543EC9700C33D89 /* ScoreView.h */,
+				4956E97D1543EC9700C33D89 /* ScoreView.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				49939775153EEEF200A91E7B /* NSSet+Additions.m in Sources */,
 				494B97F1153EDCDE002801F7 /* SummaryController.m in Sources */,
 				49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */,
+				4956E97E1543EC9700C33D89 /* ScoreView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,6 @@
 #pragma mark - LifeCycles
 
 - (void)viewDidLoad {
-  scoreName_ = @"功";
   resultsController_ = [BehaviorResultsController sharedMeritResultsController];
   [super viewDidLoad];
 }
@@ -15,8 +14,5 @@
   [super viewDidUnload];  
 }
 
-- (NSNumber*)getScore {
-  return [[BehaviorResultsController sharedMeritResultsController] todayRank];
-}
 
 @end

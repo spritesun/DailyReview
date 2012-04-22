@@ -1,13 +1,12 @@
 #import "BehaviorResultsController.h"
-#import "DailyScoreFetcher.h"
 
-@interface BehaviorTableViewController : UITableViewController <DailyScoreFetcher> {
+@class ScoreView;
+@interface BehaviorTableViewController : UITableViewController {
+  
 @protected
   BehaviorResultsController *resultsController_;
-  NSString *scoreName_;
-
 }
 
-- (NSNumber*)getScore;
+@property (nonatomic, strong) IBOutlet ScoreView* scoreView;
 
 @end
