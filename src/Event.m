@@ -18,6 +18,10 @@
   return event;
 }
 
+- (BOOL)isOnDate:(NSDate *)date {
+  return [self.date isEqualToDate:date];
+}
+
 - (NSUInteger)countValue {
   return [self.count intValue];
 }

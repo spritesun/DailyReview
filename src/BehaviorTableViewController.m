@@ -10,6 +10,8 @@
 #import "UITableView+Additions.h"
 #import "NSDate+Additions.h"
 #import "NSFetchedResultsController+Additions.h"
+#import "BehaviorResultsController.h"
+#import "ScoreView.h"
 
 @interface BehaviorTableViewController () <UITableViewAdditionDelegate>
 
@@ -19,11 +21,13 @@
   /* TODO: we could use array of boolean to store expanded status in controller,
    create sectionHeaderView time to reduce sectionHeader refresh logic
    when repository change
-  */
+   */
   NSMutableArray *sectionHeaderViews_;
   BindingManager *bindingManager_;
   NSDate *currentDate_;
 }
+
+@synthesize scoreView = topBanner_;
 
 #pragma mark - LifeCycles
 
@@ -44,22 +48,28 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-
+  
   // TODO: when repository changed become complex, this refreshViewIfNeeded logic needs to be extract, using NSNotificationCenter connect repository and tableView then.
   if (![currentDate_ isEqualToDate:[[NSDate date] dateWithoutTime]]) {
     [[self tableView] reloadData];
     currentDate_ = [[NSDate date] dateWithoutTime];
   }
+  [self updateScore]; 
+}
+
+- (void)updateScore {
+  [topBanner_ setTodayMerit:[[BehaviorResultsController sharedMeritResultsController] todayRank]];
+  [topBanner_ setTodayDemerit:[[BehaviorResultsController sharedDemeritResultsController] todayRank]];
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(id <NSFetchedResultsSectionInfo>)section {
   BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:[section name]];
-
+  
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
     [self toggleSection:section headerView:headerView];
   }];
   [headerView addGestureRecognizer:recognizer];
-
+  
   return headerView;
 }
 
@@ -82,19 +92,19 @@
   if (nil == cell) {
     cell = [BehaviorTableViewCell cell];
   }
-
+  
   Behavior *behavior = [resultsController_ objectAtIndexPath:indexPath];
   cell.textLabel.text = behavior.name;
-
-  Event *event = [self buildEventForBehavior:behavior];
-
+  
+  Event *event = [behavior createEventForDate:currentDate_];
+  
   [self addGesturesForCell:cell event:event];
   [bindingManager_ bindSource:event
                   withKeyPath:@"count"
                        action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
                          [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
                        }];
-
+  
   return cell;
 }
 
@@ -104,38 +114,20 @@
   [bindingManager_ unbindSource:[behavior eventForDate:currentDate_]];
 }
 
-//TODO: move to domain?
-- (Event *)buildEventForBehavior:(Behavior *)behavior {
-  if (nil == [behavior eventForDate:currentDate_]) {
-    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"behavior = %@ AND date = %@", behavior, currentDate_]];
-    __block NSArray *results;
-    [context performBlockAndWait:^{
-      results = [context executeFetchRequest:request error:nil];
-    }];
-    if ([results isEmpty]) {
-      [behavior addEventsObject:[Event eventForBehavior:behavior onDate:currentDate_]];
-    } else {
-      [behavior addEventsObject:[results first]];
-    }
-  }
-
-  return [behavior eventForDate:currentDate_];
-}
-
 - (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
   UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
     event.countValue++;
     [context save];
+    [self updateScore]; 
   }];
   [cell addGestureRecognizer:increaseRecognizer];
-
+  
   UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
     if (0 != event.countValue) {
       event.countValue--;
       [context save];
+      [self updateScore];
     }
   }];
   decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -148,11 +140,11 @@
   } else {
     cell.detailTextLabel.text = [newValue stringValue];
   }
-
+  
   if (oldValue == nil) {
     return;
   }
-
+  
   [cell.contentView flashWithDuration:0.4 color:([newValue intValue] > [oldValue intValue]) ? [UIColor yellowColor] : [UIColor orangeColor]];
 }
 

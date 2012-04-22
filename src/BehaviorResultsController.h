@@ -8,4 +8,6 @@
 
 - (NSNumber *)totalRank;
 
+- (NSNumber *)todayRank;
+
 @end

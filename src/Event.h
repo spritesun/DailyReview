@@ -12,4 +12,6 @@
 
 + (Event *)eventForBehavior:(Behavior *)behavior onDate:(NSDate *)date;
 
+- (BOOL)isOnDate:(NSDate *)date;
+
 @end

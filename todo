@@ -34,6 +34,17 @@
 * performance testing for performance after use it half year
 * refactor to workspace style. extract common
 
+* about page
+* about daily review
+* about us
+
+* other merit +1, at the bottom of first section of merit
+* other demerit -1, at the bottom of firt section of demerit
+
+* category table
+
+* when text too long, wrap line
+
 # Done
 // * group into section by rank value
 // * add introspect

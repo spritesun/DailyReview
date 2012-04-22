@@ -1,6 +1,9 @@
 #import "Behavior.h"
 #import "Event.h"
 #import "NSSet+Additions.h"
+#import "NSFetchedResultsController+Additions.h"
+#import "NSArray+Additions.h"
+#import "NSManagedObjectContext+Additions.h"
 
 static NSDictionary *categoryNamesDict = nil;
 
@@ -36,12 +39,32 @@ static NSDictionary *categoryNamesDict = nil;
 
 - (Event *)eventForDate:(NSDate *)date {
   return [self.events first:^BOOL(Event *event) {
-    return [[event date] isEqualToDate:date];
+    return [event isOnDate:date];
   }];
 }
 
 - (NSString *)category {
   return [categoryNamesDict objectForKey:self.rank];
+}
+
+- (Event *)createEventForDate:(NSDate *)date {
+  NSDate *currentDate_ = date;
+  if (nil == [self eventForDate:currentDate_]) {
+    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"behavior = %@ AND date = %@", self, currentDate_]];
+    __block NSArray *results;
+    [context performBlockAndWait:^{
+      results = [context executeFetchRequest:request error:nil];
+    }];
+    if ([results isEmpty]) {
+      [self addEventsObject:[Event eventForBehavior:self onDate:currentDate_]];
+    } else {
+      [self addEventsObject:[results first]];
+    }
+  }
+  
+  return [self eventForDate:currentDate_];
 }
 
 @end

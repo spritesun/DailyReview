@@ -34,4 +34,6 @@
 
 - (void)removeEvents:(NSSet *)values;
 
+- (Event *)createEventForDate:(NSDate *)date;
+
 @end
