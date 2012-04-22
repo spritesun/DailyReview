@@ -44,6 +44,8 @@
 * category table
 
 * when text too long, wrap line
+* score view should not move while dragging
+* background image, color
 
 # Done
 // * group into section by rank value
