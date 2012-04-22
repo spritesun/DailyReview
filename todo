@@ -8,6 +8,8 @@
 * try to avoid insert empty event, remove zero count event
 * add @2x images
 
+* use animation to hint user swipe to add .
+
 * try to use IB to connect table and cell
 * icloud
 
