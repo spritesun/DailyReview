@@ -1,5 +1,5 @@
-#import "BehaviorTableViewController.h"
+#import "BehaviorViewController.h"
 
-@interface MeritController : BehaviorTableViewController
+@interface MeritController : BehaviorViewController
 
 @end

@@ -22,7 +22,7 @@
 		494B97F1153EDCDE002801F7 /* SummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B97F0153EDCDE002801F7 /* SummaryController.m */; };
 		4956E97E1543EC9700C33D89 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
 		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
-		497316241534590400E3E5DC /* BehaviorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorTableViewController.m */; };
+		497316241534590400E3E5DC /* BehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorViewController.m */; };
 		497659CD153BB8DB00E0D533 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
 		497659FD153BCC5900E0D533 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
 		497659FE153BCC5E00E0D533 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
@@ -120,8 +120,8 @@
 		4956E97D1543EC9700C33D89 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreView.m; path = src/ScoreView.m; sourceTree = "<group>"; };
 		495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+Blocks.h"; path = "src/UIGestureRecognizer+Blocks.h"; sourceTree = "<group>"; };
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
-		497316221534590400E3E5DC /* BehaviorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewController.h; path = src/BehaviorTableViewController.h; sourceTree = "<group>"; };
-		497316231534590400E3E5DC /* BehaviorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewController.m; path = src/BehaviorTableViewController.m; sourceTree = "<group>"; };
+		497316221534590400E3E5DC /* BehaviorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorViewController.h; path = src/BehaviorViewController.h; sourceTree = "<group>"; };
+		497316231534590400E3E5DC /* BehaviorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorViewController.m; path = src/BehaviorViewController.m; sourceTree = "<group>"; };
 		497659CB153BB8DB00E0D533 /* Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Binding.h; path = src/Binding.h; sourceTree = "<group>"; };
 		497659CC153BB8DB00E0D533 /* Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Binding.m; path = src/Binding.m; sourceTree = "<group>"; };
 		49939773153EEEF200A91E7B /* NSSet+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSSet+Additions.h"; path = "src/NSSet+Additions.h"; sourceTree = "<group>"; };
@@ -267,8 +267,8 @@
 				49A04A9815344CD90092DC4A /* AppDelegate.m */,
 				49CE19BE153D221E00C31041 /* MainViewController.h */,
 				49CE19BF153D221E00C31041 /* MainViewController.m */,
-				497316221534590400E3E5DC /* BehaviorTableViewController.h */,
-				497316231534590400E3E5DC /* BehaviorTableViewController.m */,
+				497316221534590400E3E5DC /* BehaviorViewController.h */,
+				497316231534590400E3E5DC /* BehaviorViewController.m */,
 				49CE19C2153D5C1700C31041 /* MeritController.h */,
 				49CE19C3153D5C1700C31041 /* MeritController.m */,
 				49CE19C5153D5CE800C31041 /* DemeritController.h */,
@@ -616,7 +616,7 @@
 			files = (
 				49A04AA415344CD90092DC4A /* AppDelegate.m in Sources */,
 				49A04AA815344CD90092DC4A /* main.m in Sources */,
-				497316241534590400E3E5DC /* BehaviorTableViewController.m in Sources */,
+				497316241534590400E3E5DC /* BehaviorViewController.m in Sources */,
 				495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */,
 				49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */,
 				49EBB4321537D1E9002BBF3C /* DCCrossHairView.m in Sources */,
