@@ -10,7 +10,6 @@
 
 @interface ScoreView : UIView
 
-@property(nonatomic, retain, readwrite) NSNumber* todayMerit;
-@property(nonatomic, retain, readwrite) NSNumber* todayDemerit;
+- (void)setMeritCount:(NSNumber *)merits demeritCount:(NSNumber *)demerits;
 
 @end

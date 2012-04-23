@@ -62,8 +62,8 @@
 }
 
 - (void)updateScore {
-  [scoreView_ setTodayMerit:[[BehaviorResultsController sharedMeritResultsController] todayRank]];
-  [scoreView_ setTodayDemerit:[[BehaviorResultsController sharedDemeritResultsController] todayRank]];
+  [scoreView_ setMeritCount:[[BehaviorResultsController sharedMeritResultsController] todayRank]
+                 demeritCount:[[BehaviorResultsController sharedDemeritResultsController] todayRank]];
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(id <NSFetchedResultsSectionInfo>)section {
