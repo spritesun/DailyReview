@@ -185,7 +185,7 @@
         <class className="BehaviorTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BehaviorTableViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="topBanner" candidateClass="ScoreView"/>
+                <relationship kind="outlet" name="scoreView" candidateClass="ScoreView"/>
             </relationships>
         </class>
         <class className="DemeritController" superclassName="BehaviorTableViewController">
