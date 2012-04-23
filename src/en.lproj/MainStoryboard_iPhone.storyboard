@@ -15,7 +15,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="1kX-O8-IhQ">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.85882352941176465" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.85882352941176465" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="NB1-NI-b1p" kind="relationship" relationship="viewControllers" id="C7F-gO-Vhe"/>
@@ -48,7 +49,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="gong.png" id="OGF-bo-CKp"/>
+                    <tabBarItem key="tabBarItem" title="" image="bottom-bar-item-gong.png" id="OGF-bo-CKp">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="scoreView" destination="RCg-7a-g9h" id="yry-0S-dqz"/>
                         <outlet property="tableView" destination="Jdr-FB-ZPD" id="SCW-rm-CsO"/>
@@ -72,14 +75,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="paC-JT-rKJ" customClass="BehaviorTableView">
-                                <rect key="frame" x="0.0" y="30" width="320" height="384"/>
+                                <rect key="frame" x="0.0" y="27" width="320" height="384"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="guo.png" id="LsI-i1-vOh"/>
+                    <tabBarItem key="tabBarItem" title="" image="bottom-bar-item-guo.png" id="LsI-i1-vOh">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="scoreView" destination="UqD-m8-8JB" id="1Y6-xr-OdV"/>
                         <outlet property="tableView" destination="paC-JT-rKJ" id="WDT-vk-dzD"/>
@@ -88,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="170" y="-90"/>
         </scene>
-        <!--Summary Controller - Item-->
+        <!--Summary Controller-->
         <scene sceneID="YBW-xE-eGQ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o95-6a-ppB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,7 +147,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9ys-xQ-Njh"/>
+                    <tabBarItem key="tabBarItem" title="" image="bottom-bar-item-he.png" id="9ys-xQ-Njh">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="demeritRankView" destination="ApY-f2-EJg" id="NEk-B3-ag6"/>
@@ -155,8 +162,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gong.png" width="30" height="30"/>
-        <image name="guo.png" width="30" height="30"/>
+        <image name="bottom-bar-item-gong.png" width="31" height="31"/>
+        <image name="bottom-bar-item-guo.png" width="31" height="31"/>
+        <image name="bottom-bar-item-he.png" width="31" height="31"/>
     </resources>
     <classes>
         <class className="BehaviorTableView" superclassName="UITableView">
