@@ -1,6 +1,6 @@
 @interface SummaryController : UIViewController
 
-@property(nonatomic, strong) IBOutlet UILabel *meritRankView;
-@property(nonatomic, strong) IBOutlet UILabel *demeritRankView;
-@property(nonatomic, strong) IBOutlet UILabel *totalRankView;
+@property(nonatomic, strong) IBOutlet UILabel *meritRankLabel;
+@property(nonatomic, strong) IBOutlet UILabel *demeritRankLabel;
+@property(nonatomic, strong) IBOutlet UILabel *totalRankLabel;
 @end
