@@ -1,4 +1,4 @@
-#import "BehaviorTableViewController.h"
+#import "BehaviorViewController.h"
 #import "BehaviorSectionHeaderView.h"
 #import "BehaviorTableViewCell.h"
 #import "UIGestureRecognizer+Blocks.h"
@@ -13,26 +13,28 @@
 #import "BehaviorResultsController.h"
 #import "ScoreView.h"
 
-@interface BehaviorTableViewController () <UITableViewAdditionDelegate>
+@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @end
 
-@implementation BehaviorTableViewController {
+@implementation BehaviorViewController {
   /* TODO: we could use array of boolean to store expanded status in controller,
-   create sectionHeaderView time to reduce sectionHeader refresh logic
-   when repository change
-   */
+  create sectionHeaderView time to reduce sectionHeader refresh logic
+  when repository change
+  */
   NSMutableArray *sectionHeaderViews_;
   BindingManager *bindingManager_;
   NSDate *currentDate_;
 }
 
-@synthesize scoreView = topBanner_;
+@synthesize scoreView = scoreView_, tableView = tableView_;
 
 #pragma mark - LifeCycles
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  tableView_.delegate = self;
+  tableView_.dataSource = self;
   bindingManager_ = [BindingManager new];
   sectionHeaderViews_ = [NSMutableArray new];
   [[resultsController_ sections] each:^(id <NSFetchedResultsSectionInfo> section) {
@@ -40,36 +42,38 @@
   }];
 }
 
-- (void)viewDidUnLoad {
+- (void)viewDidUnload {
   [super viewDidUnload];
+  tableView_.delegate = nil;
+  tableView_.dataSource = nil;
   bindingManager_ = nil;
   sectionHeaderViews_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  
+
   // TODO: when repository changed become complex, this refreshViewIfNeeded logic needs to be extract, using NSNotificationCenter connect repository and tableView then.
   if (![currentDate_ isEqualToDate:[[NSDate date] dateWithoutTime]]) {
     [[self tableView] reloadData];
     currentDate_ = [[NSDate date] dateWithoutTime];
   }
-  [self updateScore]; 
+  [self updateScore];
 }
 
 - (void)updateScore {
-  [topBanner_ setTodayMerit:[[BehaviorResultsController sharedMeritResultsController] todayRank]];
-  [topBanner_ setTodayDemerit:[[BehaviorResultsController sharedDemeritResultsController] todayRank]];
+  [scoreView_ setMeritCount:[[BehaviorResultsController sharedMeritResultsController] todayRank]
+                 demeritCount:[[BehaviorResultsController sharedDemeritResultsController] todayRank]];
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(id <NSFetchedResultsSectionInfo>)section {
   BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:[section name]];
-  
+
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
     [self toggleSection:section headerView:headerView];
   }];
   [headerView addGestureRecognizer:recognizer];
-  
+
   return headerView;
 }
 
@@ -92,19 +96,19 @@
   if (nil == cell) {
     cell = [BehaviorTableViewCell cell];
   }
-  
+
   Behavior *behavior = [resultsController_ objectAtIndexPath:indexPath];
   cell.textLabel.text = behavior.name;
-  
+
   Event *event = [behavior createEventForDate:currentDate_];
-  
+
   [self addGesturesForCell:cell event:event];
   [bindingManager_ bindSource:event
                   withKeyPath:@"count"
                        action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
                          [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
                        }];
-  
+
   return cell;
 }
 
@@ -119,10 +123,10 @@
   UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
     event.countValue++;
     [context save];
-    [self updateScore]; 
+    [self updateScore];
   }];
   [cell addGestureRecognizer:increaseRecognizer];
-  
+
   UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
     if (0 != event.countValue) {
       event.countValue--;
@@ -140,11 +144,11 @@
   } else {
     cell.detailTextLabel.text = [newValue stringValue];
   }
-  
+
   if (oldValue == nil) {
     return;
   }
-  
+
   [cell.contentView flashWithDuration:0.4 color:([newValue intValue] > [oldValue intValue]) ? [UIColor yellowColor] : [UIColor orangeColor]];
 }
 

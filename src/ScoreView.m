@@ -9,54 +9,30 @@
 #import "ScoreView.h"
 #import "UIView+Additions.h"
 
-@implementation ScoreView{
-    UILabel *todayMerit;
-      UILabel *todayDemerit;
+@implementation ScoreView {
+  UILabel *scoreLabel;
 }
 
-@dynamic todayMerit;
-@dynamic todayDemerit;
-
-- (id) initWithCoder:(NSCoder *)aDecoder {
+- (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   if (self) {
     [self setSize:CGSizeMake(320, 27)];
     [self setBackgroundColor:[UIColor blackColor]];
-    todayMerit = [self createScoreLabelWithX:0];
-        [self addSubview:todayMerit];
-    
-    [self setSize:CGSizeMake(320, 27)];
-    [self setBackgroundColor:[UIColor blackColor]];
-    todayDemerit = [self createScoreLabelWithX:200];
-    [self addSubview:todayDemerit];
+    scoreLabel = [self createScoreLabel];
+    [self addSubview:scoreLabel];
   }
   return self;
 }
 
-- (UILabel *)createScoreLabelWithX:(NSInteger)x {
-  
-  UILabel *scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(x, 0, 120, 27)];  
-  scoreLabel.backgroundColor = [UIColor clearColor];
-  scoreLabel.textColor = [UIColor whiteColor];
-  scoreLabel.font = [UIFont systemFontOfSize:15];
-  return scoreLabel;
+- (UILabel *)createScoreLabel {
+  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 27)];
+  label.backgroundColor = [UIColor clearColor];
+  label.textColor = [UIColor whiteColor];
+  label.font = [UIFont systemFontOfSize:15];
+  return label;
 }
 
-
-- (void)setTodayMerit:(NSNumber *)todayScore {
-  todayMerit.text = [NSString stringWithFormat:@"今日累功： %@", todayScore];
+- (void)setMeritCount:(NSNumber *)merits demeritCount:(NSNumber *)demerits {
+  scoreLabel.text = [NSString stringWithFormat:@"今日累功： %@ 过: %@", merits, demerits];
 }
-
-- (void)setTodayDemerit:(NSNumber *)todayScore {
-  todayDemerit.text = [NSString stringWithFormat:@"今日累过： %@", todayScore];
-}
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
-
 @end
