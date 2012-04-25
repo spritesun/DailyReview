@@ -202,7 +202,7 @@
 		49939774153EEEF200A91E7B /* NSSet+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSet+Additions.m"; path = "src/NSSet+Additions.m"; sourceTree = "<group>"; };
 		499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewCell.h; path = src/BehaviorTableViewCell.h; sourceTree = "<group>"; };
 		499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewCell.m; path = src/BehaviorTableViewCell.m; sourceTree = "<group>"; };
-		49A04A451534491B0092DC4A /* DailyReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A04A451534491B0092DC4A /* 功过格.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "功过格.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A04A491534491B0092DC4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49A04A4B1534491B0092DC4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49A04A4D1534491B0092DC4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -241,6 +241,7 @@
 		49E1E1DE1547F98F0030AAD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		49E1E1E01547F98F0030AAD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReviewTests.xcconfig; path = config/DailyReviewTests.xcconfig; sourceTree = "<group>"; };
+		49E1E207154801D50030AAD1 /* DailyReview.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReview.xcconfig; path = config/DailyReview.xcconfig; sourceTree = "<group>"; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
 		49EBB4141536C8B4002BBF3C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "src/UIView+Additions.h"; sourceTree = "<group>"; };
@@ -421,7 +422,7 @@
 		49A04A461534491B0092DC4A /* products */ = {
 			isa = PBXGroup;
 			children = (
-				49A04A451534491B0092DC4A /* DailyReview.app */,
+				49A04A451534491B0092DC4A /* 功过格.app */,
 				49A04A691534491B0092DC4A /* DailyReviewTests.octest */,
 				4943CEDD153AAE1D00B823E7 /* populate-database */,
 			);
@@ -526,6 +527,7 @@
 		49E1E1F61547FD560030AAD1 /* config */ = {
 			isa = PBXGroup;
 			children = (
+				49E1E207154801D50030AAD1 /* DailyReview.xcconfig */,
 				49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */,
 			);
 			name = config;
@@ -652,7 +654,7 @@
 			);
 			name = DailyReview;
 			productName = DailyReview;
-			productReference = 49A04A451534491B0092DC4A /* DailyReview.app */;
+			productReference = 49A04A451534491B0092DC4A /* 功过格.app */;
 			productType = "com.apple.product-type.application";
 		};
 		49A04A681534491B0092DC4A /* DailyReviewTests */ = {
@@ -981,23 +983,15 @@
 		};
 		49A04A7C1534491B0092DC4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E1E207154801D50030AAD1 /* DailyReview.xcconfig */;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/DailyReview-Prefix.pch";
-				INFOPLIST_FILE = "resources/DailyReview-Info.plist";
-				PRODUCT_NAME = DailyReview;
-				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		49A04A7D1534491B0092DC4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E1E207154801D50030AAD1 /* DailyReview.xcconfig */;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/DailyReview-Prefix.pch";
-				INFOPLIST_FILE = "resources/DailyReview-Info.plist";
-				PRODUCT_NAME = DailyReview;
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};

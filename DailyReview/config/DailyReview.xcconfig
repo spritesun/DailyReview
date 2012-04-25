@@ -1,0 +1,5 @@
+INFOPLIST_FILE = resources/DailyReview-Info.plist
+PRODUCT_NAME = 功过格
+WRAPPER_EXTENSION = app
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+GCC_PREFIX_HEADER = src/DailyReview-Prefix.pch
