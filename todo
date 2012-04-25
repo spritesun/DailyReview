@@ -1,58 +1,37 @@
-# Release 1 must have:
+## Release 1
+# must have
 
-* could navigate between merit/demerit/summary
-* Plain UI with logo, splash screen
-
-# TODO List:
-
-* try to avoid insert empty event, remove zero count event
-* add @2x images
-
-* use animation to hint user swipe to add .
-
-* try to use IB to connect table and cell
-* icloud
-
-* manager pattern seem misuse.
-
-* introduce config file
+* use animation to hint user swipe
+* introduce xcconfig file
 * bundle zh name 
-
-* history summary
-* history detail
-
-* input known behavior rule data
-* different version of behavior rule
-* paper folding animation
-* pinch to close section
-* when one section longer than page, close animation not so smooth
-* swipe animation could be more fancy highlight finger touch path
-* weibo?
-* detail for behavior?
-
-* do we need save all coredata changes during applicationWillTerminate or applicationDidEnterBackground?
-* performance testing for performance after use it half year
-* refactor to workspace style. extract common
-
+* other merit +1, at the bottom of first section of merit
+* other demerit -1, at the bottom of firt section of demerit
 * about page
 * about daily review
 * about us
 
-* other merit +1, at the bottom of first section of merit
-* other demerit -1, at the bottom of firt section of demerit
+# should have
 
-* category table
+* performance testing for performance after use it half year
+* try to avoid insert empty event, remove zero count event
+* when one section longer than page, close animation not so smooth
+* input other version of behavior/category data(avoid data migration in next Release)
+* refactor to workspace style. 
 
-* when text too long, wrap line
-* score view should not move while dragging
-* background image, color
+# could have
 
-# Done
-// * group into section by rank value
-// * add introspect
-// * swipe to record/clear
-// * duplicate entry take a look why
-// * split into two view by rank +/-
-// * core data persistent
-// * order under same section
-//* use NSFetchedResultsController for cache
+* try bundle/SkinManager, refer to REA code base
+* swipe animation could be more fancy highlight finger touch path
+* pinch to close section
+* paper folding animation
+* do we need save all core data changes during applicationWillTerminate or applicationDidEnterBackground?
+
+
+## Release 2
+# backlog:
+
+* icloud
+* manager pattern seem misuse.
+* history detail(chart?)
+* extract common
+* weibo?
