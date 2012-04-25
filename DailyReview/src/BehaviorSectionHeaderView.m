@@ -18,14 +18,18 @@
   return scoreLabel;
 }
 
+- (void)drawBackground {
+  UIImage *image = [UIImage imageNamed:@"section-bg.png"];
+  UIImageView *bgView = [[UIImageView alloc] initWithImage:image];
+  bgView.frame = CGRectMake(0, 0, 320, 30);
+  [self addSubview:bgView];
+}
+
 - (id)initWithTitle:(NSString *)title {
   self = [self initWithFrame:CGRectMake(0, 0, 320, 30)];
   if (self) {
     expanded_ = YES;
-    UIImage *image = [UIImage imageNamed:@"section-bg.png"];
-    UIImageView *bgView = [[UIImageView alloc] initWithImage:image];
-    bgView.frame = CGRectMake(0, 0, 320, 30);
-    [self addSubview:bgView];
+    [self drawBackground];
     self.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
     UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
