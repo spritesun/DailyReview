@@ -70,11 +70,14 @@
 		49CE19C4153D5C1700C31041 /* MeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C3153D5C1700C31041 /* MeritController.m */; };
 		49CE19C7153D5CE800C31041 /* DemeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C6153D5CE800C31041 /* DemeritController.m */; };
 		49CE19CE153D607E00C31041 /* NSNumber+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19CD153D607E00C31041 /* NSNumber+Additions.m */; };
+		49E1E0F01547E7680030AAD1 /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E1E0E81547E7680030AAD1 /* DCCrossHairView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49E1E0F11547E7680030AAD1 /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E1E0EA1547E7680030AAD1 /* DCFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49E1E0F21547E7680030AAD1 /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E1E0EC1547E7680030AAD1 /* DCIntrospect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49E1E0F31547E7680030AAD1 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		49E1E1B11547F6EA0030AAD1 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E1E1421547EF740030AAD1 /* libKiwi.a */; };
+		49E1E1F51547FB280030AAD1 /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E1E1AD1547F55F0030AAD1 /* MathSpec.m */; };
+		49E1E1FA1547FFBE0030AAD1 /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
 		49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
-		49EBB4321537D1E9002BBF3C /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB42A1537D1E9002BBF3C /* DCCrossHairView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49EBB4331537D1E9002BBF3C /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB42C1537D1E9002BBF3C /* DCFrameView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49EBB4341537D1E9002BBF3C /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB42E1537D1E9002BBF3C /* DCIntrospect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		49EBB4351537D1E9002BBF3C /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4311537D1E9002BBF3C /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EBB4361537D360002BBF3C /* QuartzCore.framework */; };
 		49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
 		49EBB43D1537D4BE002BBF3C /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */; };
@@ -89,12 +92,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		49A04A6E1534491B0092DC4A /* PBXContainerItemProxy */ = {
+		49E1E1411547EF740030AAD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 49A04A3C1534491B0092DC4A /* Project object */;
+			containerPortal = 49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015B9F11583A77002E9A98;
+			remoteInfo = Kiwi;
+		};
+		49E1E1431547EF740030AAD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015C9E11584017002E9A98;
+			remoteInfo = KiwiTests;
+		};
+		49E1E1451547EF740030AAD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3B16542139967B800E9CC6E;
+			remoteInfo = KiwiExamples;
+		};
+		49E1E1AF1547F6CF0030AAD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 49A04A441534491B0092DC4A;
-			remoteInfo = DailyReivew;
+			remoteGlobalIDString = F5015B9E11583A77002E9A98;
+			remoteInfo = Kiwi;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -202,18 +226,24 @@
 		49CE19C6153D5CE800C31041 /* DemeritController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemeritController.m; path = src/DemeritController.m; sourceTree = "<group>"; };
 		49CE19CC153D607E00C31041 /* NSNumber+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Additions.h"; path = "src/NSNumber+Additions.h"; sourceTree = "<group>"; };
 		49CE19CD153D607E00C31041 /* NSNumber+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Additions.m"; path = "src/NSNumber+Additions.m"; sourceTree = "<group>"; };
+		49E1E0E71547E7680030AAD1 /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
+		49E1E0E81547E7680030AAD1 /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
+		49E1E0E91547E7680030AAD1 /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
+		49E1E0EA1547E7680030AAD1 /* DCFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFrameView.m; sourceTree = "<group>"; };
+		49E1E0EB1547E7680030AAD1 /* DCIntrospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospect.h; sourceTree = "<group>"; };
+		49E1E0EC1547E7680030AAD1 /* DCIntrospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCIntrospect.m; sourceTree = "<group>"; };
+		49E1E0ED1547E7680030AAD1 /* DCIntrospectSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospectSettings.h; sourceTree = "<group>"; };
+		49E1E0EE1547E7680030AAD1 /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
+		49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
+		49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = ../lib/Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
+		49E1E1AD1547F55F0030AAD1 /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathSpec.m; path = test/MathSpec.m; sourceTree = "<group>"; };
+		49E1E1DC1547F98F0030AAD1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		49E1E1DE1547F98F0030AAD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		49E1E1E01547F98F0030AAD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReviewTests.xcconfig; path = config/DailyReviewTests.xcconfig; sourceTree = "<group>"; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
 		49EBB4141536C8B4002BBF3C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "src/UIView+Additions.h"; sourceTree = "<group>"; };
-		49EBB4291537D1E9002BBF3C /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
-		49EBB42A1537D1E9002BBF3C /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
-		49EBB42B1537D1E9002BBF3C /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
-		49EBB42C1537D1E9002BBF3C /* DCFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFrameView.m; sourceTree = "<group>"; };
-		49EBB42D1537D1E9002BBF3C /* DCIntrospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospect.h; sourceTree = "<group>"; };
-		49EBB42E1537D1E9002BBF3C /* DCIntrospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCIntrospect.m; sourceTree = "<group>"; };
-		49EBB42F1537D1E9002BBF3C /* DCIntrospectSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospectSettings.h; sourceTree = "<group>"; };
-		49EBB4301537D1E9002BBF3C /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
-		49EBB4311537D1E9002BBF3C /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		49EBB4361537D360002BBF3C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49EBB4391537D4A5002BBF3C /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "src/UIView+Additions.m"; sourceTree = "<group>"; };
 		49EBB43B1537D4BE002BBF3C /* IntrospectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntrospectManager.h; path = src/IntrospectManager.h; sourceTree = "<group>"; };
@@ -264,6 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E1E1B11547F6EA0030AAD1 /* libKiwi.a in Frameworks */,
 				49A04A6B1534491B0092DC4A /* SenTestingKit.framework in Frameworks */,
 				49A04A6C1534491B0092DC4A /* UIKit.framework in Frameworks */,
 				49A04A6D1534491B0092DC4A /* Foundation.framework in Frameworks */,
@@ -379,9 +410,11 @@
 				49A04A9215344BF30092DC4A /* test */,
 				49EBB4261537D1D3002BBF3C /* lib */,
 				49A04A9315344C0E0092DC4A /* resources */,
+				49E1E1F61547FD560030AAD1 /* config */,
 				49A04A481534491B0092DC4A /* frameworks */,
 				49A04A461534491B0092DC4A /* products */,
 				4943CEE4153AAE1E00B823E7 /* populate-database */,
+				49E1E1DB1547F98F0030AAD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -428,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				49A04AB715344D9B0092DC4A /* InfoPlist.strings */,
+				49E1E1AD1547F55F0030AAD1 /* MathSpec.m */,
 			);
 			name = test;
 			sourceTree = "<group>";
@@ -452,29 +486,58 @@
 			name = others;
 			sourceTree = "<group>";
 		};
+		49E1E0E61547E7680030AAD1 /* DCIntrospect */ = {
+			isa = PBXGroup;
+			children = (
+				49E1E0E71547E7680030AAD1 /* DCCrossHairView.h */,
+				49E1E0E81547E7680030AAD1 /* DCCrossHairView.m */,
+				49E1E0E91547E7680030AAD1 /* DCFrameView.h */,
+				49E1E0EA1547E7680030AAD1 /* DCFrameView.m */,
+				49E1E0EB1547E7680030AAD1 /* DCIntrospect.h */,
+				49E1E0EC1547E7680030AAD1 /* DCIntrospect.m */,
+				49E1E0ED1547E7680030AAD1 /* DCIntrospectSettings.h */,
+				49E1E0EE1547E7680030AAD1 /* DCStatusBarOverlay.h */,
+				49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */,
+			);
+			name = DCIntrospect;
+			path = ../lib/DCIntrospect/DCIntrospect;
+			sourceTree = "<group>";
+		};
+		49E1E1391547EF740030AAD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49E1E1421547EF740030AAD1 /* libKiwi.a */,
+				49E1E1441547EF740030AAD1 /* KiwiTests.octest */,
+				49E1E1461547EF740030AAD1 /* KiwiExamples.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49E1E1DB1547F98F0030AAD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49E1E1DC1547F98F0030AAD1 /* SenTestingKit.framework */,
+				49E1E1DE1547F98F0030AAD1 /* UIKit.framework */,
+				49E1E1E01547F98F0030AAD1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49E1E1F61547FD560030AAD1 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
 		49EBB4261537D1D3002BBF3C /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				49EBB4281537D1E9002BBF3C /* DCIntrospect */,
+				49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */,
+				49E1E0E61547E7680030AAD1 /* DCIntrospect */,
 			);
 			name = lib;
-			sourceTree = "<group>";
-		};
-		49EBB4281537D1E9002BBF3C /* DCIntrospect */ = {
-			isa = PBXGroup;
-			children = (
-				49EBB4291537D1E9002BBF3C /* DCCrossHairView.h */,
-				49EBB42A1537D1E9002BBF3C /* DCCrossHairView.m */,
-				49EBB42B1537D1E9002BBF3C /* DCFrameView.h */,
-				49EBB42C1537D1E9002BBF3C /* DCFrameView.m */,
-				49EBB42D1537D1E9002BBF3C /* DCIntrospect.h */,
-				49EBB42E1537D1E9002BBF3C /* DCIntrospect.m */,
-				49EBB42F1537D1E9002BBF3C /* DCIntrospectSettings.h */,
-				49EBB4301537D1E9002BBF3C /* DCStatusBarOverlay.h */,
-				49EBB4311537D1E9002BBF3C /* DCStatusBarOverlay.m */,
-			);
-			name = DCIntrospect;
-			path = lib/DCIntrospect/DCIntrospect;
 			sourceTree = "<group>";
 		};
 		49EBB4381537D452002BBF3C /* additions */ = {
@@ -588,7 +651,7 @@
 			dependencies = (
 			);
 			name = DailyReview;
-			productName = DailyReivew;
+			productName = DailyReview;
 			productReference = 49A04A451534491B0092DC4A /* DailyReview.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -604,10 +667,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				49A04A6F1534491B0092DC4A /* PBXTargetDependency */,
+				49E1E1B01547F6CF0030AAD1 /* PBXTargetDependency */,
 			);
 			name = DailyReviewTests;
-			productName = DailyReivewTests;
+			productName = DailyReviewTests;
 			productReference = 49A04A691534491B0092DC4A /* DailyReviewTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -630,6 +693,12 @@
 			mainGroup = 49A04A3A1534491B0092DC4A;
 			productRefGroup = 49A04A461534491B0092DC4A /* products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 49E1E1391547EF740030AAD1 /* Products */;
+					ProjectRef = 49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				49A04A441534491B0092DC4A /* DailyReview */,
@@ -638,6 +707,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		49E1E1421547EF740030AAD1 /* libKiwi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKiwi.a;
+			remoteRef = 49E1E1411547EF740030AAD1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49E1E1441547EF740030AAD1 /* KiwiTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiTests.octest;
+			remoteRef = 49E1E1431547EF740030AAD1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49E1E1461547EF740030AAD1 /* KiwiExamples.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiExamples.octest;
+			remoteRef = 49E1E1451547EF740030AAD1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		49A04A431534491B0092DC4A /* Resources */ = {
@@ -723,10 +816,6 @@
 				497316241534590400E3E5DC /* BehaviorViewController.m in Sources */,
 				495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */,
 				49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */,
-				49EBB4321537D1E9002BBF3C /* DCCrossHairView.m in Sources */,
-				49EBB4331537D1E9002BBF3C /* DCFrameView.m in Sources */,
-				49EBB4341537D1E9002BBF3C /* DCIntrospect.m in Sources */,
-				49EBB4351537D1E9002BBF3C /* DCStatusBarOverlay.m in Sources */,
 				49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */,
 				49EBB43D1537D4BE002BBF3C /* IntrospectManager.m in Sources */,
 				499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */,
@@ -751,6 +840,10 @@
 				494B97F1153EDCDE002801F7 /* SummaryController.m in Sources */,
 				49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */,
 				4956E97E1543EC9700C33D89 /* ScoreView.m in Sources */,
+				49E1E0F01547E7680030AAD1 /* DCCrossHairView.m in Sources */,
+				49E1E0F11547E7680030AAD1 /* DCFrameView.m in Sources */,
+				49E1E0F21547E7680030AAD1 /* DCIntrospect.m in Sources */,
+				49E1E0F31547E7680030AAD1 /* DCStatusBarOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,16 +851,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E1E1F51547FB280030AAD1 /* MathSpec.m in Sources */,
+				49E1E1FA1547FFBE0030AAD1 /* BehaviorTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		49A04A6F1534491B0092DC4A /* PBXTargetDependency */ = {
+		49E1E1B01547F6CF0030AAD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 49A04A441534491B0092DC4A /* DailyReview */;
-			targetProxy = 49A04A6E1534491B0092DC4A /* PBXContainerItemProxy */;
+			name = Kiwi;
+			targetProxy = 49E1E1AF1547F6CF0030AAD1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -908,35 +1003,15 @@
 		};
 		49A04A7F1534491B0092DC4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DailyReivew.app/DailyReivew";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/DailyReivew-Prefix.pch";
-				INFOPLIST_FILE = "resources/DailyReviewTests-Info.plist";
-				PRODUCT_NAME = DailyReviewTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		49A04A801534491B0092DC4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DailyReivew.app/DailyReivew";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/DailyReivew-Prefix.pch";
-				INFOPLIST_FILE = "resources/DailyReviewTests-Info.plist";
-				PRODUCT_NAME = DailyReviewTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
