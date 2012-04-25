@@ -13,15 +13,17 @@
 #import "BehaviorResultsController.h"
 #import "ScoreView.h"
 
-@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>{
+  UIImageView *hintView_;
+}
 
 @end
 
 @implementation BehaviorViewController {
   /* TODO: we could use array of boolean to store expanded status in controller,
-  create sectionHeaderView time to reduce sectionHeader refresh logic
-  when repository change
-  */
+   create sectionHeaderView time to reduce sectionHeader refresh logic
+   when repository change
+   */
   NSMutableArray *sectionHeaderViews_;
   BindingManager *bindingManager_;
   NSDate *currentDate_;
@@ -30,6 +32,12 @@
 @synthesize scoreView = scoreView_, tableView = tableView_;
 
 #pragma mark - LifeCycles
+
+- (void)createHintView {
+  hintView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"swipe-hint.png"]];
+  hintView_.alpha = 0;
+  [self.tableView addSubview:hintView_];
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -40,6 +48,7 @@
   [[resultsController_ sections] each:^(id <NSFetchedResultsSectionInfo> section) {
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
   }];
+  [self createHintView];
 }
 
 - (void)viewDidUnload {
@@ -48,11 +57,12 @@
   tableView_.dataSource = nil;
   bindingManager_ = nil;
   sectionHeaderViews_ = nil;
+  hintView_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-
+  
   // TODO: when repository changed become complex, this refreshViewIfNeeded logic needs to be extract, using NSNotificationCenter connect repository and tableView then.
   if (![currentDate_ isEqualToDate:[[NSDate date] dateWithoutTime]]) {
     [[self tableView] reloadData];
@@ -63,17 +73,17 @@
 
 - (void)updateScore {
   [scoreView_ setMeritCount:[[BehaviorResultsController sharedMeritResultsController] todayRank]
-                 demeritCount:[[BehaviorResultsController sharedDemeritResultsController] todayRank]];
+               demeritCount:[[BehaviorResultsController sharedDemeritResultsController] todayRank]];
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(id <NSFetchedResultsSectionInfo>)section {
   BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:[section name]];
-
+  
   UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
     [self toggleSection:section headerView:headerView];
   }];
   [headerView addGestureRecognizer:recognizer];
-
+  
   return headerView;
 }
 
@@ -96,19 +106,19 @@
   if (nil == cell) {
     cell = [BehaviorTableViewCell cell];
   }
-
+  
   Behavior *behavior = [resultsController_ objectAtIndexPath:indexPath];
   cell.textLabel.text = behavior.name;
-
+  
   Event *event = [behavior createEventForDate:currentDate_];
-
+  
   [self addGesturesForCell:cell event:event];
   [bindingManager_ bindSource:event
                   withKeyPath:@"count"
                        action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
                          [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
                        }];
-
+  
   return cell;
 }
 
@@ -118,15 +128,34 @@
   [bindingManager_ unbindSource:[behavior eventForDate:currentDate_]];
 }
 
+- (void)showHintAnimation:(BehaviorTableViewCell *)cell {
+  CGPoint cellOrigin = cell.frame.origin;
+  UIImage *hint = hintView_.image;
+  hintView_.frame = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 12 , hint.size.width, hint.size.height);
+  hintView_.alpha = 1.0;
+  [UIView beginAnimations:@"fade in" context:nil];
+  [UIView setAnimationDuration:1.0];
+  hintView_.alpha = 0.0;
+  hintView_.frame = CGRectMake(cellOrigin.x + 180, cellOrigin.y + 12 , hint.size.width, hint.size.height);
+  [UIView commitAnimations];
+  
+}
+
 - (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
-  UIGestureRecognizer *increaseRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+  UIGestureRecognizer *hintRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+    [self showHintAnimation:cell];
+  }];
+  [cell addGestureRecognizer:hintRecognizer];
+  
+  UISwipeGestureRecognizer *increaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
     event.countValue++;
     [context save];
     [self updateScore];
   }];
+  increaseRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
   [cell addGestureRecognizer:increaseRecognizer];
-
+  
   UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
     if (0 != event.countValue) {
       event.countValue--;
@@ -135,6 +164,7 @@
     }
   }];
   decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+  
   [cell addGestureRecognizer:decreaseRecognizer];
 }
 
@@ -144,11 +174,11 @@
   } else {
     cell.detailTextLabel.text = [newValue stringValue];
   }
-
+  
   if (oldValue == nil) {
     return;
   }
-
+  
   [cell.contentView flashWithDuration:0.4 color:([newValue intValue] > [oldValue intValue]) ? [UIColor yellowColor] : [UIColor orangeColor]];
 }
 
