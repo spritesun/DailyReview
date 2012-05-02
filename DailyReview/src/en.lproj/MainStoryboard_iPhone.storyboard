@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zMu-Q3-ugO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zMu-Q3-ugO">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -96,82 +96,7 @@
             </objects>
             <point key="canvasLocation" x="238" y="-475"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="7MJ-ql-Sca">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bBp-6E-tsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="m5G-gn-6Kw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bAJ-Iy-SOf">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="uhM-ik-qeJ">
-                                <rect key="frame" x="0.0" y="125" width="320" height="226"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="0.5"/>
-                                <sections>
-                                    <tableViewSection id="kOb-t8-UaE">
-                                        <cells>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="b2J-9J-hkU">
-                                                <rect key="frame" x="0.0" y="10" width="320" height="45"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="10" y="1" width="280" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="功过格介绍" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ESu-aX-Jcx">
-                                                            <rect key="frame" x="20" y="6" width="85" height="32"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </tableViewCell>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TmL-4w-vE1">
-                                                <rect key="frame" x="0.0" y="55" width="320" height="45"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="关于我们" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wyc-j6-wtk">
-                                                            <rect key="frame" x="20" y="11" width="68" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </tableViewCell>
-                                        </cells>
-                                    </tableViewSection>
-                                </sections>
-                                <connections>
-                                    <outlet property="dataSource" destination="Phk-pn-UKZ" id="MX8-S5-xMq"/>
-                                    <outlet property="delegate" destination="Phk-pn-UKZ" id="yO0-Kq-e6z"/>
-                                </connections>
-                            </tableView>
-                            <navigationBar contentMode="scaleToFill" id="ji2-nt-I6n">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="更多" id="9Cb-aU-edw"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-317" y="1256"/>
-        </scene>
-        <!--Table View Controller - 更多-->
+        <!--Table View Controller-->
         <scene sceneID="6e3-n6-5UI">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYy-Pi-TDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -179,7 +104,7 @@
                     <tableView key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="VOS-ww-k2D">
                         <rect key="frame" x="0.0" y="64" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="0.5"/>
                         <sections>
                             <tableViewSection id="53j-UL-Cdl">
@@ -194,7 +119,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="功过格介绍" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="rey-E1-L4h">
                                                     <rect key="frame" x="20" y="6" width="85" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -215,7 +140,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="关于我们" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="eLw-jX-zMW">
                                                     <rect key="frame" x="20" y="11" width="68" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -234,33 +159,85 @@
                             <outlet property="delegate" destination="Phk-pn-UKZ" id="wzg-VD-djg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="更多" id="cTg-1q-qDl"/>
+                    <navigationItem key="navigationItem" id="cTg-1q-qDl">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="返回" id="Kca-fa-O4V"/>
+                        <view key="titleView" opaque="NO" contentMode="scaleToFill" id="HZU-bc-py5">
+                            <rect key="frame" x="96" y="6" width="128" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="更多" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Yrd-f5-Ccm">
+                                    <rect key="frame" x="43" y="6" width="42" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </view>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="167" y="910"/>
         </scene>
-        <!--View Controller - 关于我们-->
+        <!--About View Controller-->
         <scene sceneID="0Hr-bz-HTD">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDI-Ve-qr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="9Lc-w3-WxG" sceneMemberID="viewController">
+                <viewController id="9Lc-w3-WxG" customClass="AboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o2b-ki-nOc">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="关于我们" id="GxQ-RJ-AUF"/>
+                    <navigationItem key="navigationItem" id="GxQ-RJ-AUF">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="6UA-jS-6I9">
+                            <rect key="frame" x="96" y="6" width="128" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="关于我们" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="RKj-Rx-ded">
+                                    <rect key="frame" x="30" y="6" width="68" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
+                    </navigationItem>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="675" y="1355"/>
         </scene>
-        <!--View Controller - 关于功过格-->
+        <!--About View Controller-->
         <scene sceneID="Irm-iC-dE0">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Hd-va-s0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="z3N-6r-FKU" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="关于功过格" id="NvU-cJ-rRF"/>
+                <viewController id="z3N-6r-FKU" customClass="AboutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FiQ-oQ-32Q" customClass="AboutDailyReviewView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NvU-cJ-rRF">
+                        <nil key="title"/>
+                        <view key="titleView" opaque="NO" contentMode="scaleToFill" id="Og0-wU-Mn8">
+                            <rect key="frame" x="96" y="6" width="128" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="关于功过格" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UYI-ii-NwK">
+                                    <rect key="frame" x="22" y="6" width="85" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </view>
+                    </navigationItem>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="669" y="754"/>
@@ -274,7 +251,7 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qbN-Qv-yEa">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qbN-Qv-yEa" customClass="MoreNavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -343,6 +320,12 @@
         <image name="summary-bg.png" width="320" height="415"/>
     </resources>
     <classes>
+        <class className="AboutDailyReviewView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutDailyReviewView.h"/>
+        </class>
+        <class className="AboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
+        </class>
         <class className="BehaviorTableView" superclassName="UITableView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BehaviorTableView.h"/>
         </class>
@@ -364,6 +347,9 @@
         </class>
         <class className="MeritController" superclassName="BehaviorViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MeritController.h"/>
+        </class>
+        <class className="MoreNavigationBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreNavigationBar.h"/>
         </class>
         <class className="ScoreView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoreView.h"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		490A2135153E8547006D654D /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
+		49151BE715514D4600DD10A7 /* MoreNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49151BE615514D4600DD10A7 /* MoreNavigationBar.m */; };
 		49340A8C153E8B1A006C11A1 /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */; };
 		49412AA3153EA07900450C3B /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 49412AA2153EA07900450C3B /* Behavior.m */; };
 		49412AA7153EA8A500450C3B /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49412AA6153EA8A500450C3B /* db.sqlite */; };
@@ -23,6 +24,9 @@
 		4956E97E1543EC9700C33D89 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
 		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
 		495DE489154AC5C700126A81 /* MoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495DE488154AC5C700126A81 /* MoreController.m */; };
+		49699070155154B10001B287 /* AboutDailyReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4969906F155154B10001B287 /* AboutDailyReviewView.m */; };
+		49699075155164B70001B287 /* back-button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 49699074155164B70001B287 /* back-button-bg.png */; };
+		4969907C155165DF0001B287 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4969907B155165DF0001B287 /* AboutViewController.m */; };
 		497316241534590400E3E5DC /* BehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorViewController.m */; };
 		497659CD153BB8DB00E0D533 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
 		497659FD153BCC5900E0D533 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
@@ -149,6 +153,8 @@
 /* Begin PBXFileReference section */
 		490A2133153E8547006D654D /* BehaviorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableView.h; path = src/BehaviorTableView.h; sourceTree = "<group>"; };
 		490A2134153E8547006D654D /* BehaviorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableView.m; path = src/BehaviorTableView.m; sourceTree = "<group>"; };
+		49151BE515514D4600DD10A7 /* MoreNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreNavigationBar.h; path = src/MoreNavigationBar.h; sourceTree = "<group>"; };
+		49151BE615514D4600DD10A7 /* MoreNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreNavigationBar.m; path = src/MoreNavigationBar.m; sourceTree = "<group>"; };
 		49340A8A153E8B1A006C11A1 /* UITableView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+Additions.h"; path = "src/UITableView+Additions.h"; sourceTree = "<group>"; };
 		49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Additions.m"; path = "src/UITableView+Additions.m"; sourceTree = "<group>"; };
 		49412AA1153EA07900450C3B /* Behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Behavior.h; path = src/Behavior.h; sourceTree = "<group>"; };
@@ -171,6 +177,11 @@
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
 		495DE487154AC5C700126A81 /* MoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreController.h; path = src/MoreController.h; sourceTree = "<group>"; };
 		495DE488154AC5C700126A81 /* MoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreController.m; path = src/MoreController.m; sourceTree = "<group>"; };
+		4969906E155154B10001B287 /* AboutDailyReviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutDailyReviewView.h; sourceTree = "<group>"; };
+		4969906F155154B10001B287 /* AboutDailyReviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDailyReviewView.m; sourceTree = "<group>"; };
+		49699074155164B70001B287 /* back-button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-bg.png"; path = "resources/images/back-button-bg.png"; sourceTree = "<group>"; };
+		4969907A155165DF0001B287 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		4969907B155165DF0001B287 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		497316221534590400E3E5DC /* BehaviorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorViewController.h; path = src/BehaviorViewController.h; sourceTree = "<group>"; };
 		497316231534590400E3E5DC /* BehaviorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorViewController.m; path = src/BehaviorViewController.m; sourceTree = "<group>"; };
 		497659CB153BB8DB00E0D533 /* Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Binding.h; path = src/Binding.h; sourceTree = "<group>"; };
@@ -360,6 +371,8 @@
 				494B97F0153EDCDE002801F7 /* SummaryController.m */,
 				495DE487154AC5C700126A81 /* MoreController.h */,
 				495DE488154AC5C700126A81 /* MoreController.m */,
+				4969907A155165DF0001B287 /* AboutViewController.h */,
+				4969907B155165DF0001B287 /* AboutViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -379,6 +392,7 @@
 		49844C4D154587D700EA16D0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				49699074155164B70001B287 /* back-button-bg.png */,
 				498552F51546CC9A00925D92 /* behavior-table-bg.png */,
 				498552F61546CC9A00925D92 /* behavior-table-bg@2x.png */,
 				498552F71546CC9A00925D92 /* behavior-view-bg.png */,
@@ -579,6 +593,10 @@
 				49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */,
 				4956E97C1543EC9700C33D89 /* ScoreView.h */,
 				4956E97D1543EC9700C33D89 /* ScoreView.m */,
+				49151BE515514D4600DD10A7 /* MoreNavigationBar.h */,
+				49151BE615514D4600DD10A7 /* MoreNavigationBar.m */,
+				4969906E155154B10001B287 /* AboutDailyReviewView.h */,
+				4969906F155154B10001B287 /* AboutDailyReviewView.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -774,6 +792,7 @@
 				498553261546CC9A00925D92 /* swipe-hint@2x.png in Resources */,
 				498553271546CC9A00925D92 /* top-bar-bg.png in Resources */,
 				498553281546CC9A00925D92 /* top-bar-bg@2x.png in Resources */,
+				49699075155164B70001B287 /* back-button-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,6 +871,9 @@
 				49E1E0F21547E7680030AAD1 /* DCIntrospect.m in Sources */,
 				49E1E0F31547E7680030AAD1 /* DCStatusBarOverlay.m in Sources */,
 				495DE489154AC5C700126A81 /* MoreController.m in Sources */,
+				49151BE715514D4600DD10A7 /* MoreNavigationBar.m in Sources */,
+				49699070155154B10001B287 /* AboutDailyReviewView.m in Sources */,
+				4969907C155165DF0001B287 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
