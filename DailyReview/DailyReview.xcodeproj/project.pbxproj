@@ -94,6 +94,9 @@
 		49EBB43D1537D4BE002BBF5F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */; };
 		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 		49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
+		49F3EBCA1557FC6B00BAC96F /* Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */; };
+		49F3EBCD1557FC8800BAC96F /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */; };
+		49F3EBCF1557FC9800BAC96F /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 49F3EBCE1557FC9800BAC96F /* Release.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +284,9 @@
 		49EBB43D1537D4BE002BBF63 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Additions.h"; path = "src/NSArray+Additions.h"; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFetchedResultsController+Additions.m"; path = "src/NSFetchedResultsController+Additions.m"; sourceTree = "<group>"; };
 		49EBB43D1537D4BE002BBF66 /* NSFetchedResultsController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFetchedResultsController+Additions.h"; path = "src/NSFetchedResultsController+Additions.h"; sourceTree = "<group>"; };
+		49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = config/Shared.xcconfig; sourceTree = "<group>"; };
+		49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = config/Debug.xcconfig; sourceTree = "<group>"; };
+		49F3EBCE1557FC9800BAC96F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -548,6 +554,9 @@
 			children = (
 				49E1E207154801D50030AAD1 /* DailyReview.xcconfig */,
 				49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */,
+				49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */,
+				49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */,
+				49F3EBCE1557FC9800BAC96F /* Release.xcconfig */,
 			);
 			name = config;
 			sourceTree = "<group>";
@@ -793,6 +802,9 @@
 				498553271546CC9A00925D92 /* top-bar-bg.png in Resources */,
 				498553281546CC9A00925D92 /* top-bar-bg@2x.png in Resources */,
 				49699075155164B70001B287 /* back-button-bg.png in Resources */,
+				49F3EBCA1557FC6B00BAC96F /* Shared.xcconfig in Resources */,
+				49F3EBCD1557FC8800BAC96F /* Debug.xcconfig in Resources */,
+				49F3EBCF1557FC9800BAC96F /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,60 +977,25 @@
 		49A04A791534491B0092DC4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		49A04A7A1534491B0092DC4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		49A04A7C1534491B0092DC4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49E1E207154801D50030AAD1 /* DailyReview.xcconfig */;
+			baseConfigurationReference = 49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		49A04A7D1534491B0092DC4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49E1E207154801D50030AAD1 /* DailyReview.xcconfig */;
+			baseConfigurationReference = 49F3EBCE1557FC9800BAC96F /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
