@@ -22,14 +22,15 @@
   [super viewDidLoad];
   UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
   
-  UIImage *backButtonBgImage = [UIImage imageNamed:@"back-button-bg"];
+  UIImage *backButtonBgImage = [UIImage imageNamed:@"back-button"];
   [backButton setBackgroundImage:backButtonBgImage forState:UIControlStateNormal];
-  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 5, backButtonBgImage.size.width / 8, backButtonBgImage.size.height / 8)];
-  label.text = @"更多";
+  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(19, 1, backButtonBgImage.size.width, backButtonBgImage.size.height)];
+  label.text = @"返回";
   label.font = [UIFont fontWithName:@"Helvetica" size:14];
+  label.textColor = [[UIColor alloc] initWithRed:1 green:.83 blue:.49 alpha:1];
   label.backgroundColor = [UIColor clearColor];
   [backButton addSubview:label];
-  backButton.frame = CGRectMake(0, 0, backButtonBgImage.size.width / 6, backButtonBgImage.size.height / 6);
+  backButton.frame = CGRectMake(0, 0, backButtonBgImage.size.width, backButtonBgImage.size.height);
   [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
   UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
 

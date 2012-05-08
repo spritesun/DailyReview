@@ -12,8 +12,8 @@
 		49340A8C153E8B1A006C11A1 /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */; };
 		493B04B515593C91007F6702 /* about-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04B415593C91007F6702 /* about-bg.png */; };
 		493B04B715593CEB007F6702 /* about-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04B615593CEB007F6702 /* about-bg@2x.png */; };
-		493B04BA15594177007F6702 /* return-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04B815594177007F6702 /* return-button.png */; };
-		493B04BB15594177007F6702 /* return-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04B915594177007F6702 /* return-button@2x.png */; };
+		493B04CA15594674007F6702 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04C815594674007F6702 /* back-button.png */; };
+		493B04CB15594674007F6702 /* back-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04C915594674007F6702 /* back-button@2x.png */; };
 		49412AA3153EA07900450C3B /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 49412AA2153EA07900450C3B /* Behavior.m */; };
 		49412AA7153EA8A500450C3B /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49412AA6153EA8A500450C3B /* db.sqlite */; };
 		4943CECB153AA2A600B823E7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
@@ -29,7 +29,6 @@
 		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
 		495DE489154AC5C700126A81 /* MoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495DE488154AC5C700126A81 /* MoreController.m */; };
 		49699070155154B10001B287 /* AboutDailyReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4969906F155154B10001B287 /* AboutDailyReviewView.m */; };
-		49699075155164B70001B287 /* back-button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 49699074155164B70001B287 /* back-button-bg.png */; };
 		4969907C155165DF0001B287 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4969907B155165DF0001B287 /* AboutViewController.m */; };
 		497316241534590400E3E5DC /* BehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorViewController.m */; };
 		497659CD153BB8DB00E0D533 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
@@ -166,8 +165,8 @@
 		49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Additions.m"; path = "src/UITableView+Additions.m"; sourceTree = "<group>"; };
 		493B04B415593C91007F6702 /* about-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about-bg.png"; path = "resources/images/about-bg.png"; sourceTree = "<group>"; };
 		493B04B615593CEB007F6702 /* about-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about-bg@2x.png"; path = "resources/images/about-bg@2x.png"; sourceTree = "<group>"; };
-		493B04B815594177007F6702 /* return-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "return-button.png"; path = "resources/images/return-button.png"; sourceTree = "<group>"; };
-		493B04B915594177007F6702 /* return-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "return-button@2x.png"; path = "resources/images/return-button@2x.png"; sourceTree = "<group>"; };
+		493B04C815594674007F6702 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button.png"; path = "resources/images/back-button.png"; sourceTree = "<group>"; };
+		493B04C915594674007F6702 /* back-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button@2x.png"; path = "resources/images/back-button@2x.png"; sourceTree = "<group>"; };
 		49412AA1153EA07900450C3B /* Behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Behavior.h; path = src/Behavior.h; sourceTree = "<group>"; };
 		49412AA2153EA07900450C3B /* Behavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Behavior.m; path = src/Behavior.m; sourceTree = "<group>"; };
 		49412AA6153EA8A500450C3B /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = db.sqlite; path = resources/db.sqlite; sourceTree = "<group>"; };
@@ -193,7 +192,6 @@
 		496832B3155939CC00F6CDCE /* Populate-Database-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Populate-Database-Release.xcconfig"; path = "config/Populate-Database-Release.xcconfig"; sourceTree = "<group>"; };
 		4969906E155154B10001B287 /* AboutDailyReviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutDailyReviewView.h; sourceTree = "<group>"; };
 		4969906F155154B10001B287 /* AboutDailyReviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDailyReviewView.m; sourceTree = "<group>"; };
-		49699074155164B70001B287 /* back-button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-bg.png"; path = "resources/images/back-button-bg.png"; sourceTree = "<group>"; };
 		4969907A155165DF0001B287 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		4969907B155165DF0001B287 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		497316221534590400E3E5DC /* BehaviorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorViewController.h; path = src/BehaviorViewController.h; sourceTree = "<group>"; };
@@ -408,11 +406,10 @@
 		49844C4D154587D700EA16D0 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				493B04B815594177007F6702 /* return-button.png */,
-				493B04B915594177007F6702 /* return-button@2x.png */,
+				493B04C815594674007F6702 /* back-button.png */,
+				493B04C915594674007F6702 /* back-button@2x.png */,
 				493B04B615593CEB007F6702 /* about-bg@2x.png */,
 				493B04B415593C91007F6702 /* about-bg.png */,
-				49699074155164B70001B287 /* back-button-bg.png */,
 				498552F51546CC9A00925D92 /* behavior-table-bg.png */,
 				498552F61546CC9A00925D92 /* behavior-table-bg@2x.png */,
 				498552F71546CC9A00925D92 /* behavior-view-bg.png */,
@@ -817,14 +814,13 @@
 				498553261546CC9A00925D92 /* swipe-hint@2x.png in Resources */,
 				498553271546CC9A00925D92 /* top-bar-bg.png in Resources */,
 				498553281546CC9A00925D92 /* top-bar-bg@2x.png in Resources */,
-				49699075155164B70001B287 /* back-button-bg.png in Resources */,
 				49F3EBCA1557FC6B00BAC96F /* Shared.xcconfig in Resources */,
 				49F3EBCD1557FC8800BAC96F /* Debug.xcconfig in Resources */,
 				49F3EBCF1557FC9800BAC96F /* Release.xcconfig in Resources */,
 				493B04B515593C91007F6702 /* about-bg.png in Resources */,
 				493B04B715593CEB007F6702 /* about-bg@2x.png in Resources */,
-				493B04BA15594177007F6702 /* return-button.png in Resources */,
-				493B04BB15594177007F6702 /* return-button@2x.png in Resources */,
+				493B04CA15594674007F6702 /* back-button.png in Resources */,
+				493B04CB15594674007F6702 /* back-button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
