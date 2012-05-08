@@ -21,11 +21,18 @@
 {
   [super viewDidLoad];
   UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+  
   UIImage *backButtonBgImage = [UIImage imageNamed:@"back-button-bg"];
-  [backButton setImage:backButtonBgImage forState:UIControlStateNormal];
+  [backButton setBackgroundImage:backButtonBgImage forState:UIControlStateNormal];
+  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 5, backButtonBgImage.size.width / 8, backButtonBgImage.size.height / 8)];
+  label.text = @"更多";
+  label.font = [UIFont fontWithName:@"Helvetica" size:14];
+  label.backgroundColor = [UIColor clearColor];
+  [backButton addSubview:label];
   backButton.frame = CGRectMake(0, 0, backButtonBgImage.size.width / 6, backButtonBgImage.size.height / 6);
   [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
   UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+
   self.navigationItem.leftBarButtonItem = customBarItem;
 }
 
