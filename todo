@@ -2,7 +2,7 @@
 # must have
 
 * use animation to hint user swipe(done)
-* introduce xcconfig file
+* introduce xcconfig file (done)
 * bundle zh name 
 * other merit +1, at the bottom of first section of merit(done)
 * other demerit -1, at the bottom of firt section of demerit(done)

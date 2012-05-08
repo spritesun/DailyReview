@@ -180,6 +180,9 @@
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
 		495DE487154AC5C700126A81 /* MoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreController.h; path = src/MoreController.h; sourceTree = "<group>"; };
 		495DE488154AC5C700126A81 /* MoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreController.m; path = src/MoreController.m; sourceTree = "<group>"; };
+		496832B11559399700F6CDCE /* Populate-Database-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Populate-Database-Shared.xcconfig"; path = "config/Populate-Database-Shared.xcconfig"; sourceTree = "<group>"; };
+		496832B2155939BC00F6CDCE /* Populate-Database-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Populate-Database-Debug.xcconfig"; path = "config/Populate-Database-Debug.xcconfig"; sourceTree = "<group>"; };
+		496832B3155939CC00F6CDCE /* Populate-Database-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Populate-Database-Release.xcconfig"; path = "config/Populate-Database-Release.xcconfig"; sourceTree = "<group>"; };
 		4969906E155154B10001B287 /* AboutDailyReviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutDailyReviewView.h; sourceTree = "<group>"; };
 		4969906F155154B10001B287 /* AboutDailyReviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDailyReviewView.m; sourceTree = "<group>"; };
 		49699074155164B70001B287 /* back-button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-bg.png"; path = "resources/images/back-button-bg.png"; sourceTree = "<group>"; };
@@ -258,7 +261,6 @@
 		49E1E1DE1547F98F0030AAD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		49E1E1E01547F98F0030AAD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReviewTests.xcconfig; path = config/DailyReviewTests.xcconfig; sourceTree = "<group>"; };
-		49E1E207154801D50030AAD1 /* DailyReview.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReview.xcconfig; path = config/DailyReview.xcconfig; sourceTree = "<group>"; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
 		49EBB4141536C8B4002BBF3C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "src/UIView+Additions.h"; sourceTree = "<group>"; };
@@ -552,11 +554,13 @@
 		49E1E1F61547FD560030AAD1 /* config */ = {
 			isa = PBXGroup;
 			children = (
-				49E1E207154801D50030AAD1 /* DailyReview.xcconfig */,
 				49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */,
 				49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */,
 				49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */,
 				49F3EBCE1557FC9800BAC96F /* Release.xcconfig */,
+				496832B11559399700F6CDCE /* Populate-Database-Shared.xcconfig */,
+				496832B2155939BC00F6CDCE /* Populate-Database-Debug.xcconfig */,
+				496832B3155939CC00F6CDCE /* Populate-Database-Release.xcconfig */,
 			);
 			name = config;
 			sourceTree = "<group>";
@@ -946,31 +950,15 @@
 /* Begin XCBuildConfiguration section */
 		4943CEEF153AAE1E00B823E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 496832B2155939BC00F6CDCE /* Populate-Database-Debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "populate-database/populate-database-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		4943CEF0153AAE1E00B823E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 496832B3155939CC00F6CDCE /* Populate-Database-Release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "populate-database/populate-database-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};

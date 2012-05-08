@@ -1,0 +1,2 @@
+#include "Populate-Database-Shared.xcconfig"
+DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
