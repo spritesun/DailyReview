@@ -22,7 +22,7 @@
 
 * try bundle/SkinManager, refer to REA code base
 * swipe animation could be more fancy highlight finger touch path
-* pinch to close section
+* pinch to close section (done)
 * paper folding animation
 * do we need save all core data changes during applicationWillTerminate or applicationDidEnterBackground?
 
