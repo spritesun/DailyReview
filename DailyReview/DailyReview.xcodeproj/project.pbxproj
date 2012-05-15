@@ -187,9 +187,7 @@
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
 		495DE487154AC5C700126A81 /* MoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreController.h; path = src/MoreController.h; sourceTree = "<group>"; };
 		495DE488154AC5C700126A81 /* MoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreController.m; path = src/MoreController.m; sourceTree = "<group>"; };
-		496832B11559399700F6CDCE /* Populate-Database-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Populate-Database-Shared.xcconfig"; path = "config/Populate-Database-Shared.xcconfig"; sourceTree = "<group>"; };
-		496832B2155939BC00F6CDCE /* Populate-Database-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Populate-Database-Debug.xcconfig"; path = "config/Populate-Database-Debug.xcconfig"; sourceTree = "<group>"; };
-		496832B3155939CC00F6CDCE /* Populate-Database-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Populate-Database-Release.xcconfig"; path = "config/Populate-Database-Release.xcconfig"; sourceTree = "<group>"; };
+		496832B11559399700F6CDCE /* PopulateDatabase.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = PopulateDatabase.xcconfig; path = config/PopulateDatabase.xcconfig; sourceTree = "<group>"; };
 		4969906E155154B10001B287 /* AboutDailyReviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutDailyReviewView.h; sourceTree = "<group>"; };
 		4969906F155154B10001B287 /* AboutDailyReviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDailyReviewView.m; sourceTree = "<group>"; };
 		4969907A155165DF0001B287 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -567,9 +565,7 @@
 				49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */,
 				49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */,
 				49F3EBCE1557FC9800BAC96F /* Release.xcconfig */,
-				496832B11559399700F6CDCE /* Populate-Database-Shared.xcconfig */,
-				496832B2155939BC00F6CDCE /* Populate-Database-Debug.xcconfig */,
-				496832B3155939CC00F6CDCE /* Populate-Database-Release.xcconfig */,
+				496832B11559399700F6CDCE /* PopulateDatabase.xcconfig */,
 			);
 			name = config;
 			sourceTree = "<group>";
@@ -962,14 +958,14 @@
 /* Begin XCBuildConfiguration section */
 		4943CEEF153AAE1E00B823E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 496832B2155939BC00F6CDCE /* Populate-Database-Debug.xcconfig */;
+			baseConfigurationReference = 496832B11559399700F6CDCE /* PopulateDatabase.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		4943CEF0153AAE1E00B823E7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 496832B3155939CC00F6CDCE /* Populate-Database-Release.xcconfig */;
+			baseConfigurationReference = 496832B11559399700F6CDCE /* PopulateDatabase.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
