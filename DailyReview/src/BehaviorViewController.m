@@ -13,10 +13,7 @@
 #import "BehaviorResultsController.h"
 #import "ScoreView.h"
 
-@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>{
-  UIImageView *hintView_;
-}
-
+@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>
 @end
 
 @implementation BehaviorViewController {
@@ -27,6 +24,8 @@
   NSMutableArray *sectionHeaderViews_;
   BindingManager *bindingManager_;
   NSDate *currentDate_;
+  UIImageView *hintView_;
+  UIImageView *increaseView_;
 }
 
 @synthesize scoreView = scoreView_, tableView = tableView_;
@@ -37,6 +36,12 @@
   hintView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"swipe-hint.png"]];
   hintView_.alpha = 0;
   [self.tableView addSubview:hintView_];
+}
+
+- (void)createIncreaseView {
+  increaseView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"increase-hint.png"]];
+  increaseView_.alpha = 0;
+  [self.tableView addSubview:increaseView_];
 }
 
 - (void)addPinchGestureRecognizerForSections {
@@ -77,6 +82,7 @@
   [self addPinchGestureRecognizerForSections];
   
   [self createHintView];
+  [self createIncreaseView];
 }
 
 - (void)viewDidUnload {
@@ -169,8 +175,29 @@
   hintView_.alpha = 0.0;
   hintView_.frame = CGRectMake(cellOrigin.x + 180, cellOrigin.y + 12 , hint.size.width, hint.size.height);
   [UIView commitAnimations];
-  
 }
+
+- (UIImage *)croppedImage:(UIImage *)image :(CGRect)bounds {
+  CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], bounds);
+  UIImage *croppedImage = [UIImage imageWithCGImage:imageRef];
+  CGImageRelease(imageRef);
+  return croppedImage;
+}
+
+- (void)showIncreaseAnimation:(BehaviorTableViewCell *)cell {
+  CGPoint cellOrigin = cell.frame.origin;
+  CGRect rect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , increaseView_.image.size.width, increaseView_.image.size.height);
+  increaseView_.frame = rect;
+//  increaseView_.image = [self croppedImage:increaseView_.image :CGRectMake(rect.origin.x, rect.origin.y, 0, rect.size.width)];
+  increaseView_.alpha = 1.0;
+  [UIView beginAnimations:@"fade in" context:nil];
+  [UIView setAnimationDuration:1.0];
+  increaseView_.alpha = 0.0;
+//  increaseView_.image = [self croppedImage:increaseView_.image :rect];
+  [UIView commitAnimations];
+}
+
+
 
 - (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
@@ -180,9 +207,11 @@
   [cell addGestureRecognizer:hintRecognizer];
   
   UISwipeGestureRecognizer *increaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+    [self showIncreaseAnimation:cell];
     event.countValue++;
     [context save];
     [self updateScore];
+
   }];
   increaseRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
   [cell addGestureRecognizer:increaseRecognizer];
@@ -210,7 +239,7 @@
     return;
   }
   
-  [cell.contentView flashWithDuration:0.4 color:([newValue intValue] > [oldValue intValue]) ? [UIColor yellowColor] : [UIColor orangeColor]];
+//  [cell.contentView flashWithDuration:0.4 color:([newValue intValue] > [oldValue intValue]) ? [UIColor yellowColor] : [UIColor orangeColor]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
