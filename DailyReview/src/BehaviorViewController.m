@@ -26,6 +26,7 @@
   NSDate *currentDate_;
   UIImageView *hintView_;
   UIImageView *increaseView_;
+  UIImageView *decreaseView_;
 }
 
 @synthesize scoreView = scoreView_, tableView = tableView_;
@@ -38,10 +39,13 @@
   [self.tableView addSubview:hintView_];
 }
 
-- (void)createIncreaseView {
+- (void)createEventModificationView {
   increaseView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"increase-hint.png"]];
   increaseView_.alpha = 0;
   [self.tableView addSubview:increaseView_];
+  decreaseView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"decrease-hint.png"]];
+  decreaseView_.alpha = 0;
+  [self.tableView addSubview:decreaseView_];
 }
 
 - (void)addPinchGestureRecognizerForSections {
@@ -82,7 +86,7 @@
   [self addPinchGestureRecognizerForSections];
   
   [self createHintView];
-  [self createIncreaseView];
+  [self createEventModificationView];
 }
 
 - (void)viewDidUnload {
@@ -94,6 +98,8 @@
   bindingManager_ = nil;
   sectionHeaderViews_ = nil;
   hintView_ = nil;
+  increaseView_ = nil;
+  decreaseView_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -170,18 +176,11 @@
   UIImage *hint = hintView_.image;
   hintView_.frame = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 12 , hint.size.width, hint.size.height);
   hintView_.alpha = 1.0;
-  [UIView beginAnimations:@"fade in" context:nil];
-  [UIView setAnimationDuration:1.0];
-  hintView_.alpha = 0.0;
-  hintView_.frame = CGRectMake(cellOrigin.x + 180, cellOrigin.y + 12 , hint.size.width, hint.size.height);
-  [UIView commitAnimations];
-}
-
-- (UIImage *)croppedImage:(UIImage *)image :(CGRect)bounds {
-  CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], bounds);
-  UIImage *croppedImage = [UIImage imageWithCGImage:imageRef];
-  CGImageRelease(imageRef);
-  return croppedImage;
+  
+  [UIView animateWithDuration:1.0 animations:^{
+    hintView_.alpha = 0.0;
+    hintView_.frame = CGRectMake(cellOrigin.x + 180, cellOrigin.y + 12 , hint.size.width, hint.size.height);
+  }];
 }
 
 - (void)showIncreaseAnimation:(BehaviorTableViewCell *)cell {
@@ -196,6 +195,22 @@
   } completion:^(BOOL finished) {
     [UIView animateWithDuration:1 animations:^{
       increaseView_.alpha = 0;
+    }];
+  }];
+}
+
+- (void)showDecreaseAnimation:(BehaviorTableViewCell *)cell {
+  CGPoint cellOrigin = cell.frame.origin;
+  CGRect rect = CGRectMake(cellOrigin.x + 270, cellOrigin.y + 4 , 0, decreaseView_.image.size.height);
+  decreaseView_.frame = rect;
+  decreaseView_.alpha = 1.0;
+  decreaseView_.clipsToBounds = YES;
+  decreaseView_.contentMode = UIViewContentModeRight;
+  [UIView animateWithDuration:0.2 animations:^{
+    decreaseView_.frame = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , decreaseView_.image.size.width, decreaseView_.image.size.height);
+  } completion:^(BOOL finished) {
+    [UIView animateWithDuration:1 animations:^{
+      decreaseView_.alpha = 0;
     }];
   }];
 }
@@ -219,6 +234,7 @@
   
   UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
     if (0 != event.countValue) {
+      [self showDecreaseAnimation:cell];
       event.countValue--;
       [context save];
       [self updateScore];
