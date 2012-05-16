@@ -13,10 +13,7 @@
 #import "BehaviorResultsController.h"
 #import "ScoreView.h"
 
-@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>{
-  UIImageView *hintView_;
-}
-
+@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>
 @end
 
 @implementation BehaviorViewController {
@@ -27,38 +24,28 @@
   NSMutableArray *sectionHeaderViews_;
   BindingManager *bindingManager_;
   NSDate *currentDate_;
+  UIImageView *hintView_;
+  UIImageView *increaseView_;
+  UIImageView *decreaseView_;
 }
 
 @synthesize scoreView = scoreView_, tableView = tableView_;
 
 #pragma mark - LifeCycles
 
-- (void)createHintView {
-  hintView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"swipe-hint.png"]];
-  hintView_.alpha = 0;
-  [self.tableView addSubview:hintView_];
+- (UIImageView *)createTransparentView:(NSString *)imageName {
+  UIImageView * view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+  view.alpha = 0;
+  return view;
 }
 
-- (void)addPinchGestureRecognizerForSections {
-  __block BOOL isPinched = NO;
-  UIPinchGestureRecognizer *pinchRecognizer = [UIPinchGestureRecognizer recognizerWithActionBlock:^(UIPinchGestureRecognizer* recognizer) {
-    if (recognizer.state != UIGestureRecognizerStateChanged) {
-      isPinched = NO;
-    }
-    
-    if (!isPinched && recognizer.scale < 0.6 && recognizer.numberOfTouches == 2) {
-      NSIndexPath *path1 = [tableView_ indexPathForRowAtPoint:[recognizer locationOfTouch:0 inView:tableView_]];
-      NSIndexPath *path2 = [tableView_ indexPathForRowAtPoint:[recognizer locationOfTouch:1 inView:tableView_]];
-      
-      if (path1.section == path2.section) {
-        NSInteger sectionIndex = path1.section;
-        [self toggleSection:[[resultsController_ sections] objectAtIndex:sectionIndex] headerView:[sectionHeaderViews_  objectAtIndex:sectionIndex]];
-        isPinched = YES;
-      }
-    }
-  }];
-  
-  [tableView_ addGestureRecognizer:pinchRecognizer];
+- (void)createHintView {
+  hintView_ = [self createTransparentView:@"swipe-hint.png"];
+  [self.tableView addSubview:hintView_];
+  increaseView_ = [self createTransparentView:@"increase-hint.png"];
+  [self.tableView addSubview:increaseView_];
+  decreaseView_ = [self createTransparentView:@"decrease-hint.png"];
+  [self.tableView addSubview:decreaseView_];
 }
 
 - (void)viewDidLoad {
@@ -74,8 +61,6 @@
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
   }];
   
-  [self addPinchGestureRecognizerForSections];
-  
   [self createHintView];
 }
 
@@ -88,6 +73,8 @@
   bindingManager_ = nil;
   sectionHeaderViews_ = nil;
   hintView_ = nil;
+  increaseView_ = nil;
+  decreaseView_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -95,9 +82,9 @@
   
   // TODO: when repository changed become complex, this refreshViewIfNeeded logic needs to be extract, using NSNotificationCenter connect repository and tableView then.
   if (![currentDate_ isEqualToDate:[[NSDate date] dateWithoutTime]]) {
+    currentDate_ = [[NSDate date] dateWithoutTime];
     [[self tableView] reloadData];
     [[self tableView] layoutIfNeeded];
-    currentDate_ = [[NSDate date] dateWithoutTime];
   }
   [self updateScore];
 }
@@ -108,25 +95,7 @@
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(id <NSFetchedResultsSectionInfo>)section {
-  BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:[section name]];
-  
-  UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
-    [self toggleSection:section headerView:headerView];
-  }];
-  [headerView addGestureRecognizer:recognizer];
-  
-  return headerView;
-}
-
-- (void)toggleSection:(id <NSFetchedResultsSectionInfo>)section headerView:(BehaviorSectionHeaderView *)headerView {
-  headerView.expanded ^= YES;
-  UITableViewRowAnimation animation = UITableViewRowAnimationTop;
-  NSArray *indexPaths = [resultsController_ indexPathsForSection:section];
-  if (headerView.expanded) {
-    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
-  } else {
-    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
-  }
+  return [BehaviorSectionHeaderView viewWithTitle:[section name]];
 }
 
 #pragma mark - UITableViewDataSource
@@ -164,12 +133,39 @@
   UIImage *hint = hintView_.image;
   hintView_.frame = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 12 , hint.size.width, hint.size.height);
   hintView_.alpha = 1.0;
-  [UIView beginAnimations:@"fade in" context:nil];
-  [UIView setAnimationDuration:1.0];
-  hintView_.alpha = 0.0;
-  hintView_.frame = CGRectMake(cellOrigin.x + 180, cellOrigin.y + 12 , hint.size.width, hint.size.height);
-  [UIView commitAnimations];
-  
+  [UIView animateWithDuration:1.0 animations:^{
+    hintView_.alpha = 0.0;
+    hintView_.frame = CGRectMake(cellOrigin.x + 180, cellOrigin.y + 12 , hint.size.width, hint.size.height);
+  }];
+}
+
+- (void)transformAnimationOn:(UIImageView *)view From:(CGRect)fromRect to:(CGRect)toRect {
+  view.frame = fromRect;
+  view.alpha = 1.0;
+  view.clipsToBounds = YES;
+  [UIView animateWithDuration:0.2 animations:^{
+    view.frame = toRect;
+  } completion:^(BOOL finished) {
+    [UIView animateWithDuration:1 animations:^{
+      view.alpha = 0;
+    }];
+  }];
+}
+
+- (void)showIncreaseAnimation:(BehaviorTableViewCell *)cell {
+  CGPoint cellOrigin = cell.frame.origin;
+  CGRect beginRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , 0, increaseView_.image.size.height);
+  CGRect endRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , increaseView_.image.size.width, increaseView_.image.size.height);
+  increaseView_.contentMode = UIViewContentModeLeft;
+  [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
+}
+
+- (void)showDecreaseAnimation:(BehaviorTableViewCell *)cell {
+  CGPoint cellOrigin = cell.frame.origin;
+  CGRect beginRect = CGRectMake(cellOrigin.x + 270, cellOrigin.y + 4 , 0, decreaseView_.image.size.height);
+  CGRect endRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , decreaseView_.image.size.width, decreaseView_.image.size.height);
+  decreaseView_.contentMode = UIViewContentModeRight;
+  [self transformAnimationOn:decreaseView_ From:beginRect to:endRect];
 }
 
 - (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
@@ -180,15 +176,18 @@
   [cell addGestureRecognizer:hintRecognizer];
   
   UISwipeGestureRecognizer *increaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
+    [self showIncreaseAnimation:cell];
     event.countValue++;
     [context save];
     [self updateScore];
+
   }];
   increaseRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
   [cell addGestureRecognizer:increaseRecognizer];
   
   UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
     if (0 != event.countValue) {
+      [self showDecreaseAnimation:cell];
       event.countValue--;
       [context save];
       [self updateScore];
@@ -209,8 +208,6 @@
   if (oldValue == nil) {
     return;
   }
-  
-  [cell.contentView flashWithDuration:0.4 color:([newValue intValue] > [oldValue intValue]) ? [UIColor yellowColor] : [UIColor orangeColor]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
