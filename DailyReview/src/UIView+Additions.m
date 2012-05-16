@@ -98,6 +98,27 @@
   self.frame = frame;
 }
 
+static const NSInteger kBackgroundViewTag = 1000;
+
+- (UIView *)backgroundView {  
+  return [self viewWithTag:kBackgroundViewTag];
+}
+
+- (void)setBackgroundView:(UIView *)backgroundView {
+  UIView *oldBackgroundView = self.backgroundView;
+  if (oldBackgroundView == backgroundView) {
+    return;
+  }
+  if (oldBackgroundView) {
+    [oldBackgroundView removeFromSuperview];
+  }
+  if (backgroundView) {
+    backgroundView.tag = kBackgroundViewTag;
+    [self addSubview:backgroundView];
+    [self sendSubviewToBack:backgroundView];
+  }
+}
+
 - (void)removeAllSubviews {
   while (self.subviews.count) {
     UIView *child = self.subviews.lastObject;

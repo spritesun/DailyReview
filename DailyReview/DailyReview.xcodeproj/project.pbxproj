@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		490A2135153E8547006D654D /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
 		49151BE715514D4600DD10A7 /* MoreNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49151BE615514D4600DD10A7 /* MoreNavigationBar.m */; };
+		4933EE9A1563842E002722BF /* UIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933EE991563842E002722BF /* UIScrollView+Additions.m */; };
 		49340A8C153E8B1A006C11A1 /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */; };
 		493B04B515593C91007F6702 /* about-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04B415593C91007F6702 /* about-bg.png */; };
 		493B04B715593CEB007F6702 /* about-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04B615593CEB007F6702 /* about-bg@2x.png */; };
@@ -161,6 +162,8 @@
 		490A2134153E8547006D654D /* BehaviorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableView.m; path = src/BehaviorTableView.m; sourceTree = "<group>"; };
 		49151BE515514D4600DD10A7 /* MoreNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreNavigationBar.h; path = src/MoreNavigationBar.h; sourceTree = "<group>"; };
 		49151BE615514D4600DD10A7 /* MoreNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreNavigationBar.m; path = src/MoreNavigationBar.m; sourceTree = "<group>"; };
+		4933EE981563842E002722BF /* UIScrollView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+Additions.h"; path = "src/UIScrollView+Additions.h"; sourceTree = "<group>"; };
+		4933EE991563842E002722BF /* UIScrollView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+Additions.m"; path = "src/UIScrollView+Additions.m"; sourceTree = "<group>"; };
 		49340A8A153E8B1A006C11A1 /* UITableView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+Additions.h"; path = "src/UITableView+Additions.h"; sourceTree = "<group>"; };
 		49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Additions.m"; path = "src/UITableView+Additions.m"; sourceTree = "<group>"; };
 		493B04B415593C91007F6702 /* about-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about-bg.png"; path = "resources/images/about-bg.png"; sourceTree = "<group>"; };
@@ -367,8 +370,8 @@
 		4973162515345C8F00E3E5DC /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				49EBB43D1537D4BE002BBF49 /* BehaviorResultsController.m */,
 				49EBB43D1537D4BE002BBF4B /* BehaviorResultsController.h */,
+				49EBB43D1537D4BE002BBF49 /* BehaviorResultsController.m */,
 				49A04A9715344CD90092DC4A /* AppDelegate.h */,
 				49A04A9815344CD90092DC4A /* AppDelegate.m */,
 				49CE19BE153D221E00C31041 /* MainViewController.h */,
@@ -639,8 +642,10 @@
 		49EBB43D1537D4BE002BBF68 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				49EBB4391537D4A5002BBF3C /* UIView+Additions.m */,
 				49EBB4141536C8B4002BBF3C /* UIView+Additions.h */,
+				49EBB4391537D4A5002BBF3C /* UIView+Additions.m */,
+				4933EE981563842E002722BF /* UIScrollView+Additions.h */,
+				4933EE991563842E002722BF /* UIScrollView+Additions.m */,
 				49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */,
 				49340A8A153E8B1A006C11A1 /* UITableView+Additions.h */,
 				495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */,
@@ -898,6 +903,7 @@
 				49151BE715514D4600DD10A7 /* MoreNavigationBar.m in Sources */,
 				49699070155154B10001B287 /* AboutDailyReviewView.m in Sources */,
 				4969907C155165DF0001B287 /* AboutViewController.m in Sources */,
+				4933EE9A1563842E002722BF /* UIScrollView+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

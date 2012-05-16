@@ -63,6 +63,9 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  self.view.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"behavior-view-bg.png"]]; 
+  self.view.backgroundView.frame = tableView_.frame;
   tableView_.delegate = self;
   tableView_.dataSource = self;
   bindingManager_ = [BindingManager new];
@@ -78,6 +81,8 @@
 
 - (void)viewDidUnload {
   [super viewDidUnload];
+  
+  self.view.backgroundView = nil;
   tableView_.delegate = nil;
   tableView_.dataSource = nil;
   bindingManager_ = nil;
@@ -91,6 +96,7 @@
   // TODO: when repository changed become complex, this refreshViewIfNeeded logic needs to be extract, using NSNotificationCenter connect repository and tableView then.
   if (![currentDate_ isEqualToDate:[[NSDate date] dateWithoutTime]]) {
     [[self tableView] reloadData];
+    [[self tableView] layoutIfNeeded];
     currentDate_ = [[NSDate date] dateWithoutTime];
   }
   [self updateScore];
