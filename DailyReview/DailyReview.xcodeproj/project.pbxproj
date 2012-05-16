@@ -63,11 +63,8 @@
 		498553281546CC9A00925D92 /* top-bar-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530E1546CC9A00925D92 /* top-bar-bg@2x.png */; };
 		49939775153EEEF200A91E7B /* NSSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49939774153EEEF200A91E7B /* NSSet+Additions.m */; };
 		499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
-		49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A491534491B0092DC4A /* UIKit.framework */; };
 		49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
-		49A04A4E1534491B0092DC4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4D1534491B0092DC4A /* CoreGraphics.framework */; };
 		49A04A6B1534491B0092DC4A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A6A1534491B0092DC4A /* SenTestingKit.framework */; };
-		49A04A6C1534491B0092DC4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A491534491B0092DC4A /* UIKit.framework */; };
 		49A04A6D1534491B0092DC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
 		49A04AA415344CD90092DC4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A9815344CD90092DC4A /* AppDelegate.m */; };
 		49A04AA815344CD90092DC4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AA015344CD90092DC4A /* main.m */; };
@@ -75,6 +72,9 @@
 		49A04AB215344D4E0092DC4A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AAE15344D4E0092DC4A /* MainStoryboard_iPad.storyboard */; };
 		49A04AB315344D4E0092DC4A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */; };
 		49A04AB915344D9B0092DC4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB715344D9B0092DC4A /* InfoPlist.strings */; };
+		49B70C211563B021004E60CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B70C201563B021004E60CB /* UIKit.framework */; };
+		49B70C231563B026004E60CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B70C221563B026004E60CB /* CoreGraphics.framework */; };
+		49B70C241563B033004E60CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B70C201563B021004E60CB /* UIKit.framework */; };
 		49CE19C0153D221E00C31041 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19BF153D221E00C31041 /* MainViewController.m */; };
 		49CE19C4153D5C1700C31041 /* MeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C3153D5C1700C31041 /* MeritController.m */; };
 		49CE19C7153D5CE800C31041 /* DemeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C6153D5CE800C31041 /* DemeritController.m */; };
@@ -230,9 +230,7 @@
 		499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewCell.h; path = src/BehaviorTableViewCell.h; sourceTree = "<group>"; };
 		499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewCell.m; path = src/BehaviorTableViewCell.m; sourceTree = "<group>"; };
 		49A04A451534491B0092DC4A /* 功过格.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "功过格.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		49A04A491534491B0092DC4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49A04A4B1534491B0092DC4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		49A04A4D1534491B0092DC4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		49A04A691534491B0092DC4A /* DailyReviewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyReviewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A04A6A1534491B0092DC4A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		49A04A9715344CD90092DC4A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/AppDelegate.h; sourceTree = "<group>"; };
@@ -245,6 +243,8 @@
 		49A04AB815344D9B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49A04ABA15344DB50092DC4A /* DailyReview-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DailyReview-Info.plist"; path = "resources/DailyReview-Info.plist"; sourceTree = "<group>"; };
 		49A04ABB15344DB50092DC4A /* DailyReviewTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DailyReviewTests-Info.plist"; path = "resources/DailyReviewTests-Info.plist"; sourceTree = "<group>"; };
+		49B70C201563B021004E60CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		49B70C221563B026004E60CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		49CE19BE153D221E00C31041 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = src/MainViewController.h; sourceTree = "<group>"; };
 		49CE19BF153D221E00C31041 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = src/MainViewController.m; sourceTree = "<group>"; };
 		49CE19C2153D5C1700C31041 /* MeritController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeritController.h; path = src/MeritController.h; sourceTree = "<group>"; };
@@ -264,9 +264,6 @@
 		49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = ../lib/Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
 		49E1E1AD1547F55F0030AAD1 /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathSpec.m; path = test/MathSpec.m; sourceTree = "<group>"; };
-		49E1E1DC1547F98F0030AAD1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		49E1E1DE1547F98F0030AAD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		49E1E1E01547F98F0030AAD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReviewTests.xcconfig; path = config/DailyReviewTests.xcconfig; sourceTree = "<group>"; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
@@ -312,10 +309,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B70C231563B026004E60CB /* CoreGraphics.framework in Frameworks */,
+				49B70C211563B021004E60CB /* UIKit.framework in Frameworks */,
 				49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */,
-				49A04A4A1534491B0092DC4A /* UIKit.framework in Frameworks */,
 				49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */,
-				49A04A4E1534491B0092DC4A /* CoreGraphics.framework in Frameworks */,
 				4943CED8153AA6BF00B823E7 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +323,7 @@
 			files = (
 				49E1E1B11547F6EA0030AAD1 /* libKiwi.a in Frameworks */,
 				49A04A6B1534491B0092DC4A /* SenTestingKit.framework in Frameworks */,
-				49A04A6C1534491B0092DC4A /* UIKit.framework in Frameworks */,
+				49B70C241563B033004E60CB /* UIKit.framework in Frameworks */,
 				49A04A6D1534491B0092DC4A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +449,6 @@
 				49A04A481534491B0092DC4A /* frameworks */,
 				49A04A461534491B0092DC4A /* products */,
 				4943CEE4153AAE1E00B823E7 /* populate-database */,
-				49E1E1DB1547F98F0030AAD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -469,11 +465,11 @@
 		49A04A481534491B0092DC4A /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49B70C201563B021004E60CB /* UIKit.framework */,
+				49B70C221563B026004E60CB /* CoreGraphics.framework */,
 				4943CED6153AA68000B823E7 /* CoreData.framework */,
 				49EBB4361537D360002BBF3C /* QuartzCore.framework */,
-				49A04A491534491B0092DC4A /* UIKit.framework */,
 				49A04A4B1534491B0092DC4A /* Foundation.framework */,
-				49A04A4D1534491B0092DC4A /* CoreGraphics.framework */,
 				49A04A6A1534491B0092DC4A /* SenTestingKit.framework */,
 			);
 			name = frameworks;
@@ -549,16 +545,6 @@
 				49E1E1461547EF740030AAD1 /* KiwiExamples.octest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		49E1E1DB1547F98F0030AAD1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				49E1E1DC1547F98F0030AAD1 /* SenTestingKit.framework */,
-				49E1E1DE1547F98F0030AAD1 /* UIKit.framework */,
-				49E1E1E01547F98F0030AAD1 /* Foundation.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		49E1E1F61547FD560030AAD1 /* config */ = {
@@ -1006,6 +992,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks\"",
+				);
 			};
 			name = Debug;
 		};
@@ -1013,6 +1003,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks\"",
+				);
 			};
 			name = Release;
 		};
