@@ -48,28 +48,6 @@
   [self.tableView addSubview:decreaseView_];
 }
 
-- (void)addPinchGestureRecognizerForSections {
-  __block BOOL isPinched = NO;
-  UIPinchGestureRecognizer *pinchRecognizer = [UIPinchGestureRecognizer recognizerWithActionBlock:^(UIPinchGestureRecognizer* recognizer) {
-    if (recognizer.state != UIGestureRecognizerStateChanged) {
-      isPinched = NO;
-    }
-    
-    if (!isPinched && recognizer.scale < 0.6 && recognizer.numberOfTouches == 2) {
-      NSIndexPath *path1 = [tableView_ indexPathForRowAtPoint:[recognizer locationOfTouch:0 inView:tableView_]];
-      NSIndexPath *path2 = [tableView_ indexPathForRowAtPoint:[recognizer locationOfTouch:1 inView:tableView_]];
-      
-      if (path1.section == path2.section) {
-        NSInteger sectionIndex = path1.section;
-        [self toggleSection:[[resultsController_ sections] objectAtIndex:sectionIndex] headerView:[sectionHeaderViews_  objectAtIndex:sectionIndex]];
-        isPinched = YES;
-      }
-    }
-  }];
-  
-  [tableView_ addGestureRecognizer:pinchRecognizer];
-}
-
 - (void)viewDidLoad {
   [super viewDidLoad];
 
@@ -83,7 +61,6 @@
     [sectionHeaderViews_ addObject:[self buildHeaderForSection:section]];
   }];
   
-  [self addPinchGestureRecognizerForSections];
   [self createHintView];
 }
 
@@ -118,25 +95,7 @@
 }
 
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(id <NSFetchedResultsSectionInfo>)section {
-  BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:[section name]];
-  
-  UIGestureRecognizer *recognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(id theRecognizer) {
-    [self toggleSection:section headerView:headerView];
-  }];
-  [headerView addGestureRecognizer:recognizer];
-  
-  return headerView;
-}
-
-- (void)toggleSection:(id <NSFetchedResultsSectionInfo>)section headerView:(BehaviorSectionHeaderView *)headerView {
-  headerView.expanded ^= YES;
-  UITableViewRowAnimation animation = UITableViewRowAnimationTop;
-  NSArray *indexPaths = [resultsController_ indexPathsForSection:section];
-  if (headerView.expanded) {
-    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
-  } else {
-    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
-  }
+  return [BehaviorSectionHeaderView viewWithTitle:[section name]];
 }
 
 #pragma mark - UITableViewDataSource
