@@ -186,18 +186,19 @@
 
 - (void)showIncreaseAnimation:(BehaviorTableViewCell *)cell {
   CGPoint cellOrigin = cell.frame.origin;
-  CGRect rect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , increaseView_.image.size.width, increaseView_.image.size.height);
+  CGRect rect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , 0, increaseView_.image.size.height);
   increaseView_.frame = rect;
-//  increaseView_.image = [self croppedImage:increaseView_.image :CGRectMake(rect.origin.x, rect.origin.y, 0, rect.size.width)];
   increaseView_.alpha = 1.0;
-  [UIView beginAnimations:@"fade in" context:nil];
-  [UIView setAnimationDuration:1.0];
-  increaseView_.alpha = 0.0;
-//  increaseView_.image = [self croppedImage:increaseView_.image :rect];
-  [UIView commitAnimations];
+  increaseView_.clipsToBounds = YES;
+  increaseView_.contentMode = UIViewContentModeLeft;
+  [UIView animateWithDuration:0.2 animations:^{
+    increaseView_.frame = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , increaseView_.image.size.width, increaseView_.image.size.height);
+  } completion:^(BOOL finished) {
+    [UIView animateWithDuration:1 animations:^{
+      increaseView_.alpha = 0;
+    }];
+  }];
 }
-
-
 
 - (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
