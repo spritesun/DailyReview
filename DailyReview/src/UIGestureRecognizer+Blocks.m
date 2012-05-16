@@ -1,7 +1,7 @@
 #import "UIGestureRecognizer+Blocks.h"
 #import <objc/runtime.h>
 
-static char block_key;
+static char kBlock;
 
 @implementation UIGestureRecognizer (Blocks)
 
@@ -25,11 +25,11 @@ static char block_key;
 }
 
 - (GestureActionBlock)actionBlock; {
-  return objc_getAssociatedObject(self, &block_key);
+  return objc_getAssociatedObject(self, &kBlock);
 }
 
 - (void)setActionBlock:(GestureActionBlock)block; {
-  objc_setAssociatedObject(self, &block_key, block, OBJC_ASSOCIATION_COPY);
+  objc_setAssociatedObject(self, &kBlock, block, OBJC_ASSOCIATION_COPY);
 }
 
 @end

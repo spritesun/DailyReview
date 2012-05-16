@@ -16,8 +16,8 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   if (self) {
-    [self setSize:CGSizeMake(320, 27)];
-    [self setBackgroundColor:[UIColor blackColor]];
+    self.size = CGSizeMake(320, 27);
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"top-bar-bg.png"]];
     scoreLabel = [self createScoreLabel];
     [self addSubview:scoreLabel];
   }
