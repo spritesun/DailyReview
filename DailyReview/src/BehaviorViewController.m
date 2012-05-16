@@ -33,18 +33,18 @@
 
 #pragma mark - LifeCycles
 
-- (void)createHintView {
-  hintView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"swipe-hint.png"]];
-  hintView_.alpha = 0;
-  [self.tableView addSubview:hintView_];
+- (UIImageView *)createTransparentView:(NSString *)imageName {
+  UIImageView * view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+  view.alpha = 0;
+  return view;
 }
 
-- (void)createEventModificationView {
-  increaseView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"increase-hint.png"]];
-  increaseView_.alpha = 0;
+- (void)createHintView {
+  hintView_ = [self createTransparentView:@"swipe-hint.png"];
+  [self.tableView addSubview:hintView_];
+  increaseView_ = [self createTransparentView:@"increase-hint.png"];
   [self.tableView addSubview:increaseView_];
-  decreaseView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"decrease-hint.png"]];
-  decreaseView_.alpha = 0;
+  decreaseView_ = [self createTransparentView:@"decrease-hint.png"];
   [self.tableView addSubview:decreaseView_];
 }
 
@@ -84,9 +84,7 @@
   }];
   
   [self addPinchGestureRecognizerForSections];
-  
   [self createHintView];
-  [self createEventModificationView];
 }
 
 - (void)viewDidUnload {
@@ -176,43 +174,39 @@
   UIImage *hint = hintView_.image;
   hintView_.frame = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 12 , hint.size.width, hint.size.height);
   hintView_.alpha = 1.0;
-  
   [UIView animateWithDuration:1.0 animations:^{
     hintView_.alpha = 0.0;
     hintView_.frame = CGRectMake(cellOrigin.x + 180, cellOrigin.y + 12 , hint.size.width, hint.size.height);
   }];
 }
 
-- (void)showIncreaseAnimation:(BehaviorTableViewCell *)cell {
-  CGPoint cellOrigin = cell.frame.origin;
-  CGRect rect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , 0, increaseView_.image.size.height);
-  increaseView_.frame = rect;
-  increaseView_.alpha = 1.0;
-  increaseView_.clipsToBounds = YES;
-  increaseView_.contentMode = UIViewContentModeLeft;
+- (void)transformAnimationOn:(UIImageView *)view From:(CGRect)fromRect to:(CGRect)toRect {
+  view.frame = fromRect;
+  view.alpha = 1.0;
+  view.clipsToBounds = YES;
   [UIView animateWithDuration:0.2 animations:^{
-    increaseView_.frame = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , increaseView_.image.size.width, increaseView_.image.size.height);
+    view.frame = toRect;
   } completion:^(BOOL finished) {
     [UIView animateWithDuration:1 animations:^{
-      increaseView_.alpha = 0;
+      view.alpha = 0;
     }];
   }];
 }
 
+- (void)showIncreaseAnimation:(BehaviorTableViewCell *)cell {
+  CGPoint cellOrigin = cell.frame.origin;
+  CGRect beginRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , 0, increaseView_.image.size.height);
+  CGRect endRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , increaseView_.image.size.width, increaseView_.image.size.height);
+  increaseView_.contentMode = UIViewContentModeLeft;
+  [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
+}
+
 - (void)showDecreaseAnimation:(BehaviorTableViewCell *)cell {
   CGPoint cellOrigin = cell.frame.origin;
-  CGRect rect = CGRectMake(cellOrigin.x + 270, cellOrigin.y + 4 , 0, decreaseView_.image.size.height);
-  decreaseView_.frame = rect;
-  decreaseView_.alpha = 1.0;
-  decreaseView_.clipsToBounds = YES;
+  CGRect beginRect = CGRectMake(cellOrigin.x + 270, cellOrigin.y + 4 , 0, decreaseView_.image.size.height);
+  CGRect endRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , decreaseView_.image.size.width, decreaseView_.image.size.height);
   decreaseView_.contentMode = UIViewContentModeRight;
-  [UIView animateWithDuration:0.2 animations:^{
-    decreaseView_.frame = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4 , decreaseView_.image.size.width, decreaseView_.image.size.height);
-  } completion:^(BOOL finished) {
-    [UIView animateWithDuration:1 animations:^{
-      decreaseView_.alpha = 0;
-    }];
-  }];
+  [self transformAnimationOn:decreaseView_ From:beginRect to:endRect];
 }
 
 - (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
@@ -255,8 +249,6 @@
   if (oldValue == nil) {
     return;
   }
-  
-//  [cell.contentView flashWithDuration:0.4 color:([newValue intValue] > [oldValue intValue]) ? [UIColor yellowColor] : [UIColor orangeColor]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
