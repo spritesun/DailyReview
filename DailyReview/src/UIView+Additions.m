@@ -115,7 +115,6 @@ static char kBackgroundView;
   }
   if (backgroundView) {
     objc_setAssociatedObject(self, &kBackgroundView, backgroundView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    backgroundView.frame = self.frame;
     [self addSubview:backgroundView];
     [self sendSubviewToBack:backgroundView];    
   }

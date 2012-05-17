@@ -1,11 +1,3 @@
-//
-//  ScoreView.m
-//  DailyReview
-//
-//  Created by twer on 4/22/12.
-//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
-//
-
 #import "ScoreView.h"
 #import "UIView+Additions.h"
 
@@ -16,8 +8,10 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   if (self) {
-    self.size = CGSizeMake(320, 27);
+    const CGFloat height = 27;
+    self.size = CGSizeMake(SCREEN_WIDTH, height);
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"top-bar-bg.png"]];
+    self.backgroundView.width = SCREEN_WIDTH;
     scoreLabel = [self createScoreLabel];
     [self addSubview:scoreLabel];
   }
@@ -25,7 +19,7 @@
 }
 
 - (UILabel *)createScoreLabel {
-  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 27)];
+  UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
   label.backgroundColor = [UIColor clearColor];
   label.textColor = [UIColor whiteColor];
   label.font = [UIFont systemFontOfSize:15];
