@@ -102,9 +102,6 @@
 		49EBB43D1537D4BE002BBF5F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */; };
 		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 		49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
-		49F3EBCA1557FC6B00BAC96F /* Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */; };
-		49F3EBCD1557FC8800BAC96F /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */; };
-		49F3EBCF1557FC9800BAC96F /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 49F3EBCE1557FC9800BAC96F /* Release.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -813,9 +810,6 @@
 				498553261546CC9A00925D92 /* swipe-hint@2x.png in Resources */,
 				498553271546CC9A00925D92 /* top-bar-bg.png in Resources */,
 				498553281546CC9A00925D92 /* top-bar-bg@2x.png in Resources */,
-				49F3EBCA1557FC6B00BAC96F /* Shared.xcconfig in Resources */,
-				49F3EBCD1557FC8800BAC96F /* Debug.xcconfig in Resources */,
-				49F3EBCF1557FC9800BAC96F /* Release.xcconfig in Resources */,
 				493B04B515593C91007F6702 /* about-bg.png in Resources */,
 				493B04B715593CEB007F6702 /* about-bg@2x.png in Resources */,
 				493B04CA15594674007F6702 /* back-button.png in Resources */,
