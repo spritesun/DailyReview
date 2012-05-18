@@ -12,17 +12,10 @@
 @synthesize meritRankLabel = meritRankLabel_;
 @synthesize demeritRankLabel = demeritRankLabel_;
 @synthesize totalRankLabel = totalRankLabel_;
-@synthesize heItem = heItem_;
 
-//TODO: need remove duplicated setBarItem withImage methods
-- (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image {
-  UIImage *diabledImage = [image grayish];
-  [barItem setFinishedSelectedImage:image withFinishedUnselectedImage:diabledImage];
-}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [self setBarItem:heItem_ withImage:[UIImage imageNamed:@"bottom-bar-item-he"]];
   NSArray *labels = Array(meritRankLabel_, demeritRankLabel_, totalRankLabel_);
 
   const CGFloat labelX = 35;
@@ -52,7 +45,6 @@
                                                     [totalMeritRank intValue] + [totalDemeritRank intValue]];
 }
 - (void)viewDidUnload {
-  self.heItem = nil;
   [super viewDidUnload];
 }
 @end
