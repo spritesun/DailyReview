@@ -1,19 +1,6 @@
-//
-//  MoreNavigationBar.m
-//  DailyReview
-//
-//  Created by Lei Zhang on 5/2/12.
-//  Copyright 2012 ThoughtWorks. All rights reserved.
-//
-
 #import "MoreNavigationBar.h"
 
 @implementation MoreNavigationBar
-
-#pragma mark - Properties
-
-// synthesize your properties here
-
 
 - (id)init;
 {
