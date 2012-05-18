@@ -1,6 +1,7 @@
 #import "BehaviorResultsController.h"
 #import "SummaryController.h"
 #import "NSArray+Additions.h"
+#import "UIImage+Additions.h"
 
 @interface SummaryController ()
 
@@ -11,9 +12,17 @@
 @synthesize meritRankLabel = meritRankLabel_;
 @synthesize demeritRankLabel = demeritRankLabel_;
 @synthesize totalRankLabel = totalRankLabel_;
+@synthesize heItem = heItem_;
+
+//TODO: need remove duplicated setBarItem withImage methods
+- (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image {
+  UIImage *diabledImage = [image grayish];
+  [barItem setFinishedSelectedImage:image withFinishedUnselectedImage:diabledImage];
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [self setBarItem:heItem_ withImage:[UIImage imageNamed:@"bottom-bar-item-he"]];
   NSArray *labels = Array(meritRankLabel_, demeritRankLabel_, totalRankLabel_);
 
   const CGFloat labelX = 35;
@@ -41,5 +50,9 @@
   demeritRankLabel_.text = [NSString stringWithFormat:@"累计过失:  %@", totalDemeritRank];
   totalRankLabel_.text = [NSString stringWithFormat:@"功过合计:  %d",
                                                     [totalMeritRank intValue] + [totalDemeritRank intValue]];
+}
+- (void)viewDidUnload {
+  self.heItem = nil;
+  [super viewDidUnload];
 }
 @end

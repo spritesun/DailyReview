@@ -26,6 +26,7 @@
 		4943CEF2153AB14000B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CEF9153AB9A200B823E7 /* initial_data.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEF4153AB93600B823E7 /* initial_data.json */; };
 		494B97F1153EDCDE002801F7 /* SummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B97F0153EDCDE002801F7 /* SummaryController.m */; };
+		49550652156678BC007D0708 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49550651156678BC007D0708 /* UIImage+Additions.m */; };
 		4956E97E1543EC9700C33D89 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
 		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
 		495DE489154AC5C700126A81 /* MoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495DE488154AC5C700126A81 /* MoreController.m */; };
@@ -185,6 +186,8 @@
 		4943CEF4153AB93600B823E7 /* initial_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = initial_data.json; sourceTree = "<group>"; };
 		494B97EF153EDCDE002801F7 /* SummaryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryController.h; path = src/SummaryController.h; sourceTree = "<group>"; };
 		494B97F0153EDCDE002801F7 /* SummaryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryController.m; path = src/SummaryController.m; sourceTree = "<group>"; };
+		49550650156678BC007D0708 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Additions.h"; path = "src/UIImage+Additions.h"; sourceTree = "<group>"; };
+		49550651156678BC007D0708 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Additions.m"; path = "src/UIImage+Additions.m"; sourceTree = "<group>"; };
 		4956E97C1543EC9700C33D89 /* ScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreView.h; path = src/ScoreView.h; sourceTree = "<group>"; };
 		4956E97D1543EC9700C33D89 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreView.m; path = src/ScoreView.m; sourceTree = "<group>"; };
 		495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+Blocks.h"; path = "src/UIGestureRecognizer+Blocks.h"; sourceTree = "<group>"; };
@@ -645,6 +648,8 @@
 				49340A8A153E8B1A006C11A1 /* UITableView+Additions.h */,
 				495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */,
 				495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */,
+				49550650156678BC007D0708 /* UIImage+Additions.h */,
+				49550651156678BC007D0708 /* UIImage+Additions.m */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -900,6 +905,7 @@
 				49699070155154B10001B287 /* AboutDailyReviewView.m in Sources */,
 				4969907C155165DF0001B287 /* AboutViewController.m in Sources */,
 				4933EE9A1563842E002722BF /* UIScrollView+Additions.m in Sources */,
+				49550652156678BC007D0708 /* UIImage+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

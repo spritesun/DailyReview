@@ -10,6 +10,7 @@
 #import "UITableView+Additions.h"
 #import "NSDate+Additions.h"
 #import "NSFetchedResultsController+Additions.h"
+#import "UIImage+Additions.h"
 #import "BehaviorResultsController.h"
 #import "ScoreView.h"
 
@@ -46,6 +47,11 @@
   [self.tableView addSubview:increaseView_];
   decreaseView_ = [self createTransparentView:@"decrease-hint.png"];
   [self.tableView addSubview:decreaseView_];
+}
+
+- (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image {
+  UIImage *diabledImage = [image grayish];
+  [barItem setFinishedSelectedImage:image withFinishedUnselectedImage:diabledImage];
 }
 
 - (void)viewDidLoad {

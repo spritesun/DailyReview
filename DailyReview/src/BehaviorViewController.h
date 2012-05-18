@@ -10,4 +10,5 @@
 @property(nonatomic, strong) IBOutlet ScoreView *scoreView;
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
 
+- (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image;
 @end
