@@ -372,10 +372,10 @@
 		4973162515345C8F00E3E5DC /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				49EBB43D1537D4BE002BBF4B /* BehaviorResultsController.h */,
-				49EBB43D1537D4BE002BBF49 /* BehaviorResultsController.m */,
 				49A04A9715344CD90092DC4A /* AppDelegate.h */,
 				49A04A9815344CD90092DC4A /* AppDelegate.m */,
+				49EBB43D1537D4BE002BBF4B /* BehaviorResultsController.h */,
+				49EBB43D1537D4BE002BBF49 /* BehaviorResultsController.m */,
 				49CE19BE153D221E00C31041 /* MainViewController.h */,
 				49CE19BF153D221E00C31041 /* MainViewController.m */,
 				497316221534590400E3E5DC /* BehaviorViewController.h */,
@@ -603,10 +603,10 @@
 			children = (
 				490A2133153E8547006D654D /* BehaviorTableView.h */,
 				490A2134153E8547006D654D /* BehaviorTableView.m */,
-				499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */,
 				499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */,
-				49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */,
+				499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */,
 				49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */,
+				49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */,
 				4956E97C1543EC9700C33D89 /* ScoreView.h */,
 				4956E97D1543EC9700C33D89 /* ScoreView.m */,
 				49151BE515514D4600DD10A7 /* MoreNavigationBar.h */,

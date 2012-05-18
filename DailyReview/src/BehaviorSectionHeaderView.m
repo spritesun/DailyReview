@@ -27,9 +27,9 @@
     UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
     label.left = 10;
     label.text = title;
-    label.textColor = [UIColor blackColor];
+    label.font = [UIFont boldSystemFontOfSize:16];
+    label.textColor = [UIColor colorWithRed:.243 green:0 blue:0 alpha:1];
     label.backgroundColor = [UIColor clearColor];
-    label.userInteractionEnabled = YES;
     [self addSubview:label];
   }
   return self;

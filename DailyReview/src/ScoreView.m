@@ -20,9 +20,10 @@
 
 - (UILabel *)createScoreLabel {
   UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
+  label.left = 10;
   label.backgroundColor = [UIColor clearColor];
-  label.textColor = [UIColor whiteColor];
-  label.font = [UIFont systemFontOfSize:15];
+  label.textColor = [UIColor colorWithRed:1 green:.851 blue:.2 alpha:1];
+  label.font = [UIFont systemFontOfSize:14.5];
   return label;
 }
 

@@ -25,7 +25,7 @@
 * pinch to close section (done)
 * paper folding animation
 * do we need save all core data changes during applicationWillTerminate or applicationDidEnterBackground?
-
+* properties file
 
 ## Release 2
 # backlog:

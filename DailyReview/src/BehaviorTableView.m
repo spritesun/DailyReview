@@ -19,7 +19,6 @@
 
 - (void)layoutSubviews {
   [self sendSubviewToBack:backgroundView];  
-  //TODO: why not 30, for there is some px about shadow, please refactor this with BehaviorSectionHeaderView magic number 30.
   CGFloat sectionHeight = 29;
   CGFloat contentOffsetY = self.contentOffset.y;
   if (contentOffsetY < 0) {
