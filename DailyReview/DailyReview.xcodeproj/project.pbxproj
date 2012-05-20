@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		490A2135153E8547006D654D /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
+		491476AE1568CB0700305AC1 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491476AD1568CB0700305AC1 /* AboutUsViewController.m */; };
+		491476B41568D35D00305AC1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491476B31568D35D00305AC1 /* MessageUI.framework */; };
 		49151BE715514D4600DD10A7 /* MoreNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49151BE615514D4600DD10A7 /* MoreNavigationBar.m */; };
 		4919B2BF1568A00000A39097 /* UIImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4919B2BE1568A00000A39097 /* UIImageView+Additions.m */; };
 		4933EE9A1563842E002722BF /* UIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933EE991563842E002722BF /* UIScrollView+Additions.m */; };
@@ -163,6 +165,9 @@
 /* Begin PBXFileReference section */
 		490A2133153E8547006D654D /* BehaviorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableView.h; path = src/BehaviorTableView.h; sourceTree = "<group>"; };
 		490A2134153E8547006D654D /* BehaviorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableView.m; path = src/BehaviorTableView.m; sourceTree = "<group>"; };
+		491476AC1568CB0700305AC1 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutUsViewController.h; path = src/AboutUsViewController.h; sourceTree = "<group>"; };
+		491476AD1568CB0700305AC1 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutUsViewController.m; path = src/AboutUsViewController.m; sourceTree = "<group>"; };
+		491476B31568D35D00305AC1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		49151BE515514D4600DD10A7 /* MoreNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreNavigationBar.h; path = src/MoreNavigationBar.h; sourceTree = "<group>"; };
 		49151BE615514D4600DD10A7 /* MoreNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreNavigationBar.m; path = src/MoreNavigationBar.m; sourceTree = "<group>"; };
 		4919B2BD1568A00000A39097 /* UIImageView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Additions.h"; path = "src/UIImageView+Additions.h"; sourceTree = "<group>"; };
@@ -320,6 +325,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491476B41568D35D00305AC1 /* MessageUI.framework in Frameworks */,
 				49B70C231563B026004E60CB /* CoreGraphics.framework in Frameworks */,
 				49B70C211563B021004E60CB /* UIKit.framework in Frameworks */,
 				49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */,
@@ -392,8 +398,10 @@
 				49CE19C6153D5CE800C31041 /* DemeritController.m */,
 				494B97EF153EDCDE002801F7 /* SummaryController.h */,
 				494B97F0153EDCDE002801F7 /* SummaryController.m */,
-				49B7F0A71568A88E0029F992 /* AboutViewController.h */,
-				49B7F0A81568A88E0029F992 /* AboutViewController.m */,
+				4969907A155165DF0001B287 /* AboutViewController.h */,
+				4969907B155165DF0001B287 /* AboutViewController.m */,
+				491476AC1568CB0700305AC1 /* AboutUsViewController.h */,
+				491476AD1568CB0700305AC1 /* AboutUsViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -454,6 +462,7 @@
 		49A04A3A1534491B0092DC4A = {
 			isa = PBXGroup;
 			children = (
+				491476B31568D35D00305AC1 /* MessageUI.framework */,
 				49A04A8F15344BB00092DC4A /* src */,
 				49A04A9215344BF30092DC4A /* test */,
 				49EBB4261537D1D3002BBF3C /* lib */,
@@ -912,6 +921,7 @@
 				49B7F0A91568A88F0029F992 /* AboutViewController.m in Sources */,
 				49B7F0AC1568A89B0029F992 /* AboutDailyReviewView.m in Sources */,
 				4919B2BF1568A00000A39097 /* UIImageView+Additions.m in Sources */,
+				491476AE1568CB0700305AC1 /* AboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
