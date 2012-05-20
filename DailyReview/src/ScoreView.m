@@ -23,11 +23,11 @@
   label.left = 10;
   label.backgroundColor = [UIColor clearColor];
   label.textColor = [UIColor colorWithRed:1 green:.851 blue:.2 alpha:1];
-  label.font = [UIFont systemFontOfSize:14.5];
+  label.font = [UIFont boldSystemFontOfSize:14];
   return label;
 }
 
 - (void)setMeritCount:(NSNumber *)merits demeritCount:(NSNumber *)demerits {
-  scoreLabel.text = [NSString stringWithFormat:@"今日累功： %@ 过: %@", merits, demerits];
+  scoreLabel.text = [NSString stringWithFormat:@"今日累功： %@  过: %@", merits, demerits];
 }
 @end

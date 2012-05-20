@@ -20,7 +20,7 @@
     self.textLabel.textColor = [UIColor colorWithRed:.102 green:.169 blue:.2 alpha:1];
     self.detailTextLabel.backgroundColor = [UIColor clearColor];
     self.detailTextLabel.textColor = [UIColor colorWithRed:.243 green:0 blue:0 alpha:1];
-    self.detailTextLabel.font = [UIFont boldSystemFontOfSize:20];
+    self.detailTextLabel.font = [UIFont systemFontOfSize:26];
     
     [self drawCellKeyline];
   }

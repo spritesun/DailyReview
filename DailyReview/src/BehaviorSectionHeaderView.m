@@ -27,7 +27,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
     label.left = 10;
     label.text = title;
-    label.font = [UIFont boldSystemFontOfSize:16];
+    label.font = [UIFont systemFontOfSize:16];
     label.textColor = [UIColor colorWithRed:.243 green:0 blue:0 alpha:1];
     label.backgroundColor = [UIColor clearColor];
     [self addSubview:label];
