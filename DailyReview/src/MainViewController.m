@@ -1,4 +1,5 @@
 #import "MainViewController.h"
+#import "UIImage+Additions.h"
 
 @implementation MainViewController
 
@@ -6,25 +7,30 @@
 
 #pragma mark - LifeCycles
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [self setBarItem:[tabBar_.items objectAtIndex:0] withImage:[UIImage imageNamed:@"bottom-bar-item-gong.png"]];
+  [self setBarItem:[tabBar_.items objectAtIndex:1] withImage:[UIImage imageNamed:@"bottom-bar-item-guo.png"]];
+  [self setBarItem:[tabBar_.items objectAtIndex:2] withImage:[UIImage imageNamed:@"bottom-bar-item-he.png"]];
+  [self setBarItem:[tabBar_.items objectAtIndex:3] withImage:[UIImage imageNamed:@"bottom-bar-item-more.png"]];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   UIImage *image = [UIImage imageNamed:@"bottom-bar-bg.png"];
   UIImageView *bgView = [[UIImageView alloc] initWithImage:image];
   bgView.frame = CGRectMake(0, 432, 320, 48);
   tabBar_.backgroundImage = image;
-  UIImage *transparentImage = [self transparentImage];
-  tabBar_.selectionIndicatorImage = transparentImage;
+  tabBar_.selectionIndicatorImage = [UIImage transparentImage];
 }
 
-- (UIImage *)transparentImage {
-  UIGraphicsBeginImageContextWithOptions(CGSizeMake(1, 1), YES, 0.0);
-  UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-  UIGraphicsEndImageContext();
-  return newImage;
+- (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image {
+  UIImage *diabledImage = [image grayish];
+  [barItem setFinishedSelectedImage:image withFinishedUnselectedImage:diabledImage];
 }
 
 - (void)viewDidUnload {
-  [self setTabBar:nil];
+  self.tabBar = nil;
   [super viewDidUnload];
 }
 @end

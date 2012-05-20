@@ -56,7 +56,6 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="gongItem" destination="OGF-bo-CKp" id="bHG-Zi-YPA"/>
                         <outlet property="scoreView" destination="RCg-7a-g9h" id="yry-0S-dqz"/>
                         <outlet property="tableView" destination="Jdr-FB-ZPD" id="SCW-rm-CsO"/>
                     </connections>
@@ -90,7 +89,6 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="guoItem" destination="LsI-i1-vOh" id="251-Ym-I9w"/>
                         <outlet property="scoreView" destination="UqD-m8-8JB" id="1Y6-xr-OdV"/>
                         <outlet property="tableView" destination="paC-JT-rKJ" id="WDT-vk-dzD"/>
                     </connections>
@@ -306,7 +304,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="demeritRankLabel" destination="ApY-f2-EJg" id="NEk-B3-ag6"/>
-                        <outlet property="heItem" destination="9ys-xQ-Njh" id="cRm-Be-3Sr"/>
                         <outlet property="meritRankLabel" destination="Z38-1o-aud" id="zBa-cF-WSn"/>
                         <outlet property="totalRankLabel" destination="D7M-2W-8lk" id="YJc-H7-ckD"/>
                     </connections>
@@ -354,7 +351,7 @@
         <class className="MeritController" superclassName="BehaviorViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MeritController.h"/>
             <relationships>
-                <relationship kind="outlet" name="gongItem" candidateClass="UITabBarItem"/>
+                <relationship kind="outlet" name="a" candidateClass="UITabBarItem"/>
             </relationships>
         </class>
         <class className="MoreNavigationBar" superclassName="UINavigationBar">
