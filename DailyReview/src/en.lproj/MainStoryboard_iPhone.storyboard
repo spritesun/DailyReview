@@ -169,11 +169,12 @@
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="更多" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Yrd-f5-Ccm">
                                     <rect key="frame" x="43" y="6" width="42" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="textColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <color key="textColor" red="0.81960784313725488" green="0.71372549019607845" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -338,9 +339,6 @@
         </class>
         <class className="DemeritController" superclassName="BehaviorViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DemeritController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="guoItem" candidateClass="UITabBarItem"/>
-            </relationships>
         </class>
         <class className="MainViewController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
@@ -350,9 +348,6 @@
         </class>
         <class className="MeritController" superclassName="BehaviorViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MeritController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="a" candidateClass="UITabBarItem"/>
-            </relationships>
         </class>
         <class className="MoreNavigationBar" superclassName="UINavigationBar">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreNavigationBar.h"/>
@@ -364,7 +359,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SummaryController.h"/>
             <relationships>
                 <relationship kind="outlet" name="demeritRankLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="heItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="meritRankLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="totalRankLabel" candidateClass="UILabel"/>
             </relationships>
