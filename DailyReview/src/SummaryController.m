@@ -2,6 +2,7 @@
 #import "SummaryController.h"
 #import "NSArray+Additions.h"
 #import "UIImage+Additions.h"
+#import "UIColor+Additions.h"
 
 @interface SummaryController ()
 
@@ -26,7 +27,7 @@
   __block CGFloat labelY = 125;
 
   [labels each:^(UILabel *label) {
-    label.textColor = [UIColor colorWithRed:1 green:126.0 / 255 blue:0 alpha:1];
+    label.textColor = [UIColor colorWithRed:1 green:.494 blue:0];
     // TODO: need better font, maybe use image instead
     label.font = [UIFont fontWithName:@"STHeitiK-Medium" size:26];
     label.frame = CGRectMake(labelX, labelY, labelWidth, labelHeight);

@@ -1,6 +1,7 @@
 #import "BehaviorSectionHeaderView.h"
 #import "BehaviorResultsController.h"
 #import "UIView+Additions.h"
+#import "UIColor+Additions.h"
 
 @implementation BehaviorSectionHeaderView
 
@@ -28,7 +29,7 @@
     label.left = 10;
     label.text = title;
     label.font = [UIFont systemFontOfSize:16];
-    label.textColor = [UIColor colorWithRed:.243 green:0 blue:0 alpha:1];
+    label.textColor = [UIColor colorWithRed:.243 green:0 blue:0];
     label.backgroundColor = [UIColor clearColor];
     [self addSubview:label];
   }

@@ -1,4 +1,5 @@
 #import "AboutViewController.h"
+#import "UIColor+Additions.h"
 
 @implementation AboutViewController
 
@@ -14,7 +15,7 @@
   UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(17, 0, backButtonBgImage.size.width, backButtonBgImage.size.height)];
   label.text = @"返回";
   label.font = [UIFont systemFontOfSize:11];
-  label.textColor = [[UIColor alloc] initWithRed:.82 green:.714 blue:.2 alpha:1];
+  label.textColor = [UIColor colorWithRed:.82 green:.714 blue:.2];
   label.backgroundColor = [UIColor clearColor];
   [backButton addSubview:label];
   backButton.frame = CGRectMake(0, 0, backButtonBgImage.size.width, backButtonBgImage.size.height);

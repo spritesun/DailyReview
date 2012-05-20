@@ -1,5 +1,6 @@
 #import "ScoreView.h"
 #import "UIView+Additions.h"
+#import "UIColor+Additions.h"
 
 @implementation ScoreView {
   UILabel *scoreLabel;
@@ -22,7 +23,7 @@
   UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
   label.left = 10;
   label.backgroundColor = [UIColor clearColor];
-  label.textColor = [UIColor colorWithRed:1 green:.851 blue:.2 alpha:1];
+  label.textColor = [UIColor colorWithRed:1 green:.851 blue:.2];
   label.font = [UIFont boldSystemFontOfSize:14];
   return label;
 }
