@@ -257,7 +257,6 @@
 		49B70C221563B026004E60CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		49B7F0A41568A7C30029F992 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Additions.h"; path = "src/UIColor+Additions.h"; sourceTree = "<group>"; };
 		49B7F0A51568A7C30029F992 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Additions.m"; path = "src/UIColor+Additions.m"; sourceTree = "<group>"; };
-		49B7F0A71568A88E0029F992 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = src/AboutViewController.h; sourceTree = "<group>"; };
 		49B7F0A81568A88E0029F992 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = src/AboutViewController.m; sourceTree = "<group>"; };
 		49B7F0AA1568A89B0029F992 /* AboutDailyReviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutDailyReviewView.h; path = src/AboutDailyReviewView.h; sourceTree = "<group>"; };
 		49B7F0AB1568A89B0029F992 /* AboutDailyReviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutDailyReviewView.m; path = src/AboutDailyReviewView.m; sourceTree = "<group>"; };
@@ -398,8 +397,6 @@
 				49CE19C6153D5CE800C31041 /* DemeritController.m */,
 				494B97EF153EDCDE002801F7 /* SummaryController.h */,
 				494B97F0153EDCDE002801F7 /* SummaryController.m */,
-				4969907A155165DF0001B287 /* AboutViewController.h */,
-				4969907B155165DF0001B287 /* AboutViewController.m */,
 				491476AC1568CB0700305AC1 /* AboutUsViewController.h */,
 				491476AD1568CB0700305AC1 /* AboutUsViewController.m */,
 			);
@@ -462,7 +459,6 @@
 		49A04A3A1534491B0092DC4A = {
 			isa = PBXGroup;
 			children = (
-				491476B31568D35D00305AC1 /* MessageUI.framework */,
 				49A04A8F15344BB00092DC4A /* src */,
 				49A04A9215344BF30092DC4A /* test */,
 				49EBB4261537D1D3002BBF3C /* lib */,
@@ -487,6 +483,7 @@
 		49A04A481534491B0092DC4A /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				491476B31568D35D00305AC1 /* MessageUI.framework */,
 				49B70C201563B021004E60CB /* UIKit.framework */,
 				49B70C221563B026004E60CB /* CoreGraphics.framework */,
 				4943CED6153AA68000B823E7 /* CoreData.framework */,
