@@ -29,7 +29,6 @@
 		49550652156678BC007D0708 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49550651156678BC007D0708 /* UIImage+Additions.m */; };
 		4956E97E1543EC9700C33D89 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
 		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
-		495DE489154AC5C700126A81 /* MoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495DE488154AC5C700126A81 /* MoreController.m */; };
 		49699070155154B10001B287 /* AboutDailyReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4969906F155154B10001B287 /* AboutDailyReviewView.m */; };
 		4969907C155165DF0001B287 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4969907B155165DF0001B287 /* AboutViewController.m */; };
 		497316241534590400E3E5DC /* BehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorViewController.m */; };
@@ -192,8 +191,6 @@
 		4956E97D1543EC9700C33D89 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreView.m; path = src/ScoreView.m; sourceTree = "<group>"; };
 		495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+Blocks.h"; path = "src/UIGestureRecognizer+Blocks.h"; sourceTree = "<group>"; };
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
-		495DE487154AC5C700126A81 /* MoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreController.h; path = src/MoreController.h; sourceTree = "<group>"; };
-		495DE488154AC5C700126A81 /* MoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreController.m; path = src/MoreController.m; sourceTree = "<group>"; };
 		496832B11559399700F6CDCE /* PopulateDatabase.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = PopulateDatabase.xcconfig; path = config/PopulateDatabase.xcconfig; sourceTree = "<group>"; };
 		4969906E155154B10001B287 /* AboutDailyReviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutDailyReviewView.h; sourceTree = "<group>"; };
 		4969906F155154B10001B287 /* AboutDailyReviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDailyReviewView.m; sourceTree = "<group>"; };
@@ -389,8 +386,6 @@
 				49CE19C6153D5CE800C31041 /* DemeritController.m */,
 				494B97EF153EDCDE002801F7 /* SummaryController.h */,
 				494B97F0153EDCDE002801F7 /* SummaryController.m */,
-				495DE487154AC5C700126A81 /* MoreController.h */,
-				495DE488154AC5C700126A81 /* MoreController.m */,
 				4969907A155165DF0001B287 /* AboutViewController.h */,
 				4969907B155165DF0001B287 /* AboutViewController.m */,
 			);
@@ -900,7 +895,6 @@
 				49E1E0F11547E7680030AAD1 /* DCFrameView.m in Sources */,
 				49E1E0F21547E7680030AAD1 /* DCIntrospect.m in Sources */,
 				49E1E0F31547E7680030AAD1 /* DCStatusBarOverlay.m in Sources */,
-				495DE489154AC5C700126A81 /* MoreController.m in Sources */,
 				49151BE715514D4600DD10A7 /* MoreNavigationBar.m in Sources */,
 				49699070155154B10001B287 /* AboutDailyReviewView.m in Sources */,
 				4969907C155165DF0001B287 /* AboutViewController.m in Sources */,
