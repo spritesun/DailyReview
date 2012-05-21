@@ -253,6 +253,7 @@
 		49A04AB815344D9B0092DC4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = test/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49A04ABA15344DB50092DC4A /* DailyReview-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DailyReview-Info.plist"; path = "resources/DailyReview-Info.plist"; sourceTree = "<group>"; };
 		49A04ABB15344DB50092DC4A /* DailyReviewTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DailyReviewTests-Info.plist"; path = "resources/DailyReviewTests-Info.plist"; sourceTree = "<group>"; };
+		49A1CD79156A72BA008AF970 /* DailyReview.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReview.xcconfig; path = config/DailyReview.xcconfig; sourceTree = "<group>"; };
 		49B70C201563B021004E60CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		49B70C221563B026004E60CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		49B7F0A41568A7C30029F992 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Additions.h"; path = "src/UIColor+Additions.h"; sourceTree = "<group>"; };
@@ -569,10 +570,11 @@
 		49E1E1F61547FD560030AAD1 /* config */ = {
 			isa = PBXGroup;
 			children = (
-				49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */,
 				49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */,
 				49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */,
 				49F3EBCE1557FC9800BAC96F /* Release.xcconfig */,
+				49A1CD79156A72BA008AF970 /* DailyReview.xcconfig */,
+				49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */,
 				496832B11559399700F6CDCE /* PopulateDatabase.xcconfig */,
 			);
 			name = config;
@@ -986,33 +988,34 @@
 		};
 		4943CEF0153AAE1E00B823E7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 496832B11559399700F6CDCE /* PopulateDatabase.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		49A04A791534491B0092DC4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		49A04A7A1534491B0092DC4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49F3EBCE1557FC9800BAC96F /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		49A04A7C1534491B0092DC4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */;
+			baseConfigurationReference = 49A1CD79156A72BA008AF970 /* DailyReview.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		49A04A7D1534491B0092DC4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49F3EBCE1557FC9800BAC96F /* Release.xcconfig */;
+			baseConfigurationReference = 49A1CD79156A72BA008AF970 /* DailyReview.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
@@ -1021,10 +1024,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks\"",
-				);
 			};
 			name = Debug;
 		};
@@ -1032,10 +1031,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks\"",
-				);
 			};
 			name = Release;
 		};
