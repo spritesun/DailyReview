@@ -1,33 +1,22 @@
 ## Release 1
-# must have
-
-* use animation to hint user swipe(done)
-* introduce xcconfig file (done)
-* bundle zh name 
-* other merit +1, at the bottom of first section of merit(done)
-* other demerit -1, at the bottom of firt section of demerit(done)
-* about page
-* about daily review
-* about us
-
 # should have
 
 * performance testing for performance after use it half year
 * try to avoid insert empty event, remove zero count event
-* when one section longer than page, close animation not so smooth
 * input other version of behavior/category data(avoid data migration in next Release)
-* refactor to workspace style. 
+* refactor to workspace style. (done)
 
 # could have
 
 * try bundle/SkinManager, refer to REA code base
-* swipe animation could be more fancy highlight finger touch path
-* pinch to close section (done)
-* paper folding animation
-* do we need save all core data changes during applicationWillTerminate or applicationDidEnterBackground?
 * properties file for magic number
+* do we need save all core data changes during applicationWillTerminate(5s) or applicationDidEnterBackground?
 
 ## Release 2
+# must have
+* Kiwi, KIF/Frank
+* customize behavior
+
 # backlog:
 
 * add rate for us
@@ -36,3 +25,6 @@
 * history detail(chart?)
 * extract common
 * weibo?
+* share to friend
+* iPad
+
