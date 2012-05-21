@@ -15,6 +15,7 @@
 ## Release 2
 # must have
 * Kiwi, KIF/Frank
+* Makefile
 * customize behavior
 
 # backlog:
