@@ -1,6 +1,7 @@
 #import "BehaviorResultsController.h"
+#import "DailyScoreFetcher.h"
 
-@interface BehaviorTableViewController : UITableViewController {
+@interface BehaviorTableViewController : UITableViewController <DailyScoreFetcher> {
 @protected
   BehaviorResultsController *resultsController_;
   NSString *scoreName_;

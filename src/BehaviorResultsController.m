@@ -32,7 +32,7 @@
   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
   [fetchRequest setSortDescriptors:Array(sorter, [NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:YES])];
   [fetchRequest setPredicate:predicate];
-
+  
   self = [super initWithFetchRequest:fetchRequest
                 managedObjectContext:[NSManagedObjectContext defaultContext]
                   sectionNameKeyPath:@"category"
@@ -42,57 +42,38 @@
     [self performFetch:&error];
     [error handleWithDescription:@"Failed to initialize BehaviorResultsController"];
   }
-
+  
   return self;
 }
 
 - (NSNumber *)totalRank {
-  __block NSInteger result = 0;
-  [[self fetchedObjects] each:^(Behavior *behavior) {
-    result = result + [self totalRankForBehavior:behavior];
-  }];
-  return [NSNumber numberWithInt:result];
-}
-
-- (NSInteger)totalRankForBehavior:(Behavior *)behavior {
-  NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
-
-  NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
-
-  // TODO: (Lei) use behavior in behavior_list, https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pCreating.html
-  [request setPredicate:[NSPredicate predicateWithFormat:@"behavior=%@", behavior]];
-
-  __block NSArray *results = nil;
-
-  [context performBlockAndWait:^{
-    results = [context executeFetchRequest:request error:nil];
-  }];
-
-  __block NSInteger totalRank = 0;
-  [results each:^(Event *event) {
-    totalRank = event.countValue * [[behavior rank] intValue];
-  }];
-
-  return totalRank;
+  return [NSNumber numberWithInt:[self totalRankOnDate:nil]];
 }
 
 - (NSNumber *)todayRank {
-  __block NSInteger result = 0;
   NSDate *today = [[NSDate date] dateWithoutTime];
-  [[self fetchedObjects] each:^(Behavior *behavior) {
-    result = result + [self totalRankForBehavior:behavior OnDate:today];
-  }];
+  NSInteger result = [self totalRankOnDate:today];
   return [NSNumber numberWithInt:result];
 }
 
-//TODO: (Qin) duplicated with totalRankForBehavior, need refactor
-- (NSInteger)totalRankForBehavior:(Behavior *)behavior OnDate:(NSDate *)date {
+- (NSPredicate *)getDatePredicate:(NSDate *)date {
+  if (date) {
+    return [NSPredicate predicateWithFormat:@"date = %@", date];
+  }
+  return nil;
+}
+
+- (NSInteger)totalRankOnDate:(NSDate*) date {
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
   
   NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
   
-  // TODO: (Lei) use behavior in behavior_list, https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pCreating.html
-  [request setPredicate:[NSPredicate predicateWithFormat:@"behavior = %@ AND date = %@", behavior, date]];
+  NSPredicate*behaviorsPredicate = [NSPredicate predicateWithFormat:@"behavior IN %@", [self fetchedObjects]];
+  NSPredicate *datePredicate = datePredicate = [self getDatePredicate:date];
+  
+  NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:behaviorsPredicate, datePredicate, nil]];
+  
+  [request setPredicate:predicate];
   
   __block NSArray *results = nil;
   
@@ -102,10 +83,9 @@
   
   __block NSInteger totalRank = 0;
   [results each:^(Event *event) {
-    totalRank = event.countValue * [[behavior rank] intValue];
+    totalRank += event.countValue * [[[event behavior] rank] intValue];
   }];
   
-  return totalRank;
+  return totalRank;  
 }
-
 @end

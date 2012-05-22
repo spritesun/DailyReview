@@ -117,6 +117,7 @@
 		494B97F0153EDCDE002801F7 /* SummaryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryController.m; path = src/SummaryController.m; sourceTree = "<group>"; };
 		495C97FC1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+Blocks.h"; path = "src/UIGestureRecognizer+Blocks.h"; sourceTree = "<group>"; };
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
+		496363381543B78B00B2FA21 /* DailyScoreFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DailyScoreFetcher.h; path = src/DailyScoreFetcher.h; sourceTree = "<group>"; };
 		497316221534590400E3E5DC /* BehaviorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorTableViewController.h; path = src/BehaviorTableViewController.h; sourceTree = "<group>"; };
 		497316231534590400E3E5DC /* BehaviorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorTableViewController.m; path = src/BehaviorTableViewController.m; sourceTree = "<group>"; };
 		497659CB153BB8DB00E0D533 /* Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Binding.h; path = src/Binding.h; sourceTree = "<group>"; };
@@ -272,6 +273,7 @@
 				49CE19C6153D5CE800C31041 /* DemeritController.m */,
 				494B97EF153EDCDE002801F7 /* SummaryController.h */,
 				494B97F0153EDCDE002801F7 /* SummaryController.m */,
+				496363381543B78B00B2FA21 /* DailyScoreFetcher.h */,
 			);
 			name = controllers;
 			sourceTree = "<group>";

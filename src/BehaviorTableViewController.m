@@ -66,11 +66,6 @@
 
 }
 
-- (NSNumber*)getScore {
-  //TODO: (Qin) how to declare a abstract method
-  return [NSNumber numberWithInt:0];
-}
-
 - (BehaviorSectionHeaderView *)buildHeaderForSection:(id <NSFetchedResultsSectionInfo>)section {
   BehaviorSectionHeaderView *headerView = [BehaviorSectionHeaderView viewWithTitle:[section name] andScoreName:scoreName_];
 
