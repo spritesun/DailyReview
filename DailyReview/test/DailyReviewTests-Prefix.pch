@@ -1,0 +1,9 @@
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Macros.h"
+#import "Kiwi.h"
+#import "Assert.h"
+
+#endif
