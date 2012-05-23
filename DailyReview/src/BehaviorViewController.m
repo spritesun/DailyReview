@@ -71,9 +71,6 @@
 }
 
 - (void)viewDidUnload {
-  [super viewDidUnload];
-  
-  self.view.backgroundView = nil;
   tableView_.delegate = nil;
   tableView_.dataSource = nil;
   bindingManager_ = nil;
@@ -81,6 +78,7 @@
   hintView_ = nil;
   increaseView_ = nil;
   decreaseView_ = nil;
+  [super viewDidUnload];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
