@@ -12,7 +12,6 @@
   return YES;
 }
 
-
 - (void)applicationWillEnterForeground:(UIApplication *)application {  
   UIViewController *currentController = self.window.rootViewController;
   if ([currentController isKindOfClass:[UITabBarController class]]) {
@@ -21,7 +20,6 @@
       [(BehaviorViewController *)selectedController refreshView];
     }
   }
-
 }
 
 @end
