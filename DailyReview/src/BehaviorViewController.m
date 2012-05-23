@@ -85,8 +85,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  
-  // TODO: when repository changed become complex, this refreshViewIfNeeded logic needs to be extract, using NSNotificationCenter connect repository and tableView then.
+  [self refreshView];
+}
+
+- (void)refreshView {
   if (![currentDate_ isEqualToDate:[[NSDate date] dateWithoutTime]]) {
     currentDate_ = [[NSDate date] dateWithoutTime];
     [[self tableView] reloadData];
