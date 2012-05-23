@@ -28,9 +28,4 @@
   UIImage *diabledImage = [image grayish];
   [barItem setFinishedSelectedImage:image withFinishedUnselectedImage:diabledImage];
 }
-
-- (void)viewDidUnload {
-  self.tabBar = nil;
-  [super viewDidUnload];
-}
 @end

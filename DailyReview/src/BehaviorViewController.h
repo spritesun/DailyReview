@@ -11,4 +11,5 @@
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
 
 - (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image;
+- (void)refreshView;
 @end

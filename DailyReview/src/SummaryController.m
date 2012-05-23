@@ -45,7 +45,4 @@
   totalRankLabel_.text = [NSString stringWithFormat:@"功过合计:  %d",
                                                     [totalMeritRank intValue] + [totalDemeritRank intValue]];
 }
-- (void)viewDidUnload {
-  [super viewDidUnload];
-}
 @end
