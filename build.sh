@@ -6,6 +6,7 @@ function prompt {
 }
 
 function auto_set {
+# TODO: find the latest DailyReview-* directory
  path="$(find ~/Library/Developer/Xcode/DerivedData/DailyReview-* -path '**/Debug-iphonesimulator/DailyReview Frankified.app')"
  [ "$path" ] || exit 1
  export APP_BUNDLE_PATH=$path

@@ -1,5 +1,12 @@
 ##  功过格 iOS 版
 
+### How to run DailyReview Frank test?
+
+- rvm install ruby-1.9.3-p125
+- bundle install
+- Go to Xcode, run "DailyReview Frankified" target
+- ./build.sh
+
 ### 什么是[功过格](http://baike.baidu.com/view/995178.htm)?
 
 ### 建议阅读文档
