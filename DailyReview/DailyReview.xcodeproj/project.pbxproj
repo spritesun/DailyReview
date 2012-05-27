@@ -151,6 +151,8 @@
 		497659CD153BB8DB00E0D533 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
 		497659FD153BCC5900E0D533 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
 		497659FE153BCC5E00E0D533 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
+		498270631571DAD500EEF862 /* libFrank.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 498270611571DAD500EEF862 /* libFrank.a */; };
+		498270641571DAD500EEF862 /* libShelley.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 498270621571DAD500EEF862 /* libShelley.a */; };
 		4985530F1546CC9A00925D92 /* behavior-table-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498552F51546CC9A00925D92 /* behavior-table-bg.png */; };
 		498553101546CC9A00925D92 /* behavior-table-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498552F61546CC9A00925D92 /* behavior-table-bg@2x.png */; };
 		498553111546CC9A00925D92 /* behavior-view-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498552F71546CC9A00925D92 /* behavior-view-bg.png */; };
@@ -208,8 +210,6 @@
 		49E1E0F31547E7680030AAD1 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49E1E1B11547F6EA0030AAD1 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E1E1421547EF740030AAD1 /* libKiwi.a */; };
 		49E1E1FA1547FFBE0030AAD1 /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
-		49E4FE30156D053800B5EE46 /* libFrank.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E4FE2E156D053800B5EE46 /* libFrank.a */; };
-		49E4FE31156D053800B5EE46 /* libShelley.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E4FE2F156D053800B5EE46 /* libShelley.a */; };
 		49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
 		49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EBB4361537D360002BBF3C /* QuartzCore.framework */; };
 		49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
@@ -310,7 +310,6 @@
 		4943CEEC153AAE1E00B823E7 /* populate_database.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = populate_database.1; sourceTree = "<group>"; };
 		4943CEF4153AB93600B823E7 /* initial_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = initial_data.json; sourceTree = "<group>"; };
 		4948A854156D03BA00EC7A7B /* DailyReview Frankified.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DailyReview Frankified.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4948A856156D03BA00EC7A7B /* DailyReview Frankified-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DailyReview Frankified-Info.plist"; path = "/Users/twer/repo/ios/DailyReview/DailyReview/DailyReview Frankified-Info.plist"; sourceTree = "<absolute>"; };
 		4948A859156D041900EC7A7B /* my_first.feature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = my_first.feature; sourceTree = "<group>"; };
 		4948A85B156D041900EC7A7B /* launch_steps.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = launch_steps.rb; sourceTree = "<group>"; };
 		4948A85D156D041900EC7A7B /* env.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = env.rb; sourceTree = "<group>"; };
@@ -332,6 +331,9 @@
 		497316231534590400E3E5DC /* BehaviorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorViewController.m; path = src/BehaviorViewController.m; sourceTree = "<group>"; };
 		497659CB153BB8DB00E0D533 /* Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Binding.h; path = src/Binding.h; sourceTree = "<group>"; };
 		497659CC153BB8DB00E0D533 /* Binding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Binding.m; path = src/Binding.m; sourceTree = "<group>"; };
+		498270611571DAD500EEF862 /* libFrank.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFrank.a; sourceTree = "<group>"; };
+		498270621571DAD500EEF862 /* libShelley.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libShelley.a; sourceTree = "<group>"; };
+		498270651571DB2300EEF862 /* DailyReview Frankified-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DailyReview Frankified-Info.plist"; path = "resources/DailyReview Frankified-Info.plist"; sourceTree = "<group>"; };
 		498552F51546CC9A00925D92 /* behavior-table-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "behavior-table-bg.png"; path = "resources/images/behavior-table-bg.png"; sourceTree = "<group>"; };
 		498552F61546CC9A00925D92 /* behavior-table-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "behavior-table-bg@2x.png"; path = "resources/images/behavior-table-bg@2x.png"; sourceTree = "<group>"; };
 		498552F71546CC9A00925D92 /* behavior-view-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "behavior-view-bg.png"; path = "resources/images/behavior-view-bg.png"; sourceTree = "<group>"; };
@@ -408,8 +410,6 @@
 		49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = ../lib/Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
 		49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReviewTests.xcconfig; path = config/DailyReviewTests.xcconfig; sourceTree = "<group>"; };
-		49E4FE2E156D053800B5EE46 /* libFrank.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFrank.a; path = ../lib/libFrank.a; sourceTree = "<group>"; };
-		49E4FE2F156D053800B5EE46 /* libShelley.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libShelley.a; path = ../lib/libShelley.a; sourceTree = "<group>"; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
 		49EBB4141536C8B4002BBF3C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "src/UIView+Additions.h"; sourceTree = "<group>"; };
@@ -461,8 +461,8 @@
 				4948A827156D03BA00EC7A7B /* QuartzCore.framework in Frameworks */,
 				4948A828156D03BA00EC7A7B /* Foundation.framework in Frameworks */,
 				4948A829156D03BA00EC7A7B /* CoreData.framework in Frameworks */,
-				49E4FE30156D053800B5EE46 /* libFrank.a in Frameworks */,
-				49E4FE31156D053800B5EE46 /* libShelley.a in Frameworks */,
+				498270631571DAD500EEF862 /* libFrank.a in Frameworks */,
+				498270641571DAD500EEF862 /* libShelley.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +618,16 @@
 			name = domains;
 			sourceTree = "<group>";
 		};
+		498270601571DAD500EEF862 /* Frank */ = {
+			isa = PBXGroup;
+			children = (
+				498270611571DAD500EEF862 /* libFrank.a */,
+				498270621571DAD500EEF862 /* libShelley.a */,
+			);
+			name = Frank;
+			path = ../lib/Frank;
+			sourceTree = "<group>";
+		};
 		49844C4D154587D700EA16D0 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,10 +741,10 @@
 			isa = PBXGroup;
 			children = (
 				49844C4D154587D700EA16D0 /* images */,
-				4948A856156D03BA00EC7A7B /* DailyReview Frankified-Info.plist */,
 				49412AA6153EA8A500450C3B /* db.sqlite */,
 				49A04ABA15344DB50092DC4A /* DailyReview-Info.plist */,
 				49A04ABB15344DB50092DC4A /* DailyReviewTests-Info.plist */,
+				498270651571DB2300EEF862 /* DailyReview Frankified-Info.plist */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -800,9 +810,8 @@
 		49EBB4261537D1D3002BBF3C /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				49E4FE2E156D053800B5EE46 /* libFrank.a */,
-				49E4FE2F156D053800B5EE46 /* libShelley.a */,
 				49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */,
+				498270601571DAD500EEF862 /* Frank */,
 				49E1E0E61547E7680030AAD1 /* DCIntrospect */,
 			);
 			name = lib;
@@ -1350,6 +1359,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49D7A9B91571D3DB00FA3886 /* DailyReviewFrankified.xcconfig */;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../lib/Frank\"",
+				);
 			};
 			name = Debug;
 		};
@@ -1357,6 +1370,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49D7A9B91571D3DB00FA3886 /* DailyReviewFrankified.xcconfig */;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../lib/Frank\"",
+				);
 			};
 			name = Release;
 		};
