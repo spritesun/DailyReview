@@ -9,10 +9,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [self setBarItem:[tabBar_.items objectAtIndex:0] withImage:[UIImage imageNamed:@"bottom-bar-item-gong.png"]];
-  [self setBarItem:[tabBar_.items objectAtIndex:1] withImage:[UIImage imageNamed:@"bottom-bar-item-guo.png"]];
-  [self setBarItem:[tabBar_.items objectAtIndex:2] withImage:[UIImage imageNamed:@"bottom-bar-item-he.png"]];
-  [self setBarItem:[tabBar_.items objectAtIndex:3] withImage:[UIImage imageNamed:@"bottom-bar-item-more.png"]];
+  [self setBarItem:[tabBar_.items objectAtIndex:0] withImage:[UIImage imageNamed:@"bottom-bar-item-gong"]];
+  [self setBarItem:[tabBar_.items objectAtIndex:1] withImage:[UIImage imageNamed:@"bottom-bar-item-guo"]];
+  [self setBarItem:[tabBar_.items objectAtIndex:2] withImage:[UIImage imageNamed:@"bottom-bar-item-he"]];
+  [self setBarItem:[tabBar_.items objectAtIndex:3] withImage:[UIImage imageNamed:@"bottom-bar-item-more"]];
 }
 
 - (void)viewDidLoad {

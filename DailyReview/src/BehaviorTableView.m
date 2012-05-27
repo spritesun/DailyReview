@@ -10,7 +10,7 @@
   self = [super initWithCoder:aDecoder];
   if (self) {
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
-    backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"behavior-table-bg.png"]];
+    backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"behavior-table-bg"]];
     [self addSubview:backgroundView];
     self.backgroundColor = [UIColor clearColor];
   }

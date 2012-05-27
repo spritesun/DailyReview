@@ -1,11 +1,3 @@
-//
-//  UIImageView+Additions.m
-//  DailyReview
-//
-//  Created by Lei Zhang on 5/20/12.
-//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
-//
-
 #import "UIImageView+Additions.h"
 
 @implementation UIImageView (Additions)

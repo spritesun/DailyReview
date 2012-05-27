@@ -41,11 +41,11 @@
 }
 
 - (void)createHintView {
-  hintView_ = [self createTransparentView:@"swipe-hint.png"];
+  hintView_ = [self createTransparentView:@"swipe-hint"];
   [self.tableView addSubview:hintView_];
-  increaseView_ = [self createTransparentView:@"increase-hint.png"];
+  increaseView_ = [self createTransparentView:@"increase-hint"];
   [self.tableView addSubview:increaseView_];
-  decreaseView_ = [self createTransparentView:@"decrease-hint.png"];
+  decreaseView_ = [self createTransparentView:@"decrease-hint"];
   [self.tableView addSubview:decreaseView_];
 }
 
@@ -57,7 +57,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.view.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"behavior-view-bg.png"]]; 
+  self.view.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"behavior-view-bg"]]; 
   self.view.backgroundView.frame = tableView_.frame;
   tableView_.delegate = self;
   tableView_.dataSource = self;

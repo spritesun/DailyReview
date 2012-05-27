@@ -12,7 +12,7 @@
 }
 
 - (void)drawBackground {
-  UIImage *image = [UIImage imageNamed:@"section-bg.png"];
+  UIImage *image = [UIImage imageNamed:@"section-bg"];
   UIImageView *bgView = [[UIImageView alloc] initWithImage:image];
   bgView.width = SCREEN_WIDTH;
   [self addSubview:bgView];
