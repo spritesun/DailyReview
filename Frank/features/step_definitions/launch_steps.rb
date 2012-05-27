@@ -1,7 +1,3 @@
-def app_path
-  ENV['APP_BUNDLE_PATH'] || (defined?(APP_BUNDLE_PATH) && APP_BUNDLE_PATH)
-end
-
 Given /^I launch the app$/ do
   # latest sdk and iphone by default
   launch_app app_path

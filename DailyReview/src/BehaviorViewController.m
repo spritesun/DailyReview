@@ -211,6 +211,7 @@
     cell.detailTextLabel.text = [newValue stringValue];
   }
   
+  cell.detailTextLabel.accessibilityLabel = [NSString stringWithFormat:@"%@:%@", cell.textLabel.text, newValue.stringValue];
   if (oldValue == nil) {
     return;
   }
