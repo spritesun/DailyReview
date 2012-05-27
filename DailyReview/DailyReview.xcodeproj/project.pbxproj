@@ -1338,7 +1338,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../lib/Frank\"",
-				);
+				);                                                                                
 			};
 			name = Debug;
 		};

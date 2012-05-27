@@ -15,4 +15,8 @@
   return [dateFormatter dateFromString:dateStringWithoutTime];  
 }
 
+- (BOOL)isOnSameDate:(NSDate *)date {
+  return [[self dateWithoutTime] isEqualToDate:[date dateWithoutTime]];
+}
+
 @end

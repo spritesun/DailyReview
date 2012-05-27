@@ -2,4 +2,6 @@
 
 - (NSDate *)dateWithoutTime;
 
+- (BOOL)isOnSameDate:(NSDate *)date;
+
 @end

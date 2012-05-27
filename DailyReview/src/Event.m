@@ -19,7 +19,7 @@
 }
 
 - (BOOL)isOnDate:(NSDate *)date {
-  return [self.date isEqualToDate:date];
+  return [self.date isOnSameDate:date];
 }
 
 - (NSUInteger)countValue {
