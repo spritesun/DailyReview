@@ -396,6 +396,7 @@
 		49CE19C6153D5CE800C31041 /* DemeritController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemeritController.m; path = src/DemeritController.m; sourceTree = "<group>"; };
 		49CE19CC153D607E00C31041 /* NSNumber+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Additions.h"; path = "src/NSNumber+Additions.h"; sourceTree = "<group>"; };
 		49CE19CD153D607E00C31041 /* NSNumber+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Additions.m"; path = "src/NSNumber+Additions.m"; sourceTree = "<group>"; };
+		49D7A9B91571D3DB00FA3886 /* DailyReviewFrankified.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReviewFrankified.xcconfig; path = config/DailyReviewFrankified.xcconfig; sourceTree = "<group>"; };
 		49E1E0E71547E7680030AAD1 /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
 		49E1E0E81547E7680030AAD1 /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
 		49E1E0E91547E7680030AAD1 /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
@@ -782,6 +783,7 @@
 				49F3EBCE1557FC9800BAC96F /* Release.xcconfig */,
 				49A1CD79156A72BA008AF970 /* DailyReview.xcconfig */,
 				49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */,
+				49D7A9B91571D3DB00FA3886 /* DailyReviewFrankified.xcconfig */,
 				496832B11559399700F6CDCE /* PopulateDatabase.xcconfig */,
 			);
 			name = config;
@@ -1346,35 +1348,15 @@
 		};
 		4948A852156D03BA00EC7A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49A1CD79156A72BA008AF970 /* DailyReview.xcconfig */;
+			baseConfigurationReference = 49D7A9B91571D3DB00FA3886 /* DailyReviewFrankified.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = "DailyReview Frankified-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../lib\"",
-				);
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "DailyReview Frankified";
 			};
 			name = Debug;
 		};
 		4948A853156D03BA00EC7A7B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49A1CD79156A72BA008AF970 /* DailyReview.xcconfig */;
+			baseConfigurationReference = 49D7A9B91571D3DB00FA3886 /* DailyReviewFrankified.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = "DailyReview Frankified-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../lib\"",
-				);
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "DailyReview Frankified";
 			};
 			name = Release;
 		};
