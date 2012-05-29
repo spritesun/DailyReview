@@ -11,6 +11,6 @@ When /^I add "(.*?)" point to behavior "(.*?)"$/ do |score, behavior|
 end
 
 Then /^I can see "(.*?)" score increased "(.*?)"$/ do |behavior, score|
-  text_field_selector =  "view marked:'#{behavior}:1'" 
-  check_element_exists( text_field_selector )
+  text_field_selector = "view marked:'#{behavior}:1'" 
+  check_element_exists(text_field_selector)
 end
