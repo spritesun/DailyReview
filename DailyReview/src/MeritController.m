@@ -1,4 +1,5 @@
 #import "MeritController.h"
+#import "AddBehaviorController.h"
 
 
 @implementation MeritController
@@ -15,4 +16,8 @@
   [super viewDidUnload];  
 }
 
+- (IBAction)addBehavior:(id)sender {
+  AddBehaviorController *addBehaviorController = [[AddBehaviorController alloc] init];
+  [self presentModalViewController:addBehaviorController animated:YES];
+}
 @end

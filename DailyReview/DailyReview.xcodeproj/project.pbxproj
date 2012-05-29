@@ -210,6 +210,8 @@
 		49E1E0F31547E7680030AAD1 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49E1E1B11547F6EA0030AAD1 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E1E1421547EF740030AAD1 /* libKiwi.a */; };
 		49E1E1FA1547FFBE0030AAD1 /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
+		49E532B91574ECD7000AD68D /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E532B81574ECD7000AD68D /* AddBehaviorController.m */; };
+		49E532BA1574ECD7000AD68D /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E532B81574ECD7000AD68D /* AddBehaviorController.m */; };
 		49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
 		49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EBB4361537D360002BBF3C /* QuartzCore.framework */; };
 		49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
@@ -410,6 +412,8 @@
 		49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = ../lib/Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
 		49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReviewTests.xcconfig; path = config/DailyReviewTests.xcconfig; sourceTree = "<group>"; };
+		49E532B71574ECD7000AD68D /* AddBehaviorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBehaviorController.h; sourceTree = "<group>"; };
+		49E532B81574ECD7000AD68D /* AddBehaviorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBehaviorController.m; sourceTree = "<group>"; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
 		49EBB4141536C8B4002BBF3C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "src/UIView+Additions.h"; sourceTree = "<group>"; };
@@ -602,6 +606,8 @@
 				494B97F0153EDCDE002801F7 /* SummaryController.m */,
 				491476AC1568CB0700305AC1 /* AboutUsViewController.h */,
 				491476AD1568CB0700305AC1 /* AboutUsViewController.m */,
+				49E532B71574ECD7000AD68D /* AddBehaviorController.h */,
+				49E532B81574ECD7000AD68D /* AddBehaviorController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -1217,6 +1223,7 @@
 				4948A820156D03BA00EC7A7B /* AboutDailyReviewView.m in Sources */,
 				4948A821156D03BA00EC7A7B /* UIImageView+Additions.m in Sources */,
 				4948A822156D03BA00EC7A7B /* AboutUsViewController.m in Sources */,
+				49E532BA1574ECD7000AD68D /* AddBehaviorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1265,6 +1272,7 @@
 				49B7F0AC1568A89B0029F992 /* AboutDailyReviewView.m in Sources */,
 				4919B2BF1568A00000A39097 /* UIImageView+Additions.m in Sources */,
 				491476AE1568CB0700305AC1 /* AboutUsViewController.m in Sources */,
+				49E532B91574ECD7000AD68D /* AddBehaviorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
