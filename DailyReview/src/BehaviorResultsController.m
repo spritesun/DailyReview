@@ -52,7 +52,6 @@
 
 - (NSNumber *)todayRank {
   NSDate *today = [[NSDate date] dateWithoutTime];
-  NSLog(@"today is %@", today);
   NSInteger result = [self totalRankOnDate:today];
   return [NSNumber numberWithInt:result];
 }
@@ -68,13 +67,6 @@
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
   
   NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
-
-  NSArray *behaviors = [self fetchedObjects];
-  for (Behavior *behavior in behaviors) {
-    for (Event *event in behavior.events) {
-      NSLog(@"event date : %@", event.date);
-    }
-  }
   NSPredicate*behaviorsPredicate = [NSPredicate predicateWithFormat:@"behavior IN %@", [self fetchedObjects]];
   NSPredicate *datePredicate = [self getDatePredicate:date];
   
@@ -86,7 +78,6 @@
   
   [context performBlockAndWait:^{
     results = [context executeFetchRequest:request error:nil];
-    NSLog(@"result is : %@", results);
   }];
   
   __block NSInteger totalRank = 0;
