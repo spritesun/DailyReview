@@ -145,7 +145,6 @@
 		496D2C1F156BB98B00AA968F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491476B31568D35D00305AC1 /* MessageUI.framework */; };
 		496D2C20156BBA6400AA968F /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5B /* DatabaseManager.m */; };
 		496D2C22156BBA8800AA968F /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49412AA6153EA8A500450C3B /* db.sqlite */; };
-		496D2C70156BBFAE00AA968F /* ContextTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 496D2C6F156BBFAE00AA968F /* ContextTestHelper.m */; };
 		496D2C71156BC19C00AA968F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
 		497316241534590400E3E5DC /* BehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorViewController.m */; };
 		497659CD153BB8DB00E0D533 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
@@ -180,6 +179,11 @@
 		498553271546CC9A00925D92 /* top-bar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530D1546CC9A00925D92 /* top-bar-bg.png */; };
 		498553281546CC9A00925D92 /* top-bar-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530E1546CC9A00925D92 /* top-bar-bg@2x.png */; };
 		49939775153EEEF200A91E7B /* NSSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49939774153EEEF200A91E7B /* NSSet+Additions.m */; };
+		4999280B15760A1D0064BF32 /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddBehaviorController.m */; };
+		4999280D15760A1D0064BF32 /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddBehaviorController.m */; };
+		4999281015760A530064BF32 /* ContextTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280F15760A530064BF32 /* ContextTestHelper.m */; };
+		4999281515760BA20064BF32 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999281215760ACB0064BF32 /* AboutViewController.m */; };
+		4999281615760BA90064BF32 /* AboutDailyReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0AB1568A89B0029F992 /* AboutDailyReviewView.m */; };
 		499E335D1563B8D800979BE4 /* decrease-hint.png in Resources */ = {isa = PBXBuildFile; fileRef = 499E33591563B8D700979BE4 /* decrease-hint.png */; };
 		499E335E1563B8D800979BE4 /* decrease-hint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499E335A1563B8D800979BE4 /* decrease-hint@2x.png */; };
 		499E335F1563B8D800979BE4 /* increase-hint.png in Resources */ = {isa = PBXBuildFile; fileRef = 499E335B1563B8D800979BE4 /* increase-hint.png */; };
@@ -198,8 +202,6 @@
 		49B70C231563B026004E60CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B70C221563B026004E60CB /* CoreGraphics.framework */; };
 		49B70C241563B033004E60CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B70C201563B021004E60CB /* UIKit.framework */; };
 		49B7F0A61568A7C30029F992 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0A51568A7C30029F992 /* UIColor+Additions.m */; };
-		49B7F0A91568A88F0029F992 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0A81568A88E0029F992 /* AboutViewController.m */; };
-		49B7F0AC1568A89B0029F992 /* AboutDailyReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0AB1568A89B0029F992 /* AboutDailyReviewView.m */; };
 		49CE19C0153D221E00C31041 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19BF153D221E00C31041 /* MainViewController.m */; };
 		49CE19C4153D5C1700C31041 /* MeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C3153D5C1700C31041 /* MeritController.m */; };
 		49CE19C7153D5CE800C31041 /* DemeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C6153D5CE800C31041 /* DemeritController.m */; };
@@ -210,8 +212,6 @@
 		49E1E0F31547E7680030AAD1 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49E1E1B11547F6EA0030AAD1 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E1E1421547EF740030AAD1 /* libKiwi.a */; };
 		49E1E1FA1547FFBE0030AAD1 /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
-		49E532B91574ECD7000AD68D /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E532B81574ECD7000AD68D /* AddBehaviorController.m */; };
-		49E532BA1574ECD7000AD68D /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E532B81574ECD7000AD68D /* AddBehaviorController.m */; };
 		49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
 		49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EBB4361537D360002BBF3C /* QuartzCore.framework */; };
 		49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
@@ -327,8 +327,6 @@
 		495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Blocks.m"; path = "src/UIGestureRecognizer+Blocks.m"; sourceTree = "<group>"; };
 		496832B11559399700F6CDCE /* PopulateDatabase.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = PopulateDatabase.xcconfig; path = config/PopulateDatabase.xcconfig; sourceTree = "<group>"; };
 		496D2C0B156BB43D00AA968F /* DailyReviewTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DailyReviewTests-Prefix.pch"; path = "test/DailyReviewTests-Prefix.pch"; sourceTree = "<group>"; };
-		496D2C6E156BBFAE00AA968F /* ContextTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextTestHelper.h; sourceTree = "<group>"; };
-		496D2C6F156BBFAE00AA968F /* ContextTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextTestHelper.m; sourceTree = "<group>"; };
 		497316221534590400E3E5DC /* BehaviorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorViewController.h; path = src/BehaviorViewController.h; sourceTree = "<group>"; };
 		497316231534590400E3E5DC /* BehaviorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorViewController.m; path = src/BehaviorViewController.m; sourceTree = "<group>"; };
 		497659CB153BB8DB00E0D533 /* Binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Binding.h; path = src/Binding.h; sourceTree = "<group>"; };
@@ -364,6 +362,12 @@
 		4985530E1546CC9A00925D92 /* top-bar-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top-bar-bg@2x.png"; path = "resources/images/top-bar-bg@2x.png"; sourceTree = "<group>"; };
 		49939773153EEEF200A91E7B /* NSSet+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSSet+Additions.h"; path = "src/NSSet+Additions.h"; sourceTree = "<group>"; };
 		49939774153EEEF200A91E7B /* NSSet+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSet+Additions.m"; path = "src/NSSet+Additions.m"; sourceTree = "<group>"; };
+		4999280915760A1D0064BF32 /* AddBehaviorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddBehaviorController.h; path = src/AddBehaviorController.h; sourceTree = "<group>"; };
+		4999280A15760A1D0064BF32 /* AddBehaviorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddBehaviorController.m; path = src/AddBehaviorController.m; sourceTree = "<group>"; };
+		4999280E15760A530064BF32 /* ContextTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTestHelper.h; path = test/ContextTestHelper.h; sourceTree = "<group>"; };
+		4999280F15760A530064BF32 /* ContextTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextTestHelper.m; path = test/ContextTestHelper.m; sourceTree = "<group>"; };
+		4999281115760ACB0064BF32 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = src/AboutViewController.h; sourceTree = "<group>"; };
+		4999281215760ACB0064BF32 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = src/AboutViewController.m; sourceTree = "<group>"; };
 		499E33591563B8D700979BE4 /* decrease-hint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "decrease-hint.png"; path = "resources/images/decrease-hint.png"; sourceTree = "<group>"; };
 		499E335A1563B8D800979BE4 /* decrease-hint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "decrease-hint@2x.png"; path = "resources/images/decrease-hint@2x.png"; sourceTree = "<group>"; };
 		499E335B1563B8D800979BE4 /* increase-hint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "increase-hint.png"; path = "resources/images/increase-hint.png"; sourceTree = "<group>"; };
@@ -412,8 +416,6 @@
 		49E1E0EF1547E7680030AAD1 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
 		49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = ../lib/Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
 		49E1E1F71547FDBA0030AAD1 /* DailyReviewTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = DailyReviewTests.xcconfig; path = config/DailyReviewTests.xcconfig; sourceTree = "<group>"; };
-		49E532B71574ECD7000AD68D /* AddBehaviorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBehaviorController.h; sourceTree = "<group>"; };
-		49E532B81574ECD7000AD68D /* AddBehaviorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBehaviorController.m; sourceTree = "<group>"; };
 		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
 		49EBB4141536C8B4002BBF3C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "src/UIView+Additions.h"; sourceTree = "<group>"; };
@@ -581,8 +583,8 @@
 		496D2C6D156BBF9D00AA968F /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				496D2C6E156BBFAE00AA968F /* ContextTestHelper.h */,
-				496D2C6F156BBFAE00AA968F /* ContextTestHelper.m */,
+				4999280E15760A530064BF32 /* ContextTestHelper.h */,
+				4999280F15760A530064BF32 /* ContextTestHelper.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -604,10 +606,12 @@
 				49CE19C6153D5CE800C31041 /* DemeritController.m */,
 				494B97EF153EDCDE002801F7 /* SummaryController.h */,
 				494B97F0153EDCDE002801F7 /* SummaryController.m */,
+				4999281115760ACB0064BF32 /* AboutViewController.h */,
+				4999281215760ACB0064BF32 /* AboutViewController.m */,
 				491476AC1568CB0700305AC1 /* AboutUsViewController.h */,
 				491476AD1568CB0700305AC1 /* AboutUsViewController.m */,
-				49E532B71574ECD7000AD68D /* AddBehaviorController.h */,
-				49E532B81574ECD7000AD68D /* AddBehaviorController.m */,
+				4999280915760A1D0064BF32 /* AddBehaviorController.h */,
+				4999280A15760A1D0064BF32 /* AddBehaviorController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -735,8 +739,8 @@
 		49A04A9215344BF30092DC4A /* test */ = {
 			isa = PBXGroup;
 			children = (
-				496D2C6D156BBF9D00AA968F /* helpers */,
 				49E91641156BAFF900E4DE4B /* domains */,
+				496D2C6D156BBF9D00AA968F /* helpers */,
 				496D2C0A156BB3FA00AA968F /* others */,
 				49A04AB715344D9B0092DC4A /* InfoPlist.strings */,
 			);
@@ -1223,7 +1227,7 @@
 				4948A820156D03BA00EC7A7B /* AboutDailyReviewView.m in Sources */,
 				4948A821156D03BA00EC7A7B /* UIImageView+Additions.m in Sources */,
 				4948A822156D03BA00EC7A7B /* AboutUsViewController.m in Sources */,
-				49E532BA1574ECD7000AD68D /* AddBehaviorController.m in Sources */,
+				4999280D15760A1D0064BF32 /* AddBehaviorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1268,11 +1272,11 @@
 				4933EE9A1563842E002722BF /* UIScrollView+Additions.m in Sources */,
 				49550652156678BC007D0708 /* UIImage+Additions.m in Sources */,
 				49B7F0A61568A7C30029F992 /* UIColor+Additions.m in Sources */,
-				49B7F0A91568A88F0029F992 /* AboutViewController.m in Sources */,
-				49B7F0AC1568A89B0029F992 /* AboutDailyReviewView.m in Sources */,
 				4919B2BF1568A00000A39097 /* UIImageView+Additions.m in Sources */,
 				491476AE1568CB0700305AC1 /* AboutUsViewController.m in Sources */,
-				49E532B91574ECD7000AD68D /* AddBehaviorController.m in Sources */,
+				4999280B15760A1D0064BF32 /* AddBehaviorController.m in Sources */,
+				4999281515760BA20064BF32 /* AboutViewController.m in Sources */,
+				4999281615760BA90064BF32 /* AboutDailyReviewView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1299,8 +1303,8 @@
 				496D2C1B156BB8B900AA968F /* UIImageView+Additions.m in Sources */,
 				496D2C1C156BB8B900AA968F /* NSFetchedResultsController+Additions.m in Sources */,
 				496D2C20156BBA6400AA968F /* DatabaseManager.m in Sources */,
-				496D2C70156BBFAE00AA968F /* ContextTestHelper.m in Sources */,
 				496D2C71156BC19C00AA968F /* DataModel.xcdatamodeld in Sources */,
+				4999281015760A530064BF32 /* ContextTestHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
