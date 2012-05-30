@@ -52,13 +52,14 @@
 
 - (NSNumber *)todayRank {
   NSDate *today = [[NSDate date] dateWithoutTime];
+  NSLog(@"today is %@", today);
   NSInteger result = [self totalRankOnDate:today];
   return [NSNumber numberWithInt:result];
 }
 
 - (NSPredicate *)getDatePredicate:(NSDate *)date {
   if (date) {
-    return [NSPredicate predicateWithFormat:@"date = %@", date];
+    return [NSPredicate predicateWithFormat:@"date >= %@ AND date < %@", date, [date dateByAddingTimeInterval:86400]];
   }
   return nil;
 }
@@ -67,9 +68,15 @@
   NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
   
   NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
-  
+
+  NSArray *behaviors = [self fetchedObjects];
+  for (Behavior *behavior in behaviors) {
+    for (Event *event in behavior.events) {
+      NSLog(@"event date : %@", event.date);
+    }
+  }
   NSPredicate*behaviorsPredicate = [NSPredicate predicateWithFormat:@"behavior IN %@", [self fetchedObjects]];
-  NSPredicate *datePredicate = datePredicate = [self getDatePredicate:date];
+  NSPredicate *datePredicate = [self getDatePredicate:date];
   
   NSPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:behaviorsPredicate, datePredicate, nil]];
   
@@ -79,6 +86,7 @@
   
   [context performBlockAndWait:^{
     results = [context executeFetchRequest:request error:nil];
+    NSLog(@"result is : %@", results);
   }];
   
   __block NSInteger totalRank = 0;
