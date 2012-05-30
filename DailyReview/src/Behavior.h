@@ -20,6 +20,8 @@
 
 @property(nonatomic, readonly) NSString *category;
 
++ (NSDictionary *)getAllCategoryDictionary;
+
 - (Event *)eventForDate:(NSDate *)date;
 
 @end

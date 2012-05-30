@@ -37,6 +37,10 @@ static NSDictionary *categoryNamesDict = nil;
   }
 }
 
++ (NSDictionary *)getAllCategoryDictionary {
+  return categoryNamesDict;
+}
+
 - (Event *)eventForDate:(NSDate *)date {
   return [self.events first:^BOOL(Event *event) {
     return [event isOnDate:date];
