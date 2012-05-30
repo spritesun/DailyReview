@@ -13,5 +13,5 @@ function auto_set {
 }
 
 [ "$APP_BUNDLE_PATH" ] || auto_set
-bundle exec cucumber Frank/
+bundle exec cucumber DailyReview/features
 echo $APP_BUNDLE_PATH
