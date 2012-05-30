@@ -66,7 +66,6 @@
 		4948A81C156D03BA00EC7A7B /* UIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933EE991563842E002722BF /* UIScrollView+Additions.m */; };
 		4948A81D156D03BA00EC7A7B /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49550651156678BC007D0708 /* UIImage+Additions.m */; };
 		4948A81E156D03BA00EC7A7B /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0A51568A7C30029F992 /* UIColor+Additions.m */; };
-		4948A81F156D03BA00EC7A7B /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0A81568A88E0029F992 /* AboutViewController.m */; };
 		4948A820156D03BA00EC7A7B /* AboutDailyReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0AB1568A89B0029F992 /* AboutDailyReviewView.m */; };
 		4948A821156D03BA00EC7A7B /* UIImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4919B2BE1568A00000A39097 /* UIImageView+Additions.m */; };
 		4948A822156D03BA00EC7A7B /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491476AD1568CB0700305AC1 /* AboutUsViewController.m */; };
@@ -176,6 +175,7 @@
 		498553281546CC9A00925D92 /* top-bar-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530E1546CC9A00925D92 /* top-bar-bg@2x.png */; };
 		49939775153EEEF200A91E7B /* NSSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49939774153EEEF200A91E7B /* NSSet+Additions.m */; };
 		499794E91576108E000619AD /* frank_static_resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 499794E81576108E000619AD /* frank_static_resources.bundle */; };
+		49979514157615A6000619AD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999281215760ACB0064BF32 /* AboutViewController.m */; };
 		4999280B15760A1D0064BF32 /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddBehaviorController.m */; };
 		4999280D15760A1D0064BF32 /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddBehaviorController.m */; };
 		4999281015760A530064BF32 /* ContextTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280F15760A530064BF32 /* ContextTestHelper.m */; };
@@ -388,7 +388,6 @@
 		49B70C221563B026004E60CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		49B7F0A41568A7C30029F992 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Additions.h"; path = "src/UIColor+Additions.h"; sourceTree = "<group>"; };
 		49B7F0A51568A7C30029F992 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Additions.m"; path = "src/UIColor+Additions.m"; sourceTree = "<group>"; };
-		49B7F0A81568A88E0029F992 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = src/AboutViewController.m; sourceTree = "<group>"; };
 		49B7F0AA1568A89B0029F992 /* AboutDailyReviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutDailyReviewView.h; path = src/AboutDailyReviewView.h; sourceTree = "<group>"; };
 		49B7F0AB1568A89B0029F992 /* AboutDailyReviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutDailyReviewView.m; path = src/AboutDailyReviewView.m; sourceTree = "<group>"; };
 		49CE19BE153D221E00C31041 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = src/MainViewController.h; sourceTree = "<group>"; };
@@ -1188,11 +1187,11 @@
 				4948A81C156D03BA00EC7A7B /* UIScrollView+Additions.m in Sources */,
 				4948A81D156D03BA00EC7A7B /* UIImage+Additions.m in Sources */,
 				4948A81E156D03BA00EC7A7B /* UIColor+Additions.m in Sources */,
-				4948A81F156D03BA00EC7A7B /* AboutViewController.m in Sources */,
 				4948A820156D03BA00EC7A7B /* AboutDailyReviewView.m in Sources */,
 				4948A821156D03BA00EC7A7B /* UIImageView+Additions.m in Sources */,
 				4948A822156D03BA00EC7A7B /* AboutUsViewController.m in Sources */,
 				4999280D15760A1D0064BF32 /* AddBehaviorController.m in Sources */,
+				49979514157615A6000619AD /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
