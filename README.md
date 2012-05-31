@@ -1,4 +1,6 @@
-##  功过格 iOS 版
+##  功过格 iPhone 版
+
+* [App Store下载地址](http://itunes.apple.com/us/app/gong-guo-ge/id529803905)
 
 ### How to run DailyReview Frank test?
 
