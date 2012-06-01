@@ -1,0 +1,7 @@
+#include "DailyReviewShared.xcconfig"
+
+BUNDLE_IDENTIFIER = com.sunlong.dailyreview.frankified
+PRODUCT_NAME = Frankified
+OTHER_LDFLAGS = -all_load -ObjC
+INFOPLIST_FILE = resources/DailyReview-Info.plist
+LIBRARY_SEARCH_PATHS = $(inherited) "$(SRCROOT)/../lib/Frank"

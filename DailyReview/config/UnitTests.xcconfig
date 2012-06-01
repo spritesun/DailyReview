@@ -3,10 +3,10 @@
 //TEST_HOST = $(BUNDLE_LOADER)
 
 OTHER_LDFLAGS =  -all_load
-INFOPLIST_FILE = resources/DailyReviewTests-Info.plist
+INFOPLIST_FILE = resources/UnitTests-Info.plist
 PRODUCT_NAME = DailyReviewTests
 WRAPPER_EXTENSION = octest
 FRAMEWORK_SEARCH_PATHS = $(SDKROOT)/Developer/Library/Frameworks $(DEVELOPER_LIBRARY_DIR)/Frameworks
 USER_HEADER_SEARCH_PATHS = $(BUILT_PRODUCTS_DIR)/KiwiPublicHeaders
 GCC_PRECOMPILE_PREFIX_HEADER = YES
-GCC_PREFIX_HEADER = test/DailyReviewTests-Prefix.pch
+GCC_PREFIX_HEADER = test/UnitTests-Prefix.pch

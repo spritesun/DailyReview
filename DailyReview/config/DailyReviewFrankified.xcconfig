@@ -1,5 +1,0 @@
-#include "DailyReview.xcconfig"
-OTHER_LDFLAGS = -all_load -ObjC
-INFOPLIST_FILE = resources/DailyReview Frankified-Info.plist
-PRODUCT_NAME = DailyReview Frankified
-LIBRARY_SEARCH_PATHS = $(inherited) "$(SRCROOT)/../lib"

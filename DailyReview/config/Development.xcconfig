@@ -1,0 +1,4 @@
+#include "DailyReviewShared.xcconfig"
+
+BUNDLE_IDENTIFIER = com.sunlong.dailyreview.development
+PRODUCT_NAME = Development

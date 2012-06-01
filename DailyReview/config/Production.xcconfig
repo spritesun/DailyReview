@@ -1,0 +1,4 @@
+#include "DailyReviewShared.xcconfig"
+
+BUNDLE_IDENTIFIER = com.sunlong.dailyreview
+PRODUCT_NAME = 功过格
