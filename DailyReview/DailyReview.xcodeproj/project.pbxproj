@@ -682,9 +682,9 @@
 			children = (
 				4943CECD153AA48700B823E7 /* Event.h */,
 				4943CECE153AA48700B823E7 /* Event.m */,
-				4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */,
 				49412AA1153EA07900450C3B /* Behavior.h */,
 				49412AA2153EA07900450C3B /* Behavior.m */,
+				4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */,
 			);
 			name = domains;
 			sourceTree = "<group>";

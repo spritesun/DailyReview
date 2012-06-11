@@ -18,6 +18,8 @@
 
 - (IBAction)addBehavior:(id)sender {
   AddBehaviorController *addBehaviorController = [[AddBehaviorController alloc] init];
-  [self presentModalViewController:addBehaviorController animated:YES];
+  [self presentViewController:addBehaviorController animated:YES completion:^{
+    [addBehaviorController startInputName];
+  }];
 }
 @end
