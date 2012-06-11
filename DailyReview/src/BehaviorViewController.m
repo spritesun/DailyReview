@@ -11,7 +11,6 @@
 #import "NSDate+Additions.h"
 #import "NSFetchedResultsController+Additions.h"
 #import "UIImage+Additions.h"
-#import "BehaviorResultsController.h"
 #import "ScoreView.h"
 
 @interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>
@@ -50,8 +49,8 @@
 }
 
 - (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image {
-  UIImage *diabledImage = [image grayish];
-  [barItem setFinishedSelectedImage:image withFinishedUnselectedImage:diabledImage];
+  UIImage *disabledImage = [image grayish];
+  [barItem setFinishedSelectedImage:image withFinishedUnselectedImage:disabledImage];
 }
 
 - (void)viewDidLoad {

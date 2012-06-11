@@ -1,6 +1,4 @@
 #import "AboutUsViewController.h"
-#import "UIGestureRecognizer+Blocks.h"
-#import <MessageUI/MFMailComposeViewController.h>
 
 @interface AboutUsViewController ()
 

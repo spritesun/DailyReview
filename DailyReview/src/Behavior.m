@@ -1,7 +1,6 @@
 #import "Behavior.h"
 #import "Event.h"
 #import "NSSet+Additions.h"
-#import "NSFetchedResultsController+Additions.h"
 #import "NSArray+Additions.h"
 #import "NSManagedObjectContext+Additions.h"
 

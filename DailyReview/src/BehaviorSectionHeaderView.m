@@ -1,5 +1,4 @@
 #import "BehaviorSectionHeaderView.h"
-#import "BehaviorResultsController.h"
 #import "UIView+Additions.h"
 #import "UIColor+Additions.h"
 

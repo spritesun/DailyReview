@@ -1,7 +1,6 @@
 #import "BehaviorResultsController.h"
 #import "ContextTestHelper.h"
 #import "Event.h"
-#import "NSDate+Additions.h"
 
 SPEC_BEGIN(BehaviorResultsControllerSpec)
 

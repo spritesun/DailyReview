@@ -1,7 +1,6 @@
 #import "BehaviorResultsController.h"
 #import "SummaryController.h"
 #import "NSArray+Additions.h"
-#import "UIImage+Additions.h"
 #import "UIColor+Additions.h"
 
 @interface SummaryController ()

@@ -1,6 +1,6 @@
 #import "AddBehaviorController.h"
 #import "Behavior.h"
-#import "UIGestureRecognizer+Blocks.h"
+#import "NSManagedObjectContext+Additions.h"
 
 #define DEFAULT_RANK 1
 
@@ -15,6 +15,8 @@
   UIPickerView *picker_;
   UITextField *nameTextField_;
 }
+@synthesize delegate = delegate_;
+
 
 - (id)init {
   self = [self initWithStyle:UITableViewStyleGrouped];
@@ -33,27 +35,26 @@
 
 - (void)loadView {
   float const NAVIGATION_BAR_HEIGHT = 48;
-  
+
   UIView *const view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
-  
+
   UINavigationBar *const navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT)];
   [view addSubview:navigationBar];
-  
+
   UINavigationItem *const navigationItem = [[UINavigationItem alloc] initWithTitle:@"自定义功德"];
   navigationBar.items = Array(navigationItem);
   UIBarButtonItem *const addItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonSystemItemAdd target:self action:@selector(addBehavior)];
   UIBarButtonItem *const cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
   navigationItem.leftBarButtonItem = cancelItem;
   navigationItem.rightBarButtonItem = addItem;
-  
+
   UITableView *const tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT) style:UITableViewStyleGrouped];
-  
-  
-  [tableView setDataSource:self];
-  [tableView setDelegate:self];
+
+  tableView.dataSource = self;
+  tableView.delegate = self;
   [view addSubview:tableView];
-  
+
   self.view = view;
 }
 
@@ -74,28 +75,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
   if (nil == cell) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];    
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
   }
-  
+
   if (indexPath.row == 0) {
     [cell.contentView addSubview:[self labelWithName:@"名称"]];
 
-    nameTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100,10, 200, 30)];
+    nameTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 200, 30)];
     nameTextField_.delegate = self;
     nameTextField_.returnKeyType = UIReturnKeyNext;
     [cell.contentView addSubview:nameTextField_];
   } else {
     [cell.contentView addSubview:[self labelWithName:@"功过点数"]];
-    
-    rankTextField_ =  [[UITextField alloc] initWithFrame:CGRectMake(100, 5, 200, 30)];
+
+    rankTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100, 5, 200, 30)];
     rankTextField_.text = [categoryDictionary_ objectForKey:[NSNumber numberWithInt:DEFAULT_RANK]];
-    
+
     picker_ = [self getPickerViewSelectedName:rankTextField_.text inSource:categoryDictionary_];
     rankTextField_.inputView = picker_;
-    
+
     [cell.contentView addSubview:rankTextField_];
-    
+
   }
   return cell;
 }
@@ -154,7 +155,22 @@
 
 
 - (void)addBehavior {
-  //TODO: add behavior to db, reload table, scroll to recentely added cell
+  //TODO: add behavior to db, reload table, scroll to recently added cell, prevent duplication, other validation
+  NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+  Behavior *behavior = [NSEntityDescription insertNewObjectForEntityForName:@"Behavior" inManagedObjectContext:context];
+  behavior.name = nameTextField_.text;
+
+  const NSUInteger integer = (NSUInteger) [picker_ selectedRowInComponent:0];
+  behavior.rank = [sortedArray_ objectAtIndex:integer];
+  [behavior setTimestamp:[NSDate date]];
+
+  NSError *error = nil;
+  if (![context save:&error]) {
+    NSLog(@"Error: %@", [error localizedDescription]);
+    error = nil;
+  }
+
+  [delegate_ onSave:behavior];
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
