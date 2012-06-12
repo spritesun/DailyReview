@@ -1,7 +1,6 @@
 #import "MeritController.h"
 #import "AddBehaviorController.h"
 
-
 @interface MeritController () <AddBehaviorControllerDelegate>
 @end
 
@@ -30,10 +29,14 @@
 
 #pragma mark - AddBehaviorControllerDelegate
 //TODO: move the logic to BehaviorViewController
-- (void)onSave:(Behavior *)behavior {
+- (void)behaviorDidSave:(Behavior *)behavior {
   [resultsController_ performFetch:nil];
-  [[self tableView] reloadData];
-  [[self tableView] layoutIfNeeded];
+  
+  NSIndexPath *behaviorIndex = [resultsController_ indexPathForObject:behavior];
+  NSIndexPath *upperIndex = [NSIndexPath indexPathForRow:(behaviorIndex.row - 1) inSection:behaviorIndex.section];
+
+  [self.tableView scrollToRowAtIndexPath:upperIndex atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+  [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:behaviorIndex.section] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 @end

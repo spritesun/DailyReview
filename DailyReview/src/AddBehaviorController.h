@@ -2,7 +2,7 @@
 
 @protocol AddBehaviorControllerDelegate
 
-- (void)onSave:(Behavior *)behavior;
+- (void)behaviorDidSave:(Behavior *)behavior;
 
 @end
 

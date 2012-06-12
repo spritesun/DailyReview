@@ -169,9 +169,10 @@
     NSLog(@"Error: %@", [error localizedDescription]);
     error = nil;
   }
-
-  [delegate_ onSave:behavior];
-  [self dismissViewControllerAnimated:YES completion:nil];
+  
+  [self dismissViewControllerAnimated:YES completion:^{
+    [delegate_ behaviorDidSave:behavior];
+  }];
 }
 
 - (void)cancel {
