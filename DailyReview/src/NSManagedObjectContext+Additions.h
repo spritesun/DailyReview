@@ -4,6 +4,8 @@
 
 + (NSManagedObjectContext *)createDefaultContextWithPath:(NSString *)databasePath;
 
++ (NSManagedObjectContext *)createCloudContextWithPath:(NSString *)databasePath;
+
 + (NSManagedObjectContext *)defaultContext;
 
 - (void)save;

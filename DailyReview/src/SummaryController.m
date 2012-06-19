@@ -14,7 +14,6 @@
 @synthesize demeritRankLabel = demeritRankLabel_;
 @synthesize totalRankLabel = totalRankLabel_;
 
-
 - (void)viewDidLoad {
   [super viewDidLoad];
   NSArray *labels = Array(meritRankLabel_, demeritRankLabel_, totalRankLabel_);
@@ -33,10 +32,22 @@
     label.frame = CGRectMake(labelX, labelY, labelWidth, labelHeight);
     labelY += (labelHeight + labelSpacing);
   }];
+
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadFetchedResults:) name:@"SomethingChanged" object:[[UIApplication sharedApplication] delegate]];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
+
+- (void)reloadFetchedResults:(NSNotification *)notification {
+  [self loadTotalRanks];
+}
+
+- (void)viewDidUnload {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+  [super viewDidUnload];
+}
+
+
+- (void)loadTotalRanks {
   NSNumber *totalMeritRank = [[BehaviorResultsController sharedMeritResultsController] totalRank];
   NSNumber *totalDemeritRank = [[BehaviorResultsController sharedDemeritResultsController] totalRank];
 
@@ -44,5 +55,10 @@
   demeritRankLabel_.text = [NSString stringWithFormat:@"累计过失:  %@", totalDemeritRank];
   totalRankLabel_.text = [NSString stringWithFormat:@"功过合计:  %d",
                                                     [totalMeritRank intValue] + [totalDemeritRank intValue]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [self loadTotalRanks];
 }
 @end

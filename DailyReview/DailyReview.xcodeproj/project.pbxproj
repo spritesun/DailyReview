@@ -308,6 +308,7 @@
 		49EBB43D1537D4BE002BBF5F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */; };
 		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 		49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
+		49F3EBCE1557FC9800BAC971 /* initial_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 49F3EBCE1557FC9800BAC970 /* initial_data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -475,6 +476,7 @@
 		49B7F0A51568A7C30029F992 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Additions.m"; path = "src/UIColor+Additions.m"; sourceTree = "<group>"; };
 		49B7F0AA1568A89B0029F992 /* AboutDailyReviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutDailyReviewView.h; path = src/AboutDailyReviewView.h; sourceTree = "<group>"; };
 		49B7F0AB1568A89B0029F992 /* AboutDailyReviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutDailyReviewView.m; path = src/AboutDailyReviewView.m; sourceTree = "<group>"; };
+		49CDFAE71584D653004B51B8 /* Development.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Development.entitlements; sourceTree = "<group>"; };
 		49CE19BE153D221E00C31041 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = src/MainViewController.h; sourceTree = "<group>"; };
 		49CE19BF153D221E00C31041 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = src/MainViewController.m; sourceTree = "<group>"; };
 		49CE19C2153D5C1700C31041 /* MeritController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeritController.h; path = src/MeritController.h; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 		49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = config/Shared.xcconfig; sourceTree = "<group>"; };
 		49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = config/Debug.xcconfig; sourceTree = "<group>"; };
 		49F3EBCE1557FC9800BAC96F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
+		49F3EBCE1557FC9800BAC970 /* initial_data.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = initial_data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -753,6 +756,7 @@
 		49A04A3A1534491B0092DC4A = {
 			isa = PBXGroup;
 			children = (
+				49CDFAE71584D653004B51B8 /* Development.entitlements */,
 				49A04A8F15344BB00092DC4A /* src */,
 				49A04A9215344BF30092DC4A /* test */,
 				49979502157611B5000619AD /* features */,
@@ -822,6 +826,7 @@
 		49A04A9315344C0E0092DC4A /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				49F3EBCE1557FC9800BAC970 /* initial_data.json */,
 				499794E715760FED000619AD /* plists */,
 				49844C4D154587D700EA16D0 /* images */,
 				49412AA6153EA8A500450C3B /* db.sqlite */,
@@ -1290,6 +1295,7 @@
 				49E40AE01578753E0055ED44 /* decrease-hint@2x.png in Resources */,
 				49E40AE11578753E0055ED44 /* increase-hint.png in Resources */,
 				49E40AE21578753E0055ED44 /* increase-hint@2x.png in Resources */,
+				49F3EBCE1557FC9800BAC971 /* initial_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1611,6 +1617,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E40A881578735D0055ED44 /* Development.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Development.entitlements;
 			};
 			name = Debug;
 		};
@@ -1618,6 +1625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49E40A881578735D0055ED44 /* Development.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Development.entitlements;
 			};
 			name = Release;
 		};
