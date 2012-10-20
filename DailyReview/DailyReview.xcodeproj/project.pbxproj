@@ -308,6 +308,8 @@
 		49EBB43D1537D4BE002BBF5F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */; };
 		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 		49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
+		A38C69AD15B6550C0036F2D3 /* libLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A38C69AA15B655000036F2D3 /* libLibrary.a */; };
+		A38C69AE15B6562C0036F2D3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4948A863156D043700EC7A7B /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,6 +340,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = F5015B9E11583A77002E9A98;
 			remoteInfo = Kiwi;
+		};
+		A38C69A915B655000036F2D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A38C69A115B655000036F2D3 /* Library.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7A836FB14AC20E0008E6944;
+			remoteInfo = Library;
+		};
+		A38C69AB15B655000036F2D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A38C69A115B655000036F2D3 /* Library.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7A8370B14AC20E0008E6944;
+			remoteInfo = LibraryTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -528,6 +544,7 @@
 		49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = config/Shared.xcconfig; sourceTree = "<group>"; };
 		49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = config/Debug.xcconfig; sourceTree = "<group>"; };
 		49F3EBCE1557FC9800BAC96F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
+		A38C69A115B655000036F2D3 /* Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Library.xcodeproj; path = ../lib/xray/Library/Library.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -588,6 +605,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38C69AE15B6562C0036F2D3 /* CFNetwork.framework in Frameworks */,
+				A38C69AD15B6550C0036F2D3 /* libLibrary.a in Frameworks */,
 				49E40AB61578753E0055ED44 /* MessageUI.framework in Frameworks */,
 				49E40AB71578753E0055ED44 /* CoreGraphics.framework in Frameworks */,
 				49E40AB81578753E0055ED44 /* UIKit.framework in Frameworks */,
@@ -901,6 +920,7 @@
 		49EBB4261537D1D3002BBF3C /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				A38C69A115B655000036F2D3 /* Library.xcodeproj */,
 				49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */,
 				498270601571DAD500EEF862 /* Frank */,
 				49E1E0E61547E7680030AAD1 /* DCIntrospect */,
@@ -995,6 +1015,15 @@
 				49EBB43D1537D4BE002BBF66 /* NSFetchedResultsController+Additions.h */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		A38C69A215B655000036F2D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A38C69AA15B655000036F2D3 /* libLibrary.a */,
+				A38C69AC15B655000036F2D3 /* LibraryTests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1112,6 +1141,10 @@
 					ProductGroup = 49E1E1391547EF740030AAD1 /* Products */;
 					ProjectRef = 49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */;
 				},
+				{
+					ProductGroup = A38C69A215B655000036F2D3 /* Products */;
+					ProjectRef = A38C69A115B655000036F2D3 /* Library.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1144,6 +1177,20 @@
 			fileType = wrapper.cfbundle;
 			path = KiwiExamples.octest;
 			remoteRef = 49E1E1451547EF740030AAD1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A38C69AA15B655000036F2D3 /* libLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLibrary.a;
+			remoteRef = A38C69A915B655000036F2D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A38C69AC15B655000036F2D3 /* LibraryTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LibraryTests.octest;
+			remoteRef = A38C69AB15B655000036F2D3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

@@ -1,7 +1,7 @@
 #import "IntrospectManager.h"
 
 // comment/uncoment this line for DCIntrospect disable/enable
-#define WANT_DCINTROSPECT
+//#define WANT_DCINTROSPECT
 
 #if defined(WANT_DCINTROSPECT) && defined(TARGET_IPHONE_SIMULATOR)
 #define IS_DCINTROSPECT_ENABLED 1

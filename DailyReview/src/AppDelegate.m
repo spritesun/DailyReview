@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 #import "IntrospectManager.h"
 #import "BehaviorViewController.h"
+#import "IBAXrayServer.h"
 
 @implementation AppDelegate
 
@@ -8,6 +9,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [IntrospectManager loadIntrospect];
+    [[IBAXrayServer sharedServer] start:nil];
 
   return YES;
 }
