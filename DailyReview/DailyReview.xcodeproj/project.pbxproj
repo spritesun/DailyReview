@@ -76,7 +76,6 @@
 		4948A828156D03BA00EC7A7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
 		4948A829156D03BA00EC7A7B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
 		4948A82B156D03BA00EC7A7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AAB15344D420092DC4A /* InfoPlist.strings */; };
-		4948A82C156D03BA00EC7A7B /* (null) in Resources */ = {isa = PBXBuildFile; };
 		4948A82D156D03BA00EC7A7B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */; };
 		4948A82E156D03BA00EC7A7B /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49412AA6153EA8A500450C3B /* db.sqlite */; };
 		4948A82F156D03BA00EC7A7B /* behavior-table-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498552F51546CC9A00925D92 /* behavior-table-bg.png */; };
@@ -257,7 +256,6 @@
 		49E40ABA1578753E0055ED44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A04A4B1534491B0092DC4A /* Foundation.framework */; };
 		49E40ABB1578753E0055ED44 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
 		49E40ABD1578753E0055ED44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AAB15344D420092DC4A /* InfoPlist.strings */; };
-		49E40ABE1578753E0055ED44 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		49E40ABF1578753E0055ED44 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A04AB015344D4E0092DC4A /* MainStoryboard_iPhone.storyboard */; };
 		49E40AC01578753E0055ED44 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49412AA6153EA8A500450C3B /* db.sqlite */; };
 		49E40AC11578753E0055ED44 /* behavior-table-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498552F51546CC9A00925D92 /* behavior-table-bg.png */; };
@@ -1154,7 +1152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4948A82B156D03BA00EC7A7B /* InfoPlist.strings in Resources */,
-				4948A82C156D03BA00EC7A7B /* (null) in Resources */,
 				4948A82D156D03BA00EC7A7B /* MainStoryboard_iPhone.storyboard in Resources */,
 				4948A82E156D03BA00EC7A7B /* db.sqlite in Resources */,
 				4948A82F156D03BA00EC7A7B /* behavior-table-bg.png in Resources */,
@@ -1253,7 +1250,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E40ABD1578753E0055ED44 /* InfoPlist.strings in Resources */,
-				49E40ABE1578753E0055ED44 /* (null) in Resources */,
 				49E40ABF1578753E0055ED44 /* MainStoryboard_iPhone.storyboard in Resources */,
 				49E40AC01578753E0055ED44 /* db.sqlite in Resources */,
 				49E40AC11578753E0055ED44 /* behavior-table-bg.png in Resources */,

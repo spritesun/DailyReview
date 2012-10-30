@@ -4,7 +4,6 @@
 * performance testing for performance after use it half year
 * try to avoid insert empty event, remove zero count event
 * input other version of behavior/category data(avoid data migration in next Release)
-* refactor to workspace style. (done)
 
 # could have
 
@@ -14,18 +13,49 @@
 
 ## Release 2
 # must have
-* Kiwi, KIF/Frank
-* Makefile
-* customize behavior
+* iOS 6 support
+* customise behaviour
+(* add/remove/edit/hide)
+* performance issue during scrolling table
+* order items
+* data migration
 
-# backlog:
+# nice to have
 
+* colloquial Chinese as description for each items
 * add rate for us
+* iPad
+* weibo?(share to weibo)
+* notification(emphasise what you did wrong yesterday, should not be a mistake again today)
+* rank(list top 3 good behaviour, top 3 bad behaviour, according to count ignore rank)
+* fetch customise behaviour from cloud
+* summary view in different mode
+* text summary
+(
+xxx 10
+xxx 9
+xxx 9
+xxx 1
+)
+* calendar summary
+(Sept. 9th 
+xxx
+xxx
+Sept. 11th
+xxx
+xxx
+)
+* Thanks to 次第花开 婆婆陈
+
+## Backlog
+
+* passport protect
 * icloud
 * manager pattern seem misuse.
 * history detail(chart?)
 * extract common
-* weibo?
 * share to friend
-* iPad
-
+* Kiwi, KIF/Frank
+* Makefile
+* Donation 
+* English version (Karma Counter)
