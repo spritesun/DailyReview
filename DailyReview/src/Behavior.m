@@ -1,8 +1,6 @@
 #import "Behavior.h"
 #import "Event.h"
 #import "NSSet+Additions.h"
-#import "NSManagedObjectContext+Additions.h"
-#import "NSDate+Additions.h"
 
 static NSDictionary *categoryNamesDict = nil;
 
@@ -12,6 +10,9 @@ static NSDictionary *categoryNamesDict = nil;
 @dynamic rank;
 @dynamic timestamp;
 @dynamic events;
+@dynamic isHidden;
+@dynamic isCustomised;
+@dynamic annotation;
 
 @dynamic category;
 

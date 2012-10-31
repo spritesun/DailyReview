@@ -2,4 +2,5 @@
 
 + (NSString *)installDatabaseIfNeed;
 
++ (void)migrateData;
 @end
