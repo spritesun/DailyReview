@@ -7,7 +7,6 @@
 #import "NSManagedObjectContext+Additions.h"
 #import "UITableView+Additions.h"
 #import "NSDate+Additions.h"
-#import "NSFetchedResultsController+Additions.h"
 #import "UIImage+Additions.h"
 #import "ScoreView.h"
 
@@ -77,9 +76,11 @@
 - (void)refreshView {
     if (![currentDate_ isEqualToDate:[[NSDate date] dateWithoutTime]]) {
         currentDate_ = [[NSDate date] dateWithoutTime];
-        [[self tableView] reloadData];
-        [[self tableView] layoutIfNeeded];
     }
+    [resultsController_ performFetch:nil];
+    [[self tableView] reloadData];
+    [[self tableView] setContentOffset:CGPointZero animated:YES];
+    [[self tableView] layoutIfNeeded];//MAYBE unnecessary but I am lazy to verify again
     [self updateScore];
 }
 
@@ -168,6 +169,7 @@
     UISwipeGestureRecognizer *increaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
         [self showIncreaseAnimation:cell];
         event.countValue++;
+        event.behavior.timestamp = [NSDate date];//TODO: this would fail when introduce edit event in past date.
         [context save];
         [self updateScore];
 

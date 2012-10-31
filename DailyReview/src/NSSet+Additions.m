@@ -15,4 +15,16 @@
   return result;
 }
 
+- (NSSet *)pick:(BOOL (^)(id item))block {
+    NSMutableSet *result = [NSMutableSet setWithCapacity:[self count]];
+
+    for (id obj in self) {
+        if (block(obj)) {
+            [result addObject:obj];
+        }
+    }
+
+    return [NSSet setWithSet:result];
+}
+
 @end

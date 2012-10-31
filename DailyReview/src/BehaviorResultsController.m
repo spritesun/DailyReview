@@ -30,7 +30,7 @@
 
 - (id)initWithPredicate:(NSPredicate *)predicate sorter:(NSSortDescriptor *)sorter cacheName:(NSString *)cacheName {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
-    [fetchRequest setSortDescriptors:Array(sorter, [NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:YES])];
+    [fetchRequest setSortDescriptors:Array([NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:NO], sorter)];
     [fetchRequest setPredicate:predicate];
 
     self = [super initWithFetchRequest:fetchRequest
