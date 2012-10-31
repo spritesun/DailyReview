@@ -33,7 +33,6 @@
 		4948A7FB156D03BA00EC7A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AA015344CD90092DC4A /* main.m */; };
 		4948A7FC156D03BA00EC7A7B /* BehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorViewController.m */; };
 		4948A7FD156D03BA00EC7A7B /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
-		4948A7FE156D03BA00EC7A7B /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
 		4948A7FF156D03BA00EC7A7B /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
 		4948A800156D03BA00EC7A7B /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */; };
 		4948A801156D03BA00EC7A7B /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
@@ -96,8 +95,6 @@
 		4948A83E156D03BA00EC7A7B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553041546CC9A00925D92 /* Icon@2x.png */; };
 		4948A83F156D03BA00EC7A7B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553051546CC9A00925D92 /* Default.png */; };
 		4948A840156D03BA00EC7A7B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553061546CC9A00925D92 /* Default@2x.png */; };
-		4948A841156D03BA00EC7A7B /* section-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553071546CC9A00925D92 /* section-bg.png */; };
-		4948A842156D03BA00EC7A7B /* section-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553081546CC9A00925D92 /* section-bg@2x.png */; };
 		4948A843156D03BA00EC7A7B /* summary-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553091546CC9A00925D92 /* summary-bg.png */; };
 		4948A844156D03BA00EC7A7B /* summary-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530A1546CC9A00925D92 /* summary-bg@2x.png */; };
 		4948A845156D03BA00EC7A7B /* swipe-hint.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530B1546CC9A00925D92 /* swipe-hint.png */; };
@@ -164,8 +161,6 @@
 		4985531E1546CC9A00925D92 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553041546CC9A00925D92 /* Icon@2x.png */; };
 		4985531F1546CC9A00925D92 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553051546CC9A00925D92 /* Default.png */; };
 		498553201546CC9A00925D92 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553061546CC9A00925D92 /* Default@2x.png */; };
-		498553211546CC9A00925D92 /* section-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553071546CC9A00925D92 /* section-bg.png */; };
-		498553221546CC9A00925D92 /* section-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553081546CC9A00925D92 /* section-bg@2x.png */; };
 		498553231546CC9A00925D92 /* summary-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553091546CC9A00925D92 /* summary-bg.png */; };
 		498553241546CC9A00925D92 /* summary-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530A1546CC9A00925D92 /* summary-bg@2x.png */; };
 		498553251546CC9A00925D92 /* swipe-hint.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530B1546CC9A00925D92 /* swipe-hint.png */; };
@@ -211,7 +206,6 @@
 		49E40A8C1578753E0055ED44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AA015344CD90092DC4A /* main.m */; };
 		49E40A8D1578753E0055ED44 /* BehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorViewController.m */; };
 		49E40A8E1578753E0055ED44 /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
-		49E40A8F1578753E0055ED44 /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
 		49E40A901578753E0055ED44 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
 		49E40A911578753E0055ED44 /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */; };
 		49E40A921578753E0055ED44 /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
@@ -276,8 +270,6 @@
 		49E40AD01578753E0055ED44 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553041546CC9A00925D92 /* Icon@2x.png */; };
 		49E40AD11578753E0055ED44 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553051546CC9A00925D92 /* Default.png */; };
 		49E40AD21578753E0055ED44 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553061546CC9A00925D92 /* Default@2x.png */; };
-		49E40AD31578753E0055ED44 /* section-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553071546CC9A00925D92 /* section-bg.png */; };
-		49E40AD41578753E0055ED44 /* section-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553081546CC9A00925D92 /* section-bg@2x.png */; };
 		49E40AD51578753E0055ED44 /* summary-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498553091546CC9A00925D92 /* summary-bg.png */; };
 		49E40AD61578753E0055ED44 /* summary-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530A1546CC9A00925D92 /* summary-bg@2x.png */; };
 		49E40AD71578753E0055ED44 /* swipe-hint.png in Resources */ = {isa = PBXBuildFile; fileRef = 4985530B1546CC9A00925D92 /* swipe-hint.png */; };
@@ -294,7 +286,6 @@
 		49E40AE21578753E0055ED44 /* increase-hint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499E335C1563B8D800979BE4 /* increase-hint@2x.png */; };
 		49E8CC7E15763A5B0076F4AC /* BehaviorResultsControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E8CC7D15763A5B0076F4AC /* BehaviorResultsControllerSpec.m */; };
 		49E8CC7F15763A820076F4AC /* BehaviorResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF49 /* BehaviorResultsController.m */; };
-		49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */; };
 		49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EBB4361537D360002BBF3C /* QuartzCore.framework */; };
 		49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB4391537D4A5002BBF3C /* UIView+Additions.m */; };
 		49EBB43D1537D4BE002BBF3C /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */; };
@@ -430,8 +421,6 @@
 		498553041546CC9A00925D92 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "resources/images/Icon@2x.png"; sourceTree = "<group>"; };
 		498553051546CC9A00925D92 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resources/images/Default.png; sourceTree = "<group>"; };
 		498553061546CC9A00925D92 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "resources/images/Default@2x.png"; sourceTree = "<group>"; };
-		498553071546CC9A00925D92 /* section-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "section-bg.png"; path = "resources/images/section-bg.png"; sourceTree = "<group>"; };
-		498553081546CC9A00925D92 /* section-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "section-bg@2x.png"; path = "resources/images/section-bg@2x.png"; sourceTree = "<group>"; };
 		498553091546CC9A00925D92 /* summary-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "summary-bg.png"; path = "resources/images/summary-bg.png"; sourceTree = "<group>"; };
 		4985530A1546CC9A00925D92 /* summary-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "summary-bg@2x.png"; path = "resources/images/summary-bg@2x.png"; sourceTree = "<group>"; };
 		4985530B1546CC9A00925D92 /* swipe-hint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipe-hint.png"; path = "resources/images/swipe-hint.png"; sourceTree = "<group>"; };
@@ -498,8 +487,6 @@
 		49E40AE61578753E0055ED44 /* Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Development.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E40AE915788EA40055ED44 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "resources/UnitTests-Info.plist"; sourceTree = "<group>"; };
 		49E8CC7D15763A5B0076F4AC /* BehaviorResultsControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorResultsControllerSpec.m; path = test/BehaviorResultsControllerSpec.m; sourceTree = "<group>"; };
-		49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BehaviorSectionHeaderView.h; path = src/BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
-		49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BehaviorSectionHeaderView.m; path = src/BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
 		49EBB4141536C8B4002BBF3C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "src/UIView+Additions.h"; sourceTree = "<group>"; };
 		49EBB4361537D360002BBF3C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49EBB4391537D4A5002BBF3C /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "src/UIView+Additions.m"; sourceTree = "<group>"; };
@@ -726,8 +713,6 @@
 				498553041546CC9A00925D92 /* Icon@2x.png */,
 				498553051546CC9A00925D92 /* Default.png */,
 				498553061546CC9A00925D92 /* Default@2x.png */,
-				498553071546CC9A00925D92 /* section-bg.png */,
-				498553081546CC9A00925D92 /* section-bg@2x.png */,
 				498553091546CC9A00925D92 /* summary-bg.png */,
 				4985530A1546CC9A00925D92 /* summary-bg@2x.png */,
 				4985530B1546CC9A00925D92 /* swipe-hint.png */,
@@ -936,8 +921,6 @@
 				490A2134153E8547006D654D /* BehaviorTableView.m */,
 				499EC2571537E9A90025C20D /* BehaviorTableViewCell.h */,
 				499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */,
-				49EBB40915367663002BBF3C /* BehaviorSectionHeaderView.h */,
-				49EBB40A15367663002BBF3C /* BehaviorSectionHeaderView.m */,
 				4956E97C1543EC9700C33D89 /* ScoreView.h */,
 				4956E97D1543EC9700C33D89 /* ScoreView.m */,
 				49151BE515514D4600DD10A7 /* MoreNavigationBar.h */,
@@ -1172,8 +1155,6 @@
 				4948A83E156D03BA00EC7A7B /* Icon@2x.png in Resources */,
 				4948A83F156D03BA00EC7A7B /* Default.png in Resources */,
 				4948A840156D03BA00EC7A7B /* Default@2x.png in Resources */,
-				4948A841156D03BA00EC7A7B /* section-bg.png in Resources */,
-				4948A842156D03BA00EC7A7B /* section-bg@2x.png in Resources */,
 				4948A843156D03BA00EC7A7B /* summary-bg.png in Resources */,
 				4948A844156D03BA00EC7A7B /* summary-bg@2x.png in Resources */,
 				4948A845156D03BA00EC7A7B /* swipe-hint.png in Resources */,
@@ -1217,8 +1198,6 @@
 				4985531E1546CC9A00925D92 /* Icon@2x.png in Resources */,
 				4985531F1546CC9A00925D92 /* Default.png in Resources */,
 				498553201546CC9A00925D92 /* Default@2x.png in Resources */,
-				498553211546CC9A00925D92 /* section-bg.png in Resources */,
-				498553221546CC9A00925D92 /* section-bg@2x.png in Resources */,
 				498553231546CC9A00925D92 /* summary-bg.png in Resources */,
 				498553241546CC9A00925D92 /* summary-bg@2x.png in Resources */,
 				498553251546CC9A00925D92 /* swipe-hint.png in Resources */,
@@ -1270,8 +1249,6 @@
 				49E40AD01578753E0055ED44 /* Icon@2x.png in Resources */,
 				49E40AD11578753E0055ED44 /* Default.png in Resources */,
 				49E40AD21578753E0055ED44 /* Default@2x.png in Resources */,
-				49E40AD31578753E0055ED44 /* section-bg.png in Resources */,
-				49E40AD41578753E0055ED44 /* section-bg@2x.png in Resources */,
 				49E40AD51578753E0055ED44 /* summary-bg.png in Resources */,
 				49E40AD61578753E0055ED44 /* summary-bg@2x.png in Resources */,
 				49E40AD71578753E0055ED44 /* swipe-hint.png in Resources */,
@@ -1326,7 +1303,6 @@
 				4948A7FB156D03BA00EC7A7B /* main.m in Sources */,
 				4948A7FC156D03BA00EC7A7B /* BehaviorViewController.m in Sources */,
 				4948A7FD156D03BA00EC7A7B /* UIGestureRecognizer+Blocks.m in Sources */,
-				4948A7FE156D03BA00EC7A7B /* BehaviorSectionHeaderView.m in Sources */,
 				4948A7FF156D03BA00EC7A7B /* UIView+Additions.m in Sources */,
 				4948A800156D03BA00EC7A7B /* IntrospectManager.m in Sources */,
 				4948A801156D03BA00EC7A7B /* BehaviorTableViewCell.m in Sources */,
@@ -1375,7 +1351,6 @@
 				49A04AA815344CD90092DC4A /* main.m in Sources */,
 				497316241534590400E3E5DC /* BehaviorViewController.m in Sources */,
 				495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */,
-				49EBB40B15367663002BBF3C /* BehaviorSectionHeaderView.m in Sources */,
 				49EBB43A1537D4A5002BBF3C /* UIView+Additions.m in Sources */,
 				49EBB43D1537D4BE002BBF3C /* IntrospectManager.m in Sources */,
 				499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */,
@@ -1454,7 +1429,6 @@
 				49E40A8C1578753E0055ED44 /* main.m in Sources */,
 				49E40A8D1578753E0055ED44 /* BehaviorViewController.m in Sources */,
 				49E40A8E1578753E0055ED44 /* UIGestureRecognizer+Blocks.m in Sources */,
-				49E40A8F1578753E0055ED44 /* BehaviorSectionHeaderView.m in Sources */,
 				49E40A901578753E0055ED44 /* UIView+Additions.m in Sources */,
 				49E40A911578753E0055ED44 /* IntrospectManager.m in Sources */,
 				49E40A921578753E0055ED44 /* BehaviorTableViewCell.m in Sources */,
