@@ -133,18 +133,19 @@
     }];
 }
 
-- (void)showIncreaseAnimation:(UITableViewCell *)cell {
-    CGPoint cellOrigin = cell.frame.origin;
-    CGRect beginRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4, 0, increaseView_.image.size.height);
-    CGRect endRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4, increaseView_.image.size.width, increaseView_.image.size.height);
+- (void)showIncreaseAnimation:(CGPoint)point {
+    CGFloat imageHeight = increaseView_.image.size.height;
+    CGRect beginRect = CGRectMake(point.x, point.y - imageHeight / 2., 0, imageHeight);
+    CGRect endRect = CGRectMake(point.x, point.y - imageHeight / 2., increaseView_.image.size.width, imageHeight);
     increaseView_.contentMode = UIViewContentModeLeft;
     [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
 }
 
-- (void)showDecreaseAnimation:(UITableViewCell *)cell {
-    CGPoint cellOrigin = cell.frame.origin;
-    CGRect beginRect = CGRectMake(cellOrigin.x + 270, cellOrigin.y + 4, 0, decreaseView_.image.size.height);
-    CGRect endRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4, decreaseView_.image.size.width, decreaseView_.image.size.height);
+- (void)showDecreaseAnimation:(CGPoint)point {
+    CGFloat imageHeight = decreaseView_.image.size.height;
+    CGFloat imageWidth = decreaseView_.image.size.width;
+    CGRect beginRect = CGRectMake(point.x, point.y - imageHeight / 2., 0, imageHeight);
+    CGRect endRect = CGRectMake(point.x - imageWidth, point.y - imageHeight / 2., imageWidth, imageHeight);
     decreaseView_.contentMode = UIViewContentModeRight;
     [self transformAnimationOn:decreaseView_ From:beginRect to:endRect];
 }
@@ -175,11 +176,11 @@
     Behavior *behavior = [self.resultsController objectAtIndexPath:indexPath];
 
     if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
-        [self showIncreaseAnimation:cell];
+        [self showIncreaseAnimation:touchPoint];
         [behavior increaseEventForDate:self.currentDate];
     }
     else if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-        [self showDecreaseAnimation:cell];
+        [self showDecreaseAnimation:touchPoint];
         [behavior decreaseEventForDate:self.currentDate];
     }
     [context save];
