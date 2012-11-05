@@ -72,6 +72,7 @@
 }
 
 - (NSInteger)totalRankOnDate:(NSDate *)date {
+    //TODO: could we refactor something here? just a smell.
     NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
 
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
@@ -89,6 +90,7 @@
     }];
 
     __block NSInteger totalRank = 0;
+    //TODO: here we could use @sum
     [results each:^(Event *event) {
         totalRank += event.countValue * [[[event behavior] rank] intValue];
     }];

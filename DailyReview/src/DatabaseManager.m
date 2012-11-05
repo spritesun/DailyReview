@@ -1,8 +1,8 @@
 #import "DatabaseManager.h"
 #import "NSError+Additions.h"
 #import "BehaviorResultsController.h"
-#import "NSArray+Additions.h"
 #import "NSManagedObjectContext+Additions.h"
+#import "NSArray+Additions.h"
 
 static NSString *const kDatabaseFileName = @"db.sqlite";
 
@@ -50,8 +50,22 @@ static NSString *const kDBVersion = @"kDBVersion";
 }
 
 + (void)migrateTo110 {
-    NSLog(@"Migrate to 1.1.0");
+    NSLog(@"Migrating to 1.1.0");
     //remove zero count event, make sure does not insert zero count event first.
+    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Event"];
+    request.predicate = [NSPredicate predicateWithFormat:@"count == 0"];
+    __block NSArray *events = nil;
+
+    [context performBlockAndWait:^{
+        events = [context executeFetchRequest:request error:nil];
+    }];
+    [events each:^(id event) {
+        [context deleteObject:event];
+        NSLog(@"Removing zero count event.");
+    }];
+    [context save];
+
     //insert description
 
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
