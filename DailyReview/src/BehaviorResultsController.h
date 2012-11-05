@@ -1,6 +1,6 @@
 #import "Behavior.h"
 
-@interface BehaviorResultsController : NSFetchedResultsController
+@interface BehaviorResultsController : NSObject
 
 + (BehaviorResultsController *)sharedMeritResultsController;
 
@@ -9,5 +9,10 @@
 - (NSNumber *)totalRank;
 
 - (NSNumber *)todayRank;
+- (NSArray *)fetchedObjects;
 
+- (Behavior *)objectAtIndexPath:(NSIndexPath *)path;
+- (void)performFetch;
+
+- (NSIndexPath *)indexPathForObject:(id)object;
 @end

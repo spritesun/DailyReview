@@ -50,16 +50,7 @@ static NSString *const kDBVersion = @"kDBVersion";
 }
 
 + (void)migrateTo110 {
-    //load all behaviors in timestamp order, reverse it, reset timestamp
-    //TODO, should not use resutls controller here, it breaks the rank order, we also need consider order by the most popular event first
-    [[[BehaviorResultsController sharedMeritResultsController] fetchedObjects] each:^(Behavior *behavior) {
-        behavior.timestamp = [NSDate date];
-    }];
-    [[[BehaviorResultsController sharedDemeritResultsController] fetchedObjects] each:^(Behavior *behavior) {
-        behavior.timestamp = [NSDate date];
-    }];
-    [[NSManagedObjectContext defaultContext] save];
-
+    NSLog(@"Migrate to 1.1.0");
     //remove zero count event, make sure does not insert zero count event first.
     //insert description
 

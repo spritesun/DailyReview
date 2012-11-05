@@ -23,7 +23,7 @@
 }
 
 - (NSUInteger)countValue {
-  return [self.count intValue];
+  return (NSUInteger) [self.count intValue];
 }
 
 - (void)setCountValue:(NSUInteger)aCountValue {

@@ -3,19 +3,19 @@
 #import "UIGestureRecognizer+Blocks.h"
 #import "UIView+Additions.h"
 #import "BindingManager.h"
-#import "Event.h"
 #import "NSManagedObjectContext+Additions.h"
 #import "UITableView+Additions.h"
 #import "NSDate+Additions.h"
 #import "UIImage+Additions.h"
 #import "ScoreView.h"
+#import "Event.h"
 
 @interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>
+@property(nonatomic, strong) NSDate *currentDate;
 @end
 
 @implementation BehaviorViewController {
     BindingManager *bindingManager_;
-    NSDate *currentDate_;
     UIImageView *hintView_;
     UIImageView *increaseView_;
     UIImageView *decreaseView_;
@@ -54,6 +54,7 @@
     tableView_.dataSource = self;
     bindingManager_ = [BindingManager new];
     [self createHintView];
+    [self addGestures];
 }
 
 
@@ -74,10 +75,10 @@
 }
 
 - (void)refreshView {
-    if (![currentDate_ isEqualToDate:[[NSDate date] dateWithoutTime]]) {
-        currentDate_ = [[NSDate date] dateWithoutTime];
+    if (![self.currentDate isEqualToDate:[[NSDate date] dateWithoutTime]]) {
+        self.currentDate = [[NSDate date] dateWithoutTime];
     }
-    [resultsController_ performFetch:nil];
+    [self.resultsController performFetch];
     [[self tableView] reloadData];
     [[self tableView] setContentOffset:CGPointZero animated:YES];
     [[self tableView] layoutIfNeeded];//MAYBE unnecessary but I am lazy to verify again
@@ -98,35 +99,24 @@
         cell = [BehaviorTableViewCell cell];
     }
 
-    Behavior *behavior = [resultsController_ objectAtIndexPath:indexPath];
+    Behavior *behavior = [self.resultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = behavior.name;
-
-    Event *event = [behavior createEventForDate:currentDate_];
-
-    [self addGesturesForCell:cell event:event];
-    [bindingManager_ bindSource:event
-                    withKeyPath:@"count"
-                         action:^(Binding *binding, NSNumber *oldValue, NSNumber *newValue) {
-                             [self changeBehaviorCountFrom:oldValue to:newValue inCell:cell];
-                         }];
-
+    [cell displayEventCount:[behavior eventForDate:self.currentDate].count];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView willRemoveCell:(UITableViewCell *)cell {
     [cell removeAllGestureRecognizers];
-    Behavior *behavior = [resultsController_ objectAtIndexPath:[tableView indexPathForCell:cell]];
-    [bindingManager_ unbindSource:[behavior eventForDate:currentDate_]];
+    Behavior *behavior = [self.resultsController objectAtIndexPath:[tableView indexPathForCell:cell]];
+    [bindingManager_ unbindSource:[behavior eventForDate:self.currentDate]];
 }
 
-- (void)showHintAnimation:(BehaviorTableViewCell *)cell {
-    CGPoint cellOrigin = cell.frame.origin;
-    UIImage *hint = hintView_.image;
-    hintView_.frame = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 12, hint.size.width, hint.size.height);
+- (void)showHintAnimation:(CGPoint)touchPoint {
+    hintView_.origin = touchPoint;
     hintView_.alpha = 1.0;
     [UIView animateWithDuration:1.0 animations:^{
         hintView_.alpha = 0.0;
-        hintView_.frame = CGRectMake(cellOrigin.x + 180, cellOrigin.y + 12, hint.size.width, hint.size.height);
+        hintView_.left = touchPoint.x + 50;
     }];
 }
 
@@ -143,7 +133,7 @@
     }];
 }
 
-- (void)showIncreaseAnimation:(BehaviorTableViewCell *)cell {
+- (void)showIncreaseAnimation:(UITableViewCell *)cell {
     CGPoint cellOrigin = cell.frame.origin;
     CGRect beginRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4, 0, increaseView_.image.size.height);
     CGRect endRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4, increaseView_.image.size.width, increaseView_.image.size.height);
@@ -151,7 +141,7 @@
     [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
 }
 
-- (void)showDecreaseAnimation:(BehaviorTableViewCell *)cell {
+- (void)showDecreaseAnimation:(UITableViewCell *)cell {
     CGPoint cellOrigin = cell.frame.origin;
     CGRect beginRect = CGRectMake(cellOrigin.x + 270, cellOrigin.y + 4, 0, decreaseView_.image.size.height);
     CGRect endRect = CGRectMake(cellOrigin.x + 130, cellOrigin.y + 4, decreaseView_.image.size.width, decreaseView_.image.size.height);
@@ -159,54 +149,49 @@
     [self transformAnimationOn:decreaseView_ From:beginRect to:endRect];
 }
 
-- (void)addGesturesForCell:(BehaviorTableViewCell *)cell event:(Event *)event {
-    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+- (void)addGestures {
+    __weak typeof (self) weakSelf = self;
+
     UIGestureRecognizer *hintRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-        [self showHintAnimation:cell];
+        [weakSelf showHintAnimation:[theRecognizer locationInView:weakSelf.tableView]];
     }];
-    [cell addGestureRecognizer:hintRecognizer];
+    [self.tableView addGestureRecognizer:hintRecognizer];
 
-    UISwipeGestureRecognizer *increaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-        [self showIncreaseAnimation:cell];
-        event.countValue++;
-        event.behavior.timestamp = [NSDate date];//TODO: this would fail when introduce edit event in past date.
-        [context save];
-        [self updateScore];
 
-    }];
+    UISwipeGestureRecognizer *increaseRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
     increaseRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
-    [cell addGestureRecognizer:increaseRecognizer];
+    [self.tableView addGestureRecognizer:increaseRecognizer];
 
-    UISwipeGestureRecognizer *decreaseRecognizer = [UISwipeGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
-        if (0 != event.countValue) {
-            [self showDecreaseAnimation:cell];
-            event.countValue--;
-            [context save];
-            [self updateScore];
-        }
-    }];
+    UISwipeGestureRecognizer *decreaseRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
     decreaseRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-
-    [cell addGestureRecognizer:decreaseRecognizer];
+    [self.tableView addGestureRecognizer:decreaseRecognizer];
 }
 
-- (void)changeBehaviorCountFrom:(NSNumber *)oldValue to:(NSNumber *)newValue inCell:(UITableViewCell *)cell {
-    if ([newValue intValue] == 0) {
-        cell.detailTextLabel.text = @" ";
-    } else {
-        cell.detailTextLabel.text = [newValue stringValue];
-    }
+- (void)didSwipe:(UISwipeGestureRecognizer *)recognizer {
+    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+    CGPoint touchPoint = [recognizer locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:touchPoint];
+    BehaviorTableViewCell *cell = (BehaviorTableViewCell *) [self.tableView cellForRowAtIndexPath:indexPath];
+    Behavior *behavior = [self.resultsController objectAtIndexPath:indexPath];
 
-//    cell.detailTextLabel.accessibilityLabel = [NSString stringWithFormat:@"%@:%@", cell.textLabel.text, newValue.stringValue];
-    if (oldValue == nil) {
-        return;
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+        [self showIncreaseAnimation:cell];
+        [behavior increaseEventForDate:self.currentDate];
     }
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[resultsController_ fetchedObjects] count];
+    else if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+        [self showDecreaseAnimation:cell];
+        [behavior decreaseEventForDate:self.currentDate];
+    }
+    [context save];
+    [cell displayEventCount:[behavior eventForDate:self.currentDate].count];
+    [self updateScore];
 }
 
 #pragma mark - UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [[self.resultsController fetchedObjects] count];
+}
+
 
 @end

@@ -5,12 +5,12 @@
 #pragma mark - LifeCycles
 
 - (void)viewDidLoad {
-  resultsController_ = [BehaviorResultsController sharedDemeritResultsController];
+  self.resultsController = [BehaviorResultsController sharedDemeritResultsController];
   [super viewDidLoad];
 }
 
 - (void)viewDidUnload {
-  resultsController_ = nil;
+  self.resultsController = nil;
   [super viewDidUnload];
 }
 

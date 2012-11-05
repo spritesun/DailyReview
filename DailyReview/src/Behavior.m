@@ -1,6 +1,7 @@
 #import "Behavior.h"
 #import "Event.h"
 #import "NSSet+Additions.h"
+#import "NSManagedObjectContext+Additions.h"
 
 static NSDictionary *categoryNamesDict = nil;
 
@@ -13,7 +14,6 @@ static NSDictionary *categoryNamesDict = nil;
 @dynamic isHidden;
 @dynamic isCustomised;
 @dynamic annotation;
-
 @dynamic category;
 
 + (void)initialize {
@@ -42,19 +42,37 @@ static NSDictionary *categoryNamesDict = nil;
 }
 
 - (Event *)eventForDate:(NSDate *)date {
-    return [self.events first:^BOOL(Event *event) {
-        return [event isOnDate:date];
+    return [self.events first:^BOOL(Event *theEvent) {
+        return [theEvent isOnDate:date];
     }];
+}
+
+- (Event *)createEventForDate:(NSDate *)date {
+    Event *event = [Event eventForBehavior:self onDate:date];
+    [self addEventsObject:event];
+    return event;
 }
 
 - (NSString *)category {
     return [categoryNamesDict objectForKey:self.rank];
 }
 
-- (Event *)createEventForDate:(NSDate *)currentDate {
-    if (nil == [self eventForDate:currentDate]) {
-        [self addEventsObject:[Event eventForBehavior:self onDate:currentDate]];
+- (void)increaseEventForDate:(NSDate *)date {
+    Event *event = [self eventForDate:date];
+    if (nil == event) {
+        event = [self createEventForDate:date];
     }
-    return [self eventForDate:currentDate];
+    event.countValue++;
+}
+
+- (void)decreaseEventForDate:(NSDate *)date {
+    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+    Event *event = [self eventForDate:date];
+    if (event.countValue > 0) {
+        event.countValue--;
+        if (event.countValue == 0) {
+            [context deleteObject:event];
+        }
+    }
 }
 @end

@@ -21,13 +21,16 @@
 @property(nonatomic, assign) BOOL isCustomised;
 @property(nonatomic, retain) NSString *annotation;
 
-
 @property(nonatomic, readonly) NSString *category;
 
 + (NSDictionary *)getAllCategoryDictionary;
 
 - (Event *)eventForDate:(NSDate *)date;
+- (Event *)createEventForDate:(NSDate *)date;
 
+- (void)increaseEventForDate:(NSDate *)date;
+
+- (void)decreaseEventForDate:(NSDate *)date;
 @end
 
 @interface Behavior (CoreDataGeneratedAccessors)
@@ -39,7 +42,5 @@
 - (void)addEvents:(NSSet *)values;
 
 - (void)removeEvents:(NSSet *)values;
-
-- (Event *)createEventForDate:(NSDate *)date;
 
 @end

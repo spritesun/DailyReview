@@ -2,13 +2,11 @@
 
 @class ScoreView;
 
-@interface BehaviorViewController : UIViewController {
-@protected
-  BehaviorResultsController *resultsController_;
-}
+@interface BehaviorViewController : UIViewController
 
 @property(nonatomic, strong) IBOutlet ScoreView *scoreView;
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
+@property(nonatomic, strong) IBOutlet BehaviorResultsController *resultsController;
 
 - (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image;
 - (void)refreshView;

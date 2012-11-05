@@ -4,15 +4,18 @@
 #import "Event.h"
 #import "NSDate+Additions.h"
 
-@implementation BehaviorResultsController
 
+@interface BehaviorResultsController ()
+@property(nonatomic, copy) NSArray *cache;
+@property(nonatomic, strong) NSPredicate *predicate;
+@end
+
+@implementation BehaviorResultsController
 + (BehaviorResultsController *)sharedMeritResultsController {
     static dispatch_once_t onceToken;
     static BehaviorResultsController *instance = nil;
     dispatch_once(&onceToken, ^{
-        instance = [[self alloc] initWithPredicate:[NSPredicate predicateWithFormat:@"rank > 0"]
-                                            sorter:[NSSortDescriptor sortDescriptorWithKey:@"rank" ascending:YES]
-                                         cacheName:@"meritCache"];
+        instance = [[self alloc] initWithPredicate:[NSPredicate predicateWithFormat:@"rank > 0"]];
     });
     return instance;
 }
@@ -21,29 +24,34 @@
     static dispatch_once_t onceToken;
     static BehaviorResultsController *instance = nil;
     dispatch_once(&onceToken, ^{
-        instance = [[self alloc] initWithPredicate:[NSPredicate predicateWithFormat:@"rank < 0"]
-                                            sorter:[NSSortDescriptor sortDescriptorWithKey:@"rank" ascending:NO]
-                                         cacheName:@"demeritCache"];
+        instance = [[self alloc] initWithPredicate:[NSPredicate predicateWithFormat:@"rank < 0"]];
     });
     return instance;
 }
 
-- (id)initWithPredicate:(NSPredicate *)predicate sorter:(NSSortDescriptor *)sorter cacheName:(NSString *)cacheName {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
-    [fetchRequest setSortDescriptors:Array([NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:NO], sorter)];
-    [fetchRequest setPredicate:predicate];
-
-    self = [super initWithFetchRequest:fetchRequest
-                  managedObjectContext:[NSManagedObjectContext defaultContext]
-                    sectionNameKeyPath:nil
-                             cacheName:cacheName];
+- (id)initWithPredicate:(NSPredicate *)predicate {
+    self = [super init];
     if (self) {
-        NSError *error = nil;
-        [self performFetch:&error];
-        [error handleWithDescription:@"Failed to initialize BehaviorResultsController"];
+        self.predicate = predicate;
+        [self performFetch];
     }
-
     return self;
+}
+
+- (void)performFetch {
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
+    request.predicate = self.predicate;
+    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+    __block NSArray *dbResults = nil;
+    [context performBlockAndWait:^{
+        NSError *error = nil;
+        dbResults = [context executeFetchRequest:request error:&error];
+        [error handleWithDescription:@"Failed to initialize BehaviorResultsController"];
+    }];
+
+    //sort by behavior total sum descending, abstract rank ascending.
+    NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"events.@sum.count" ascending:NO], [NSSortDescriptor sortDescriptorWithKey:@"rank.absInt" ascending:YES]];
+    self.cache = [dbResults sortedArrayUsingDescriptors:sortDescriptors];
 }
 
 - (NSNumber *)totalRank {
@@ -86,5 +94,21 @@
     }];
 
     return totalRank;
+}
+
+- (NSArray *)fetchedObjects {
+    if (nil == self.cache) {
+        [self performFetch];
+    }
+    return self.cache;
+}
+
+- (Behavior *)objectAtIndexPath:(NSIndexPath *)path {
+    return [[self fetchedObjects] objectAtIndex:(NSUInteger) path.row];
+}
+
+- (NSIndexPath *)indexPathForObject:(id)object {
+    NSUInteger row = [[self fetchedObjects] indexOfObject:object];
+    return [NSIndexPath indexPathForRow:row inSection:0];
 }
 @end

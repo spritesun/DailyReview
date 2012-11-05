@@ -4,4 +4,5 @@
 
 + (BehaviorTableViewCell *)cell;
 
+- (void)displayEventCount:(NSNumber *)count;
 @end

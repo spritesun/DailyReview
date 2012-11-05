@@ -9,12 +9,12 @@
 #pragma mark - LifeCycles
 
 - (void)viewDidLoad {
-  resultsController_ = [BehaviorResultsController sharedMeritResultsController];
+  self.resultsController = [BehaviorResultsController sharedMeritResultsController];
   [super viewDidLoad];
 }
 
 - (void)viewDidUnload {
-  resultsController_ = nil;
+  self.resultsController = nil;
   [super viewDidUnload];  
 }
 
@@ -30,9 +30,9 @@
 #pragma mark - AddBehaviorControllerDelegate
 //TODO: move the logic to BehaviorViewController
 - (void)behaviorDidSave:(Behavior *)behavior {
-  [resultsController_ performFetch:nil];
+  [self.resultsController performFetch];
   
-  NSIndexPath *behaviorIndex = [resultsController_ indexPathForObject:behavior];
+  NSIndexPath *behaviorIndex = [self.resultsController indexPathForObject:behavior];
   NSIndexPath *upperIndex = [NSIndexPath indexPathForRow:(behaviorIndex.row - 1) inSection:behaviorIndex.section];
 
   [self.tableView scrollToRowAtIndexPath:upperIndex atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
