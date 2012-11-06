@@ -9,9 +9,13 @@
 #import "ScoreView.h"
 #import "Event.h"
 #import "AddBehaviorController.h"
+#import "NSManagedObjectContext+Additions.h"
 
-@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate> {
+    NSInteger _editingRow;
+}
 @property(nonatomic, strong) NSDate *currentDate;
+@property(nonatomic, strong) UIView *actionPanel;
 @end
 
 @implementation BehaviorViewController {
@@ -84,6 +88,7 @@
         self.currentDate = [[NSDate date] dateWithoutTime];
     }
     [self.resultsController performFetch];
+    [self dismissActionPanel:NO];
     [[self tableView] reloadData];
     [[self tableView] setContentOffset:CGPointZero animated:YES];
     [[self tableView] layoutIfNeeded];//MAYBE unnecessary but I am lazy to verify again
@@ -117,6 +122,7 @@
 }
 
 - (void)showHintAnimation:(CGPoint)touchPoint {
+    [self dismissActionPanel:YES];
     hintView_.origin = touchPoint;
     hintView_.alpha = 1.0;
     [UIView animateWithDuration:1.0 animations:^{
@@ -139,6 +145,7 @@
 }
 
 - (void)showIncreaseAnimation:(CGPoint)point {
+    [self dismissActionPanel:YES];
     CGFloat imageHeight = increaseView_.image.size.height;
     CGRect beginRect = CGRectMake(point.x, point.y - imageHeight / 2., 0, imageHeight);
     CGRect endRect = CGRectMake(point.x, point.y - imageHeight / 2., increaseView_.image.size.width, imageHeight);
@@ -146,12 +153,14 @@
     [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
 }
 
-- (void)showDecreaseAnimation:(CGPoint)point {
+- (void)showDecreaseAnimation {
+    CGPoint cellOrigin = [self.tableView rectForRowAtIndexPath:[self editingIndexPath]].origin;
     CGFloat imageHeight = decreaseView_.image.size.height;
     CGFloat imageWidth = decreaseView_.image.size.width;
-    CGRect beginRect = CGRectMake(point.x, point.y - imageHeight / 2., 0, imageHeight);
-    CGRect endRect = CGRectMake(point.x - imageWidth, point.y - imageHeight / 2., imageWidth, imageHeight);
+    CGRect beginRect = CGRectMake(130 + imageWidth, cellOrigin.y + 5, 0, imageHeight);
+    CGRect endRect = CGRectMake(130, cellOrigin.y + 5, imageWidth, imageHeight);
     decreaseView_.contentMode = UIViewContentModeRight;
+    [self.tableView bringSubviewToFront:decreaseView_];
     [self transformAnimationOn:decreaseView_ From:beginRect to:endRect];
 }
 
@@ -182,14 +191,125 @@
     if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
         [self showIncreaseAnimation:touchPoint];
         [behavior increaseEventForDate:self.currentDate];
+        [cell displayEventCount:[behavior eventForDate:self.currentDate].count];
+        [self updateScore];
     }
     else if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-        [self showDecreaseAnimation:touchPoint];
-        [behavior decreaseEventForDate:self.currentDate];
+        [self showActionPanel:indexPath];
     }
+}
 
-    [cell displayEventCount:[behavior eventForDate:self.currentDate].count];
+- (void)dismissActionPanel:(BOOL)animated {
+    _editingRow = -1;
+    [UIView animateWithDuration:(animated ? .2 : 0) animations:^{
+        self.actionPanel.left = self.tableView.right;
+    }];
+}
+
+- (void)showActionPanel:(NSIndexPath *)indexPath {
+    if (_editingRow == indexPath.row) {
+        return;
+    }
+    _editingRow = indexPath.row;
+    CGRect cellRect = [self.tableView rectForRowAtIndexPath:indexPath];
+    [self.tableView bringSubviewToFront:self.actionPanel];
+    self.actionPanel.left = self.tableView.right;
+    self.actionPanel.top = cellRect.origin.y - 1;
+    [UIView animateWithDuration:.2 animations:^{
+        self.actionPanel.left = 95;
+    }];
+}
+
+- (UIView *)actionPanel {
+    if (nil == _actionPanel) {
+        _actionPanel = [[UIView alloc] initWithFrame:CGRectZero];
+        _actionPanel.left = self.tableView.right;
+        _actionPanel.backgroundColor = [UIColor redColor];
+        [self.tableView addSubview:_actionPanel];
+
+        [self buildButtonForActionPanelWithTitle:@"白话" action:@selector(displayAnnotation) left:0];
+        [self buildButtonForActionPanelWithTitle:@"历史" action:@selector(displayHistory) left:45];
+        [self buildButtonForActionPanelWithTitle:@"减一" action:@selector(decreaseEventCount) left:45 * 2];
+        [self buildButtonForActionPanelWithTitle:@"修改" action:@selector(editBehavior) left:45 * 3];
+        [self buildButtonForActionPanelWithTitle:@"删除" action:@selector(removeBehavior) left:45 * 4];
+
+        _actionPanel.width = 45 * 5;
+        _actionPanel.height = 44;
+    }
+    return _actionPanel;
+}
+
+- (void)removeBehavior {
+    if (!self.editingBehavior.isCustomised.boolValue) {
+        NSLog(@"You can not remove not customised item");
+        return;
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"删除项目"
+                                                    message:@"永久删除此项目将同时删除相关的历史记录。"
+                                                   delegate:self
+                                          cancelButtonTitle:@"取消"
+                                          otherButtonTitles:@"确认", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+        [context deleteObject:[self editingBehavior]];
+        [context save];
+        [self.resultsController performFetch];
+        [self.tableView deleteRowsAtIndexPaths:@[[self editingIndexPath]] withRowAnimation:UITableViewRowAnimationFade];
+        [self updateScore];
+        [self dismissActionPanel:NO];
+    }
+}
+
+- (void)editBehavior {
+
+}
+
+- (void)displayHistory {
+
+}
+
+- (void)displayAnnotation {
+
+}
+
+- (UIButton *)buildButtonForActionPanelWithTitle:(NSString *)title action:(SEL)action left:(CGFloat)left {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor darkTextColor] forState:UIControlStateHighlighted];
+    button.frame = CGRectMake(left, 0, 45, 44);
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    [_actionPanel addSubview:button];
+    return button;
+}
+
+- (void)decreaseEventCount {
+    [self showDecreaseAnimation];
+
+    Behavior *behavior = [self editingBehavior];
+    [behavior decreaseEventForDate:self.currentDate];
+
+    [[self editingCell] displayEventCount:[behavior eventForDate:self.currentDate].count];
+
     [self updateScore];
+
+    [self dismissActionPanel:NO];
+}
+
+- (BehaviorTableViewCell *)editingCell {
+    return (BehaviorTableViewCell *) [self.tableView cellForRowAtIndexPath:[self editingIndexPath]];
+}
+
+- (NSIndexPath *)editingIndexPath {
+    return [NSIndexPath indexPathForRow:_editingRow inSection:0];
+}
+
+- (Behavior *)editingBehavior {
+    return [[self.resultsController fetchedObjects] objectAtIndex:(NSUInteger) _editingRow];
 }
 
 #pragma mark - UITableViewDelegate

@@ -180,6 +180,7 @@
     behavior.name = behaviorName;
     behavior.rank = [sortedArray_ objectAtIndex:(NSUInteger) [picker_ selectedRowInComponent:0]];
     behavior.timestamp = [NSDate date];
+    behavior.isCustomised = [NSNumber numberWithBool:YES];
     [context save];
 
     [behavior increaseEventForDate:[[NSDate date] dateWithoutTime]];

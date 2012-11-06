@@ -17,8 +17,8 @@
 @property(nonatomic, retain) NSNumber *rank;
 @property(nonatomic, retain) NSDate *timestamp;
 @property(nonatomic, retain) NSSet *events;
-@property(nonatomic, assign) BOOL isHidden;
-@property(nonatomic, assign) BOOL isCustomised;
+@property(nonatomic, retain) NSNumber *isHidden;
+@property(nonatomic, retain) NSNumber *isCustomised;
 @property(nonatomic, retain) NSString *annotation;
 
 @property(nonatomic, readonly) NSString *category;

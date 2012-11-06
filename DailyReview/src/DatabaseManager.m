@@ -66,7 +66,7 @@ static NSString *const kDBVersion = @"kDBVersion";
     }];
     [context save];
 
-    //insert description
+    //insert annotaion
 
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setInteger:DBVersion110 forKey:kDBVersion];

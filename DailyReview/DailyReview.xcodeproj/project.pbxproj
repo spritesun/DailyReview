@@ -21,12 +21,10 @@
 		493B04CB15594674007F6702 /* back-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04C915594674007F6702 /* back-button@2x.png */; };
 		49412AA3153EA07900450C3B /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 49412AA2153EA07900450C3B /* Behavior.m */; };
 		49412AA7153EA8A500450C3B /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49412AA6153EA8A500450C3B /* db.sqlite */; };
-		4943CECB153AA2A600B823E7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
 		4943CECF153AA48700B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CED8153AA6BF00B823E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
 		4943CEE6153AAE1E00B823E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEE5153AAE1E00B823E7 /* main.m */; };
 		4943CEED153AAE1E00B823E7 /* populate_database.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEEC153AAE1E00B823E7 /* populate_database.1 */; };
-		4943CEF1153AB13600B823E7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
 		4943CEF2153AB14000B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CEF9153AB9A200B823E7 /* initial_data.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEF4153AB93600B823E7 /* initial_data.json */; };
 		4948A7FA156D03BA00EC7A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A9815344CD90092DC4A /* AppDelegate.m */; };
@@ -37,7 +35,6 @@
 		4948A800156D03BA00EC7A7B /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */; };
 		4948A801156D03BA00EC7A7B /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
 		4948A802156D03BA00EC7A7B /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF43 /* BindingManager.m */; };
-		4948A803156D03BA00EC7A7B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
 		4948A804156D03BA00EC7A7B /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4948A805156D03BA00EC7A7B /* BehaviorResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF49 /* BehaviorResultsController.m */; };
 		4948A806156D03BA00EC7A7B /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
@@ -136,7 +133,6 @@
 		496D2C1F156BB98B00AA968F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491476B31568D35D00305AC1 /* MessageUI.framework */; };
 		496D2C20156BBA6400AA968F /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5B /* DatabaseManager.m */; };
 		496D2C22156BBA8800AA968F /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49412AA6153EA8A500450C3B /* db.sqlite */; };
-		496D2C71156BC19C00AA968F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
 		497316241534590400E3E5DC /* BehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorViewController.m */; };
 		497659CD153BB8DB00E0D533 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
 		497659FD153BCC5900E0D533 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
@@ -210,7 +206,6 @@
 		49E40A911578753E0055ED44 /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */; };
 		49E40A921578753E0055ED44 /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
 		49E40A931578753E0055ED44 /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF43 /* BindingManager.m */; };
-		49E40A941578753E0055ED44 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
 		49E40A951578753E0055ED44 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		49E40A961578753E0055ED44 /* BehaviorResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF49 /* BehaviorResultsController.m */; };
 		49E40A971578753E0055ED44 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
@@ -298,6 +293,7 @@
 		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 		49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
 		5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
+		A3399BCE1648DC680068DC6B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3399BCB1648DC680068DC6B /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -376,7 +372,6 @@
 		49412AA1153EA07900450C3B /* Behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Behavior.h; path = src/Behavior.h; sourceTree = "<group>"; };
 		49412AA2153EA07900450C3B /* Behavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Behavior.m; path = src/Behavior.m; sourceTree = "<group>"; };
 		49412AA6153EA8A500450C3B /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = db.sqlite; path = resources/db.sqlite; sourceTree = "<group>"; };
-		4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		4943CECD153AA48700B823E7 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = src/Event.h; sourceTree = "<group>"; };
 		4943CECE153AA48700B823E7 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = src/Event.m; sourceTree = "<group>"; };
 		4943CED6153AA68000B823E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -516,7 +511,8 @@
 		49F3EBCE1557FC9800BAC96F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
 		5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		55870F159F4F18A0BE87871A /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
-		A39888031640E80200716DBD /* DataModel 1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 1.1.xcdatamodel"; sourceTree = "<group>"; };
+		A3399BCC1648DC680068DC6B /* DataModel 1.1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 1.1.0.xcdatamodel"; sourceTree = "<group>"; };
+		A3399BCD1648DC680068DC6B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -669,11 +665,11 @@
 		4973162615345CA000E3E5DC /* domains */ = {
 			isa = PBXGroup;
 			children = (
+				A3399BCB1648DC680068DC6B /* DataModel.xcdatamodeld */,
 				4943CECD153AA48700B823E7 /* Event.h */,
 				4943CECE153AA48700B823E7 /* Event.m */,
 				49412AA1153EA07900450C3B /* Behavior.h */,
 				49412AA2153EA07900450C3B /* Behavior.m */,
-				4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */,
 			);
 			name = domains;
 			sourceTree = "<group>";
@@ -1296,7 +1292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4943CEE6153AAE1E00B823E7 /* main.m in Sources */,
-				4943CEF1153AB13600B823E7 /* DataModel.xcdatamodeld in Sources */,
 				4943CEF2153AB14000B823E7 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1313,7 +1308,6 @@
 				4948A800156D03BA00EC7A7B /* IntrospectManager.m in Sources */,
 				4948A801156D03BA00EC7A7B /* BehaviorTableViewCell.m in Sources */,
 				4948A802156D03BA00EC7A7B /* BindingManager.m in Sources */,
-				4948A803156D03BA00EC7A7B /* DataModel.xcdatamodeld in Sources */,
 				4948A804156D03BA00EC7A7B /* Event.m in Sources */,
 				4948A805156D03BA00EC7A7B /* BehaviorResultsController.m in Sources */,
 				4948A806156D03BA00EC7A7B /* Binding.m in Sources */,
@@ -1361,7 +1355,6 @@
 				49EBB43D1537D4BE002BBF3C /* IntrospectManager.m in Sources */,
 				499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */,
 				49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */,
-				4943CECB153AA2A600B823E7 /* DataModel.xcdatamodeld in Sources */,
 				4943CECF153AA48700B823E7 /* Event.m in Sources */,
 				49EBB43D1537D4BE002BBF4A /* BehaviorResultsController.m in Sources */,
 				497659CD153BB8DB00E0D533 /* Binding.m in Sources */,
@@ -1420,7 +1413,6 @@
 				496D2C1B156BB8B900AA968F /* UIImageView+Additions.m in Sources */,
 				496D2C1C156BB8B900AA968F /* NSFetchedResultsController+Additions.m in Sources */,
 				496D2C20156BBA6400AA968F /* DatabaseManager.m in Sources */,
-				496D2C71156BC19C00AA968F /* DataModel.xcdatamodeld in Sources */,
 				4999281015760A530064BF32 /* ContextTestHelper.m in Sources */,
 				49E8CC7E15763A5B0076F4AC /* BehaviorResultsControllerSpec.m in Sources */,
 				49E8CC7F15763A820076F4AC /* BehaviorResultsController.m in Sources */,
@@ -1439,7 +1431,6 @@
 				49E40A911578753E0055ED44 /* IntrospectManager.m in Sources */,
 				49E40A921578753E0055ED44 /* BehaviorTableViewCell.m in Sources */,
 				49E40A931578753E0055ED44 /* BindingManager.m in Sources */,
-				49E40A941578753E0055ED44 /* DataModel.xcdatamodeld in Sources */,
 				49E40A951578753E0055ED44 /* Event.m in Sources */,
 				49E40A961578753E0055ED44 /* BehaviorResultsController.m in Sources */,
 				49E40A971578753E0055ED44 /* Binding.m in Sources */,
@@ -1473,6 +1464,7 @@
 				49E40AB31578753E0055ED44 /* AboutViewController.m in Sources */,
 				49E40AB41578753E0055ED44 /* AboutDailyReviewView.m in Sources */,
 				5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */,
+				A3399BCE1648DC680068DC6B /* DataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1658,13 +1650,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */ = {
+		A3399BCB1648DC680068DC6B /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A39888031640E80200716DBD /* DataModel 1.1.xcdatamodel */,
-				4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */,
+				A3399BCC1648DC680068DC6B /* DataModel 1.1.0.xcdatamodel */,
+				A3399BCD1648DC680068DC6B /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */;
+			currentVersion = A3399BCC1648DC680068DC6B /* DataModel 1.1.0.xcdatamodel */;
 			name = DataModel.xcdatamodeld;
 			path = src/DataModel.xcdatamodeld;
 			sourceTree = "<group>";
