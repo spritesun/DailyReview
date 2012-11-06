@@ -63,6 +63,7 @@ static NSDictionary *categoryNamesDict = nil;
         event = [self createEventForDate:date];
     }
     event.countValue++;
+    [[NSManagedObjectContext defaultContext] save];
 }
 
 - (void)decreaseEventForDate:(NSDate *)date {
@@ -73,6 +74,7 @@ static NSDictionary *categoryNamesDict = nil;
         if (event.countValue == 0) {
             [context deleteObject:event];
         }
+        [context save];
     }
 }
 @end

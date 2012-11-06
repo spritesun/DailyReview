@@ -3,12 +3,12 @@
 #import "UIGestureRecognizer+Blocks.h"
 #import "UIView+Additions.h"
 #import "BindingManager.h"
-#import "NSManagedObjectContext+Additions.h"
 #import "UITableView+Additions.h"
 #import "NSDate+Additions.h"
 #import "UIImage+Additions.h"
 #import "ScoreView.h"
 #import "Event.h"
+#import "AddBehaviorController.h"
 
 @interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, strong) NSDate *currentDate;
@@ -55,6 +55,11 @@
     bindingManager_ = [BindingManager new];
     [self createHintView];
     [self addGestures];
+
+    UIButton *addButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    addButton.right = self.view.right - 5;
+    [addButton addTarget:self action:@selector(addBehavior) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addButton];
 }
 
 
@@ -169,7 +174,6 @@
 }
 
 - (void)didSwipe:(UISwipeGestureRecognizer *)recognizer {
-    NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
     CGPoint touchPoint = [recognizer locationInView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:touchPoint];
     BehaviorTableViewCell *cell = (BehaviorTableViewCell *) [self.tableView cellForRowAtIndexPath:indexPath];
@@ -183,7 +187,7 @@
         [self showDecreaseAnimation:touchPoint];
         [behavior decreaseEventForDate:self.currentDate];
     }
-    [context save];
+
     [cell displayEventCount:[behavior eventForDate:self.currentDate].count];
     [self updateScore];
 }
@@ -194,5 +198,11 @@
     return [[self.resultsController fetchedObjects] count];
 }
 
+- (void)addBehavior {
+    AddBehaviorController *addBehaviorController = [[AddBehaviorController alloc] init];
+    [self presentViewController:addBehaviorController animated:YES completion:^{
+        [addBehaviorController startInputName];
+    }];
 
+}
 @end
