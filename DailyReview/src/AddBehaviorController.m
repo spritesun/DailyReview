@@ -3,6 +3,7 @@
 #import "NSManagedObjectContext+Additions.h"
 #import "NSDate+Additions.h"
 #import "MainViewController.h"
+#import "NSString+Additions.h"
 
 @interface AddBehaviorController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -154,11 +155,29 @@
 }
 
 - (void)addBehavior {
-    //TODO: add behavior to db, reload table, scroll to recently added cell, prevent duplication, other validation
     NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
+    NSString *behaviorName = nameTextField_.text;
+
+    if ([behaviorName isBlank]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"项目名称不能为空" delegate:nil cancelButtonTitle:@"明了" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"name == %@", behaviorName]];
+    __block NSUInteger count;
+    [context performBlockAndWait:^{
+        count = [context countForFetchRequest:request error:nil];
+    }];
+    if (count > 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"已存在同名项目，请修改名称" delegate:nil cancelButtonTitle:@"明了" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
 
     Behavior *behavior = [NSEntityDescription insertNewObjectForEntityForName:@"Behavior" inManagedObjectContext:context];
-    behavior.name = nameTextField_.text;
+    behavior.name = behaviorName;
     behavior.rank = [sortedArray_ objectAtIndex:(NSUInteger) [picker_ selectedRowInComponent:0]];
     behavior.timestamp = [NSDate date];
     [context save];

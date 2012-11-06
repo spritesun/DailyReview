@@ -19,12 +19,15 @@
 		493B04B715593CEB007F6702 /* about-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04B615593CEB007F6702 /* about-bg@2x.png */; };
 		493B04CA15594674007F6702 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04C815594674007F6702 /* back-button.png */; };
 		493B04CB15594674007F6702 /* back-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493B04C915594674007F6702 /* back-button@2x.png */; };
+		49412AA3153EA07900450C3B /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 49412AA2153EA07900450C3B /* Behavior.m */; };
 		49412AA7153EA8A500450C3B /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49412AA6153EA8A500450C3B /* db.sqlite */; };
 		4943CECB153AA2A600B823E7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
+		4943CECF153AA48700B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CED8153AA6BF00B823E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
 		4943CEE6153AAE1E00B823E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEE5153AAE1E00B823E7 /* main.m */; };
 		4943CEED153AAE1E00B823E7 /* populate_database.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEEC153AAE1E00B823E7 /* populate_database.1 */; };
 		4943CEF1153AB13600B823E7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
+		4943CEF2153AB14000B823E7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4943CEF9153AB9A200B823E7 /* initial_data.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4943CEF4153AB93600B823E7 /* initial_data.json */; };
 		4948A7FA156D03BA00EC7A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A9815344CD90092DC4A /* AppDelegate.m */; };
 		4948A7FB156D03BA00EC7A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04AA015344CD90092DC4A /* main.m */; };
@@ -35,6 +38,7 @@
 		4948A801156D03BA00EC7A7B /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
 		4948A802156D03BA00EC7A7B /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF43 /* BindingManager.m */; };
 		4948A803156D03BA00EC7A7B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
+		4948A804156D03BA00EC7A7B /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		4948A805156D03BA00EC7A7B /* BehaviorResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF49 /* BehaviorResultsController.m */; };
 		4948A806156D03BA00EC7A7B /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
 		4948A807156D03BA00EC7A7B /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF50 /* NSError+Additions.m */; };
@@ -48,6 +52,7 @@
 		4948A80F156D03BA00EC7A7B /* NSNumber+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19CD153D607E00C31041 /* NSNumber+Additions.m */; };
 		4948A810156D03BA00EC7A7B /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
 		4948A811156D03BA00EC7A7B /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */; };
+		4948A812156D03BA00EC7A7B /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 49412AA2153EA07900450C3B /* Behavior.m */; };
 		4948A813156D03BA00EC7A7B /* NSSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49939774153EEEF200A91E7B /* NSSet+Additions.m */; };
 		4948A814156D03BA00EC7A7B /* SummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B97F0153EDCDE002801F7 /* SummaryController.m */; };
 		4948A815156D03BA00EC7A7B /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
@@ -109,6 +114,8 @@
 		49550652156678BC007D0708 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49550651156678BC007D0708 /* UIImage+Additions.m */; };
 		4956E97E1543EC9700C33D89 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
 		495C97FE1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C97FD1535ABF200EEDAFB /* UIGestureRecognizer+Blocks.m */; };
+		496D2C0C156BB73B00AA968F /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
+		496D2C0D156BB74000AA968F /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 49412AA2153EA07900450C3B /* Behavior.m */; };
 		496D2C0E156BB77000AA968F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4943CED6153AA68000B823E7 /* CoreData.framework */; };
 		496D2C0F156BB85200AA968F /* NSManagedObjectContext+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF53 /* NSManagedObjectContext+Additions.m */; };
 		496D2C10156BB8A700AA968F /* NSSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49939774153EEEF200A91E7B /* NSSet+Additions.m */; };
@@ -204,6 +211,7 @@
 		49E40A921578753E0055ED44 /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
 		49E40A931578753E0055ED44 /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF43 /* BindingManager.m */; };
 		49E40A941578753E0055ED44 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */; };
+		49E40A951578753E0055ED44 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943CECE153AA48700B823E7 /* Event.m */; };
 		49E40A961578753E0055ED44 /* BehaviorResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF49 /* BehaviorResultsController.m */; };
 		49E40A971578753E0055ED44 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
 		49E40A981578753E0055ED44 /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF50 /* NSError+Additions.m */; };
@@ -217,6 +225,7 @@
 		49E40AA01578753E0055ED44 /* NSNumber+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19CD153D607E00C31041 /* NSNumber+Additions.m */; };
 		49E40AA11578753E0055ED44 /* BehaviorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A2134153E8547006D654D /* BehaviorTableView.m */; };
 		49E40AA21578753E0055ED44 /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49340A8B153E8B1A006C11A1 /* UITableView+Additions.m */; };
+		49E40AA31578753E0055ED44 /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 49412AA2153EA07900450C3B /* Behavior.m */; };
 		49E40AA41578753E0055ED44 /* NSSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49939774153EEEF200A91E7B /* NSSet+Additions.m */; };
 		49E40AA51578753E0055ED44 /* SummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B97F0153EDCDE002801F7 /* SummaryController.m */; };
 		49E40AA61578753E0055ED44 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
@@ -288,8 +297,7 @@
 		49EBB43D1537D4BE002BBF5F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */; };
 		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 		49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
-		A39888141640EB3300716DBD /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = A39888131640EB3300716DBD /* Event.m */; };
-		A39888171640EB3300716DBD /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = A39888161640EB3300716DBD /* Behavior.m */; };
+		5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -365,8 +373,12 @@
 		493B04B615593CEB007F6702 /* about-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about-bg@2x.png"; path = "resources/images/about-bg@2x.png"; sourceTree = "<group>"; };
 		493B04C815594674007F6702 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button.png"; path = "resources/images/back-button.png"; sourceTree = "<group>"; };
 		493B04C915594674007F6702 /* back-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button@2x.png"; path = "resources/images/back-button@2x.png"; sourceTree = "<group>"; };
+		49412AA1153EA07900450C3B /* Behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Behavior.h; path = src/Behavior.h; sourceTree = "<group>"; };
+		49412AA2153EA07900450C3B /* Behavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Behavior.m; path = src/Behavior.m; sourceTree = "<group>"; };
 		49412AA6153EA8A500450C3B /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = db.sqlite; path = resources/db.sqlite; sourceTree = "<group>"; };
 		4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		4943CECD153AA48700B823E7 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = src/Event.h; sourceTree = "<group>"; };
+		4943CECE153AA48700B823E7 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = src/Event.m; sourceTree = "<group>"; };
 		4943CED6153AA68000B823E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4943CEDD153AAE1D00B823E7 /* PopulateDatabase */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PopulateDatabase; sourceTree = BUILT_PRODUCTS_DIR; };
 		4943CEE5153AAE1E00B823E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -502,11 +514,9 @@
 		49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = config/Shared.xcconfig; sourceTree = "<group>"; };
 		49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = config/Debug.xcconfig; sourceTree = "<group>"; };
 		49F3EBCE1557FC9800BAC96F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
-		A39888031640E80200716DBD /* DataModel 1.1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 1.1.0.xcdatamodel"; sourceTree = "<group>"; };
-		A39888121640EB3300716DBD /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = src/Event.h; sourceTree = "<group>"; };
-		A39888131640EB3300716DBD /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = src/Event.m; sourceTree = "<group>"; };
-		A39888151640EB3300716DBD /* Behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Behavior.h; path = src/Behavior.h; sourceTree = "<group>"; };
-		A39888161640EB3300716DBD /* Behavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Behavior.m; path = src/Behavior.m; sourceTree = "<group>"; };
+		5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		55870F159F4F18A0BE87871A /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		A39888031640E80200716DBD /* DataModel 1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 1.1.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -659,11 +669,11 @@
 		4973162615345CA000E3E5DC /* domains */ = {
 			isa = PBXGroup;
 			children = (
+				4943CECD153AA48700B823E7 /* Event.h */,
+				4943CECE153AA48700B823E7 /* Event.m */,
+				49412AA1153EA07900450C3B /* Behavior.h */,
+				49412AA2153EA07900450C3B /* Behavior.m */,
 				4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */,
-				A39888121640EB3300716DBD /* Event.h */,
-				A39888131640EB3300716DBD /* Event.m */,
-				A39888151640EB3300716DBD /* Behavior.h */,
-				A39888161640EB3300716DBD /* Behavior.m */,
 			);
 			name = domains;
 			sourceTree = "<group>";
@@ -926,6 +936,8 @@
 		49EBB43D1537D4BE002BBF67 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				55870F159F4F18A0BE87871A /* NSString+Additions.h */,
+				5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */,
 				49939774153EEEF200A91E7B /* NSSet+Additions.m */,
 				49939773153EEEF200A91E7B /* NSSet+Additions.h */,
 				49CE19CD153D607E00C31041 /* NSNumber+Additions.m */,
@@ -1285,6 +1297,7 @@
 			files = (
 				4943CEE6153AAE1E00B823E7 /* main.m in Sources */,
 				4943CEF1153AB13600B823E7 /* DataModel.xcdatamodeld in Sources */,
+				4943CEF2153AB14000B823E7 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,6 +1314,7 @@
 				4948A801156D03BA00EC7A7B /* BehaviorTableViewCell.m in Sources */,
 				4948A802156D03BA00EC7A7B /* BindingManager.m in Sources */,
 				4948A803156D03BA00EC7A7B /* DataModel.xcdatamodeld in Sources */,
+				4948A804156D03BA00EC7A7B /* Event.m in Sources */,
 				4948A805156D03BA00EC7A7B /* BehaviorResultsController.m in Sources */,
 				4948A806156D03BA00EC7A7B /* Binding.m in Sources */,
 				4948A807156D03BA00EC7A7B /* NSError+Additions.m in Sources */,
@@ -1314,6 +1328,7 @@
 				4948A80F156D03BA00EC7A7B /* NSNumber+Additions.m in Sources */,
 				4948A810156D03BA00EC7A7B /* BehaviorTableView.m in Sources */,
 				4948A811156D03BA00EC7A7B /* UITableView+Additions.m in Sources */,
+				4948A812156D03BA00EC7A7B /* Behavior.m in Sources */,
 				4948A813156D03BA00EC7A7B /* NSSet+Additions.m in Sources */,
 				4948A814156D03BA00EC7A7B /* SummaryController.m in Sources */,
 				4948A815156D03BA00EC7A7B /* NSFetchedResultsController+Additions.m in Sources */,
@@ -1347,6 +1362,7 @@
 				499EC2591537E9A90025C20D /* BehaviorTableViewCell.m in Sources */,
 				49EBB43D1537D4BE002BBF44 /* BindingManager.m in Sources */,
 				4943CECB153AA2A600B823E7 /* DataModel.xcdatamodeld in Sources */,
+				4943CECF153AA48700B823E7 /* Event.m in Sources */,
 				49EBB43D1537D4BE002BBF4A /* BehaviorResultsController.m in Sources */,
 				497659CD153BB8DB00E0D533 /* Binding.m in Sources */,
 				49EBB43D1537D4BE002BBF51 /* NSError+Additions.m in Sources */,
@@ -1360,6 +1376,7 @@
 				49CE19CE153D607E00C31041 /* NSNumber+Additions.m in Sources */,
 				490A2135153E8547006D654D /* BehaviorTableView.m in Sources */,
 				49340A8C153E8B1A006C11A1 /* UITableView+Additions.m in Sources */,
+				49412AA3153EA07900450C3B /* Behavior.m in Sources */,
 				49939775153EEEF200A91E7B /* NSSet+Additions.m in Sources */,
 				494B97F1153EDCDE002801F7 /* SummaryController.m in Sources */,
 				49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */,
@@ -1386,6 +1403,8 @@
 			files = (
 				49E1E1FA1547FFBE0030AAD1 /* BehaviorTableView.m in Sources */,
 				4918B3E3156BB10C0073951D /* EventSpec.m in Sources */,
+				496D2C0C156BB73B00AA968F /* Event.m in Sources */,
+				496D2C0D156BB74000AA968F /* Behavior.m in Sources */,
 				496D2C0F156BB85200AA968F /* NSManagedObjectContext+Additions.m in Sources */,
 				496D2C10156BB8A700AA968F /* NSSet+Additions.m in Sources */,
 				496D2C11156BB8A700AA968F /* NSNumber+Additions.m in Sources */,
@@ -1421,6 +1440,7 @@
 				49E40A921578753E0055ED44 /* BehaviorTableViewCell.m in Sources */,
 				49E40A931578753E0055ED44 /* BindingManager.m in Sources */,
 				49E40A941578753E0055ED44 /* DataModel.xcdatamodeld in Sources */,
+				49E40A951578753E0055ED44 /* Event.m in Sources */,
 				49E40A961578753E0055ED44 /* BehaviorResultsController.m in Sources */,
 				49E40A971578753E0055ED44 /* Binding.m in Sources */,
 				49E40A981578753E0055ED44 /* NSError+Additions.m in Sources */,
@@ -1434,6 +1454,7 @@
 				49E40AA01578753E0055ED44 /* NSNumber+Additions.m in Sources */,
 				49E40AA11578753E0055ED44 /* BehaviorTableView.m in Sources */,
 				49E40AA21578753E0055ED44 /* UITableView+Additions.m in Sources */,
+				49E40AA31578753E0055ED44 /* Behavior.m in Sources */,
 				49E40AA41578753E0055ED44 /* NSSet+Additions.m in Sources */,
 				49E40AA51578753E0055ED44 /* SummaryController.m in Sources */,
 				49E40AA61578753E0055ED44 /* NSFetchedResultsController+Additions.m in Sources */,
@@ -1451,8 +1472,7 @@
 				49E40AB21578753E0055ED44 /* AddBehaviorController.m in Sources */,
 				49E40AB31578753E0055ED44 /* AboutViewController.m in Sources */,
 				49E40AB41578753E0055ED44 /* AboutDailyReviewView.m in Sources */,
-				A39888141640EB3300716DBD /* Event.m in Sources */,
-				A39888171640EB3300716DBD /* Behavior.m in Sources */,
+				5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1641,10 +1661,10 @@
 		4943CEC9153AA2A600B823E7 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A39888031640E80200716DBD /* DataModel 1.1.0.xcdatamodel */,
+				A39888031640E80200716DBD /* DataModel 1.1.xcdatamodel */,
 				4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */,
 			);
-			currentVersion = A39888031640E80200716DBD /* DataModel 1.1.0.xcdatamodel */;
+			currentVersion = 4943CECA153AA2A600B823E7 /* DataModel.xcdatamodel */;
 			name = DataModel.xcdatamodeld;
 			path = src/DataModel.xcdatamodeld;
 			sourceTree = "<group>";
