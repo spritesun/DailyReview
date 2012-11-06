@@ -1,15 +1,15 @@
-#import "AddBehaviorController.h"
+#import "AddOrEditBehaviorController.h"
 #import "Behavior.h"
 #import "NSManagedObjectContext+Additions.h"
 #import "NSDate+Additions.h"
 #import "MainViewController.h"
 #import "NSString+Additions.h"
 
-@interface AddBehaviorController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
-
+@interface AddOrEditBehaviorController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@property(nonatomic, retain) Behavior *editingBehavior;
 @end
 
-@implementation AddBehaviorController {
+@implementation AddOrEditBehaviorController {
     UITextField *rankTextField_;
     NSArray *sortedArray_;
     NSDictionary *categoryDictionary_;
@@ -17,6 +17,11 @@
     UITextField *nameTextField_;
 }
 
++ (AddOrEditBehaviorController *)editBehaviorController:(Behavior *)behavior {
+    AddOrEditBehaviorController *obj = [[self alloc] init];
+    obj.editingBehavior = behavior;
+    return obj;
+}
 
 - (id)init {
     self = [self initWithStyle:UITableViewStyleGrouped];
@@ -34,6 +39,18 @@
 }
 
 - (void)loadView {
+    NSNumber *rank;
+    NSString *title;
+    NSString *nameText = @"";
+    if (self.editingBehavior) {
+        title = @"修改项目";
+        nameText = self.editingBehavior.name;
+        rank = self.editingBehavior.rank;
+    } else {
+        title = @"添加新项目";
+        rank = [NSNumber numberWithInt:((MainViewController *) self.presentingViewController).selectedIndex == 0 ? 1 : -1];
+    }
+
     float const NAVIGATION_BAR_HEIGHT = 48;
 
     UIView *const view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -42,9 +59,9 @@
     UINavigationBar *const navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT)];
     [view addSubview:navigationBar];
 
-    UINavigationItem *const navigationItem = [[UINavigationItem alloc] initWithTitle:@"添加新项目"];
+    UINavigationItem *const navigationItem = [[UINavigationItem alloc] initWithTitle:title];
     navigationBar.items = Array(navigationItem);
-    UIBarButtonItem *const addItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonSystemItemAdd target:self action:@selector(addBehavior)];
+    UIBarButtonItem *const addItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonSystemItemAdd target:self action:@selector(save)];
     UIBarButtonItem *const cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     navigationItem.leftBarButtonItem = cancelItem;
     navigationItem.rightBarButtonItem = addItem;
@@ -54,6 +71,18 @@
     tableView.dataSource = self;
     tableView.delegate = self;
     [view addSubview:tableView];
+
+    //build name text filed
+    nameTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 200, 30)];
+    nameTextField_.delegate = self;
+    nameTextField_.returnKeyType = UIReturnKeyNext;
+    nameTextField_.text = nameText;
+
+    //build rank text filed
+    rankTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 200, 30)];
+    rankTextField_.text = [categoryDictionary_ objectForKey:rank];
+    picker_ = [self getPickerViewSelectedName:rankTextField_.text inSource:categoryDictionary_];
+    rankTextField_.inputView = picker_;
 
     self.view = view;
 }
@@ -81,23 +110,10 @@
 
     if (indexPath.row == 0) {
         [cell.contentView addSubview:[self labelWithName:@"名称"]];
-
-        nameTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 200, 30)];
-        nameTextField_.delegate = self;
-        nameTextField_.returnKeyType = UIReturnKeyNext;
         [cell.contentView addSubview:nameTextField_];
     } else {
         [cell.contentView addSubview:[self labelWithName:@"功过点数"]];
-
-        rankTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 200, 30)];
-
-        rankTextField_.text = [categoryDictionary_ objectForKey:[NSNumber numberWithInt:((MainViewController *) self.presentingViewController).selectedIndex == 0 ? 1 : -1]];
-
-        picker_ = [self getPickerViewSelectedName:rankTextField_.text inSource:categoryDictionary_];
-        rankTextField_.inputView = picker_;
-
         [cell.contentView addSubview:rankTextField_];
-
     }
     return cell;
 }
@@ -154,36 +170,44 @@
     rankTextField_.text = [categoryDictionary_ objectForKey:[sortedArray_ objectAtIndex:[pickerView selectedRowInComponent:0]]];
 }
 
-- (void)addBehavior {
+- (void)save {
     NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
     NSString *behaviorName = nameTextField_.text;
 
-    if ([behaviorName isBlank]){
+    if ([behaviorName isBlank]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"项目名称不能为空" delegate:nil cancelButtonTitle:@"明了" otherButtonTitles:nil];
         [alert show];
         return;
     }
 
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"name == %@", behaviorName]];
-    __block NSUInteger count;
-    [context performBlockAndWait:^{
-        count = [context countForFetchRequest:request error:nil];
-    }];
-    if (count > 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"已存在同名项目，请修改名称" delegate:nil cancelButtonTitle:@"明了" otherButtonTitles:nil];
-        [alert show];
-        return;
+    if (nil == self.editingBehavior || (![self.editingBehavior.name isEqualToString:nameTextField_.text])) {
+        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
+        [request setPredicate:[NSPredicate predicateWithFormat:@"name == %@", behaviorName]];
+        __block NSUInteger count;
+        [context performBlockAndWait:^{
+            count = [context countForFetchRequest:request error:nil];
+        }];
+        if (count > 0) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"已存在同名项目，请修改名称" delegate:nil cancelButtonTitle:@"明了" otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
     }
 
-    Behavior *behavior = [NSEntityDescription insertNewObjectForEntityForName:@"Behavior" inManagedObjectContext:context];
+    Behavior *behavior = nil;
+    if (self.editingBehavior) {
+        behavior = self.editingBehavior;
+    }
+    else {
+        behavior = [NSEntityDescription insertNewObjectForEntityForName:@"Behavior" inManagedObjectContext:context];
+        behavior.isCustomised = [NSNumber numberWithBool:YES];
+        [behavior increaseEventForDate:[[NSDate date] dateWithoutTime]];
+    }
+
     behavior.name = behaviorName;
     behavior.rank = [sortedArray_ objectAtIndex:(NSUInteger) [picker_ selectedRowInComponent:0]];
     behavior.timestamp = [NSDate date];
-    behavior.isCustomised = [NSNumber numberWithBool:YES];
     [context save];
-
-    [behavior increaseEventForDate:[[NSDate date] dateWithoutTime]];
 
     MainViewController *controller = (MainViewController *) self.presentingViewController;
     [self dismissViewControllerAnimated:YES completion:^{

@@ -166,8 +166,8 @@
 		49939775153EEEF200A91E7B /* NSSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49939774153EEEF200A91E7B /* NSSet+Additions.m */; };
 		499794E91576108E000619AD /* frank_static_resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 499794E81576108E000619AD /* frank_static_resources.bundle */; };
 		49979514157615A6000619AD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999281215760ACB0064BF32 /* AboutViewController.m */; };
-		4999280B15760A1D0064BF32 /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddBehaviorController.m */; };
-		4999280D15760A1D0064BF32 /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddBehaviorController.m */; };
+		4999280B15760A1D0064BF32 /* AddOrEditBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddOrEditBehaviorController.m */; };
+		4999280D15760A1D0064BF32 /* AddOrEditBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddOrEditBehaviorController.m */; };
 		4999281015760A530064BF32 /* ContextTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280F15760A530064BF32 /* ContextTestHelper.m */; };
 		4999281515760BA20064BF32 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999281215760ACB0064BF32 /* AboutViewController.m */; };
 		4999281615760BA90064BF32 /* AboutDailyReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0AB1568A89B0029F992 /* AboutDailyReviewView.m */; };
@@ -235,7 +235,7 @@
 		49E40AAF1578753E0055ED44 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0A51568A7C30029F992 /* UIColor+Additions.m */; };
 		49E40AB01578753E0055ED44 /* UIImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4919B2BE1568A00000A39097 /* UIImageView+Additions.m */; };
 		49E40AB11578753E0055ED44 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491476AD1568CB0700305AC1 /* AboutUsViewController.m */; };
-		49E40AB21578753E0055ED44 /* AddBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddBehaviorController.m */; };
+		49E40AB21578753E0055ED44 /* AddOrEditBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddOrEditBehaviorController.m */; };
 		49E40AB31578753E0055ED44 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999281215760ACB0064BF32 /* AboutViewController.m */; };
 		49E40AB41578753E0055ED44 /* AboutDailyReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0AB1568A89B0029F992 /* AboutDailyReviewView.m */; };
 		49E40AB61578753E0055ED44 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491476B31568D35D00305AC1 /* MessageUI.framework */; };
@@ -427,8 +427,8 @@
 		49939774153EEEF200A91E7B /* NSSet+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSet+Additions.m"; path = "src/NSSet+Additions.m"; sourceTree = "<group>"; };
 		499794E81576108E000619AD /* frank_static_resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = frank_static_resources.bundle; path = resources/frank_static_resources.bundle; sourceTree = "<group>"; };
 		49979502157611B5000619AD /* features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = features; sourceTree = "<group>"; };
-		4999280915760A1D0064BF32 /* AddBehaviorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddBehaviorController.h; path = src/AddBehaviorController.h; sourceTree = "<group>"; };
-		4999280A15760A1D0064BF32 /* AddBehaviorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddBehaviorController.m; path = src/AddBehaviorController.m; sourceTree = "<group>"; };
+		4999280915760A1D0064BF32 /* AddOrEditBehaviorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddOrEditBehaviorController.h; path = src/AddOrEditBehaviorController.h; sourceTree = "<group>"; };
+		4999280A15760A1D0064BF32 /* AddOrEditBehaviorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddOrEditBehaviorController.m; path = src/AddOrEditBehaviorController.m; sourceTree = "<group>"; };
 		4999280E15760A530064BF32 /* ContextTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTestHelper.h; path = test/ContextTestHelper.h; sourceTree = "<group>"; };
 		4999280F15760A530064BF32 /* ContextTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextTestHelper.m; path = test/ContextTestHelper.m; sourceTree = "<group>"; };
 		4999281115760ACB0064BF32 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = src/AboutViewController.h; sourceTree = "<group>"; };
@@ -656,8 +656,8 @@
 				4999281215760ACB0064BF32 /* AboutViewController.m */,
 				491476AC1568CB0700305AC1 /* AboutUsViewController.h */,
 				491476AD1568CB0700305AC1 /* AboutUsViewController.m */,
-				4999280915760A1D0064BF32 /* AddBehaviorController.h */,
-				4999280A15760A1D0064BF32 /* AddBehaviorController.m */,
+				4999280915760A1D0064BF32 /* AddOrEditBehaviorController.h */,
+				4999280A15760A1D0064BF32 /* AddOrEditBehaviorController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -1338,7 +1338,7 @@
 				4948A820156D03BA00EC7A7B /* AboutDailyReviewView.m in Sources */,
 				4948A821156D03BA00EC7A7B /* UIImageView+Additions.m in Sources */,
 				4948A822156D03BA00EC7A7B /* AboutUsViewController.m in Sources */,
-				4999280D15760A1D0064BF32 /* AddBehaviorController.m in Sources */,
+				4999280D15760A1D0064BF32 /* AddOrEditBehaviorController.m in Sources */,
 				49979514157615A6000619AD /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1384,7 +1384,7 @@
 				49B7F0A61568A7C30029F992 /* UIColor+Additions.m in Sources */,
 				4919B2BF1568A00000A39097 /* UIImageView+Additions.m in Sources */,
 				491476AE1568CB0700305AC1 /* AboutUsViewController.m in Sources */,
-				4999280B15760A1D0064BF32 /* AddBehaviorController.m in Sources */,
+				4999280B15760A1D0064BF32 /* AddOrEditBehaviorController.m in Sources */,
 				4999281515760BA20064BF32 /* AboutViewController.m in Sources */,
 				4999281615760BA90064BF32 /* AboutDailyReviewView.m in Sources */,
 			);
@@ -1460,7 +1460,7 @@
 				49E40AAF1578753E0055ED44 /* UIColor+Additions.m in Sources */,
 				49E40AB01578753E0055ED44 /* UIImageView+Additions.m in Sources */,
 				49E40AB11578753E0055ED44 /* AboutUsViewController.m in Sources */,
-				49E40AB21578753E0055ED44 /* AddBehaviorController.m in Sources */,
+				49E40AB21578753E0055ED44 /* AddOrEditBehaviorController.m in Sources */,
 				49E40AB31578753E0055ED44 /* AboutViewController.m in Sources */,
 				49E40AB41578753E0055ED44 /* AboutDailyReviewView.m in Sources */,
 				5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */,

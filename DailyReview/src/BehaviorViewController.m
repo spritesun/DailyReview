@@ -8,7 +8,7 @@
 #import "UIImage+Additions.h"
 #import "ScoreView.h"
 #import "Event.h"
-#import "AddBehaviorController.h"
+#import "AddOrEditBehaviorController.h"
 #import "NSManagedObjectContext+Additions.h"
 
 @interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate> {
@@ -240,10 +240,12 @@
 }
 
 - (void)removeBehavior {
+    //TODO: could remove when prod
     if (!self.editingBehavior.isCustomised.boolValue) {
         NSLog(@"You can not remove not customised item");
         return;
     }
+
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"删除项目"
                                                     message:@"永久删除此项目将同时删除相关的历史记录。"
                                                    delegate:self
@@ -254,9 +256,12 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
-        NSManagedObjectContext *context = [NSManagedObjectContext defaultContext];
-        [context deleteObject:[self editingBehavior]];
-        [context save];
+        NSManagedObjectContext *ctx = [NSManagedObjectContext defaultContext];
+        [[self editingBehavior].events enumerateObjectsUsingBlock:^(id event, BOOL *stop) {
+            [ctx deleteObject:event];
+        }];
+        [ctx deleteObject:[self editingBehavior]];
+        [ctx save];
         [self.resultsController performFetch];
         [self.tableView deleteRowsAtIndexPaths:@[[self editingIndexPath]] withRowAnimation:UITableViewRowAnimationFade];
         [self updateScore];
@@ -265,7 +270,15 @@
 }
 
 - (void)editBehavior {
-
+    //TODO: could remove when prod
+    if (!self.editingBehavior.isCustomised.boolValue) {
+        NSLog(@"You can not edit customised item");
+        return;
+    }
+    AddOrEditBehaviorController *controller = [AddOrEditBehaviorController editBehaviorController:[self editingBehavior]];
+    [self presentViewController:controller animated:YES completion:^{
+        [controller startInputName];
+    }];
 }
 
 - (void)displayHistory {
@@ -319,10 +332,9 @@
 }
 
 - (void)addBehavior {
-    AddBehaviorController *addBehaviorController = [[AddBehaviorController alloc] init];
-    [self presentViewController:addBehaviorController animated:YES completion:^{
-        [addBehaviorController startInputName];
+    AddOrEditBehaviorController *controller = [[AddOrEditBehaviorController alloc] init];
+    [self presentViewController:controller animated:YES completion:^{
+        [controller startInputName];
     }];
-
 }
 @end
