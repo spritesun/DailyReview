@@ -89,7 +89,7 @@
     } else {
         [cell.contentView addSubview:[self labelWithName:@"功过点数"]];
 
-        rankTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100, 5, 200, 30)];
+        rankTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 200, 30)];
 
         rankTextField_.text = [categoryDictionary_ objectForKey:[NSNumber numberWithInt:((MainViewController *) self.presentingViewController).selectedIndex == 0 ? 1 : -1]];
 
