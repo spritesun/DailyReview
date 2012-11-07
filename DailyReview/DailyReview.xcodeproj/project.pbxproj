@@ -292,6 +292,7 @@
 		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 		49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
 		5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
+		55870BFB9BC642298B7FD68C /* FullPageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587010F7A7A8D5D81529209 /* FullPageTextView.m */; };
 		A3399BCE1648DC680068DC6B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3399BCB1648DC680068DC6B /* DataModel.xcdatamodeld */; };
 		A3399C09164A15590068DC6B /* initial_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A3399C08164A15590068DC6B /* initial_data.json */; };
 /* End PBXBuildFile section */
@@ -507,7 +508,9 @@
 		49F3EBC91557FC6B00BAC96F /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = config/Shared.xcconfig; sourceTree = "<group>"; };
 		49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = config/Debug.xcconfig; sourceTree = "<group>"; };
 		49F3EBCE1557FC9800BAC96F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
+		5587010F7A7A8D5D81529209 /* FullPageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FullPageTextView.m; path = src/FullPageTextView.m; sourceTree = "<group>"; };
 		5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		55870B8027DB15C18B314DAD /* FullPageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FullPageTextView.h; path = src/FullPageTextView.h; sourceTree = "<group>"; };
 		55870F159F4F18A0BE87871A /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		A3399BCC1648DC680068DC6B /* DataModel 1.1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 1.1.0.xcdatamodel"; sourceTree = "<group>"; };
 		A3399BCD1648DC680068DC6B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -914,6 +917,8 @@
 		49EBB43D1537D4BE002BBF5D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				55870B8027DB15C18B314DAD /* FullPageTextView.h */,
+				5587010F7A7A8D5D81529209 /* FullPageTextView.m */,
 				49B7F0AA1568A89B0029F992 /* AboutDailyReviewView.h */,
 				49B7F0AB1568A89B0029F992 /* AboutDailyReviewView.m */,
 				490A2133153E8547006D654D /* BehaviorTableView.h */,
@@ -1465,6 +1470,7 @@
 				49E40AB41578753E0055ED44 /* AboutDailyReviewView.m in Sources */,
 				5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */,
 				A3399BCE1648DC680068DC6B /* DataModel.xcdatamodeld in Sources */,
+				55870BFB9BC642298B7FD68C /* FullPageTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,19 @@
 #import "Event.h"
 #import "AddOrEditBehaviorController.h"
 #import "NSManagedObjectContext+Additions.h"
+#import "FullPageTextView.h"
+#import "NSString+Additions.h"
 
 @interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate> {
     NSInteger _editingRow;
 }
 @property(nonatomic, strong) NSDate *currentDate;
 @property(nonatomic, strong) UIView *actionPanel;
+@property(nonatomic, strong) UIButton *annotationBtn;
+@property(nonatomic, strong) UIButton *minusBtn;
+@property(nonatomic, strong) UIButton *editBtn;
+@property(nonatomic, strong) UIButton *removeBtn;
+
 @end
 
 @implementation BehaviorViewController {
@@ -211,13 +218,22 @@
         return;
     }
     _editingRow = indexPath.row;
+
     CGRect cellRect = [self.tableView rectForRowAtIndexPath:indexPath];
-    [self.tableView bringSubviewToFront:self.actionPanel];
     self.actionPanel.left = self.tableView.right;
     self.actionPanel.top = cellRect.origin.y - 1;
+    [self refreshActionPanel];
+    [self.tableView bringSubviewToFront:self.actionPanel];
     [UIView animateWithDuration:.2 animations:^{
-        self.actionPanel.left = 95;
+        self.actionPanel.right = self.tableView.right;
     }];
+}
+
+- (void)refreshActionPanel {
+    Behavior *behavior = [self editingBehavior];
+    self.annotationBtn.hidden = ![behavior.annotation isNotBlank];
+    self.minusBtn.hidden = ([behavior eventForDate:self.currentDate].countValue == 0);
+    self.editBtn.hidden = self.removeBtn.hidden = ![behavior.isCustomised boolValue];
 }
 
 - (UIView *)actionPanel {
@@ -227,10 +243,10 @@
         _actionPanel.backgroundColor = [UIColor redColor];
         [self.tableView addSubview:_actionPanel];
 
-        [self buildButtonForActionPanelWithTitle:@"白话" action:@selector(displayAnnotation) left:0];
-        [self buildButtonForActionPanelWithTitle:@"减一" action:@selector(decreaseEventCount) left:45 * 1];
-        [self buildButtonForActionPanelWithTitle:@"修改" action:@selector(editBehavior) left:45 * 2];
-        [self buildButtonForActionPanelWithTitle:@"删除" action:@selector(removeBehavior) left:45 * 3];
+        self.annotationBtn = [self buildButtonForActionPanelWithTitle:@"白话" action:@selector(displayAnnotation) left:0];
+        self.minusBtn = [self buildButtonForActionPanelWithTitle:@"减一" action:@selector(decreaseEventCount) left:45 * 1];
+        self.editBtn = [self buildButtonForActionPanelWithTitle:@"修改" action:@selector(editBehavior) left:45 * 2];
+        self.removeBtn = [self buildButtonForActionPanelWithTitle:@"删除" action:@selector(removeBehavior) left:45 * 3];
 
         _actionPanel.width = 45 * 4;
         _actionPanel.height = 44;
@@ -239,12 +255,6 @@
 }
 
 - (void)removeBehavior {
-    //TODO: could remove when prod
-    if (!self.editingBehavior.isCustomised.boolValue) {
-        NSLog(@"You can not remove not customised item");
-        return;
-    }
-
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"删除项目"
                                                     message:@"永久删除此项目将同时删除相关的历史记录。"
                                                    delegate:self
@@ -269,11 +279,6 @@
 }
 
 - (void)editBehavior {
-    //TODO: could remove when prod
-    if (!self.editingBehavior.isCustomised.boolValue) {
-        NSLog(@"You can not edit customised item");
-        return;
-    }
     AddOrEditBehaviorController *controller = [AddOrEditBehaviorController editBehaviorController:[self editingBehavior]];
     [self presentViewController:controller animated:YES completion:^{
         [controller startInputName];
@@ -281,7 +286,11 @@
 }
 
 - (void)displayAnnotation {
-
+    UIViewController *controller = [[UIViewController alloc] init];
+    controller.view = [[FullPageTextView alloc] initWithFrame:controller.view.frame content:[NSString stringWithFormat:@"\n\n\n\n%@\n\n%@", [self editingBehavior].name, [self editingBehavior].annotation]];
+    controller.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    [self presentViewController:controller animated:YES completion:NULL];
+    [self dismissActionPanel:NO];
 }
 
 - (UIButton *)buildButtonForActionPanelWithTitle:(NSString *)title action:(SEL)action left:(CGFloat)left {

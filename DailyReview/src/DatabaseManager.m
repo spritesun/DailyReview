@@ -46,6 +46,7 @@ static NSString *const kDBVersion = @"kDBVersion";
             break;
         case DBVersion110:
             NSLog(@"1.1.0");
+//            [self migrateTo110];
             break;
     }
 }
@@ -103,6 +104,7 @@ static NSString *const kDBVersion = @"kDBVersion";
         Behavior *behavior = [self behaviorNamed:[object valueForKey:@"name"] inBehaviors:behaviors];
         behavior.annotation = [object valueForKey:@"annotation"];
     }
+    [ctx save];
 
     //4.raise up db version
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
