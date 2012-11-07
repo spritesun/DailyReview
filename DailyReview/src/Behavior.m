@@ -58,12 +58,17 @@ static NSDictionary *categoryNamesDict = nil;
 }
 
 - (void)increaseEventForDate:(NSDate *)date {
+    Event *event = [self findOrCreateEventForDate:date];
+    event.countValue++;
+    [[NSManagedObjectContext defaultContext] save];
+}
+
+- (Event *)findOrCreateEventForDate:(NSDate *)date {
     Event *event = [self eventForDate:date];
     if (nil == event) {
         event = [self createEventForDate:date];
     }
-    event.countValue++;
-    [[NSManagedObjectContext defaultContext] save];
+    return event;
 }
 
 - (void)decreaseEventForDate:(NSDate *)date {

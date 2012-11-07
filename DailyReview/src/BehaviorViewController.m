@@ -228,12 +228,11 @@
         [self.tableView addSubview:_actionPanel];
 
         [self buildButtonForActionPanelWithTitle:@"白话" action:@selector(displayAnnotation) left:0];
-        [self buildButtonForActionPanelWithTitle:@"历史" action:@selector(displayHistory) left:45];
-        [self buildButtonForActionPanelWithTitle:@"减一" action:@selector(decreaseEventCount) left:45 * 2];
-        [self buildButtonForActionPanelWithTitle:@"修改" action:@selector(editBehavior) left:45 * 3];
-        [self buildButtonForActionPanelWithTitle:@"删除" action:@selector(removeBehavior) left:45 * 4];
+        [self buildButtonForActionPanelWithTitle:@"减一" action:@selector(decreaseEventCount) left:45 * 1];
+        [self buildButtonForActionPanelWithTitle:@"修改" action:@selector(editBehavior) left:45 * 2];
+        [self buildButtonForActionPanelWithTitle:@"删除" action:@selector(removeBehavior) left:45 * 3];
 
-        _actionPanel.width = 45 * 5;
+        _actionPanel.width = 45 * 4;
         _actionPanel.height = 44;
     }
     return _actionPanel;
@@ -279,10 +278,6 @@
     [self presentViewController:controller animated:YES completion:^{
         [controller startInputName];
     }];
-}
-
-- (void)displayHistory {
-
 }
 
 - (void)displayAnnotation {

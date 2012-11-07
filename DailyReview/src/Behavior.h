@@ -26,9 +26,12 @@
 + (NSDictionary *)getAllCategoryDictionary;
 
 - (Event *)eventForDate:(NSDate *)date;
+
 - (Event *)createEventForDate:(NSDate *)date;
 
 - (void)increaseEventForDate:(NSDate *)date;
+
+- (Event *)findOrCreateEventForDate:(NSDate *)date;
 
 - (void)decreaseEventForDate:(NSDate *)date;
 @end
