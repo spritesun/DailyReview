@@ -1,6 +1,6 @@
-#import "MoreNavigationBar.h"
+#import "DRNavigationBar.h"
 
-@implementation MoreNavigationBar
+@implementation DRNavigationBar
 
 - (void)drawRect:(CGRect)rect {
 	UIImage *image = [UIImage imageNamed:@"bottom-bar-bg"];

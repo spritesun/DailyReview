@@ -1,0 +1,3 @@
+@interface DRNavigationBar : UINavigationBar
+
+@end

@@ -1,3 +1,0 @@
-@interface MoreNavigationBar : UINavigationBar
-
-@end
