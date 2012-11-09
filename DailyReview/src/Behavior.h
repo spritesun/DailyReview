@@ -3,7 +3,7 @@
 //  DailyReview
 //
 //  Created by Long Sun on 18/04/12.
-//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
+//  Copyright (c) 2012 Sunlong. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -20,8 +20,9 @@
 @property(nonatomic, retain) NSNumber *isHidden;
 @property(nonatomic, retain) NSNumber *isCustomised;
 @property(nonatomic, retain) NSString *annotation;
-
 @property(nonatomic, readonly) NSString *category;
+
+@property(nonatomic, retain) NSNumber *totalCount;
 
 + (NSDictionary *)getAllCategoryDictionary;
 

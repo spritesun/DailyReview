@@ -289,7 +289,7 @@
     UIViewController *controller = [[UIViewController alloc] init];
     Behavior *behavior = [self editingBehavior];
     controller.view = [[FullPageTextView alloc] initWithFrame:controller.view.frame
-                                                      content:[NSString stringWithFormat:@"\n\n\n\n%@： %@\n\n%@", [[Behavior getAllCategoryDictionary] objectForKey:behavior.rank], behavior.name, behavior.annotation]];
+                                                      content:[NSString stringWithFormat:@"\n\n\n\n%@： %@\n\n%@", behavior.category, behavior.name, behavior.annotation]];
     controller.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     [self presentViewController:controller animated:YES completion:NULL];
     [self dismissActionPanel:NO];

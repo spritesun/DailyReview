@@ -326,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="20" y="185"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Time Line View Controller-->
         <scene sceneID="lA8-wz-9H5">
             <objects>
-                <tableViewController id="Az9-hU-PZn" sceneMemberID="viewController">
+                <tableViewController id="Az9-hU-PZn" customClass="TimeLineViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Nj4-IJ-ehp">
                         <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,10 +356,10 @@
             </objects>
             <point key="canvasLocation" x="866" y="14"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Ranking Charts View Controller-->
         <scene sceneID="8TZ-Jy-yqh">
             <objects>
-                <tableViewController id="9cL-dx-xDi" sceneMemberID="viewController">
+                <tableViewController id="9cL-dx-xDi" customClass="RankingChartsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JC8-yJ-Hpu">
                         <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -534,6 +534,9 @@
         <class className="MeritController" superclassName="BehaviorViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MeritController.h"/>
         </class>
+        <class className="RankingChartsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RankingChartsViewController.h"/>
+        </class>
         <class className="ScoreView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoreView.h"/>
         </class>
@@ -544,6 +547,9 @@
                 <relationship kind="outlet" name="meritRankLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="totalRankLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="TimeLineViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeLineViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

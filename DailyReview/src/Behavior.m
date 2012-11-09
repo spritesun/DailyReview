@@ -15,6 +15,7 @@ static NSDictionary *categoryNamesDict = nil;
 @dynamic isCustomised;
 @dynamic annotation;
 @dynamic category;
+@synthesize totalCount = _totalCount;
 
 + (void)initialize {
     if (!categoryNamesDict) {

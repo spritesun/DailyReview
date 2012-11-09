@@ -1,5 +1,5 @@
 // Created by Long Sun on 7/11/12.
-//  Copyright (c) 2012 Itty Bitty Apps. All rights reserved.
+//  Copyright (c) 2012 Sunlong. All rights reserved.
 
 #import "FullPageTextView.h"
 #import "UIColor+Additions.h"

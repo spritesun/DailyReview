@@ -3,119 +3,92 @@
 //  DailyReview
 //
 //  Created by Long Sun on 9/11/12.
-//  Copyright (c) 2012 ThoughtWorks. All rights reserved.
+//  Copyright (c) 2012 Sunlong. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "RankingChartsViewController.h"
+#import "NSManagedObjectContext+Additions.h"
+#import "NSArray+Additions.h"
+#import "Behavior.h"
+#import "BehaviorTableViewCell.h"
+#import "BehaviorSectionHeaderView.h"
 
-@interface RankingChartsViewController ()
+@interface RankingChartsViewController () {
+    NSArray *_tableData;
+}
 
 @end
 
 @implementation RankingChartsViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self fetchTableData];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self fetchTableData];
+    [[self tableView] reloadData];
+}
+
+
+- (void)fetchTableData {
+    _tableData = @[[NSMutableArray array], [NSMutableArray array]];
+
+    NSManagedObjectContext *ctx = [NSManagedObjectContext defaultContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Behavior"];
+    __block NSArray *behaviors = nil;
+    [ctx performBlockAndWait:^{
+        behaviors = [ctx executeFetchRequest:request error:nil];
+    }];
+
+    [behaviors each:^(Behavior *behavior) {
+        NSNumber *totalCount = [behavior valueForKeyPath:@"events.@sum.count"];
+        if (totalCount.intValue > 0) {
+            behavior.totalCount = totalCount;
+            if (behavior.rank.intValue > 0) {
+                [[_tableData first] addObject:behavior];
+            } else {
+                [[_tableData last] addObject:behavior];
+            }
+        }
+    }];
+    [[_tableData first] sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"totalCount" ascending:NO]]];
+    [[_tableData last] sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"totalCount" ascending:NO]]];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return _tableData.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return ((NSDictionary *) [_tableData objectAtIndex:(NSUInteger) section]).count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    BehaviorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BehaviorTableViewCell class])];
+    if (nil == cell) {
+        cell = [BehaviorTableViewCell cell];
+    }
+
+    Behavior *behavior = [[_tableData objectAtIndex:(NSUInteger) indexPath.section] objectAtIndex:(NSUInteger) indexPath.row];
+    cell.textLabel.text = behavior.name;
+    [cell displayEventCount:behavior.totalCount];
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return [BehaviorSectionHeaderView viewWithTitle:section == 0 ? @"功德排行" : @"过失排行"];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 32;
+}
 @end
