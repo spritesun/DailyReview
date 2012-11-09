@@ -14,6 +14,7 @@
 #import "Event.h"
 #import "BehaviorSectionHeaderView.h"
 #import "NSArray+Additions.h"
+#import "DRBackButton.h"
 
 @interface TimeLineViewController () {
     NSFetchedResultsController *_resultsController;
@@ -25,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[DRBackButton button]];
 
     [[self resultsController] performFetch:nil];
 

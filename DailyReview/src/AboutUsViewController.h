@@ -3,7 +3,7 @@
 
 @interface AboutUsViewController : AboutViewController <MFMailComposeViewControllerDelegate>
 
-@property (nonatomic, retain) IBOutlet UILabel *mailLable;
+@property (nonatomic, retain) IBOutlet UILabel *mailLabel;
 
 - (IBAction)mailTo:(id)sender;
 

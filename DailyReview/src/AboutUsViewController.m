@@ -6,7 +6,7 @@
 
 @implementation AboutUsViewController
 
-@synthesize mailLable = mailLabel_;
+@synthesize mailLabel = mailLabel_;
 
 - (IBAction)mailTo:(id)sender {
   MFMailComposeViewController *controller=[[MFMailComposeViewController alloc]init];

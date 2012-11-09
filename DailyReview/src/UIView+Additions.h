@@ -74,4 +74,5 @@
 
 - (void)flashWithDuration:(float)duration color:(UIColor *)color;
 
+- (UIViewController *)viewController;
 @end
