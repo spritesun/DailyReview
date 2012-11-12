@@ -285,9 +285,11 @@
 		49EBB43D1537D4BE002BBF5F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF5E /* NSDate+Additions.m */; };
 		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 		49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
+		558702E8A02CBB5B38DFAD80 /* UserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 558708EAAD5822BC9B49D054 /* UserDefaultsManager.m */; };
 		5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
 		558707CAC1852A202DCE74A3 /* BaihuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */; };
 		5587096F297A06F97D809D49 /* DRBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 558705D491E3A1A5759246F8 /* DRBackButton.m */; };
+		55870AA47DE5892B25997879 /* NotificationSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558703F8C80F8CF11A223AFB /* NotificationSettingController.m */; };
 		55870BFB9BC642298B7FD68C /* FullPageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587010F7A7A8D5D81529209 /* FullPageTextView.m */; };
 		A3048910164C7B3D0062D3E6 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304890F164C7B3D0062D3E6 /* TimeLineViewController.m */; };
 		A3048914164C7BE10062D3E6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3048911164C7BE10062D3E6 /* DataModel.xcdatamodeld */; };
@@ -512,10 +514,14 @@
 		5587010F7A7A8D5D81529209 /* FullPageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullPageTextView.m; sourceTree = "<group>"; };
 		558702D718FD19F89F7677E1 /* BaihuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaihuaViewController.h; sourceTree = "<group>"; };
 		5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		558703F8C80F8CF11A223AFB /* NotificationSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationSettingController.m; sourceTree = "<group>"; };
 		558704672E2D93BC6ABB5938 /* DRBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBackButton.h; sourceTree = "<group>"; };
 		558705D491E3A1A5759246F8 /* DRBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBackButton.m; sourceTree = "<group>"; };
+		558706199D8C022B61C9C392 /* UserDefaultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsManager.h; sourceTree = "<group>"; };
+		558708EAAD5822BC9B49D054 /* UserDefaultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsManager.m; sourceTree = "<group>"; };
 		55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaihuaViewController.m; sourceTree = "<group>"; };
 		55870B8027DB15C18B314DAD /* FullPageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullPageTextView.h; sourceTree = "<group>"; };
+		55870C9B29741E4757D0AA5B /* NotificationSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationSettingController.h; sourceTree = "<group>"; };
 		55870F159F4F18A0BE87871A /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		A304890E164C7B3D0062D3E6 /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineViewController.h; sourceTree = "<group>"; };
 		A304890F164C7B3D0062D3E6 /* TimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineViewController.m; sourceTree = "<group>"; };
@@ -648,6 +654,7 @@
 		4973162515345C8F00E3E5DC /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				55870031393DBE8F91953501 /* more */,
 				A304890D164C7B120062D3E6 /* summary */,
 				49A04A9715344CD90092DC4A /* AppDelegate.h */,
 				49A04A9815344CD90092DC4A /* AppDelegate.m */,
@@ -663,7 +670,6 @@
 				49CE19C6153D5CE800C31041 /* DemeritController.m */,
 				4999280915760A1D0064BF32 /* AddOrEditBehaviorController.h */,
 				4999280A15760A1D0064BF32 /* AddOrEditBehaviorController.m */,
-				55870031393DBE8F91953501 /* more */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -919,6 +925,8 @@
 		49EBB43D1537D4BE002BBF56 /* managers */ = {
 			isa = PBXGroup;
 			children = (
+				558706199D8C022B61C9C392 /* UserDefaultsManager.h */,
+				558708EAAD5822BC9B49D054 /* UserDefaultsManager.m */,
 				49EBB43D1537D4BE002BBF5B /* DatabaseManager.m */,
 				49EBB43D1537D4BE002BBF5A /* DatabaseManager.h */,
 				49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */,
@@ -1004,6 +1012,8 @@
 		55870031393DBE8F91953501 /* more */ = {
 			isa = PBXGroup;
 			children = (
+				55870C9B29741E4757D0AA5B /* NotificationSettingController.h */,
+				558703F8C80F8CF11A223AFB /* NotificationSettingController.m */,
 				4999281215760ACB0064BF32 /* AboutViewController.m */,
 				4999281115760ACB0064BF32 /* AboutViewController.h */,
 				491476AD1568CB0700305AC1 /* AboutUsViewController.m */,
@@ -1517,6 +1527,8 @@
 				A304894E164C8E540062D3E6 /* BehaviorSectionHeaderView.m in Sources */,
 				5587096F297A06F97D809D49 /* DRBackButton.m in Sources */,
 				558707CAC1852A202DCE74A3 /* BaihuaViewController.m in Sources */,
+				558702E8A02CBB5B38DFAD80 /* UserDefaultsManager.m in Sources */,
+				55870AA47DE5892B25997879 /* NotificationSettingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -129,13 +129,17 @@
 }
 
 - (void)showHintAnimation:(CGPoint)touchPoint {
-    [self dismissActionPanel:YES];
-    hintView_.origin = touchPoint;
-    hintView_.alpha = 1.0;
-    [UIView animateWithDuration:1.0 animations:^{
-        hintView_.alpha = 0.0;
-        hintView_.left = touchPoint.x + 50;
-    }];
+    if (_editingRow != -1) {
+        [self dismissActionPanel:YES];
+    } else {
+        hintView_.origin = touchPoint;
+        hintView_.alpha = 1.0;
+        [UIView animateWithDuration:1.0 animations:^{
+            hintView_.alpha = 0.0;
+            hintView_.left = touchPoint.x + 50;
+        }];
+    }
+
 }
 
 - (void)transformAnimationOn:(UIImageView *)view From:(CGRect)fromRect to:(CGRect)toRect {
@@ -152,12 +156,15 @@
 }
 
 - (void)showIncreaseAnimation:(CGPoint)point {
-    [self dismissActionPanel:YES];
-    CGFloat imageHeight = increaseView_.image.size.height;
-    CGRect beginRect = CGRectMake(point.x, point.y - imageHeight / 2., 0, imageHeight);
-    CGRect endRect = CGRectMake(point.x, point.y - imageHeight / 2., increaseView_.image.size.width, imageHeight);
-    increaseView_.contentMode = UIViewContentModeLeft;
-    [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
+    if (_editingRow != -1) {
+        [self dismissActionPanel:YES];
+    } else {
+        CGFloat imageHeight = increaseView_.image.size.height;
+        CGRect beginRect = CGRectMake(point.x, point.y - imageHeight / 2., 0, imageHeight);
+        CGRect endRect = CGRectMake(point.x, point.y - imageHeight / 2., increaseView_.image.size.width, imageHeight);
+        increaseView_.contentMode = UIViewContentModeLeft;
+        [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
+    }
 }
 
 - (void)showDecreaseAnimation {
