@@ -286,6 +286,7 @@
 		49EBB43D1537D4BE002BBF62 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF61 /* NSArray+Additions.m */; };
 		49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
 		5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
+		558707CAC1852A202DCE74A3 /* BaihuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */; };
 		5587096F297A06F97D809D49 /* DRBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 558705D491E3A1A5759246F8 /* DRBackButton.m */; };
 		55870BFB9BC642298B7FD68C /* FullPageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587010F7A7A8D5D81529209 /* FullPageTextView.m */; };
 		A3048910164C7B3D0062D3E6 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304890F164C7B3D0062D3E6 /* TimeLineViewController.m */; };
@@ -509,9 +510,11 @@
 		49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = config/Debug.xcconfig; sourceTree = "<group>"; };
 		49F3EBCE1557FC9800BAC96F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = config/Release.xcconfig; sourceTree = "<group>"; };
 		5587010F7A7A8D5D81529209 /* FullPageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullPageTextView.m; sourceTree = "<group>"; };
+		558702D718FD19F89F7677E1 /* BaihuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaihuaViewController.h; sourceTree = "<group>"; };
 		5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		558704672E2D93BC6ABB5938 /* DRBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBackButton.h; sourceTree = "<group>"; };
 		558705D491E3A1A5759246F8 /* DRBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBackButton.m; sourceTree = "<group>"; };
+		55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaihuaViewController.m; sourceTree = "<group>"; };
 		55870B8027DB15C18B314DAD /* FullPageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullPageTextView.h; sourceTree = "<group>"; };
 		55870F159F4F18A0BE87871A /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		A304890E164C7B3D0062D3E6 /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineViewController.h; sourceTree = "<group>"; };
@@ -658,12 +661,9 @@
 				49CE19C3153D5C1700C31041 /* MeritController.m */,
 				49CE19C5153D5CE800C31041 /* DemeritController.h */,
 				49CE19C6153D5CE800C31041 /* DemeritController.m */,
-				4999281115760ACB0064BF32 /* AboutViewController.h */,
-				4999281215760ACB0064BF32 /* AboutViewController.m */,
-				491476AC1568CB0700305AC1 /* AboutUsViewController.h */,
-				491476AD1568CB0700305AC1 /* AboutUsViewController.m */,
 				4999280915760A1D0064BF32 /* AddOrEditBehaviorController.h */,
 				4999280A15760A1D0064BF32 /* AddOrEditBehaviorController.m */,
+				55870031393DBE8F91953501 /* more */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -999,6 +999,19 @@
 				49EBB43D1537D4BE002BBF66 /* NSFetchedResultsController+Additions.h */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		55870031393DBE8F91953501 /* more */ = {
+			isa = PBXGroup;
+			children = (
+				4999281215760ACB0064BF32 /* AboutViewController.m */,
+				4999281115760ACB0064BF32 /* AboutViewController.h */,
+				491476AD1568CB0700305AC1 /* AboutUsViewController.m */,
+				491476AC1568CB0700305AC1 /* AboutUsViewController.h */,
+				558702D718FD19F89F7677E1 /* BaihuaViewController.h */,
+				55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */,
+			);
+			name = more;
 			sourceTree = "<group>";
 		};
 		A304890D164C7B120062D3E6 /* summary */ = {
@@ -1503,6 +1516,7 @@
 				A304891D164C7CD90062D3E6 /* RankingChartsViewController.m in Sources */,
 				A304894E164C8E540062D3E6 /* BehaviorSectionHeaderView.m in Sources */,
 				5587096F297A06F97D809D49 /* DRBackButton.m in Sources */,
+				558707CAC1852A202DCE74A3 /* BaihuaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

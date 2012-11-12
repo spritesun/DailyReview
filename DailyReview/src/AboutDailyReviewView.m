@@ -27,7 +27,7 @@ static NSString *dailyReviewIntro = @"功过格介绍\n\n    逐日登记自己�
     textView_.font = [UIFont systemFontOfSize:21];
     textView_.textColor = [UIColor colorWithRed:.247 green:.165 blue:.094];
     textView_.editable = NO;
-    textView_.showsVerticalScrollIndicator = NO;
+//    textView_.showsVerticalScrollIndicator = NO;
     [self addSubview:textView_];
 }
 
