@@ -77,6 +77,7 @@
     nameTextField_.delegate = self;
     nameTextField_.returnKeyType = UIReturnKeyNext;
     nameTextField_.text = nameText;
+    nameTextField_.clearButtonMode = UITextFieldViewModeWhileEditing;
 
     //build rank text filed
     rankTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 200, 30)];

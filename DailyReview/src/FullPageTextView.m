@@ -15,8 +15,7 @@
     self = [self initWithFrame:frame];
     if (self) {
         self.content = content;
-        UIColor *bgColor = [UIColor colorWithRed:0.961 green:0.937 blue:0.863];
-        self.backgroundColor = bgColor;
+        self.backgroundColor = [UIColor creamColor];
         [self initTextView];
         [self initBgView];
     }

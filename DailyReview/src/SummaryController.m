@@ -23,7 +23,7 @@
     const CGFloat labelHeight = 28;
     const CGFloat labelSpacing = 20;
 
-    __block CGFloat labelY = 125;
+    __block CGFloat labelY = 120;
 
     [labels each:^(UILabel *label) {
         label.textColor = [UIColor colorWithRed:1 green:.494 blue:0];

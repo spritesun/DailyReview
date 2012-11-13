@@ -15,6 +15,7 @@
 #import "BehaviorSectionHeaderView.h"
 #import "NSArray+Additions.h"
 #import "DRBackButton.h"
+#import "UIColor+Additions.h"
 
 @interface TimeLineViewController () {
     NSFetchedResultsController *_resultsController;
@@ -26,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[DRBackButton button]];
+    self.view.backgroundColor = [UIColor creamColor];
 
     [[self resultsController] performFetch:nil];
 

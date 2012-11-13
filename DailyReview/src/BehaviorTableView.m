@@ -12,7 +12,6 @@
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
         backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"behavior-table-bg"]];
         backgroundView.frame = self.bounds;
-        backgroundView.contentMode = UIViewContentModeScaleToFill;
         [self addSubview:backgroundView];
         self.backgroundColor = [UIColor clearColor];
     }

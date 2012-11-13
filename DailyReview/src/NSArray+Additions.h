@@ -28,5 +28,6 @@
 
 - (NSArray *)reverse;
 
+- (id)reduce:(id (^)(id current, id item))block initial:(id)initial;
 
 @end

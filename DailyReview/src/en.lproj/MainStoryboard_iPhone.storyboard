@@ -170,7 +170,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Rsr-7r-s3Q">
-                                        <rect key="frame" x="0.0" y="143" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -188,6 +188,27 @@
                                         </view>
                                         <connections>
                                             <segue destination="9Lc-w3-WxG" kind="push" id="GFd-yo-Bee"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="v2F-z9-mrR">
+                                        <rect key="frame" x="0.0" y="187" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="致谢" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vMA-4T-vUn">
+                                                    <rect key="frame" x="20" y="11" width="68" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="TSd-E4-jLk" kind="push" id="dwi-s2-euV"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -220,6 +241,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYy-Pi-TDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7" y="754"/>
+        </scene>
+        <!--Thanks View Controller-->
+        <scene sceneID="GJc-K5-8xZ">
+            <objects>
+                <viewController id="TSd-E4-jLk" customClass="ThanksViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rIy-eh-ZG6">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cR9-jR-vvZ">
+                        <connections>
+                            <outlet property="titleView" destination="Avl-Y8-WWe" id="WCk-IX-mPx"/>
+                        </connections>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4o-gd-tH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="y6o-KV-baT">
+                    <rect key="frame" x="0.0" y="0.0" width="128" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="致谢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Avl-Y8-WWe">
+                            <rect key="frame" x="19" y="6" width="90" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <color key="textColor" red="0.81960784310000001" green="0.71372549019999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-170" y="1448"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="0Hr-bz-HTD">
@@ -586,7 +640,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4S8-a6-tZT">
-                                <rect key="frame" x="26" y="27" width="118" height="37"/>
+                                <rect key="frame" x="35" y="31" width="100" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="时间轴">
@@ -598,7 +652,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hxr-3O-nC7">
-                                <rect key="frame" x="168" y="27" width="118" height="37"/>
+                                <rect key="frame" x="185" y="31" width="100" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="排行榜">
@@ -654,6 +708,78 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="bottom-bar-item-more.png" width="31" height="31"/>
         <image name="summary-bg.png" width="320" height="415"/>
     </resources>
+    <classes>
+        <class className="AboutDailyReviewView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutDailyReviewView.h"/>
+        </class>
+        <class className="AboutUsViewController" superclassName="AboutViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutUsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="mailTo:"/>
+                <relationship kind="action" name="weiboTo:"/>
+                <relationship kind="outlet" name="mailLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
+        </class>
+        <class className="BaihuaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaihuaViewController.h"/>
+        </class>
+        <class className="BehaviorResultsController" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BehaviorResultsController.h"/>
+        </class>
+        <class className="BehaviorTableView" superclassName="UITableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BehaviorTableView.h"/>
+        </class>
+        <class className="BehaviorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BehaviorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="resultsController" candidateClass="BehaviorResultsController"/>
+                <relationship kind="outlet" name="scoreView" candidateClass="ScoreView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="DRNavigationBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DRNavigationBar.h"/>
+        </class>
+        <class className="DemeritController" superclassName="BehaviorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DemeritController.h"/>
+        </class>
+        <class className="MainViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tabBar" candidateClass="UITabBar"/>
+            </relationships>
+        </class>
+        <class className="MeritController" superclassName="BehaviorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MeritController.h"/>
+        </class>
+        <class className="NotificationSettingController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NotificationSettingController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="switcher" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="RankingChartsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RankingChartsViewController.h"/>
+        </class>
+        <class className="ScoreView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoreView.h"/>
+        </class>
+        <class className="SummaryController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SummaryController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="demeritRankLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="meritRankLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalRankLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TimeLineViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeLineViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

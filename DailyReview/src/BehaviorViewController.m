@@ -12,6 +12,9 @@
 #import "NSManagedObjectContext+Additions.h"
 #import "FullPageTextView.h"
 #import "NSString+Additions.h"
+#import "NSArray+Additions.h"
+#import "HorizontalStackedView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate> {
     NSInteger _editingRow;
@@ -156,15 +159,12 @@
 }
 
 - (void)showIncreaseAnimation:(CGPoint)point {
-    if (_editingRow != -1) {
-        [self dismissActionPanel:YES];
-    } else {
-        CGFloat imageHeight = increaseView_.image.size.height;
-        CGRect beginRect = CGRectMake(point.x, point.y - imageHeight / 2., 0, imageHeight);
-        CGRect endRect = CGRectMake(point.x, point.y - imageHeight / 2., increaseView_.image.size.width, imageHeight);
-        increaseView_.contentMode = UIViewContentModeLeft;
-        [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
-    }
+    CGFloat imageHeight = increaseView_.image.size.height;
+    CGRect beginRect = CGRectMake(point.x, point.y - imageHeight / 2., 0, imageHeight);
+    CGRect endRect = CGRectMake(point.x, point.y - imageHeight / 2., increaseView_.image.size.width, imageHeight);
+    increaseView_.contentMode = UIViewContentModeLeft;
+    [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
+
 }
 
 - (void)showDecreaseAnimation {
@@ -203,10 +203,14 @@
     Behavior *behavior = [self.resultsController objectAtIndexPath:indexPath];
 
     if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
-        [self showIncreaseAnimation:touchPoint];
-        [behavior increaseEventForDate:self.currentDate];
-        [cell displayEventCount:[behavior eventForDate:self.currentDate].count];
-        [self updateScore];
+        if (_editingRow != -1) {
+            [self dismissActionPanel:YES];
+        } else {
+            [self showIncreaseAnimation:touchPoint];
+            [behavior increaseEventForDate:self.currentDate];
+            [cell displayEventCount:[behavior eventForDate:self.currentDate].count];
+            [self updateScore];
+        }
     }
     else if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
         [self showActionPanel:indexPath];
@@ -227,12 +231,12 @@
     _editingRow = indexPath.row;
 
     CGRect cellRect = [self.tableView rectForRowAtIndexPath:indexPath];
+    [self refreshActionPanel];
     self.actionPanel.left = self.tableView.right;
     self.actionPanel.top = cellRect.origin.y - 1;
-    [self refreshActionPanel];
     [self.tableView bringSubviewToFront:self.actionPanel];
     [UIView animateWithDuration:.2 animations:^{
-        self.actionPanel.right = self.tableView.right;
+        self.actionPanel.right = self.tableView.right + 10;
     }];
 }
 
@@ -241,22 +245,28 @@
     self.annotationBtn.hidden = ![behavior.annotation isNotBlank];
     self.minusBtn.hidden = ([behavior eventForDate:self.currentDate].countValue == 0);
     self.editBtn.hidden = self.removeBtn.hidden = ![behavior.isCustomised boolValue];
+    NSUInteger visibleBtnNumber = [self.actionPanel.subviews pick:^BOOL(UIView *view) {
+        return !view.hidden;
+    }].count;
+    self.actionPanel.width = 45 * visibleBtnNumber + 20;
 }
 
 - (UIView *)actionPanel {
     if (nil == _actionPanel) {
-        _actionPanel = [[UIView alloc] initWithFrame:CGRectZero];
+        _actionPanel = [[HorizontalStackedView alloc] initWithFrame:CGRectZero];
         _actionPanel.left = self.tableView.right;
-        _actionPanel.backgroundColor = [UIColor redColor];
+        _actionPanel.backgroundColor = [UIColor colorWithWhite:.3 alpha:.7];
         [self.tableView addSubview:_actionPanel];
 
-        self.annotationBtn = [self buildButtonForActionPanelWithTitle:@"白话" action:@selector(displayAnnotation) left:0];
-        self.minusBtn = [self buildButtonForActionPanelWithTitle:@"减一" action:@selector(decreaseEventCount) left:45 * 1];
-        self.editBtn = [self buildButtonForActionPanelWithTitle:@"修改" action:@selector(editBehavior) left:45 * 2];
-        self.removeBtn = [self buildButtonForActionPanelWithTitle:@"删除" action:@selector(removeBehavior) left:45 * 3];
 
-        _actionPanel.width = 45 * 4;
+        self.annotationBtn = [self buildButtonForActionPanelWithTitle:@"白话" action:@selector(displayAnnotation)];
+        self.minusBtn = [self buildButtonForActionPanelWithTitle:@"减一" action:@selector(decreaseEventCount)];
+        self.editBtn = [self buildButtonForActionPanelWithTitle:@"修改" action:@selector(editBehavior)];
+        self.removeBtn = [self buildButtonForActionPanelWithTitle:@"删除" action:@selector(removeBehavior)];
+
+        _actionPanel.width = 45 * 4 + 20;
         _actionPanel.height = 44;
+        _actionPanel.layer.cornerRadius = 10;
     }
     return _actionPanel;
 }
@@ -302,12 +312,12 @@
     [self dismissActionPanel:NO];
 }
 
-- (UIButton *)buildButtonForActionPanelWithTitle:(NSString *)title action:(SEL)action left:(CGFloat)left {
+- (UIButton *)buildButtonForActionPanelWithTitle:(NSString *)title action:(SEL)action {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor darkTextColor] forState:UIControlStateHighlighted];
-    button.frame = CGRectMake(left, 0, 45, 44);
+    button.frame = CGRectMake(0, 0, 45, 44);
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     [_actionPanel addSubview:button];
     return button;
