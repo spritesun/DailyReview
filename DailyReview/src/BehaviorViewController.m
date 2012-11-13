@@ -62,7 +62,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"behavior-view-bg"]];
+    self.view.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"summary-bg.png"]];
     self.view.backgroundView.frame = tableView_.frame;
     tableView_.delegate = self;
     tableView_.dataSource = self;

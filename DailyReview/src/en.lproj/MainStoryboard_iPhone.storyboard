@@ -43,7 +43,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" id="RCg-7a-g9h" customClass="ScoreView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -76,7 +76,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" id="UqD-m8-8JB" customClass="ScoreView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -352,13 +352,13 @@
             </objects>
             <point key="canvasLocation" x="93" y="1775"/>
         </scene>
-        <!--About View Controller-->
+        <!--About Karma Counter View Controller-->
         <scene sceneID="Irm-iC-dE0">
             <objects>
-                <viewController id="z3N-6r-FKU" customClass="AboutViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FiQ-oQ-32Q" customClass="AboutDailyReviewView">
+                <viewController id="z3N-6r-FKU" customClass="AboutKarmaCounterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FiQ-oQ-32Q">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NvU-cJ-rRF">
@@ -426,7 +426,7 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="JmD-1L-jVX">
                                 <rect key="frame" x="0.0" y="151" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="374407200.72665101">
                                     <!--2012-11-12 10:00:00 +0000-->
                                 </date>
@@ -616,7 +616,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="summary-bg.png" id="qvl-1O-Jzo">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="415"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="累计功德：0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Z38-1o-aud">
                                 <rect key="frame" x="121" y="125" width="99" height="30"/>
@@ -706,22 +706,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="bottom-bar-item-guo.png" width="31" height="31"/>
         <image name="bottom-bar-item-he.png" width="31" height="31"/>
         <image name="bottom-bar-item-more.png" width="31" height="31"/>
-        <image name="summary-bg.png" width="320" height="415"/>
+        <image name="summary-bg.png" width="320" height="503"/>
     </resources>
     <classes>
-        <class className="AboutDailyReviewView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutDailyReviewView.h"/>
-        </class>
-        <class className="AboutUsViewController" superclassName="AboutViewController">
+        <class className="AboutUsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutUsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="mailTo:"/>
                 <relationship kind="action" name="weiboTo:"/>
                 <relationship kind="outlet" name="mailLabel" candidateClass="UILabel"/>
             </relationships>
-        </class>
-        <class className="AboutViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
         </class>
         <class className="BaihuaViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaihuaViewController.h"/>
@@ -775,6 +769,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="meritRankLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="totalRankLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="ThanksViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ThanksViewController.h"/>
         </class>
         <class className="TimeLineViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeLineViewController.h"/>

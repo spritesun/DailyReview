@@ -4,6 +4,7 @@
 #import "NSDate+Additions.h"
 #import "MainViewController.h"
 #import "NSString+Additions.h"
+#import "UIView+Additions.h"
 
 @interface AddOrEditBehaviorController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 @property(nonatomic, retain) Behavior *editingBehavior;
@@ -54,6 +55,7 @@
     float const NAVIGATION_BAR_HEIGHT = 48;
 
     UIView *const view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
     view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
 
     UINavigationBar *const navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT)];
@@ -66,8 +68,7 @@
     navigationItem.leftBarButtonItem = cancelItem;
     navigationItem.rightBarButtonItem = addItem;
 
-    UITableView *const tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT) style:UITableViewStyleGrouped];
-
+    UITableView *const tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, view.height - NAVIGATION_BAR_HEIGHT) style:UITableViewStyleGrouped];
     tableView.dataSource = self;
     tableView.delegate = self;
     [view addSubview:tableView];

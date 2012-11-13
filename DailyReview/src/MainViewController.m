@@ -46,7 +46,7 @@
     BehaviorResultsController *resultsController = behaviorViewController.resultsController;
     [resultsController performFetch];
     NSIndexPath *behaviorIndex = [resultsController indexPathForObject:behavior];
-    [behaviorViewController.tableView scrollToRowAtIndexPath:behaviorIndex atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [behaviorViewController.tableView scrollToRowAtIndexPath:behaviorIndex atScrollPosition:UITableViewScrollPositionTop animated:NO];
     [behaviorViewController.tableView reloadRowsAtIndexPaths:@[behaviorIndex] withRowAnimation:UITableViewRowAnimationFade];
 }
 

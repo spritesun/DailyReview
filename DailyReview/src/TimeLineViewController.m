@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[DRBackButton button]];
     self.view.backgroundColor = [UIColor creamColor];
 
     [[self resultsController] performFetch:nil];
