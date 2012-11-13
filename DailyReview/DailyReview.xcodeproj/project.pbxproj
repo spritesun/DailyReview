@@ -294,6 +294,79 @@
 		A3A77605165201610051BAA1 /* initial_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A3A77604165201610051BAA1 /* initial_data.json */; };
 		A3A77607165205190051BAA1 /* initial_data.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = A3A77604165201610051BAA1 /* initial_data.json */; };
 		A3C216AD16522B27009B78F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C216AC16522B27009B78F9 /* Default-568h@2x.png */; };
+		A3C216D8165241A2009B78F9 /* BackableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870F9C42E9FFEEEAD8B80B /* BackableViewController.m */; };
+		A3C216D9165241A2009B78F9 /* ThanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870829243B25E085495C6E /* ThanksViewController.m */; };
+		A3C216DA165241A2009B78F9 /* NotificationSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558703F8C80F8CF11A223AFB /* NotificationSettingController.m */; };
+		A3C216DB165241A2009B78F9 /* BaihuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */; };
+		A3C216DC165241A3009B78F9 /* BackableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870F9C42E9FFEEEAD8B80B /* BackableViewController.m */; };
+		A3C216DD165241A3009B78F9 /* ThanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870829243B25E085495C6E /* ThanksViewController.m */; };
+		A3C216DE165241A3009B78F9 /* NotificationSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558703F8C80F8CF11A223AFB /* NotificationSettingController.m */; };
+		A3C216DF165241A3009B78F9 /* BaihuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */; };
+		A3C216E0165241A9009B78F9 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304890F164C7B3D0062D3E6 /* TimeLineViewController.m */; };
+		A3C216E1165241A9009B78F9 /* RankingChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304891C164C7CD90062D3E6 /* RankingChartsViewController.m */; };
+		A3C216E2165241AA009B78F9 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304890F164C7B3D0062D3E6 /* TimeLineViewController.m */; };
+		A3C216E3165241AA009B78F9 /* RankingChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304891C164C7CD90062D3E6 /* RankingChartsViewController.m */; };
+		A3C216E4165241B1009B78F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A04A9815344CD90092DC4A /* AppDelegate.m */; };
+		A3C216E5165241B1009B78F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19BF153D221E00C31041 /* MainViewController.m */; };
+		A3C216E6165241B1009B78F9 /* BehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497316231534590400E3E5DC /* BehaviorViewController.m */; };
+		A3C216E7165241B1009B78F9 /* MeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C3153D5C1700C31041 /* MeritController.m */; };
+		A3C216E8165241B1009B78F9 /* DemeritController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CE19C6153D5CE800C31041 /* DemeritController.m */; };
+		A3C216E9165241B1009B78F9 /* AddOrEditBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddOrEditBehaviorController.m */; };
+		A3C216EA165241BD009B78F9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3048911164C7BE10062D3E6 /* DataModel.xcdatamodeld */; };
+		A3C216EB165241BF009B78F9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3048911164C7BE10062D3E6 /* DataModel.xcdatamodeld */; };
+		A3C216EC165241C6009B78F9 /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 49412AA2153EA07900450C3B /* Behavior.m */; };
+		A3C216ED165241DC009B78F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3048915164C7CB20062D3E6 /* InfoPlist.strings */; };
+		A3C216EE165241DE009B78F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3048915164C7CB20062D3E6 /* InfoPlist.strings */; };
+		A3C216EF165241DF009B78F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3048915164C7CB20062D3E6 /* InfoPlist.strings */; };
+		A3C216F0165241F3009B78F9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3048911164C7BE10062D3E6 /* DataModel.xcdatamodeld */; };
+		A3C216F116524200009B78F9 /* BackableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870F9C42E9FFEEEAD8B80B /* BackableViewController.m */; };
+		A3C216F216524200009B78F9 /* ThanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870829243B25E085495C6E /* ThanksViewController.m */; };
+		A3C216F316524200009B78F9 /* NotificationSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558703F8C80F8CF11A223AFB /* NotificationSettingController.m */; };
+		A3C216F416524200009B78F9 /* AboutKarmaCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999281215760ACB0064BF32 /* AboutKarmaCounterViewController.m */; };
+		A3C216F516524200009B78F9 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491476AD1568CB0700305AC1 /* AboutUsViewController.m */; };
+		A3C216F616524200009B78F9 /* BaihuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */; };
+		A3C216F71652420D009B78F9 /* SummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B97F0153EDCDE002801F7 /* SummaryController.m */; };
+		A3C216F81652420D009B78F9 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304890F164C7B3D0062D3E6 /* TimeLineViewController.m */; };
+		A3C216F91652420D009B78F9 /* RankingChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304891C164C7CD90062D3E6 /* RankingChartsViewController.m */; };
+		A3C216FA16524218009B78F9 /* HorizontalStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 558707E1DC51985ADF5BC35D /* HorizontalStackedView.m */; };
+		A3C216FB16524218009B78F9 /* DRBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 558705D491E3A1A5759246F8 /* DRBackButton.m */; };
+		A3C216FC16524218009B78F9 /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A304894D164C8E540062D3E6 /* BehaviorSectionHeaderView.m */; };
+		A3C216FD16524218009B78F9 /* FullPageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587010F7A7A8D5D81529209 /* FullPageTextView.m */; };
+		A3C216FE16524218009B78F9 /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
+		A3C216FF16524218009B78F9 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
+		A3C2170016524218009B78F9 /* DRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49151BE615514D4600DD10A7 /* DRNavigationBar.m */; };
+		A3C2170116524218009B78F9 /* HorizontalStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 558707E1DC51985ADF5BC35D /* HorizontalStackedView.m */; };
+		A3C2170216524218009B78F9 /* DRBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 558705D491E3A1A5759246F8 /* DRBackButton.m */; };
+		A3C2170316524218009B78F9 /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A304894D164C8E540062D3E6 /* BehaviorSectionHeaderView.m */; };
+		A3C2170416524218009B78F9 /* FullPageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587010F7A7A8D5D81529209 /* FullPageTextView.m */; };
+		A3C2170516524218009B78F9 /* HorizontalStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 558707E1DC51985ADF5BC35D /* HorizontalStackedView.m */; };
+		A3C2170616524218009B78F9 /* DRBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 558705D491E3A1A5759246F8 /* DRBackButton.m */; };
+		A3C2170716524218009B78F9 /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A304894D164C8E540062D3E6 /* BehaviorSectionHeaderView.m */; };
+		A3C2170816524218009B78F9 /* FullPageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587010F7A7A8D5D81529209 /* FullPageTextView.m */; };
+		A3C2170916524222009B78F9 /* UserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 558708EAAD5822BC9B49D054 /* UserDefaultsManager.m */; };
+		A3C2170A16524222009B78F9 /* IntrospectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43C1537D4BE002BBF3C /* IntrospectManager.m */; };
+		A3C2170B16524222009B78F9 /* UserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 558708EAAD5822BC9B49D054 /* UserDefaultsManager.m */; };
+		A3C2170C16524223009B78F9 /* UserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 558708EAAD5822BC9B49D054 /* UserDefaultsManager.m */; };
+		A3C2170D1652422B009B78F9 /* Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = 497659CC153BB8DB00E0D533 /* Binding.m */; };
+		A3C2170E1652422B009B78F9 /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF43 /* BindingManager.m */; };
+		A3C2170F1652423D009B78F9 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A391D3F7165206440061BBC7 /* db.sqlite */; };
+		A3C217101652423E009B78F9 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A391D3F7165206440061BBC7 /* db.sqlite */; };
+		A3C217111652423F009B78F9 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A391D3F7165206440061BBC7 /* db.sqlite */; };
+		A3C2171216524243009B78F9 /* initial_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A3A77604165201610051BAA1 /* initial_data.json */; };
+		A3C2171316524243009B78F9 /* initial_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A3A77604165201610051BAA1 /* initial_data.json */; };
+		A3C2171416524243009B78F9 /* initial_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A3A77604165201610051BAA1 /* initial_data.json */; };
+		A3C2171516524254009B78F9 /* section-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A304892C164C80460062D3E6 /* section-bg.png */; };
+		A3C2171616524254009B78F9 /* section-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A304892D164C80460062D3E6 /* section-bg@2x.png */; };
+		A3C2171716524254009B78F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C216AC16522B27009B78F9 /* Default-568h@2x.png */; };
+		A3C2171816524255009B78F9 /* section-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A304892C164C80460062D3E6 /* section-bg.png */; };
+		A3C2171916524255009B78F9 /* section-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A304892D164C80460062D3E6 /* section-bg@2x.png */; };
+		A3C2171A16524255009B78F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C216AC16522B27009B78F9 /* Default-568h@2x.png */; };
+		A3C2171B16524282009B78F9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3048917164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard */; };
+		A3C2171C16524283009B78F9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3048917164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard */; };
+		A3C2171D16524285009B78F9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3048917164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard */; };
+		A3C2171E165242C0009B78F9 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
+		A3C2171F165242C0009B78F9 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
+		A3C21720165242C1009B78F9 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -789,8 +862,6 @@
 		49A04A8F15344BB00092DC4A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				558708C173DE23AD638E7D62 /* HorizontalStackedView.h */,
-				558707E1DC51985ADF5BC35D /* HorizontalStackedView.m */,
 				A3048915164C7CB20062D3E6 /* InfoPlist.strings */,
 				A3048917164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard */,
 				4973162615345CA000E3E5DC /* domains */,
@@ -937,6 +1008,8 @@
 		49EBB43D1537D4BE002BBF5D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				558708C173DE23AD638E7D62 /* HorizontalStackedView.h */,
+				558707E1DC51985ADF5BC35D /* HorizontalStackedView.m */,
 				558704672E2D93BC6ABB5938 /* DRBackButton.h */,
 				558705D491E3A1A5759246F8 /* DRBackButton.m */,
 				A304894C164C8E540062D3E6 /* BehaviorSectionHeaderView.h */,
@@ -1225,6 +1298,13 @@
 				4948A84F156D03BA00EC7A7B /* increase-hint.png in Resources */,
 				4948A850156D03BA00EC7A7B /* increase-hint@2x.png in Resources */,
 				499794E91576108E000619AD /* frank_static_resources.bundle in Resources */,
+				A3C216EE165241DE009B78F9 /* InfoPlist.strings in Resources */,
+				A3C217101652423E009B78F9 /* db.sqlite in Resources */,
+				A3C2171416524243009B78F9 /* initial_data.json in Resources */,
+				A3C2171816524255009B78F9 /* section-bg.png in Resources */,
+				A3C2171916524255009B78F9 /* section-bg@2x.png in Resources */,
+				A3C2171A16524255009B78F9 /* Default-568h@2x.png in Resources */,
+				A3C2171C16524283009B78F9 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1262,6 +1342,13 @@
 				499E335E1563B8D800979BE4 /* decrease-hint@2x.png in Resources */,
 				499E335F1563B8D800979BE4 /* increase-hint.png in Resources */,
 				499E33601563B8D800979BE4 /* increase-hint@2x.png in Resources */,
+				A3C216ED165241DC009B78F9 /* InfoPlist.strings in Resources */,
+				A3C2170F1652423D009B78F9 /* db.sqlite in Resources */,
+				A3C2171316524243009B78F9 /* initial_data.json in Resources */,
+				A3C2171516524254009B78F9 /* section-bg.png in Resources */,
+				A3C2171616524254009B78F9 /* section-bg@2x.png in Resources */,
+				A3C2171716524254009B78F9 /* Default-568h@2x.png in Resources */,
+				A3C2171B16524282009B78F9 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1270,6 +1357,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A04AB915344D9B0092DC4A /* InfoPlist.strings in Resources */,
+				A3C216EF165241DF009B78F9 /* InfoPlist.strings in Resources */,
+				A3C217111652423F009B78F9 /* db.sqlite in Resources */,
+				A3C2171216524243009B78F9 /* initial_data.json in Resources */,
+				A3C2171D16524285009B78F9 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1343,6 +1434,7 @@
 				4943CEE6153AAE1E00B823E7 /* main.m in Sources */,
 				4943CEF2153AB14000B823E7 /* Event.m in Sources */,
 				A391D3F6165206070061BBC7 /* DataModel.xcdatamodeld in Sources */,
+				A3C216EC165241C6009B78F9 /* Behavior.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1389,6 +1481,19 @@
 				4948A822156D03BA00EC7A7B /* AboutUsViewController.m in Sources */,
 				4999280D15760A1D0064BF32 /* AddOrEditBehaviorController.m in Sources */,
 				49979514157615A6000619AD /* AboutKarmaCounterViewController.m in Sources */,
+				A3C216DC165241A3009B78F9 /* BackableViewController.m in Sources */,
+				A3C216DD165241A3009B78F9 /* ThanksViewController.m in Sources */,
+				A3C216DE165241A3009B78F9 /* NotificationSettingController.m in Sources */,
+				A3C216DF165241A3009B78F9 /* BaihuaViewController.m in Sources */,
+				A3C216E2165241AA009B78F9 /* TimeLineViewController.m in Sources */,
+				A3C216E3165241AA009B78F9 /* RankingChartsViewController.m in Sources */,
+				A3C216EB165241BF009B78F9 /* DataModel.xcdatamodeld in Sources */,
+				A3C2170516524218009B78F9 /* HorizontalStackedView.m in Sources */,
+				A3C2170616524218009B78F9 /* DRBackButton.m in Sources */,
+				A3C2170716524218009B78F9 /* BehaviorSectionHeaderView.m in Sources */,
+				A3C2170816524218009B78F9 /* FullPageTextView.m in Sources */,
+				A3C2170C16524223009B78F9 /* UserDefaultsManager.m in Sources */,
+				A3C21720165242C1009B78F9 /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1435,6 +1540,19 @@
 				491476AE1568CB0700305AC1 /* AboutUsViewController.m in Sources */,
 				4999280B15760A1D0064BF32 /* AddOrEditBehaviorController.m in Sources */,
 				4999281515760BA20064BF32 /* AboutKarmaCounterViewController.m in Sources */,
+				A3C216D8165241A2009B78F9 /* BackableViewController.m in Sources */,
+				A3C216D9165241A2009B78F9 /* ThanksViewController.m in Sources */,
+				A3C216DA165241A2009B78F9 /* NotificationSettingController.m in Sources */,
+				A3C216DB165241A2009B78F9 /* BaihuaViewController.m in Sources */,
+				A3C216E0165241A9009B78F9 /* TimeLineViewController.m in Sources */,
+				A3C216E1165241A9009B78F9 /* RankingChartsViewController.m in Sources */,
+				A3C216EA165241BD009B78F9 /* DataModel.xcdatamodeld in Sources */,
+				A3C2170116524218009B78F9 /* HorizontalStackedView.m in Sources */,
+				A3C2170216524218009B78F9 /* DRBackButton.m in Sources */,
+				A3C2170316524218009B78F9 /* BehaviorSectionHeaderView.m in Sources */,
+				A3C2170416524218009B78F9 /* FullPageTextView.m in Sources */,
+				A3C2170B16524222009B78F9 /* UserDefaultsManager.m in Sources */,
+				A3C2171F165242C0009B78F9 /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1464,6 +1582,34 @@
 				4999281015760A530064BF32 /* ContextTestHelper.m in Sources */,
 				49E8CC7E15763A5B0076F4AC /* BehaviorResultsControllerSpec.m in Sources */,
 				49E8CC7F15763A820076F4AC /* BehaviorResultsController.m in Sources */,
+				A3C216E4165241B1009B78F9 /* AppDelegate.m in Sources */,
+				A3C216E5165241B1009B78F9 /* MainViewController.m in Sources */,
+				A3C216E6165241B1009B78F9 /* BehaviorViewController.m in Sources */,
+				A3C216E7165241B1009B78F9 /* MeritController.m in Sources */,
+				A3C216E8165241B1009B78F9 /* DemeritController.m in Sources */,
+				A3C216E9165241B1009B78F9 /* AddOrEditBehaviorController.m in Sources */,
+				A3C216F0165241F3009B78F9 /* DataModel.xcdatamodeld in Sources */,
+				A3C216F116524200009B78F9 /* BackableViewController.m in Sources */,
+				A3C216F216524200009B78F9 /* ThanksViewController.m in Sources */,
+				A3C216F316524200009B78F9 /* NotificationSettingController.m in Sources */,
+				A3C216F416524200009B78F9 /* AboutKarmaCounterViewController.m in Sources */,
+				A3C216F516524200009B78F9 /* AboutUsViewController.m in Sources */,
+				A3C216F616524200009B78F9 /* BaihuaViewController.m in Sources */,
+				A3C216F71652420D009B78F9 /* SummaryController.m in Sources */,
+				A3C216F81652420D009B78F9 /* TimeLineViewController.m in Sources */,
+				A3C216F91652420D009B78F9 /* RankingChartsViewController.m in Sources */,
+				A3C216FA16524218009B78F9 /* HorizontalStackedView.m in Sources */,
+				A3C216FB16524218009B78F9 /* DRBackButton.m in Sources */,
+				A3C216FC16524218009B78F9 /* BehaviorSectionHeaderView.m in Sources */,
+				A3C216FD16524218009B78F9 /* FullPageTextView.m in Sources */,
+				A3C216FE16524218009B78F9 /* BehaviorTableViewCell.m in Sources */,
+				A3C216FF16524218009B78F9 /* ScoreView.m in Sources */,
+				A3C2170016524218009B78F9 /* DRNavigationBar.m in Sources */,
+				A3C2170916524222009B78F9 /* UserDefaultsManager.m in Sources */,
+				A3C2170A16524222009B78F9 /* IntrospectManager.m in Sources */,
+				A3C2170D1652422B009B78F9 /* Binding.m in Sources */,
+				A3C2170E1652422B009B78F9 /* BindingManager.m in Sources */,
+				A3C2171E165242C0009B78F9 /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,21 +37,17 @@ static NSString *const kDBVersion = @"kDBVersion";
     DBVersion version = (DBVersion) [[NSUserDefaults standardUserDefaults] integerForKey:kDBVersion];
     switch (version) {
         case DBVersionBefore110:
-            NSLog(@"before 1.1.0");
             [self migrateTo110];
             break;
         case DBVersionBrandNew:
-            NSLog(@"brand new");
             [[NSUserDefaults standardUserDefaults] setInteger:DBVersion110 forKey:kDBVersion];
             break;
         case DBVersion110:
-            NSLog(@"1.1.0");
             break;
     }
 }
 
 + (void)migrateTo110 {
-    NSLog(@"Migrating to 1.1.0");
     NSManagedObjectContext *ctx = [NSManagedObjectContext defaultContext];
 
     //1.remove zero count event, make sure does not insert zero count event first.
@@ -64,7 +60,6 @@ static NSString *const kDBVersion = @"kDBVersion";
     }];
     [events each:^(id event) {
         [ctx deleteObject:event];
-        NSLog(@"Removing zero count event.");
     }];
     [ctx save];
 
@@ -109,7 +104,6 @@ static NSString *const kDBVersion = @"kDBVersion";
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setInteger:DBVersion110 forKey:kDBVersion];
     [ud synchronize];//Normally unnecessary, but as db migration is very important, ensure here
-    NSLog(@"Finishe migrated to 1.1.0");
 }
 
 + (Behavior *)behaviorNamed:(NSString *)name inBehaviors:(NSArray *)behaviors {

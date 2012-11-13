@@ -709,7 +709,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="summary-bg.png" width="320" height="503"/>
     </resources>
     <classes>
-        <class className="AboutUsViewController" superclassName="UIViewController">
+        <class className="AboutKarmaCounterViewController" superclassName="BackableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutKarmaCounterViewController.h"/>
+        </class>
+        <class className="AboutUsViewController" superclassName="BackableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutUsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="mailTo:"/>
@@ -717,7 +720,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="mailLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="BaihuaViewController" superclassName="UIViewController">
+        <class className="BackableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackableViewController.h"/>
+        </class>
+        <class className="BaihuaViewController" superclassName="BackableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaihuaViewController.h"/>
         </class>
         <class className="BehaviorResultsController" superclassName="NSObject">
@@ -749,7 +755,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="MeritController" superclassName="BehaviorViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MeritController.h"/>
         </class>
-        <class className="NotificationSettingController" superclassName="UIViewController">
+        <class className="NotificationSettingController" superclassName="BackableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NotificationSettingController.h"/>
             <relationships>
                 <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
@@ -770,7 +776,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="totalRankLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="ThanksViewController" superclassName="UIViewController">
+        <class className="ThanksViewController" superclassName="BackableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ThanksViewController.h"/>
         </class>
         <class className="TimeLineViewController" superclassName="UITableViewController">
