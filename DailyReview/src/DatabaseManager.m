@@ -42,11 +42,10 @@ static NSString *const kDBVersion = @"kDBVersion";
             break;
         case DBVersionBrandNew:
             NSLog(@"brand new");
-            [[NSUserDefaults standardUserDefaults] setInteger:DBVersionBefore110 forKey:kDBVersion];//TODO: set to be VERSION110 after update db.sqlite
+            [[NSUserDefaults standardUserDefaults] setInteger:DBVersion110 forKey:kDBVersion];
             break;
         case DBVersion110:
             NSLog(@"1.1.0");
-//            [self migrateTo110];
             break;
     }
 }

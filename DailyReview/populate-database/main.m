@@ -23,6 +23,7 @@ void insertData(NSManagedObjectContext *context, NSArray *behaviorJSONArray) {
     Behavior *behavior = [NSEntityDescription insertNewObjectForEntityForName:@"Behavior" inManagedObjectContext:context];
     [behavior setName:[object valueForKey:@"name"]];
     [behavior setRank:[object valueForKey:@"rank"]];
+    [behavior setAnnotation:[object valueForKey:@"annotation"]];
     [behavior setTimestamp:[NSDate date]];
     if (![context save:&error]) {
       NSLog(@"Error: %@", [error localizedDescription]);
