@@ -113,7 +113,6 @@
 #pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //TODO: avoid create empty event for every behavior everyday.
     BehaviorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BehaviorTableViewCell class])];
     if (nil == cell) {
         cell = [BehaviorTableViewCell cell];
