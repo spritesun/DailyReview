@@ -16,7 +16,7 @@
 #import "HorizontalStackedView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate> {
+@interface BehaviorViewController () <UITableViewAdditionDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UIGestureRecognizerDelegate> {
     NSInteger _editingRow;
 }
 @property(nonatomic, strong) NSDate *currentDate;
@@ -144,7 +144,7 @@
 
 }
 
-- (void)transformAnimationOn:(UIImageView *)view From:(CGRect)fromRect to:(CGRect)toRect {
+- (void)transformAnimationOn:(UIImageView *)view from:(CGRect)fromRect to:(CGRect)toRect {
     view.frame = fromRect;
     view.alpha = 1.0;
     view.clipsToBounds = YES;
@@ -162,7 +162,7 @@
     CGRect beginRect = CGRectMake(point.x, point.y - imageHeight / 2., 0, imageHeight);
     CGRect endRect = CGRectMake(point.x, point.y - imageHeight / 2., increaseView_.image.size.width, imageHeight);
     increaseView_.contentMode = UIViewContentModeLeft;
-    [self transformAnimationOn:increaseView_ From:beginRect to:endRect];
+    [self transformAnimationOn:increaseView_ from:beginRect to:endRect];
 
 }
 
@@ -174,7 +174,7 @@
     CGRect endRect = CGRectMake(130, cellOrigin.y + 5, imageWidth, imageHeight);
     decreaseView_.contentMode = UIViewContentModeRight;
     [self.tableView bringSubviewToFront:decreaseView_];
-    [self transformAnimationOn:decreaseView_ From:beginRect to:endRect];
+    [self transformAnimationOn:decreaseView_ from:beginRect to:endRect];
 }
 
 - (void)addGestures {
@@ -183,6 +183,7 @@
     UIGestureRecognizer *hintRecognizer = [UITapGestureRecognizer recognizerWithActionBlock:^(UISwipeGestureRecognizer *theRecognizer) {
         [weakSelf showHintAnimation:[theRecognizer locationInView:weakSelf.tableView]];
     }];
+    hintRecognizer.delegate = self;
     [self.tableView addGestureRecognizer:hintRecognizer];
 
 
@@ -195,6 +196,13 @@
     [self.tableView addGestureRecognizer:decreaseRecognizer];
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if (([touch.view isKindOfClass:[UIButton class]]) && ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]])) {
+        return NO;
+    }
+    return YES;
+}
 - (void)didSwipe:(UISwipeGestureRecognizer *)recognizer {
     CGPoint touchPoint = [recognizer locationInView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:touchPoint];
