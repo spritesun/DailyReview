@@ -1763,6 +1763,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49A1CD79156A72BA008AF970 /* Production.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Long Sun";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6F5BF36E-2B3F-4E95-8FD7-285FEF59A7A8";
 			};
 			name = Release;
 		};
