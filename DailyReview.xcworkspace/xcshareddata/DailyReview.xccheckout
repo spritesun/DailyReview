@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9190CDC2-ECEB-4083-A8BC-F4DD4CBAB972</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DailyReview</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>68A470DE-1257-46ED-825F-23B430983BDF</key>
+		<string>https://github.com/spritesun/DailyReview.git</string>
+		<key>D3A5876D-5743-4021-988D-27286EF0E0ED</key>
+		<string>git://github.com/domesticcatsoftware/DCIntrospect.git</string>
+		<key>E2F4BC2B-17AB-4191-BCCC-5866642EC1EE</key>
+		<string>git://github.com/allending/Kiwi.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DailyReview.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>68A470DE-1257-46ED-825F-23B430983BDF</key>
+		<string>..</string>
+		<key>D3A5876D-5743-4021-988D-27286EF0E0ED</key>
+		<string>../lib/DCIntrospect</string>
+		<key>E2F4BC2B-17AB-4191-BCCC-5866642EC1EE</key>
+		<string>../lib/Kiwi</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/spritesun/DailyReview.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>68A470DE-1257-46ED-825F-23B430983BDF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D3A5876D-5743-4021-988D-27286EF0E0ED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DCIntrospect</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>68A470DE-1257-46ED-825F-23B430983BDF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E2F4BC2B-17AB-4191-BCCC-5866642EC1EE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Kiwi</string>
+		</dict>
+	</array>
+</dict>
+</plist>

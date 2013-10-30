@@ -1209,7 +1209,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = ThoughtWorks;
+				ORGANIZATIONNAME = Sunlong;
+				TargetAttributes = {
+					49A04A441534491B0092DC4A = {
+						DevelopmentTeam = WLLL6UU7Y7;
+					};
+				};
 			};
 			buildConfigurationList = 49A04A3F1534491B0092DC4A /* Build configuration list for PBXProject "DailyReview" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1763,8 +1768,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49A1CD79156A72BA008AF970 /* Production.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Long Sun";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6F5BF36E-2B3F-4E95-8FD7-285FEF59A7A8";
 			};
 			name = Release;
 		};
