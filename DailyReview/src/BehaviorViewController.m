@@ -54,11 +54,6 @@
     [self.tableView addSubview:decreaseView_];
 }
 
-- (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image {
-    UIImage *disabledImage = [image grayish];
-    [barItem setFinishedSelectedImage:image withFinishedUnselectedImage:disabledImage];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 

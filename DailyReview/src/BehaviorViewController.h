@@ -8,6 +8,5 @@
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
 @property(nonatomic, strong) IBOutlet BehaviorResultsController *resultsController;
 
-- (void)setBarItem:(UITabBarItem *)barItem withImage:(UIImage *)image;
 - (void)refreshView;
 @end
