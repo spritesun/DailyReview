@@ -325,6 +325,7 @@
 		A3C2171E165242C0009B78F9 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
 		A3C2171F165242C0009B78F9 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
 		A3C21720165242C1009B78F9 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
+		A3EB33D91821D7D10053A35A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EB33D81821D7D10053A35A /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -546,6 +547,7 @@
 		A35455C81820D81600D03DE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Develpment/Images.xcassets; sourceTree = "<group>"; };
 		A391D3F7165206440061BBC7 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = db.sqlite; path = resources/db.sqlite; sourceTree = "<group>"; };
 		A3A77604165201610051BAA1 /* initial_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = initial_data.json; path = resources/initial_data.json; sourceTree = "<group>"; };
+		A3EB33D81821D7D10053A35A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = ../lib/Reveal.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -606,6 +608,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EB33D91821D7D10053A35A /* Reveal.framework in Frameworks */,
 				49E40AB61578753E0055ED44 /* MessageUI.framework in Frameworks */,
 				49E40AB71578753E0055ED44 /* CoreGraphics.framework in Frameworks */,
 				49E40AB81578753E0055ED44 /* UIKit.framework in Frameworks */,
@@ -883,6 +886,7 @@
 		49EBB4261537D1D3002BBF3C /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				A3EB33D81821D7D10053A35A /* Reveal.framework */,
 				49E1E1381547EF740030AAD1 /* Kiwi.xcodeproj */,
 				498270601571DAD500EEF862 /* Frank */,
 			);
@@ -1660,6 +1664,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/spritesun/workspace/KarmaCounter/DailyReview,
+				);
+				OTHER_LDFLAGS = "-ObjC";
 			};
 			name = Debug;
 		};
@@ -1669,6 +1678,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/spritesun/workspace/KarmaCounter/DailyReview,
+				);
+				OTHER_LDFLAGS = "-ObjC";
 			};
 			name = Release;
 		};
