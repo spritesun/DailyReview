@@ -11,7 +11,6 @@
   if (self) {
     const CGFloat height = 27;
     self.size = CGSizeMake(SCREEN_WIDTH, height);
-    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"top-bar-bg"]];
     self.backgroundView.width = SCREEN_WIDTH;
     scoreLabel = [self createScoreLabel];
     [self addSubview:scoreLabel];
