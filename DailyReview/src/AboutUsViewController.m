@@ -22,7 +22,7 @@
     [controller setToRecipients:[NSArray arrayWithObject:@"gongguoge@gmail.com"]];
 
     [controller setMessageBody:@"" isHTML:NO];
-    [self presentModalViewController:controller animated:YES];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (IBAction)weiboTo:(id)sender {
@@ -30,7 +30,7 @@
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

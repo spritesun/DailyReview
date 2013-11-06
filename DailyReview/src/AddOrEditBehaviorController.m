@@ -63,8 +63,8 @@
 
     UINavigationItem *const navigationItem = [[UINavigationItem alloc] initWithTitle:title];
     navigationBar.items = Array(navigationItem);
-    UIBarButtonItem *const addItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonSystemItemAdd target:self action:@selector(save)];
-    UIBarButtonItem *const cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
+  UIBarButtonItem *const addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(save)];
+  UIBarButtonItem *const cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     navigationItem.leftBarButtonItem = cancelItem;
     navigationItem.rightBarButtonItem = addItem;
 

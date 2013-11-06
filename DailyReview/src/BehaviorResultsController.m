@@ -55,13 +55,13 @@
 }
 
 - (NSNumber *)totalRank {
-    return [NSNumber numberWithInt:[self totalRankOnDate:nil]];
+    return [NSNumber numberWithInteger:[self totalRankOnDate:nil]];
 }
 
 - (NSNumber *)todayRank {
     NSDate *today = [[NSDate date] dateWithoutTime];
     NSInteger result = [self totalRankOnDate:today];
-    return [NSNumber numberWithInt:result];
+    return [NSNumber numberWithInteger:result];
 }
 
 - (NSPredicate *)getDatePredicate:(NSDate *)date {
