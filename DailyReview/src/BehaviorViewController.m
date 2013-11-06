@@ -247,7 +247,7 @@
   Behavior *behavior = [self editingBehavior];
   self.annotationBtn.hidden = ![behavior.annotation isNotBlank];
   self.minusBtn.hidden = ([behavior eventForDate:self.currentDate].countValue == 0);
-  self.editBtn.hidden = self.removeBtn.hidden = ![behavior.isCustomised boolValue];
+  self.editBtn.hidden = ![behavior.isCustomised boolValue];
   NSUInteger visibleBtnNumber = [self.actionPanel.subviews pick:^BOOL(UIView *view) {
     return !view.hidden;
   }].count;
