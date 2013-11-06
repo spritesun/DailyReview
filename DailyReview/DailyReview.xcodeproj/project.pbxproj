@@ -289,6 +289,9 @@
 		A304892E164C80460062D3E6 /* section-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A304892C164C80460062D3E6 /* section-bg.png */; };
 		A304892F164C80460062D3E6 /* section-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A304892D164C80460062D3E6 /* section-bg@2x.png */; };
 		A304894E164C8E540062D3E6 /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A304894D164C8E540062D3E6 /* BehaviorSectionHeaderView.m */; };
+		A387DF83182A147100FD23C0 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = A387DF82182A147100FD23C0 /* Icon-120.png */; };
+		A387DF84182A147100FD23C0 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = A387DF82182A147100FD23C0 /* Icon-120.png */; };
+		A387DF85182A147100FD23C0 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = A387DF82182A147100FD23C0 /* Icon-120.png */; };
 		A391D3F6165206070061BBC7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3048911164C7BE10062D3E6 /* DataModel.xcdatamodeld */; };
 		A391D3F8165206440061BBC7 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A391D3F7165206440061BBC7 /* db.sqlite */; };
 		A3A77605165201610051BAA1 /* initial_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A3A77604165201610051BAA1 /* initial_data.json */; };
@@ -604,6 +607,7 @@
 		A304892D164C80460062D3E6 /* section-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "section-bg@2x.png"; path = "resources/images/section-bg@2x.png"; sourceTree = "<group>"; };
 		A304894C164C8E540062D3E6 /* BehaviorSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehaviorSectionHeaderView.h; sourceTree = "<group>"; };
 		A304894D164C8E540062D3E6 /* BehaviorSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BehaviorSectionHeaderView.m; sourceTree = "<group>"; };
+		A387DF82182A147100FD23C0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-120.png"; path = "resources/images/Icon-120.png"; sourceTree = "<group>"; };
 		A391D3F7165206440061BBC7 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = db.sqlite; path = resources/db.sqlite; sourceTree = "<group>"; };
 		A3A77604165201610051BAA1 /* initial_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = initial_data.json; path = resources/initial_data.json; sourceTree = "<group>"; };
 		A3C216AC16522B27009B78F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resources/images/Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -795,6 +799,7 @@
 				498553021546CC9A00925D92 /* bottom-bar-item-more@2x.png */,
 				498553031546CC9A00925D92 /* Icon.png */,
 				498553041546CC9A00925D92 /* Icon@2x.png */,
+				A387DF82182A147100FD23C0 /* Icon-120.png */,
 				498553051546CC9A00925D92 /* Default.png */,
 				498553061546CC9A00925D92 /* Default@2x.png */,
 				498553091546CC9A00925D92 /* summary-bg.png */,
@@ -1306,6 +1311,7 @@
 				A3C216EE165241DE009B78F9 /* InfoPlist.strings in Resources */,
 				A3C217101652423E009B78F9 /* db.sqlite in Resources */,
 				A3C2171416524243009B78F9 /* initial_data.json in Resources */,
+				A387DF85182A147100FD23C0 /* Icon-120.png in Resources */,
 				A3C2171816524255009B78F9 /* section-bg.png in Resources */,
 				A3C2171916524255009B78F9 /* section-bg@2x.png in Resources */,
 				A3C2171A16524255009B78F9 /* Default-568h@2x.png in Resources */,
@@ -1347,6 +1353,7 @@
 				499E335E1563B8D800979BE4 /* decrease-hint@2x.png in Resources */,
 				499E335F1563B8D800979BE4 /* increase-hint.png in Resources */,
 				499E33601563B8D800979BE4 /* increase-hint@2x.png in Resources */,
+				A387DF84182A147100FD23C0 /* Icon-120.png in Resources */,
 				A3C216ED165241DC009B78F9 /* InfoPlist.strings in Resources */,
 				A3C2170F1652423D009B78F9 /* db.sqlite in Resources */,
 				A3C2171316524243009B78F9 /* initial_data.json in Resources */,
@@ -1403,6 +1410,7 @@
 				49E40AE01578753E0055ED44 /* decrease-hint@2x.png in Resources */,
 				49E40AE11578753E0055ED44 /* increase-hint.png in Resources */,
 				49E40AE21578753E0055ED44 /* increase-hint@2x.png in Resources */,
+				A387DF83182A147100FD23C0 /* Icon-120.png in Resources */,
 				A3048919164C7CB20062D3E6 /* InfoPlist.strings in Resources */,
 				A304891A164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				A304892E164C80460062D3E6 /* section-bg.png in Resources */,

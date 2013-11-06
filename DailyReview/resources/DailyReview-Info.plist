@@ -21,6 +21,12 @@
 			<true/>
 		</dict>
 	</dict>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon.png</string>
+		<string>Icon@2x.png</string>
+		<string>Icon-120.png</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>$(BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
