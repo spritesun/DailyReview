@@ -763,7 +763,9 @@
 				49A04A461534491B0092DC4A /* products */,
 				4943CEE4153AAE1E00B823E7 /* populate-database */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		49A04A461534491B0092DC4A /* products */ = {
 			isa = PBXGroup;
@@ -1123,7 +1125,7 @@
 		49A04A3C1534491B0092DC4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Sunlong;
 				TargetAttributes = {
 					49A04A441534491B0092DC4A = {
@@ -1620,6 +1622,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/../lib";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -1627,6 +1640,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49F3EBCE1557FC9800BAC96F /* Release.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/../lib";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 			};
 			name = Release;
 		};

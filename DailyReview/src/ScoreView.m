@@ -9,18 +9,14 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   if (self) {
-    const CGFloat height = 27;
-    self.size = CGSizeMake(SCREEN_WIDTH, height);
-    self.backgroundView.width = SCREEN_WIDTH;
-    scoreLabel = [self createScoreLabel];
-    [self addSubview:scoreLabel];
+    [self addSubview:[self createScoreLabel]];
   }
   return self;
 }
 
 - (UILabel *)createScoreLabel {
-  UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
-  label.left = 10;
+  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.f, 0.f, self.width - 10.f, self.height)];
+  label.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
   label.backgroundColor = [UIColor clearColor];
   label.textColor = [UIColor colorWithRed:1 green:.851 blue:.2];
   label.font = [UIFont boldSystemFontOfSize:14];
