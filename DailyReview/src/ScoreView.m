@@ -9,7 +9,8 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   if (self) {
-    [self addSubview:[self createScoreLabel]];
+    scoreLabel = [self createScoreLabel];
+    [self addSubview:scoreLabel];
   }
   return self;
 }
@@ -17,9 +18,8 @@
 - (UILabel *)createScoreLabel {
   UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.f, 0.f, self.width - 10.f, self.height)];
   label.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
-  label.backgroundColor = [UIColor clearColor];
-  label.textColor = [UIColor colorWithRed:1 green:.851 blue:.2];
   label.font = [UIFont boldSystemFontOfSize:14];
+  label.textColor = [UIColor darkGrayColor];
   return label;
 }
 

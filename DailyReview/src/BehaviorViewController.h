@@ -6,7 +6,8 @@
 
 @property(nonatomic, strong) IBOutlet ScoreView *scoreView;
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
-@property(nonatomic, strong) IBOutlet BehaviorResultsController *resultsController;
+@property(nonatomic, strong) BehaviorResultsController *resultsController;
 
 - (void)refreshView;
+- (IBAction)addBehavior:(id)sender;
 @end

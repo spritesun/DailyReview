@@ -56,32 +56,11 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
-  self.view.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"summary-bg.png"]];
-  self.view.backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-  self.view.backgroundView.frame = tableView_.frame;
   tableView_.delegate = self;
   tableView_.dataSource = self;
   bindingManager_ = [BindingManager new];
   [self createHintView];
   [self addGestures];
-  
-  UIButton *addButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
-  addButton.right = self.view.right - 5;
-  [addButton addTarget:self action:@selector(addBehavior) forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:addButton];
-}
-
-
-//TODO: could remove as iOS 6 deprecated this
-- (void)viewDidUnload {
-  tableView_.delegate = nil;
-  tableView_.dataSource = nil;
-  bindingManager_ = nil;
-  hintView_ = nil;
-  increaseView_ = nil;
-  decreaseView_ = nil;
-  [super viewDidUnload];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -268,7 +247,7 @@
     self.removeBtn = [self buildButtonForActionPanelWithTitle:@"删除" action:@selector(removeBehavior)];
     
     _actionPanel.width = 45 * 4 + 20;
-    _actionPanel.height = 44;
+    _actionPanel.height = self.tableView.rowHeight;
     _actionPanel.layer.cornerRadius = 10;
   }
   return _actionPanel;
@@ -320,7 +299,7 @@
   [button setTitle:title forState:UIControlStateNormal];
   [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   [button setTitleColor:[UIColor darkTextColor] forState:UIControlStateHighlighted];
-  button.frame = CGRectMake(0, 0, 45, 44);
+  button.frame = CGRectMake(0, 0, 45, self.tableView.rowHeight);
   [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
   [_actionPanel addSubview:button];
   return button;
@@ -357,7 +336,7 @@
   return [[self.resultsController fetchedObjects] count];
 }
 
-- (void)addBehavior {
+- (IBAction)addBehavior:(id)sender {
   AddOrEditBehaviorController *controller = [[AddOrEditBehaviorController alloc] init];
   [self presentViewController:controller animated:YES completion:^{
     [controller startInputName];
