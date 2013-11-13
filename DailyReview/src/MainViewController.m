@@ -8,16 +8,6 @@
 
 @synthesize tabBar = tabBar_;
 
-#pragma mark - LifeCycles
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 #pragma mark - AddBehaviorController
 - (void)behaviorDidSave:(Behavior *)behavior {
     if (behavior.rank.intValue > 0) {

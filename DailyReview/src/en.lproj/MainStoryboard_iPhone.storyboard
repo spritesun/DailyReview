@@ -14,8 +14,6 @@
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="1" green="0.85882352941176465" blue="0.18823529411764706" alpha="1" colorSpace="deviceRGB"/>
-                        <color key="selectedImageTintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <outlet property="tabBar" destination="1kX-O8-IhQ" id="eFX-1v-iEE"/>
@@ -29,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-713" y="-90"/>
         </scene>
-        <!--Merit Controller-->
+        <!--Merit Controller - 功德-->
         <scene sceneID="geK-o0-DW7">
             <objects>
                 <viewController id="NB1-NI-b1p" customClass="MeritController" sceneMemberID="viewController">
@@ -74,9 +72,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="bottom-bar-item-gong.png" id="OGF-bo-CKp">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="功德" image="bottom-bar-item-gong.png" id="OGF-bo-CKp"/>
                     <connections>
                         <outlet property="scoreView" destination="RCg-7a-g9h" id="yry-0S-dqz"/>
                         <outlet property="tableView" destination="Jdr-FB-ZPD" id="SCW-rm-CsO"/>
@@ -86,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="-170" y="-817"/>
         </scene>
-        <!--Demerit Controller-->
+        <!--Demerit Controller - 过失-->
         <scene sceneID="epN-gr-Lup">
             <objects>
                 <viewController id="6j9-9x-GLy" customClass="DemeritController" sceneMemberID="viewController">
@@ -107,9 +103,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="bottom-bar-item-guo.png" id="LsI-i1-vOh">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="过失" image="bottom-bar-item-guo.png" id="LsI-i1-vOh"/>
                     <connections>
                         <outlet property="scoreView" destination="UqD-m8-8JB" id="1Y6-xr-OdV"/>
                         <outlet property="tableView" destination="paC-JT-rKJ" id="WDT-vk-dzD"/>
@@ -492,13 +486,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="442" y="1471"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - 设置-->
         <scene sceneID="eWf-ny-tXU">
             <objects>
                 <navigationController definesPresentationContext="YES" id="paK-eN-uhX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bottom-bar-item-more.png" id="Boo-kt-1kh">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="设置" image="bottom-bar-item-more.png" id="Boo-kt-1kh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qbN-Qv-yEa" customClass="DRNavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
@@ -511,13 +503,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-424" y="754"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - 统计-->
         <scene sceneID="Ych-dB-sWU">
             <objects>
                 <navigationController definesPresentationContext="YES" id="n96-oc-3uH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bottom-bar-item-he.png" id="1Y3-ic-Aqe">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="统计" image="bottom-bar-item-he.png" id="1Y3-ic-Aqe"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rlM-1S-w9u" customClass="DRNavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -703,10 +693,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="bottom-bar-item-gong.png" width="31" height="31"/>
-        <image name="bottom-bar-item-guo.png" width="31" height="31"/>
-        <image name="bottom-bar-item-he.png" width="31" height="31"/>
-        <image name="bottom-bar-item-more.png" width="31" height="31"/>
+        <image name="bottom-bar-item-gong.png" width="32" height="32"/>
+        <image name="bottom-bar-item-guo.png" width="32" height="32"/>
+        <image name="bottom-bar-item-he.png" width="32" height="32"/>
+        <image name="bottom-bar-item-more.png" width="32" height="32"/>
         <image name="summary-bg.png" width="320" height="503"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
