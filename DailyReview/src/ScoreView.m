@@ -16,7 +16,7 @@
 }
 
 - (UILabel *)createScoreLabel {
-  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.f, 0.f, self.width - 10.f, self.height)];
+  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.f, 0.f, 200.f, self.height)];
   label.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
   label.font = [UIFont boldSystemFontOfSize:14];
   label.textColor = [UIColor darkGrayColor];

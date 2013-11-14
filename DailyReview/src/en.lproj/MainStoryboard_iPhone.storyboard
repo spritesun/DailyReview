@@ -86,27 +86,52 @@
         <scene sceneID="epN-gr-Lup">
             <objects>
                 <viewController id="6j9-9x-GLy" customClass="DemeritController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EPu-f9-6sz">
+                    <view key="view" contentMode="scaleToFill" id="jCw-HM-i62">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="paC-JT-rKJ">
-                                <rect key="frame" x="0.0" y="27" width="320" height="541"/>
+                            <view contentMode="scaleToFill" id="NWk-qK-hea" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="V7s-bF-FGd" customClass="ScoreView">
+                                        <rect key="frame" x="0.0" y="20" width="320" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="jw6-cJ-7aD">
+                                                <rect key="frame" x="289" y="4" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addBehavior:" destination="6j9-9x-GLy" eventType="touchUpInside" id="KIK-BQ-vY1"/>
+                                                    <action selector="addBehavior:" destination="NB1-NI-b1p" eventType="touchUpInside" id="mcU-yc-p2M"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="CGG-v7-S1g" userLabel="Divider">
+                                        <rect key="frame" x="0.0" y="49" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="h7e-29-FYf">
+                                <rect key="frame" x="0.0" y="50" width="320" height="468"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <view contentMode="scaleToFill" id="UqD-m8-8JB" customClass="ScoreView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="过失" image="bottom-bar-item-guo.png" id="LsI-i1-vOh"/>
                     <connections>
-                        <outlet property="scoreView" destination="UqD-m8-8JB" id="1Y6-xr-OdV"/>
-                        <outlet property="tableView" destination="paC-JT-rKJ" id="WDT-vk-dzD"/>
+                        <outlet property="scoreView" destination="V7s-bF-FGd" id="NHr-ho-UUu"/>
+                        <outlet property="tableView" destination="h7e-29-FYf" id="851-NX-jAH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo6-1g-qw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -693,10 +718,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="bottom-bar-item-gong.png" width="32" height="32"/>
-        <image name="bottom-bar-item-guo.png" width="32" height="32"/>
-        <image name="bottom-bar-item-he.png" width="32" height="32"/>
-        <image name="bottom-bar-item-more.png" width="32" height="32"/>
+        <image name="bottom-bar-item-gong.png" width="26" height="26"/>
+        <image name="bottom-bar-item-guo.png" width="26" height="26"/>
+        <image name="bottom-bar-item-he.png" width="26" height="26"/>
+        <image name="bottom-bar-item-more.png" width="26" height="26"/>
         <image name="summary-bg.png" width="320" height="503"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
