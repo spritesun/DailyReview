@@ -66,8 +66,6 @@
  */
 @property(nonatomic) CGSize size;
 
-@property(nonatomic, retain) UIView *backgroundView;
-
 - (void)removeAllSubviews;
 
 - (void)removeAllGestureRecognizers;

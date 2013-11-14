@@ -1,7 +1,4 @@
 #import "UIView+Additions.h"
-#import <objc/runtime.h>
-
-static char kBackgroundView;
 
 @implementation UIView (Additions)
 
@@ -99,25 +96,6 @@ static char kBackgroundView;
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;
-}
-
-- (UIView *)backgroundView {
-    return objc_getAssociatedObject(self, &kBackgroundView);
-}
-
-- (void)setBackgroundView:(UIView *)backgroundView {
-    UIView *oldBackgroundView = self.backgroundView;
-    if (oldBackgroundView == backgroundView) {
-        return;
-    }
-    if (oldBackgroundView) {
-        [oldBackgroundView removeFromSuperview];
-    }
-    if (backgroundView) {
-        objc_setAssociatedObject(self, &kBackgroundView, backgroundView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        [self addSubview:backgroundView];
-        [self sendSubviewToBack:backgroundView];
-    }
 }
 
 - (void)removeAllSubviews {

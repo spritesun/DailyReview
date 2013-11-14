@@ -56,7 +56,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"table-bg"]];
+  self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
   tableView_.delegate = self;
   tableView_.dataSource = self;
   bindingManager_ = [BindingManager new];
