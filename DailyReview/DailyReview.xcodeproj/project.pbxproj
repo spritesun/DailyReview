@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		491476AE1568CB0700305AC1 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491476AD1568CB0700305AC1 /* AboutUsViewController.m */; };
 		491476B41568D35D00305AC1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491476B31568D35D00305AC1 /* MessageUI.framework */; };
-		49151BE715514D4600DD10A7 /* DRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49151BE615514D4600DD10A7 /* DRNavigationBar.m */; };
 		4918B3E3156BB10C0073951D /* EventSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918B3E2156BB10C0073951D /* EventSpec.m */; };
 		4919B2BF1568A00000A39097 /* UIImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4919B2BE1568A00000A39097 /* UIImageView+Additions.m */; };
 		4933EE9A1563842E002722BF /* UIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933EE991563842E002722BF /* UIScrollView+Additions.m */; };
@@ -47,7 +46,6 @@
 		4948A814156D03BA00EC7A7B /* SummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B97F0153EDCDE002801F7 /* SummaryController.m */; };
 		4948A815156D03BA00EC7A7B /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
 		4948A816156D03BA00EC7A7B /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
-		4948A81B156D03BA00EC7A7B /* DRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49151BE615514D4600DD10A7 /* DRNavigationBar.m */; };
 		4948A81C156D03BA00EC7A7B /* UIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933EE991563842E002722BF /* UIScrollView+Additions.m */; };
 		4948A81D156D03BA00EC7A7B /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49550651156678BC007D0708 /* UIImage+Additions.m */; };
 		4948A81E156D03BA00EC7A7B /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0A51568A7C30029F992 /* UIColor+Additions.m */; };
@@ -169,7 +167,6 @@
 		49E40AA51578753E0055ED44 /* SummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B97F0153EDCDE002801F7 /* SummaryController.m */; };
 		49E40AA61578753E0055ED44 /* NSFetchedResultsController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBB43D1537D4BE002BBF64 /* NSFetchedResultsController+Additions.m */; };
 		49E40AA71578753E0055ED44 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
-		49E40AAC1578753E0055ED44 /* DRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49151BE615514D4600DD10A7 /* DRNavigationBar.m */; };
 		49E40AAD1578753E0055ED44 /* UIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933EE991563842E002722BF /* UIScrollView+Additions.m */; };
 		49E40AAE1578753E0055ED44 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49550651156678BC007D0708 /* UIImage+Additions.m */; };
 		49E40AAF1578753E0055ED44 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0A51568A7C30029F992 /* UIColor+Additions.m */; };
@@ -279,7 +276,6 @@
 		A3C216FD16524218009B78F9 /* FullPageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587010F7A7A8D5D81529209 /* FullPageTextView.m */; };
 		A3C216FE16524218009B78F9 /* BehaviorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */; };
 		A3C216FF16524218009B78F9 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4956E97D1543EC9700C33D89 /* ScoreView.m */; };
-		A3C2170016524218009B78F9 /* DRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49151BE615514D4600DD10A7 /* DRNavigationBar.m */; };
 		A3C2170116524218009B78F9 /* HorizontalStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 558707E1DC51985ADF5BC35D /* HorizontalStackedView.m */; };
 		A3C2170216524218009B78F9 /* DRBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 558705D491E3A1A5759246F8 /* DRBackButton.m */; };
 		A3C2170316524218009B78F9 /* BehaviorSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A304894D164C8E540062D3E6 /* BehaviorSectionHeaderView.m */; };
@@ -370,8 +366,6 @@
 		491476AC1568CB0700305AC1 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		491476AD1568CB0700305AC1 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		491476B31568D35D00305AC1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
-		49151BE515514D4600DD10A7 /* DRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRNavigationBar.h; sourceTree = "<group>"; };
-		49151BE615514D4600DD10A7 /* DRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRNavigationBar.m; sourceTree = "<group>"; };
 		4918B3E2156BB10C0073951D /* EventSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventSpec.m; path = test/EventSpec.m; sourceTree = "<group>"; };
 		4919B2BD1568A00000A39097 /* UIImageView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Additions.h"; sourceTree = "<group>"; };
 		4919B2BE1568A00000A39097 /* UIImageView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Additions.m"; sourceTree = "<group>"; };
@@ -911,8 +905,6 @@
 				499EC2581537E9A90025C20D /* BehaviorTableViewCell.m */,
 				4956E97C1543EC9700C33D89 /* ScoreView.h */,
 				4956E97D1543EC9700C33D89 /* ScoreView.m */,
-				49151BE515514D4600DD10A7 /* DRNavigationBar.h */,
-				49151BE615514D4600DD10A7 /* DRNavigationBar.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -1323,7 +1315,6 @@
 				4948A814156D03BA00EC7A7B /* SummaryController.m in Sources */,
 				4948A815156D03BA00EC7A7B /* NSFetchedResultsController+Additions.m in Sources */,
 				4948A816156D03BA00EC7A7B /* ScoreView.m in Sources */,
-				4948A81B156D03BA00EC7A7B /* DRNavigationBar.m in Sources */,
 				4948A81C156D03BA00EC7A7B /* UIScrollView+Additions.m in Sources */,
 				4948A81D156D03BA00EC7A7B /* UIImage+Additions.m in Sources */,
 				4948A81E156D03BA00EC7A7B /* UIColor+Additions.m in Sources */,
@@ -1376,7 +1367,6 @@
 				494B97F1153EDCDE002801F7 /* SummaryController.m in Sources */,
 				49EBB43D1537D4BE002BBF65 /* NSFetchedResultsController+Additions.m in Sources */,
 				4956E97E1543EC9700C33D89 /* ScoreView.m in Sources */,
-				49151BE715514D4600DD10A7 /* DRNavigationBar.m in Sources */,
 				4933EE9A1563842E002722BF /* UIScrollView+Additions.m in Sources */,
 				49550652156678BC007D0708 /* UIImage+Additions.m in Sources */,
 				49B7F0A61568A7C30029F992 /* UIColor+Additions.m in Sources */,
@@ -1447,7 +1437,6 @@
 				A3C216FD16524218009B78F9 /* FullPageTextView.m in Sources */,
 				A3C216FE16524218009B78F9 /* BehaviorTableViewCell.m in Sources */,
 				A3C216FF16524218009B78F9 /* ScoreView.m in Sources */,
-				A3C2170016524218009B78F9 /* DRNavigationBar.m in Sources */,
 				A3C2170916524222009B78F9 /* UserDefaultsManager.m in Sources */,
 				A3C2170D1652422B009B78F9 /* Binding.m in Sources */,
 				A3C2170E1652422B009B78F9 /* BindingManager.m in Sources */,
@@ -1484,7 +1473,6 @@
 				49E40AA51578753E0055ED44 /* SummaryController.m in Sources */,
 				49E40AA61578753E0055ED44 /* NSFetchedResultsController+Additions.m in Sources */,
 				49E40AA71578753E0055ED44 /* ScoreView.m in Sources */,
-				49E40AAC1578753E0055ED44 /* DRNavigationBar.m in Sources */,
 				49E40AAD1578753E0055ED44 /* UIScrollView+Additions.m in Sources */,
 				49E40AAE1578753E0055ED44 /* UIImage+Additions.m in Sources */,
 				49E40AAF1578753E0055ED44 /* UIColor+Additions.m in Sources */,

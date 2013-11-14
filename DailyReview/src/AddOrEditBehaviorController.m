@@ -56,7 +56,7 @@
 
     UIView *const view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+    view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 
     UINavigationBar *const navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT)];
     [view addSubview:navigationBar];
