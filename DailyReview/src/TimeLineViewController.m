@@ -26,7 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor creamColor];
 
     [[self resultsController] performFetch:nil];
 
