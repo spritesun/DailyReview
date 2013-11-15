@@ -1,7 +1,7 @@
 #import "AboutKarmaCounterViewController.h"
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface AboutUsViewController : BackableViewController <MFMailComposeViewControllerDelegate>
+@interface AboutUsViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, retain) IBOutlet UILabel *mailLabel;
 

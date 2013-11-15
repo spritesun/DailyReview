@@ -1,5 +1,4 @@
-#import "BackableViewController.h"
 
-@interface AboutKarmaCounterViewController : BackableViewController
+@interface AboutKarmaCounterViewController : UIViewController
 
 @end

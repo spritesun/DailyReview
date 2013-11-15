@@ -1,4 +1,4 @@
-@interface SummaryController : UIViewController
+@interface SummaryController : UITableViewController
 
 @property(nonatomic, strong) IBOutlet UILabel *meritRankLabel;
 @property(nonatomic, strong) IBOutlet UILabel *demeritRankLabel;

@@ -3,7 +3,6 @@
 
 #import "NotificationSettingController.h"
 #import "UserDefaultsManager.h"
-#import "DRBackButton.h"
 
 @interface NotificationSettingController ()
 @property(weak, nonatomic) IBOutlet UISwitch *switcher;

@@ -13,7 +13,6 @@
 #import "Behavior.h"
 #import "BehaviorTableViewCell.h"
 #import "BehaviorSectionHeaderView.h"
-#import "DRBackButton.h"
 #import "UIColor+Additions.h"
 
 @interface RankingChartsViewController () {
@@ -27,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor creamColor];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[DRBackButton button]];
     [self fetchTableData];
 }
 

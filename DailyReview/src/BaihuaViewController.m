@@ -4,7 +4,6 @@
 #import "BaihuaViewController.h"
 #import "FullPageTextView.h"
 #import "UIView+Additions.h"
-#import "DRBackButton.h"
 
 static NSString *const baihuaContent = @"功过格白话解\n"
         "\n"
