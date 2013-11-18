@@ -12,7 +12,6 @@
 #import "NSArray+Additions.h"
 #import "Behavior.h"
 #import "BehaviorTableViewCell.h"
-#import "BehaviorSectionHeaderView.h"
 #import "UIColor+Additions.h"
 
 @interface RankingChartsViewController () {
@@ -25,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor creamColor];
     [self fetchTableData];
 }
 
@@ -85,11 +83,11 @@
 
 #pragma mark - Table view delegate
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return [BehaviorSectionHeaderView viewWithTitle:section == 0 ? @"功德排行" : @"过失排行"];
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return section == 0 ? @"功德排行" : @"过失排行";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 32;
+    return 36;
 }
 @end
