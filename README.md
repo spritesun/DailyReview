@@ -11,11 +11,6 @@
 
 ### 什么是[功过格](http://baike.baidu.com/view/995178.htm)?
 
-### 建议阅读文档
-* [Table View Programming Guide for iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/TableView_iPhone/AboutTableViewsiPhone/AboutTableViewsiPhone.html)
-* [Core Data Programming Guide](http://developer.apple.com/library/mac/#documentation/cocoa/conceptual/coredata/cdprogrammingguide.html)
-* [KVO Programming Guide](https://developer.apple.com/library/mac/#documentation/cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html)
-
 ### 开发者联系方式
 gongguoge at gmail.com
 
@@ -41,7 +36,3 @@ This Code is released under the MIT License by Long Sun.
 - 目前暂采用“其他功德”和“其他过失”项作为简略的自定义方式，未来版本中将会提供更丰富的自定义功过功能  
 
 我们的新浪微博：@功过格  
-
-
-###Keywords:
-功过格, DailyReview, 了凡四训, 佛教, 佛学, 自知录, 功德, 过失, gongguoge, 善, 恶, 自省, 修行, 功过, gong guo ge, Daily Review, 般若, 福德
