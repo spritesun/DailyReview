@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		491476AE1568CB0700305AC1 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491476AD1568CB0700305AC1 /* AboutUsViewController.m */; };
 		491476B41568D35D00305AC1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491476B31568D35D00305AC1 /* MessageUI.framework */; };
 		4918B3E3156BB10C0073951D /* EventSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918B3E2156BB10C0073951D /* EventSpec.m */; };
 		4919B2BF1568A00000A39097 /* UIImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4919B2BE1568A00000A39097 /* UIImageView+Additions.m */; };
@@ -48,7 +47,6 @@
 		4948A81D156D03BA00EC7A7B /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49550651156678BC007D0708 /* UIImage+Additions.m */; };
 		4948A81E156D03BA00EC7A7B /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0A51568A7C30029F992 /* UIColor+Additions.m */; };
 		4948A821156D03BA00EC7A7B /* UIImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4919B2BE1568A00000A39097 /* UIImageView+Additions.m */; };
-		4948A822156D03BA00EC7A7B /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491476AD1568CB0700305AC1 /* AboutUsViewController.m */; };
 		4948A824156D03BA00EC7A7B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491476B31568D35D00305AC1 /* MessageUI.framework */; };
 		4948A825156D03BA00EC7A7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B70C221563B026004E60CB /* CoreGraphics.framework */; };
 		4948A826156D03BA00EC7A7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B70C201563B021004E60CB /* UIKit.framework */; };
@@ -139,7 +137,6 @@
 		49E40AAE1578753E0055ED44 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49550651156678BC007D0708 /* UIImage+Additions.m */; };
 		49E40AAF1578753E0055ED44 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F0A51568A7C30029F992 /* UIColor+Additions.m */; };
 		49E40AB01578753E0055ED44 /* UIImageView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4919B2BE1568A00000A39097 /* UIImageView+Additions.m */; };
-		49E40AB11578753E0055ED44 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491476AD1568CB0700305AC1 /* AboutUsViewController.m */; };
 		49E40AB21578753E0055ED44 /* AddOrEditBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999280A15760A1D0064BF32 /* AddOrEditBehaviorController.m */; };
 		49E40AB31578753E0055ED44 /* AboutKarmaCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999281215760ACB0064BF32 /* AboutKarmaCounterViewController.m */; };
 		49E40AB61578753E0055ED44 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491476B31568D35D00305AC1 /* MessageUI.framework */; };
@@ -173,6 +170,9 @@
 		A304891A164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3048917164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard */; };
 		A304891D164C7CD90062D3E6 /* RankingChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304891C164C7CD90062D3E6 /* RankingChartsViewController.m */; };
 		A35455C91820D81700D03DE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35455C81820D81600D03DE2 /* Images.xcassets */; };
+		A38EE07D183A02B1004284C4 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38EE07C183A02B1004284C4 /* MoreTableViewController.m */; };
+		A38EE07E183A02B1004284C4 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38EE07C183A02B1004284C4 /* MoreTableViewController.m */; };
+		A38EE07F183A02B1004284C4 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38EE07C183A02B1004284C4 /* MoreTableViewController.m */; };
 		A391D3F6165206070061BBC7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3048911164C7BE10062D3E6 /* DataModel.xcdatamodeld */; };
 		A391D3F8165206440061BBC7 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A391D3F7165206440061BBC7 /* db.sqlite */; };
 		A3A77605165201610051BAA1 /* initial_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A3A77604165201610051BAA1 /* initial_data.json */; };
@@ -203,7 +203,6 @@
 		A3C216F216524200009B78F9 /* ThanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870829243B25E085495C6E /* ThanksViewController.m */; };
 		A3C216F316524200009B78F9 /* NotificationSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558703F8C80F8CF11A223AFB /* NotificationSettingController.m */; };
 		A3C216F416524200009B78F9 /* AboutKarmaCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999281215760ACB0064BF32 /* AboutKarmaCounterViewController.m */; };
-		A3C216F516524200009B78F9 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491476AD1568CB0700305AC1 /* AboutUsViewController.m */; };
 		A3C216F616524200009B78F9 /* BaihuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */; };
 		A3C216F71652420D009B78F9 /* SummaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494B97F0153EDCDE002801F7 /* SummaryController.m */; };
 		A3C216F81652420D009B78F9 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304890F164C7B3D0062D3E6 /* TimeLineViewController.m */; };
@@ -291,8 +290,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		491476AC1568CB0700305AC1 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
-		491476AD1568CB0700305AC1 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		491476B31568D35D00305AC1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		4918B3E2156BB10C0073951D /* EventSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventSpec.m; path = test/EventSpec.m; sourceTree = "<group>"; };
 		4919B2BD1568A00000A39097 /* UIImageView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Additions.h"; sourceTree = "<group>"; };
@@ -419,6 +416,8 @@
 		A304891B164C7CD90062D3E6 /* RankingChartsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingChartsViewController.h; sourceTree = "<group>"; };
 		A304891C164C7CD90062D3E6 /* RankingChartsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingChartsViewController.m; sourceTree = "<group>"; };
 		A35455C81820D81600D03DE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Develpment/Images.xcassets; sourceTree = "<group>"; };
+		A38EE07B183A02B1004284C4 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
+		A38EE07C183A02B1004284C4 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
 		A391D3F7165206440061BBC7 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = db.sqlite; path = resources/db.sqlite; sourceTree = "<group>"; };
 		A3A77604165201610051BAA1 /* initial_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = initial_data.json; path = resources/initial_data.json; sourceTree = "<group>"; };
 		A3EB33D81821D7D10053A35A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = ../lib/Reveal.framework; sourceTree = "<group>"; };
@@ -848,10 +847,10 @@
 				558703F8C80F8CF11A223AFB /* NotificationSettingController.m */,
 				4999281215760ACB0064BF32 /* AboutKarmaCounterViewController.m */,
 				4999281115760ACB0064BF32 /* AboutKarmaCounterViewController.h */,
-				491476AD1568CB0700305AC1 /* AboutUsViewController.m */,
-				491476AC1568CB0700305AC1 /* AboutUsViewController.h */,
 				558702D718FD19F89F7677E1 /* BaihuaViewController.h */,
 				55870A4A3CE631F93D413CC8 /* BaihuaViewController.m */,
+				A38EE07B183A02B1004284C4 /* MoreTableViewController.h */,
+				A38EE07C183A02B1004284C4 /* MoreTableViewController.m */,
 			);
 			name = more;
 			sourceTree = "<group>";
@@ -1139,13 +1138,13 @@
 				4948A81D156D03BA00EC7A7B /* UIImage+Additions.m in Sources */,
 				4948A81E156D03BA00EC7A7B /* UIColor+Additions.m in Sources */,
 				4948A821156D03BA00EC7A7B /* UIImageView+Additions.m in Sources */,
-				4948A822156D03BA00EC7A7B /* AboutUsViewController.m in Sources */,
 				4999280D15760A1D0064BF32 /* AddOrEditBehaviorController.m in Sources */,
 				49979514157615A6000619AD /* AboutKarmaCounterViewController.m in Sources */,
 				A3C216DD165241A3009B78F9 /* ThanksViewController.m in Sources */,
 				A3C216DE165241A3009B78F9 /* NotificationSettingController.m in Sources */,
 				A3C216DF165241A3009B78F9 /* BaihuaViewController.m in Sources */,
 				A3C216E2165241AA009B78F9 /* TimeLineViewController.m in Sources */,
+				A38EE07F183A02B1004284C4 /* MoreTableViewController.m in Sources */,
 				A3C216E3165241AA009B78F9 /* RankingChartsViewController.m in Sources */,
 				A3C216EB165241BF009B78F9 /* DataModel.xcdatamodeld in Sources */,
 				A3C2170516524218009B78F9 /* HorizontalStackedView.m in Sources */,
@@ -1188,13 +1187,13 @@
 				49550652156678BC007D0708 /* UIImage+Additions.m in Sources */,
 				49B7F0A61568A7C30029F992 /* UIColor+Additions.m in Sources */,
 				4919B2BF1568A00000A39097 /* UIImageView+Additions.m in Sources */,
-				491476AE1568CB0700305AC1 /* AboutUsViewController.m in Sources */,
 				4999280B15760A1D0064BF32 /* AddOrEditBehaviorController.m in Sources */,
 				4999281515760BA20064BF32 /* AboutKarmaCounterViewController.m in Sources */,
 				A3C216D9165241A2009B78F9 /* ThanksViewController.m in Sources */,
 				A3C216DA165241A2009B78F9 /* NotificationSettingController.m in Sources */,
 				A3C216DB165241A2009B78F9 /* BaihuaViewController.m in Sources */,
 				A3C216E0165241A9009B78F9 /* TimeLineViewController.m in Sources */,
+				A38EE07E183A02B1004284C4 /* MoreTableViewController.m in Sources */,
 				A3C216E1165241A9009B78F9 /* RankingChartsViewController.m in Sources */,
 				A3C216EA165241BD009B78F9 /* DataModel.xcdatamodeld in Sources */,
 				A3C2170116524218009B78F9 /* HorizontalStackedView.m in Sources */,
@@ -1239,7 +1238,6 @@
 				A3C216F216524200009B78F9 /* ThanksViewController.m in Sources */,
 				A3C216F316524200009B78F9 /* NotificationSettingController.m in Sources */,
 				A3C216F416524200009B78F9 /* AboutKarmaCounterViewController.m in Sources */,
-				A3C216F516524200009B78F9 /* AboutUsViewController.m in Sources */,
 				A3C216F616524200009B78F9 /* BaihuaViewController.m in Sources */,
 				A3C216F71652420D009B78F9 /* SummaryController.m in Sources */,
 				A3C216F81652420D009B78F9 /* TimeLineViewController.m in Sources */,
@@ -1288,13 +1286,13 @@
 				49E40AAE1578753E0055ED44 /* UIImage+Additions.m in Sources */,
 				49E40AAF1578753E0055ED44 /* UIColor+Additions.m in Sources */,
 				49E40AB01578753E0055ED44 /* UIImageView+Additions.m in Sources */,
-				49E40AB11578753E0055ED44 /* AboutUsViewController.m in Sources */,
 				49E40AB21578753E0055ED44 /* AddOrEditBehaviorController.m in Sources */,
 				49E40AB31578753E0055ED44 /* AboutKarmaCounterViewController.m in Sources */,
 				5587074BEB3EDDE0C8A80E00 /* NSString+Additions.m in Sources */,
 				55870BFB9BC642298B7FD68C /* FullPageTextView.m in Sources */,
 				A3048910164C7B3D0062D3E6 /* TimeLineViewController.m in Sources */,
 				A3048914164C7BE10062D3E6 /* DataModel.xcdatamodeld in Sources */,
+				A38EE07D183A02B1004284C4 /* MoreTableViewController.m in Sources */,
 				A304891D164C7CD90062D3E6 /* RankingChartsViewController.m in Sources */,
 				558707CAC1852A202DCE74A3 /* BaihuaViewController.m in Sources */,
 				558702E8A02CBB5B38DFAD80 /* UserDefaultsManager.m in Sources */,
