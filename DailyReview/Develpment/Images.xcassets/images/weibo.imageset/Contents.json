@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "more.png"
+      "filename" : "weibo.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "more@2x.png"
+      "filename" : "weibo@2x.png"
     }
   ],
   "info" : {
