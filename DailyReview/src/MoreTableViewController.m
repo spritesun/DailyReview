@@ -7,7 +7,8 @@
 //
 
 #import "MoreTableViewController.h"
-#import <MessageUI/MessageUI.h>
+@import MessageUI;
+@import Social;
 
 @interface MoreTableViewController () <MFMailComposeViewControllerDelegate>
 
@@ -19,11 +20,11 @@
 {
   if (indexPath.row == 3)
   {
-    [self mailTo:nil];
+    [self weiboTo:nil];
   }
   else if (indexPath.row == 4)
   {
-    [self weiboTo:nil];
+    [self mailTo:nil];
   }
 }
 - (IBAction)mailTo:(id)sender
@@ -41,7 +42,20 @@
 
 - (IBAction)weiboTo:(id)sender
 {
-  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://weibo.com/u/2808620024"]];
+  if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeSinaWeibo])
+  {
+    // Initialize Compose View Controller
+    SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    // Configure Compose View Controller
+    [vc setInitialText:@"@功过格 "];
+    // Present Compose View Controller
+    [self presentViewController:vc animated:YES completion:nil];
+  } else {
+    NSString *message = @"It seems that we cannot talk to Weibo at the moment or you have not yet added your Weibo account. Go to the Settings application to add your Weibo account.";
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+  }
+//  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://weibo.com/u/2808620024"]];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error

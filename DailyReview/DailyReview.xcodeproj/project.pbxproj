@@ -173,6 +173,9 @@
 		A38EE07D183A02B1004284C4 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38EE07C183A02B1004284C4 /* MoreTableViewController.m */; };
 		A38EE07E183A02B1004284C4 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38EE07C183A02B1004284C4 /* MoreTableViewController.m */; };
 		A38EE07F183A02B1004284C4 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38EE07C183A02B1004284C4 /* MoreTableViewController.m */; };
+		A38EE083183A13B8004284C4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38EE082183A13B8004284C4 /* Social.framework */; };
+		A38EE084183A13C0004284C4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38EE082183A13B8004284C4 /* Social.framework */; };
+		A38EE085183A13C2004284C4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38EE082183A13B8004284C4 /* Social.framework */; };
 		A391D3F6165206070061BBC7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3048911164C7BE10062D3E6 /* DataModel.xcdatamodeld */; };
 		A391D3F8165206440061BBC7 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A391D3F7165206440061BBC7 /* db.sqlite */; };
 		A3A77605165201610051BAA1 /* initial_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A3A77604165201610051BAA1 /* initial_data.json */; };
@@ -418,6 +421,7 @@
 		A35455C81820D81600D03DE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Develpment/Images.xcassets; sourceTree = "<group>"; };
 		A38EE07B183A02B1004284C4 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
 		A38EE07C183A02B1004284C4 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
+		A38EE082183A13B8004284C4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A391D3F7165206440061BBC7 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = db.sqlite; path = resources/db.sqlite; sourceTree = "<group>"; };
 		A3A77604165201610051BAA1 /* initial_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = initial_data.json; path = resources/initial_data.json; sourceTree = "<group>"; };
 		A3EB33D81821D7D10053A35A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = ../lib/Reveal.framework; sourceTree = "<group>"; };
@@ -438,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4948A864156D043700EC7A7B /* CFNetwork.framework in Frameworks */,
+				A38EE085183A13C2004284C4 /* Social.framework in Frameworks */,
 				4948A824156D03BA00EC7A7B /* MessageUI.framework in Frameworks */,
 				4948A825156D03BA00EC7A7B /* CoreGraphics.framework in Frameworks */,
 				4948A826156D03BA00EC7A7B /* UIKit.framework in Frameworks */,
@@ -455,6 +460,7 @@
 			files = (
 				491476B41568D35D00305AC1 /* MessageUI.framework in Frameworks */,
 				49B70C231563B026004E60CB /* CoreGraphics.framework in Frameworks */,
+				A38EE084183A13C0004284C4 /* Social.framework in Frameworks */,
 				49B70C211563B021004E60CB /* UIKit.framework in Frameworks */,
 				49EBB4371537D361002BBF3C /* QuartzCore.framework in Frameworks */,
 				49A04A4C1534491B0092DC4A /* Foundation.framework in Frameworks */,
@@ -481,6 +487,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38EE083183A13B8004284C4 /* Social.framework in Frameworks */,
 				A3EB33D91821D7D10053A35A /* Reveal.framework in Frameworks */,
 				49E40AB61578753E0055ED44 /* MessageUI.framework in Frameworks */,
 				49E40AB71578753E0055ED44 /* CoreGraphics.framework in Frameworks */,
@@ -632,6 +639,7 @@
 		49A04A481534491B0092DC4A /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A38EE082183A13B8004284C4 /* Social.framework */,
 				4948A863156D043700EC7A7B /* CFNetwork.framework */,
 				491476B31568D35D00305AC1 /* MessageUI.framework */,
 				49B70C201563B021004E60CB /* UIKit.framework */,
@@ -1372,6 +1380,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49F3EBCC1557FC8800BAC96F /* Debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1390,6 +1399,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 49F3EBCE1557FC9800BAC96F /* Release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
