@@ -138,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="-353" y="-788"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - 设置-->
         <scene sceneID="6e3-n6-5UI">
             <objects>
                 <tableViewController autoresizesArchivedViewToFullSize="NO" id="Phk-pn-UKZ" sceneMemberID="viewController">
@@ -258,23 +258,7 @@
                             <outlet property="delegate" destination="Phk-pn-UKZ" id="wzg-VD-djg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cTg-1q-qDl">
-                        <nil key="title"/>
-                        <view key="titleView" opaque="NO" contentMode="scaleToFill" id="HZU-bc-py5">
-                            <rect key="frame" x="96" y="6" width="128" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="更多" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Yrd-f5-Ccm">
-                                    <rect key="frame" x="39" y="6" width="50" height="21"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                    <color key="textColor" red="0.81960784313725488" green="0.71372549019607845" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </view>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="设置" id="cTg-1q-qDl"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYy-Pi-TDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
