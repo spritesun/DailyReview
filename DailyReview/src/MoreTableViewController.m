@@ -18,11 +18,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.row == 3)
+  if (indexPath.section == 1 && indexPath.row == 0)
   {
     [self weiboTo:nil];
   }
-  else if (indexPath.row == 4)
+  else if (indexPath.section == 1 && indexPath.row == 1)
   {
     [self mailTo:nil];
   }
@@ -44,14 +44,12 @@
 {
   if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeSinaWeibo])
   {
-    // Initialize Compose View Controller
-    SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    // Configure Compose View Controller
+    SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeSinaWeibo];
     [vc setInitialText:@"@功过格 "];
     // Present Compose View Controller
     [self presentViewController:vc animated:YES completion:nil];
   } else {
-    NSString *message = @"It seems that we cannot talk to Weibo at the moment or you have not yet added your Weibo account. Go to the Settings application to add your Weibo account.";
+    NSString *message = @"请先设置好您的新浪微博账号。";
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
   }
