@@ -9,5 +9,4 @@
 @property(nonatomic, strong) BehaviorResultsController *resultsController;
 
 - (void)refreshView;
-- (IBAction)addBehavior:(id)sender;
 @end

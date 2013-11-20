@@ -337,10 +337,4 @@
   return [[self.resultsController fetchedObjects] count];
 }
 
-- (IBAction)addBehavior:(id)sender {
-  AddOrEditBehaviorController *controller = [[AddOrEditBehaviorController alloc] init];
-  [self presentViewController:controller animated:YES completion:^{
-    [controller startInputName];
-  }];
-}
 @end

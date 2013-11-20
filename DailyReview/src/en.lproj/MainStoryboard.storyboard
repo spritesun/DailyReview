@@ -51,7 +51,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="addBehavior:" destination="NB1-NI-b1p" eventType="touchUpInside" id="HKd-vl-7Uz"/>
+                                                    <segue destination="8Ym-dH-dmX" kind="modal" id="aQR-eR-QFZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -106,8 +106,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="addBehavior:" destination="6j9-9x-GLy" eventType="touchUpInside" id="KIK-BQ-vY1"/>
-                                                    <action selector="addBehavior:" destination="NB1-NI-b1p" eventType="touchUpInside" id="mcU-yc-p2M"/>
+                                                    <segue destination="8Ym-dH-dmX" kind="modal" id="dz2-14-BvT"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -137,6 +136,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo6-1g-qw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-353" y="-788"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R0o-Tv-64U">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8Ym-dH-dmX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G94-Cx-Rch">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VfE-eS-Ozx" kind="relationship" relationship="rootViewController" id="dtn-2C-h1v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzU-BT-kSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="-788"/>
+        </scene>
+        <!--Add Or Edit Behavior Controller-->
+        <scene sceneID="5sx-ol-NkU">
+            <objects>
+                <tableViewController id="VfE-eS-Ozx" customClass="AddOrEditBehaviorController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="10" sectionFooterHeight="10" id="jvp-RW-AkU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="2ND-CV-XkR">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Nqi-9N-XBE">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nqi-9N-XBE" id="WQk-Wp-46D">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test" minimumFontSize="17" clearButtonMode="whileEditing" id="ucb-n2-qa9" userLabel="Value">
+                                                    <rect key="frame" x="104" y="0.0" width="216" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="VfE-eS-Ozx" id="nvK-hm-qdR"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lg4-B8-GMS" userLabel="Title">
+                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7O1-Ot-jXn">
+                                        <rect key="frame" x="0.0" y="149" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7O1-Ot-jXn" id="Pcw-SM-Ezi">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test" minimumFontSize="17" id="ttF-pV-GRf" userLabel="Value">
+                                                    <rect key="frame" x="104" y="0.0" width="216" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="功过点数" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DiX-eJ-l7u" userLabel="Title">
+                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="VfE-eS-Ozx" id="6gY-QE-cDi"/>
+                            <outlet property="delegate" destination="VfE-eS-Ozx" id="Twx-Sl-7lJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="RGQ-rd-3CM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="F00-DD-ydE">
+                            <connections>
+                                <action selector="cancel:" destination="VfE-eS-Ozx" id="4rq-Cl-Lu4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yca-2l-42G">
+                            <connections>
+                                <action selector="save:" destination="VfE-eS-Ozx" id="CjN-ck-vU1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="ucb-n2-qa9" id="koh-ec-heX"/>
+                        <outlet property="rankTextField" destination="ttF-pV-GRf" id="O1i-rX-4EJ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFR-XG-oat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="-788"/>
         </scene>
         <!--More Table View Controller - 更多-->
         <scene sceneID="6e3-n6-5UI">
@@ -478,7 +581,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XqB-u6-mo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="-398"/>
+            <point key="canvasLocation" x="539" y="-96"/>
         </scene>
         <!--Ranking Charts View Controller - 排行榜-->
         <scene sceneID="8TZ-Jy-yqh">
@@ -507,7 +610,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ech-2S-bdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="256"/>
+            <point key="canvasLocation" x="902" y="-96"/>
         </scene>
         <!--Summary Controller - 合计-->
         <scene sceneID="8YQ-jk-UNx">
@@ -695,4 +798,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="dz2-14-BvT"/>
+    </inferredMetricsTieBreakers>
 </document>

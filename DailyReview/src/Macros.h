@@ -1,8 +1,5 @@
 #define HAS_FLAG(flags, flag) (((flags) & (flag)) != 0)
 
-#define SCREEN_WIDTH 320
-#define SCREEN_HEIGHT 480
-
 #define Array(...) [NSArray arrayWithObjects:__VA_ARGS__, nil]
 #define MArray(...) [NSMutableArray arrayWithObjects:__VA_ARGS__, nil]
 
