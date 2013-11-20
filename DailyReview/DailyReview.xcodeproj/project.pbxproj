@@ -96,7 +96,7 @@
 		A3048910164C7B3D0062D3E6 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304890F164C7B3D0062D3E6 /* TimeLineViewController.m */; };
 		A3048914164C7BE10062D3E6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3048911164C7BE10062D3E6 /* DataModel.xcdatamodeld */; };
 		A3048919164C7CB20062D3E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3048915164C7CB20062D3E6 /* InfoPlist.strings */; };
-		A304891A164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3048917164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard */; };
+		A304891A164C7CB20062D3E6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3048917164C7CB20062D3E6 /* MainStoryboard.storyboard */; };
 		A304891D164C7CD90062D3E6 /* RankingChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304891C164C7CD90062D3E6 /* RankingChartsViewController.m */; };
 		A3735493183C8549005E648E /* DailyReview-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A373548F183C8549005E648E /* DailyReview-Info.plist */; };
 		A3735494183C8549005E648E /* DailyReview-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A373548F183C8549005E648E /* DailyReview-Info.plist */; };
@@ -122,7 +122,7 @@
 		A3C2170116524218009B78F9 /* HorizontalStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 558707E1DC51985ADF5BC35D /* HorizontalStackedView.m */; };
 		A3C2170416524218009B78F9 /* FullPageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587010F7A7A8D5D81529209 /* FullPageTextView.m */; };
 		A3C2170B16524222009B78F9 /* UserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 558708EAAD5822BC9B49D054 /* UserDefaultsManager.m */; };
-		A3C2171B16524282009B78F9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3048917164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard */; };
+		A3C2171B16524282009B78F9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3048917164C7CB20062D3E6 /* MainStoryboard.storyboard */; };
 		A3C2171F165242C0009B78F9 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587031A4C1EDDAB03CC0EDD /* NSString+Additions.m */; };
 		A3EB33D91821D7D10053A35A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EB33D81821D7D10053A35A /* Reveal.framework */; };
 /* End PBXBuildFile section */
@@ -254,7 +254,7 @@
 		A3048912164C7BE10062D3E6 /* DataModel 1.1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 1.1.0.xcdatamodel"; sourceTree = "<group>"; };
 		A3048913164C7BE10062D3E6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		A3048916164C7CB20062D3E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A3048918164C7CB20062D3E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		A3048918164C7CB20062D3E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A304891B164C7CD90062D3E6 /* RankingChartsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingChartsViewController.h; sourceTree = "<group>"; };
 		A304891C164C7CD90062D3E6 /* RankingChartsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingChartsViewController.m; sourceTree = "<group>"; };
 		A373548F183C8549005E648E /* DailyReview-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DailyReview-Info.plist"; sourceTree = "<group>"; };
@@ -416,7 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				A3048915164C7CB20062D3E6 /* InfoPlist.strings */,
-				A3048917164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard */,
+				A3048917164C7CB20062D3E6 /* MainStoryboard.storyboard */,
 				4973162615345CA000E3E5DC /* domains */,
 				4973162515345C8F00E3E5DC /* controllers */,
 				49EBB43D1537D4BE002BBF5D /* views */,
@@ -699,7 +699,7 @@
 				A3735498183C8549005E648E /* Images.xcassets in Resources */,
 				A373549A183C8549005E648E /* initial_data.json in Resources */,
 				A3C216ED165241DC009B78F9 /* InfoPlist.strings in Resources */,
-				A3C2171B16524282009B78F9 /* MainStoryboard_iPhone.storyboard in Resources */,
+				A3C2171B16524282009B78F9 /* MainStoryboard.storyboard in Resources */,
 				A3735496183C8549005E648E /* db.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,7 +712,7 @@
 				A3735497183C8549005E648E /* Images.xcassets in Resources */,
 				A3735499183C8549005E648E /* initial_data.json in Resources */,
 				A3048919164C7CB20062D3E6 /* InfoPlist.strings in Resources */,
-				A304891A164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard in Resources */,
+				A304891A164C7CB20062D3E6 /* MainStoryboard.storyboard in Resources */,
 				A3735495183C8549005E648E /* db.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -840,12 +840,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A3048917164C7CB20062D3E6 /* MainStoryboard_iPhone.storyboard */ = {
+		A3048917164C7CB20062D3E6 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A3048918164C7CB20062D3E6 /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
