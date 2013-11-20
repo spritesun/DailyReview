@@ -7,7 +7,6 @@
 #import "UIView+Additions.h"
 
 @interface AddOrEditBehaviorController () <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
-@property(nonatomic, retain) Behavior *editingBehavior;
 @end
 
 @implementation AddOrEditBehaviorController
@@ -15,12 +14,6 @@
   NSArray *sortedArray_;
   NSDictionary *categoryDictionary_;
   UIPickerView *picker_;
-}
-
-+ (AddOrEditBehaviorController *)editBehaviorController:(Behavior *)behavior {
-  AddOrEditBehaviorController *obj = [[self alloc] init];
-  obj.editingBehavior = behavior;
-  return obj;
 }
 
 - (void)awakeFromNib

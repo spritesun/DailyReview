@@ -279,10 +279,11 @@
 }
 
 - (void)editBehavior {
-  AddOrEditBehaviorController *controller = [AddOrEditBehaviorController editBehaviorController:[self editingBehavior]];
-  [self presentViewController:controller animated:YES completion:^{
-    [controller startInputName];
-  }];
+  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
+  UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"AddOrEditBehaviorNavigationController"];
+  AddOrEditBehaviorController *controller = (AddOrEditBehaviorController *)navController.topViewController;
+  controller.editingBehavior = self.editingBehavior;
+  [self presentViewController:navController animated:YES completion:nil];
 }
 
 - (void)displayAnnotation {

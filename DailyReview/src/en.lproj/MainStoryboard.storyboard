@@ -140,7 +140,7 @@
         <!--Navigation Controller-->
         <scene sceneID="R0o-Tv-64U">
             <objects>
-                <navigationController definesPresentationContext="YES" id="8Ym-dH-dmX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddOrEditBehaviorNavigationController" definesPresentationContext="YES" id="8Ym-dH-dmX" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G94-Cx-Rch">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
