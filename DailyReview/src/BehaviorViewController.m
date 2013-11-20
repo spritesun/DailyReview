@@ -232,15 +232,16 @@
     return !view.hidden;
   }].count;
   self.actionPanel.width = 45 * visibleBtnNumber + 20;
+  [self.actionPanel layoutSubviews];
 }
 
 - (UIView *)actionPanel {
   if (nil == _actionPanel) {
     _actionPanel = [[HorizontalStackedView alloc] initWithFrame:CGRectZero];
     _actionPanel.left = self.tableView.right;
+    _actionPanel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
     _actionPanel.backgroundColor = [UIColor colorWithWhite:.3 alpha:.7];
     [self.tableView addSubview:_actionPanel];
-    
     
     self.annotationBtn = [self buildButtonForActionPanelWithTitle:@"白话" action:@selector(displayAnnotation)];
     self.minusBtn = [self buildButtonForActionPanelWithTitle:@"减一" action:@selector(decreaseEventCount)];
