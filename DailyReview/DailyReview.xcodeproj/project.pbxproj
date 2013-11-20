@@ -373,7 +373,6 @@
 		49A04A3A1534491B0092DC4A = {
 			isa = PBXGroup;
 			children = (
-				A373549B183C86D0005E648E /* iPad */,
 				49A04A8F15344BB00092DC4A /* src */,
 				49EBB4261537D1D3002BBF3C /* lib */,
 				49A04A9315344C0E0092DC4A /* resources */,
@@ -590,13 +589,6 @@
 				A304891C164C7CD90062D3E6 /* RankingChartsViewController.m */,
 			);
 			name = summary;
-			sourceTree = "<group>";
-		};
-		A373549B183C86D0005E648E /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

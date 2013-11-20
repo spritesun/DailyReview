@@ -6,9 +6,8 @@
 
 @implementation MainViewController
 
-@synthesize tabBar = tabBar_;
-
 #pragma mark - AddBehaviorController
+
 - (void)behaviorDidSave:(Behavior *)behavior {
     if (behavior.rank.intValue > 0) {
         self.selectedIndex = 0;
