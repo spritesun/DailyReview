@@ -10,7 +10,7 @@
 @import MessageUI;
 @import Social;
 
-@interface MoreTableViewController () <MFMailComposeViewControllerDelegate>
+@interface MoreTableViewController () <MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 
 @end
 
@@ -26,7 +26,12 @@
   {
     [self mailTo:nil];
   }
+  else if (indexPath.section == 2 && indexPath.row == 0)
+  {
+    [self openLink];
+  }
 }
+
 - (IBAction)mailTo:(id)sender
 {
   MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
@@ -53,7 +58,6 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
   }
-//  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://weibo.com/u/2808620024"]];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
@@ -61,4 +65,18 @@
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)openLink
+{
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"您确认要离开功过格应用，打开这个链接吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+  alertView.delegate = self;
+  [alertView show];
+
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+  if (buttonIndex == 1) {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://icons8.com/"]];
+  }
+}
 @end

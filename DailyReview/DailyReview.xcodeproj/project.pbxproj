@@ -98,8 +98,6 @@
 		A3048919164C7CB20062D3E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3048915164C7CB20062D3E6 /* InfoPlist.strings */; };
 		A304891A164C7CB20062D3E6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3048917164C7CB20062D3E6 /* MainStoryboard.storyboard */; };
 		A304891D164C7CD90062D3E6 /* RankingChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A304891C164C7CD90062D3E6 /* RankingChartsViewController.m */; };
-		A3735493183C8549005E648E /* DailyReview-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A373548F183C8549005E648E /* DailyReview-Info.plist */; };
-		A3735494183C8549005E648E /* DailyReview-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A373548F183C8549005E648E /* DailyReview-Info.plist */; };
 		A3735495183C8549005E648E /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A3735490183C8549005E648E /* db.sqlite */; };
 		A3735496183C8549005E648E /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A3735490183C8549005E648E /* db.sqlite */; };
 		A3735497183C8549005E648E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3735491183C8549005E648E /* Images.xcassets */; };
@@ -687,7 +685,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3735494183C8549005E648E /* DailyReview-Info.plist in Resources */,
 				A3735498183C8549005E648E /* Images.xcassets in Resources */,
 				A373549A183C8549005E648E /* initial_data.json in Resources */,
 				A3C216ED165241DC009B78F9 /* InfoPlist.strings in Resources */,
@@ -700,7 +697,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3735493183C8549005E648E /* DailyReview-Info.plist in Resources */,
 				A3735497183C8549005E648E /* Images.xcassets in Resources */,
 				A3735499183C8549005E648E /* initial_data.json in Resources */,
 				A3048919164C7CB20062D3E6 /* InfoPlist.strings in Resources */,
