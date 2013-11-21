@@ -34,15 +34,23 @@
 
 - (IBAction)mailTo:(id)sender
 {
-  MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
-  controller.mailComposeDelegate = self;
-  
-  [controller setSubject:@"功过格应用的反馈"];
-  
-  [controller setToRecipients:[NSArray arrayWithObject:@"gongguoge@gmail.com"]];
-  
-  [controller setMessageBody:@"" isHTML:NO];
-  [self presentViewController:controller animated:YES completion:nil];
+  if ([MFMailComposeViewController canSendMail]) {
+    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+    controller.mailComposeDelegate = self;
+    
+    [controller setSubject:@"功过格应用的反馈"];
+    
+    [controller setToRecipients:[NSArray arrayWithObject:@"gongguoge@gmail.com"]];
+    
+    [controller setMessageBody:@"" isHTML:NO];
+    [self presentViewController:controller animated:YES completion:nil];
+  }
+  else
+  {
+    NSString *message = @"请设置好您的电子邮箱。";
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+  }
 }
 
 - (IBAction)weiboTo:(id)sender
@@ -54,8 +62,8 @@
     // Present Compose View Controller
     [self presentViewController:vc animated:YES completion:nil];
   } else {
-    NSString *message = @"请先设置好您的新浪微博账号。";
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    NSString *message = @"请设置好您的新浪微博账号。";
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
   }
 }
