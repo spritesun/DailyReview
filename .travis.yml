@@ -1,3 +1,2 @@
 language: objective-c
-xcode_workspace: DailyReview.xcworkspace
-xcode_scheme: Development
+script: xctool -workspace DailyReview.xcworkspace -scheme Development  -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO clean build test
