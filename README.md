@@ -1,4 +1,5 @@
 ##  功过格 iPhone 版
+[![Build Status](https://api.travis-ci.org/spritesun/DailyReview.png)](https://travis-ci.org/spritesun/DailyReview)
 
 * [App Store下载地址](http://itunes.apple.com/us/app/gong-guo-ge/id529803905)
 
