@@ -16,24 +16,28 @@
 		<string>git://github.com/domesticcatsoftware/DCIntrospect.git</string>
 		<key>E2F4BC2B-17AB-4191-BCCC-5866642EC1EE</key>
 		<string>git://github.com/allending/Kiwi.git</string>
+		<key>EE5422315B961F447AF49802D68BA6644E06077F</key>
+		<string>https://github.com/spritesun/DailyReview.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DailyReview.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>68A470DE-1257-46ED-825F-23B430983BDF</key>
-		<string>..</string>
+		<string>../../ios</string>
 		<key>D3A5876D-5743-4021-988D-27286EF0E0ED</key>
-		<string>../lib/DCIntrospect</string>
+		<string>../../ios/lib/DCIntrospect</string>
 		<key>E2F4BC2B-17AB-4191-BCCC-5866642EC1EE</key>
-		<string>../lib/Kiwi</string>
+		<string>../../ios/lib/Kiwi</string>
+		<key>EE5422315B961F447AF49802D68BA6644E06077F</key>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/spritesun/DailyReview.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>68A470DE-1257-46ED-825F-23B430983BDF</string>
+	<string>EE5422315B961F447AF49802D68BA6644E06077F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -51,6 +55,14 @@
 			<string>68A470DE-1257-46ED-825F-23B430983BDF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ios</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE5422315B961F447AF49802D68BA6644E06077F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KarmaCounter</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

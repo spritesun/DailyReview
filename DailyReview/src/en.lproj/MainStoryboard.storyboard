@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="T0Z-Dq-Q7H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="T0Z-Dq-Q7H">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Merit Controller - 功德-->
+        <!--功德-->
         <scene sceneID="geK-o0-DW7">
             <objects>
                 <viewController id="NB1-NI-b1p" customClass="MeritController" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="-713" y="-788"/>
         </scene>
-        <!--Demerit Controller - 过失-->
+        <!--过失-->
         <scene sceneID="epN-gr-Lup">
             <objects>
                 <viewController id="6j9-9x-GLy" customClass="DemeritController" sceneMemberID="viewController">
@@ -219,7 +219,7 @@
             </objects>
             <point key="canvasLocation" x="437" y="-788"/>
         </scene>
-        <!--More Table View Controller - 更多-->
+        <!--更多-->
         <scene sceneID="6e3-n6-5UI">
             <objects>
                 <tableViewController autoresizesArchivedViewToFullSize="NO" id="Phk-pn-UKZ" customClass="MoreTableViewController" sceneMemberID="viewController">
@@ -411,12 +411,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="更多" id="cTg-1q-qDl"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYy-Pi-TDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-644" y="1498"/>
         </scene>
-        <!--Thanks View Controller - 致谢-->
+        <!--致谢-->
         <scene sceneID="GJc-K5-8xZ">
             <objects>
                 <viewController id="TSd-E4-jLk" customClass="ThanksViewController" sceneMemberID="viewController">
@@ -431,7 +432,7 @@
             </objects>
             <point key="canvasLocation" x="-94" y="1832"/>
         </scene>
-        <!--About Karma Counter View Controller - 功过格介绍-->
+        <!--功过格介绍-->
         <scene sceneID="Irm-iC-dE0">
             <objects>
                 <viewController id="z3N-6r-FKU" customClass="AboutKarmaCounterViewController" sceneMemberID="viewController">
@@ -446,7 +447,7 @@
             </objects>
             <point key="canvasLocation" x="-94" y="978"/>
         </scene>
-        <!--Baihua View Controller - 功过格白话解-->
+        <!--功过格白话解-->
         <scene sceneID="w1m-QI-RzR">
             <objects>
                 <viewController id="bMN-uN-cwA" customClass="BaihuaViewController" sceneMemberID="viewController">
@@ -461,7 +462,7 @@
             </objects>
             <point key="canvasLocation" x="298" y="978"/>
         </scene>
-        <!--Notification Setting Controller - 提醒设置-->
+        <!--提醒设置-->
         <scene sceneID="peN-9A-Gf5">
             <objects>
                 <viewController id="goL-ta-VZl" customClass="NotificationSettingController" sceneMemberID="viewController">
@@ -475,27 +476,6 @@
                                 <date key="date" timeIntervalSinceReferenceDate="374407200.72665101">
                                     <!--2012-11-12 10:00:00 +0000-->
                                 </date>
-                                <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <data key="data">
-VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
-y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
-5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
-8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
-AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
-DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
-HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
-KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
-OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
-Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
-VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
-Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
-cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
-f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</data>
-                                </timeZone>
                                 <connections>
                                     <action selector="notifyTimeValueChanged:" destination="goL-ta-VZl" eventType="valueChanged" id="sLQ-dN-pKK"/>
                                 </connections>
@@ -527,7 +507,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="690" y="978"/>
         </scene>
-        <!--Navigation Controller - 更多-->
+        <!--更多-->
         <scene sceneID="eWf-ny-tXU">
             <objects>
                 <navigationController definesPresentationContext="YES" id="paK-eN-uhX" sceneMemberID="viewController">
@@ -565,7 +545,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-713" y="-90"/>
         </scene>
-        <!--Navigation Controller - 合计-->
+        <!--合计-->
         <scene sceneID="Ych-dB-sWU">
             <objects>
                 <navigationController definesPresentationContext="YES" id="n96-oc-3uH" sceneMemberID="viewController">
@@ -581,7 +561,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-254" y="-90"/>
         </scene>
-        <!--Time Line View Controller - 时间轴-->
+        <!--时间轴-->
         <scene sceneID="lA8-wz-9H5">
             <objects>
                 <tableViewController id="Az9-hU-PZn" customClass="TimeLineViewController" sceneMemberID="viewController">
@@ -610,7 +590,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="539" y="-96"/>
         </scene>
-        <!--Ranking Charts View Controller - 排行榜-->
+        <!--排行榜-->
         <scene sceneID="8TZ-Jy-yqh">
             <objects>
                 <tableViewController id="9cL-dx-xDi" customClass="RankingChartsViewController" sceneMemberID="viewController">
@@ -639,7 +619,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="902" y="-96"/>
         </scene>
-        <!--Summary Controller - 合计-->
+        <!--合计-->
         <scene sceneID="8YQ-jk-UNx">
             <objects>
                 <tableViewController id="Qvj-hu-XIA" customClass="SummaryController" sceneMemberID="viewController">
